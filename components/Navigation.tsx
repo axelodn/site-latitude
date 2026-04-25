@@ -5,11 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
 const navLinks = [
-  { label: "Accueil", href: "#accueil" },
-  { label: "Expertises", href: "#expertises" },
-  { label: "Réalisations", href: "#realisations" },
-  { label: "Approche", href: "#approche" },
-  { label: "Contact", href: "#contact" },
+  { label: "Accueil", href: "/" },
+  { label: "Qui sommes-nous", href: "/qui-sommes-nous" },
+  { label: "Expertises", href: "/expertises" },
+  { label: "Réalisations", href: "/realisations" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navigation() {
@@ -35,11 +36,15 @@ export default function Navigation() {
 
   const handleNavClick = (href: string) => {
     setMobileOpen(false);
-    const id = href.replace("#", "");
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
+    // If it's a hash anchor on the same page
+    if (href.startsWith("#")) {
+      const id = href.replace("#", "");
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
     }
+    // Otherwise, Link component will handle navigation
   };
 
   return (
@@ -82,27 +87,28 @@ export default function Navigation() {
               className="hidden md:flex items-center gap-8"
             >
               {navLinks.map((link) => (
-                <button
+                <Link
                   key={link.href}
+                  href={link.href}
                   onClick={() => handleNavClick(link.href)}
-                  className={`font-inter text-sm font-medium tracking-wide transition-colors duration-300 hover:text-latitude-gold cursor-pointer ${
-                    scrolled ? "text-latitude-gray-dark" : "text-white/90"
+                  className={`font-inter text-sm font-medium tracking-wide transition-colors duration-300 hover:text-latitude-gold ${
+                    scrolled ? "text-latitude-black/80" : "text-white/90"
                   }`}
                 >
                   {link.label}
-                </button>
+                </Link>
               ))}
             </nav>
 
             {/* CTA */}
             <div className="hidden md:flex items-center">
-              <button
-                onClick={() => handleNavClick("#contact")}
-                className="font-inter text-sm font-medium px-6 py-2.5 border border-latitude-gold text-latitude-gold hover:bg-latitude-gold hover:text-white transition-all duration-300 tracking-wide cursor-pointer"
+              <Link
+                href="/contact"
+                className="font-inter text-sm font-medium px-6 py-2.5 border border-latitude-gold text-latitude-gold hover:bg-latitude-gold hover:text-white transition-all duration-300 tracking-wide"
                 aria-label="Demander un devis pour votre événement"
               >
                 Demander un devis
-              </button>
+              </Link>
             </div>
 
             {/* Burger */}
@@ -148,26 +154,35 @@ export default function Navigation() {
           >
             <nav className="flex flex-col items-center gap-8">
               {navLinks.map((link, i) => (
-                <motion.button
+                <motion.div
                   key={link.href}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.08 + 0.2 }}
-                  onClick={() => handleNavClick(link.href)}
-                  className="font-playfair text-4xl text-white hover:text-latitude-gold transition-colors duration-300 cursor-pointer"
                 >
-                  {link.label}
-                </motion.button>
+                  <Link
+                    href={link.href}
+                    onClick={() => handleNavClick(link.href)}
+                    className="font-playfair text-4xl text-white hover:text-latitude-gold transition-colors duration-300"
+                  >
+                    {link.label}
+                  </Link>
+                </motion.div>
               ))}
-              <motion.button
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: navLinks.length * 0.08 + 0.3 }}
-                onClick={() => handleNavClick("#contact")}
-                className="mt-4 font-inter text-sm font-medium px-8 py-3 bg-latitude-gold text-white hover:bg-latitude-gold/90 transition-all duration-300 tracking-wide cursor-pointer"
+                className="mt-4"
               >
-                Demander un devis
-              </motion.button>
+                <Link
+                  href="/contact"
+                  onClick={() => setMobileOpen(false)}
+                  className="inline-block font-inter text-sm font-medium px-8 py-3 bg-latitude-gold text-white hover:bg-latitude-gold/90 transition-all duration-300 tracking-wide"
+                >
+                  Demander un devis
+                </Link>
+              </motion.div>
             </nav>
           </motion.div>
         )}

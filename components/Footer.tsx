@@ -3,19 +3,20 @@
 import Link from "next/link";
 
 const expertiseLinks = [
-  { label: "Séminaires & Incentives", href: "#expertises" },
-  { label: "Congrès & Forums", href: "#expertises" },
-  { label: "Soirées Événementielles", href: "#expertises" },
-  { label: "Team-Building", href: "#expertises" },
-  { label: "Management & Coaching", href: "#expertises" },
-  { label: "Production Vidéo", href: "#expertises" },
+  { label: "Séminaires & Incentives", href: "/expertises/seminaires-incentives" },
+  { label: "Congrès & Forums", href: "/expertises/congres-forums" },
+  { label: "Soirées Événementielles", href: "/expertises/soirees-evenementielles" },
+  { label: "Team-Building", href: "/expertises/team-building" },
+  { label: "Management & Coaching", href: "/expertises/management-coaching" },
+  { label: "Production Vidéo", href: "/expertises/production-video" },
 ];
 
 const quickLinks = [
-  { label: "Accueil", href: "#accueil" },
-  { label: "Réalisations", href: "#realisations" },
-  { label: "Notre approche", href: "#approche" },
-  { label: "Contact & Devis", href: "#contact" },
+  { label: "Accueil", href: "/" },
+  { label: "Qui sommes-nous", href: "/qui-sommes-nous" },
+  { label: "Réalisations", href: "/realisations" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact & Devis", href: "/contact" },
   { label: "Mentions légales", href: "/mentions-legales" },
   { label: "CGV", href: "/cgv" },
 ];
