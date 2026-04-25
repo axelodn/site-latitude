@@ -79,7 +79,7 @@ export default function QuiSommesNous() {
                 variants={fadeInUp}
                 className="font-inter text-white/70 text-lg leading-relaxed mb-6"
               >
-                Aujourd&apos;hui, nous sommes une équipe de 50+ experts, forte d&apos;une expérience de plus de
+                Aujourd&apos;hui, nous sommes une équipe forte d&apos;une expérience de plus de
                 20 ans, capable de concevoir et de piloter tous les types d&apos;événements professionnels,
                 du séminaire d&apos;équipe de 30 personnes au congrès international de 5 000 délégués.
               </motion.p>
