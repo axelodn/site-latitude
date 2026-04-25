@@ -2,41 +2,18 @@
 
 export const team = [
   {
-    name: "Antoine Rivière",
+    name: "Jérôme Aviotte",
     role: "Directeur Général & Fondateur",
-    bio: "Fondateur de Latitude Organisation en 2004. 25 ans d'expérience dans l'événementiel B2B haut de gamme. Visionnaire passionné, il a tissé le réseau de partenaires qui fait notre force aujourd'hui.",
+    bio: "Fondateur de Latitude Organisation en 2004. 25 ans d'expérience dans l'événementiel B2B. Visionnaire passionné, il a tissé le réseau de partenaires qui fait notre force aujourd'hui.",
     image: "/team/antoine.jpg",
   },
   {
-    name: "Camille Lefort",
-    role: "Directrice des Opérations",
+    name: "Sandra David",
+    role: "Cheffe de projet",
     bio: "Cheffe d'orchestre des projets complexes. 15 ans d'expérience en pilotage logistique d'événements jusqu'à 3 000 personnes. Garante de l'excellence opérationnelle.",
     image: "/team/camille.jpg",
   },
   {
-    name: "Thomas Marchand",
-    role: "Responsable Séminaires & Incentives",
-    bio: "Expert en conception de séminaires et voyages incentives. Connaît chaque destination sur le bout des doigts. Spécialiste de l'expérience collaborateur.",
-    image: "/team/thomas.jpg",
-  },
-  {
-    name: "Léa Bertrand",
-    role: "Responsable Congrès & Forums",
-    bio: "Spécialiste des grands rendez-vous professionnels. A orchestré plus de 200 congrès dont les plus prestigieux du secteur pharmaceutique et tech.",
-    image: "/team/lea.jpg",
-  },
-  {
-    name: "Julien Caron",
-    role: "Directeur Artistique & Production Vidéo",
-    bio: "Créateur de notre signature 'L'œil du terrain'. 12 ans dans la production audiovisuelle événementielle. Capture l'émotion en temps réel.",
-    image: "/team/julien.jpg",
-  },
-  {
-    name: "Sophie Allard",
-    role: "Responsable Soirées & Galas",
-    bio: "Designer d'expériences sensorielles. Spécialisée dans les soirées de prestige dans les lieux d'exception français et européens.",
-    image: "/team/sophie.jpg",
-  },
 ];
 
 export const valeurs = [
