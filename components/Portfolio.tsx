@@ -18,7 +18,8 @@ export default function Portfolio() {
   return (
     <section
       id="realisations"
-      className="bg-latitude-cream py-24 md:py-32"
+      className="py-24 md:py-32"
+      style={{ background: "#0A0A0A", borderTop: "1px solid rgba(255,255,255,0.05)" }}
       aria-labelledby="portfolio-title"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -38,11 +39,11 @@ export default function Portfolio() {
           </p>
           <h2
             id="portfolio-title"
-            className="font-playfair font-bold text-latitude-black text-4xl md:text-5xl mb-4 leading-tight"
+            className="font-playfair font-bold text-white text-4xl md:text-5xl mb-4 leading-tight"
           >
             Nos réalisations événementielles
           </h2>
-          <p className="font-inter text-latitude-gray-dark text-lg max-w-2xl mx-auto">
+          <p className="font-inter text-white/50 text-lg max-w-2xl mx-auto">
             Un aperçu de nos derniers événements d&apos;entreprise organisés en
             France et à l&apos;international.
           </p>
@@ -64,8 +65,8 @@ export default function Portfolio() {
               onClick={() => setActiveFilter(cat)}
               className={`font-inter text-sm px-6 py-2.5 border transition-all duration-300 cursor-pointer ${
                 activeFilter === cat
-                  ? "bg-latitude-black text-white border-latitude-black"
-                  : "bg-transparent text-latitude-gray-dark border-latitude-gray-light hover:border-latitude-black"
+                  ? "bg-white text-latitude-black border-white"
+                  : "bg-transparent text-white/50 border-white/20 hover:border-white/50"
               }`}
               aria-pressed={activeFilter === cat}
             >
@@ -147,7 +148,7 @@ export default function Portfolio() {
           transition={{ duration: 0.6 }}
           className="text-center mt-14"
         >
-          <p className="font-inter text-latitude-gray-dark mb-6">
+          <p className="font-inter text-white/50 mb-6">
             Votre prochain événement pourrait figurer ici.
           </p>
           <button
@@ -156,7 +157,7 @@ export default function Portfolio() {
                 .getElementById("contact")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
-            className="font-inter text-sm font-medium px-8 py-4 border border-latitude-black text-latitude-black hover:bg-latitude-black hover:text-white transition-all duration-300 tracking-widest uppercase cursor-pointer"
+            className="font-inter text-sm font-medium px-8 py-4 border border-white/30 text-white hover:bg-white hover:text-latitude-black transition-all duration-300 tracking-widest uppercase cursor-pointer"
             aria-label="Nous contacter pour organiser votre événement d'entreprise"
           >
             Organiser votre événement

@@ -11,7 +11,8 @@ export default function FAQ() {
 
   return (
     <section
-      className="bg-latitude-cream py-24 md:py-32"
+      className="py-24 md:py-32"
+      style={{ background: "#F5F3EE" }}
       aria-labelledby="faq-title"
     >
       <div className="max-w-3xl mx-auto px-6 lg:px-8">
@@ -52,7 +53,7 @@ export default function FAQ() {
               key={index}
               variants={fadeInUp}
               role="listitem"
-              className="border-b border-latitude-gray-light"
+              className="border-b border-latitude-black/15"
             >
               <button
                 onClick={() =>
@@ -91,7 +92,7 @@ export default function FAQ() {
                     transition={{ duration: 0.35, ease: [0.25, 0.46, 0.45, 0.94] }}
                     className="overflow-hidden"
                   >
-                    <p className="font-inter text-sm text-latitude-gray-dark leading-relaxed pb-6">
+                    <p className="font-inter text-sm text-latitude-black/65 leading-relaxed pb-6">
                       {item.answer}
                     </p>
                   </motion.div>
@@ -109,7 +110,7 @@ export default function FAQ() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center mt-12"
         >
-          <p className="font-inter text-latitude-gray-dark mb-6">
+          <p className="font-inter text-latitude-black/65 mb-6">
             Vous ne trouvez pas la réponse à votre question ?
           </p>
           <button

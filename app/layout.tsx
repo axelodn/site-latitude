@@ -107,8 +107,8 @@ export default function RootLayout({
       <body
         className="min-h-full antialiased"
         style={{
-          fontFamily:
-            "var(--font-inter), Arial, Helvetica, sans-serif",
+          fontFamily: "var(--font-inter), Arial, Helvetica, sans-serif",
+          background: "#0A0A0A",
         }}
       >
         <StructuredData />

@@ -4,8 +4,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { PageHero, Breadcrumb, CTABand, SectionHeader } from "@/components/shared";
 import { expertiseDetails } from "@/lib/content";
-import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer, viewportConfig } from "@/lib/animations";
+
+
 
 export const metadata: Metadata = {
   title: "Nos Expertises | Latitude Organisation",
@@ -42,6 +42,7 @@ export default function ExpertisesIndex() {
         eyebrow="NOS DOMAINES"
         title="6 expertises au service de vos événements"
         subtitle="Séminaires, congrès, soirées, team-building, coaching ou production vidéo — nous maîtrisons tous les formats."
+        imageSrc="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&q=80"
       />
 
       {/* Expertises Grid */}
@@ -53,17 +54,10 @@ export default function ExpertisesIndex() {
             centered={true}
           />
 
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportConfig}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
             {expertiseDetails.map((expertise) => (
-              <motion.div
+              <div
                 key={expertise.slug}
-                variants={fadeInUp}
               >
                 <Link
                   href={`/expertises/${expertise.slug}`}
@@ -81,9 +75,9 @@ export default function ExpertisesIndex() {
                     </span>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -96,13 +90,7 @@ export default function ExpertisesIndex() {
             centered={true}
           />
 
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportConfig}
-            className="space-y-6 mt-12"
-          >
+          <div className="space-y-6 mt-12">
             {[
               {
                 title: "Un interlocuteur unique",
@@ -121,9 +109,8 @@ export default function ExpertisesIndex() {
                 desc: "Nous gérons tous les détails. Vous vous concentrez sur vos objectifs métier, nous nous concentrons sur l'excellence opérationnelle.",
               },
             ].map((item, i) => (
-              <motion.div
+              <div
                 key={i}
-                variants={fadeInUp}
                 className="border-l-2 border-latitude-gold pl-6"
               >
                 <h3 className="font-playfair text-xl font-bold text-white mb-2">
@@ -132,9 +119,9 @@ export default function ExpertisesIndex() {
                 <p className="font-inter text-white/70">
                   {item.desc}
                 </p>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 

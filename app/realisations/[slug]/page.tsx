@@ -4,8 +4,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { PageHero, Breadcrumb, CTABand } from "@/components/shared";
 import { realisationsDetails } from "@/lib/content";
-import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer, viewportConfig } from "@/lib/animations";
+
+
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -98,49 +98,44 @@ export default async function RealisationPage({
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Main content */}
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={viewportConfig}
-              className="lg:col-span-2"
-            >
-              <motion.div variants={fadeInUp} className="mb-8">
+            <div className="lg:col-span-2">
+              <div className="mb-8">
                 <h2 className="font-playfair text-2xl font-bold text-white mb-4">
                   Le contexte
                 </h2>
                 <p className="font-inter text-white/70 text-lg leading-relaxed">
                   {realisation.description}
                 </p>
-              </motion.div>
+              </div>
 
-              <motion.div variants={fadeInUp} className="mb-8">
+              <div className="mb-8">
                 <h2 className="font-playfair text-2xl font-bold text-white mb-4">
-                  Notre approche
-                </h2>
-                <p className="font-inter text-white/70 text-lg leading-relaxed">
-                  {realisation.approach}
-                </p>
-              </motion.div>
-
-              <motion.div variants={fadeInUp} className="mb-8">
-                <h2 className="font-playfair text-2xl font-bold text-white mb-4">
-                  Les résultats
+                  Les défis
                 </h2>
                 <div className="space-y-4">
-                  {realisation.results.map((result, i) => (
+                  {realisation.challenges.map((challenge, i) => (
                     <p key={i} className="font-inter text-white/70 text-lg leading-relaxed">
-                      • {result}
+                      • {challenge}
                     </p>
                   ))}
                 </div>
-              </motion.div>
+              </div>
+
+              <div className="mb-8">
+                <h2 className="font-playfair text-2xl font-bold text-white mb-4">
+                  Nos solutions
+                </h2>
+                <div className="space-y-4">
+                  {realisation.solutions.map((solution, i) => (
+                    <p key={i} className="font-inter text-white/70 text-lg leading-relaxed">
+                      • {solution}
+                    </p>
+                  ))}
+                </div>
+              </div>
 
               {/* CTA */}
-              <motion.div
-                variants={fadeInUp}
-                className="mt-12 pt-8 border-t border-white/10"
-              >
+              <div className="mt-12 pt-8 border-t border-white/10">
                 <h3 className="font-playfair text-xl font-bold text-white mb-4">
                   Inspiré par ce projet ?
                 </h3>
@@ -148,46 +143,49 @@ export default async function RealisationPage({
                   href="/contact"
                   className="inline-block font-inter text-sm font-medium px-8 py-4 text-white transition-all duration-400 tracking-widest uppercase"
                   style={{ background: "#C9A961" }}
-                  onMouseEnter={(e) => (e.currentTarget.style.background = "#b8943f")}
-                  onMouseLeave={(e) => (e.currentTarget.style.background = "#C9A961")}
                 >
                   Demander un devis
                 </Link>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
 
             {/* Sidebar */}
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={viewportConfig}
-              className="lg:col-span-1 space-y-8"
-            >
+            <div className="lg:col-span-1 space-y-8">
               {/* Key Stats */}
-              <motion.div
-                variants={fadeInUp}
-                className="bg-white/5 border border-white/10 p-8"
-              >
+              <div className="bg-white/5 border border-white/10 p-8">
                 <h3 className="font-playfair text-lg font-bold text-white mb-6">
                   Chiffres clés
                 </h3>
                 <div className="space-y-4">
-                  {realisation.stats.map((stat, i) => (
-                    <div key={i} className="border-b border-white/10 pb-4 last:border-0">
-                      <p className="font-inter text-sm text-white/60 mb-1">
-                        {stat.label}
-                      </p>
-                      <p className="font-playfair text-2xl font-bold text-latitude-gold">
-                        {stat.value}
-                      </p>
-                    </div>
-                  ))}
+                  <div className="border-b border-white/10 pb-4">
+                    <p className="font-inter text-sm text-white/60 mb-1">
+                      Participants
+                    </p>
+                    <p className="font-playfair text-2xl font-bold text-latitude-gold">
+                      {realisation.participants}
+                    </p>
+                  </div>
+                  <div className="border-b border-white/10 pb-4">
+                    <p className="font-inter text-sm text-white/60 mb-1">
+                      Durée
+                    </p>
+                    <p className="font-playfair text-2xl font-bold text-latitude-gold">
+                      {realisation.duree}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-inter text-sm text-white/60 mb-1">
+                      Lieu
+                    </p>
+                    <p className="font-playfair text-2xl font-bold text-latitude-gold">
+                      {realisation.lieu}
+                    </p>
+                  </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Other Realisations */}
-              <motion.div variants={fadeInUp}>
+              <div>
                 <h3 className="font-playfair text-lg font-bold text-white mb-4">
                   Autres réalisations
                 </h3>
@@ -207,8 +205,8 @@ export default async function RealisationPage({
                     </Link>
                   ))}
                 </div>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -13,7 +13,6 @@ export const team = [
     bio: "Cheffe d'orchestre des projets complexes. 15 ans d'expérience en pilotage logistique d'événements jusqu'à 3 000 personnes. Garante de l'excellence opérationnelle.",
     image: "/team/camille.jpg",
   },
-  {
 ];
 
 export const valeurs = [
@@ -261,36 +260,51 @@ export const expertiseDetails: ExpertiseDetail[] = [
       "Un congrès professionnel réussi est avant tout un événement où chaque participant repart avec le sentiment d'avoir vécu un moment fort, à la fois sur le plan business et sur le plan humain. Cela suppose une scénographie maîtrisée, une logistique millimétrée, une expérience digitale cohérente et une expérience humaine forte. Nous orchestrons des congrès de 100 à 5 000 participants pour les plus grands groupes français et internationaux, avec une exigence constante : que rien ne distraie vos participants du contenu et des rencontres.",
     sections: [
       {
-        title: "Nos services de gestion de congrès",
+        title: "Une orchestration en 3 temps",
         content:
-          "Une prestation complète qui couvre l'intégralité du cycle de vie de votre congrès professionnel.",
+          "Considéré comme un événement majeur dans la vie et le développement de votre entreprise, nous mettons tous les outils dont nous disposons pour la réussite de votre forum ou congrès. Notre méthode repose sur trois phases complémentaires, pensées pour garantir une exécution sans faille.",
+      },
+      {
+        title: "01 — La Préparation",
+        content:
+          "Tout se joue en amont. Nous posons les fondations logistiques et stratégiques qui garantiront le bon déroulement de votre événement.",
         items: [
-          "Conception scénographique : design de scène, signalétique, parcours visiteur",
-          "Logistique complète : transport, hébergement, restauration, accréditations",
-          "Production technique : audiovisuel, projection, sonorisation, captation",
-          "Live streaming & hybride : diffusion en direct multi-plateformes",
-          "Application mobile dédiée : programme, networking, votes interactifs",
-          "Gestion des intervenants : briefing, coaching, support en coulisses",
-          "Soirées associées : ouverture, gala, clôture",
-          "Production vidéo L'Œil du Terrain : film bilan le soir même",
+          "Unité de lieu : sélection et réservation du centre de congrès idéal parmi 120+ partenaires",
+          "Sélection des prestataires : technique, restauration, hôtelier, transferts, animations",
+          "Organisation logistique : suivi des plannings, coordination des budgets et des équipes",
+          "Positionnement géographique stratégique : accessibilité, capacité, équipements",
+          "Décoration et scénographie : identité visuelle, signalétique, mobilier",
+          "Communication événement : publicité, affichage, supports de programme",
         ],
       },
       {
-        title: "Notre réseau de 120+ centres de congrès partenaires",
+        title: "02 — La Réalisation",
         content:
-          "Un avantage concurrentiel majeur : 20 ans de relations privilégiées avec les meilleurs centres de congrès de France et d'Europe nous permettent d'accéder à des dates, des tarifs et des prestations privilégiés. Du Palais des Congrès de Paris au Centre des Congrès de Cannes, en passant par les structures internationales de Marrakech, Barcelone ou Lisbonne, nous trouvons toujours le lieu adapté à votre événement.",
+          "Le jour J, nous sommes là. Sur place, en coulisses, au contact de chaque prestataire pour que rien ne soit laissé au hasard.",
+        items: [
+          "Coordination logistique complète : accueil, flux, hébergement, restauration",
+          "Gestion du déroulement des réunions, tables rondes et activités en parallèle",
+          "Supervision technique : sonorisation, projection 4K, live streaming, traduction simultanée",
+          "Travail de précision sur les animations et les soirées associées",
+          "Support en coulisses pour les intervenants et les speakers",
+          "Production vidéo L'Œil du Terrain : captation en temps réel, projection le soir même",
+        ],
       },
       {
-        title: "Notre expertise technique",
+        title: "03 — Le Bilan",
         content:
-          "L'événement parfait suppose une exécution technique sans faille. Nos équipes sont rompues aux dispositifs les plus complexes.",
+          "Un événement réussi se mesure aussi après. Nous livrons une analyse complète pour valoriser votre investissement.",
         items: [
-          "Production audiovisuelle 4K, écrans géants, mapping vidéo",
-          "Live streaming multi-caméras et événements 100% hybrides",
-          "Traduction simultanée multi-langues",
-          "Captation drone et plans aériens",
-          "Application mobile dédiée et networking digital",
+          "Débriefing complet avec vos équipes dans les jours suivant l'événement",
+          "Mesure de l'impact : satisfaction participants, couverture médiatique, retombées",
+          "Remise du film événement monté (L'Œil du Terrain)",
+          "Recommandations pour les éditions futures",
         ],
+      },
+      {
+        title: "Notre réseau de 120+ centres partenaires",
+        content:
+          "Un avantage décisif : 20 ans de relations privilégiées avec les meilleurs centres de congrès de France et d'Europe nous donnent accès à des dates, des tarifs et des prestations exclusives. Du Palais des Congrès de Paris aux structures internationales de Marrakech, Barcelone ou Lisbonne — nous trouvons le lieu qui fait la différence.",
       },
     ],
     cases: [

@@ -4,8 +4,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { PageHero, Breadcrumb, CTABand, SectionHeader } from "@/components/shared";
 import { blogArticles } from "@/lib/content";
-import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer, viewportConfig } from "@/lib/animations";
+
+
 
 export const metadata: Metadata = {
   title: "Blog | Latitude Organisation",
@@ -46,6 +46,7 @@ export default function BlogIndex() {
         eyebrow="RESSOURCES"
         title="Le Blog de Latitude Organisation"
         subtitle="Conseils, tendances et insights d'experts en organisation d'événements professionnels."
+        imageSrc="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1920&q=80"
       />
 
       {/* Articles Grid */}
@@ -57,17 +58,10 @@ export default function BlogIndex() {
             centered={true}
           />
 
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportConfig}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
             {blogArticles.map((article) => (
-              <motion.div
+              <div
                 key={article.slug}
-                variants={fadeInUp}
               >
                 <Link
                   href={`/blog/${article.slug}`}
@@ -93,9 +87,9 @@ export default function BlogIndex() {
                     </div>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -108,19 +102,13 @@ export default function BlogIndex() {
             centered={true}
           />
 
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportConfig}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mt-12"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mt-12">
             {categories.map((category) => {
               const count = blogArticles.filter(
                 (a) => a.category === category
               ).length;
               return (
-                <motion.div key={category} variants={fadeInUp}>
+                <div key={category}>
                   <button className="w-full py-4 px-6 border border-white/10 hover:border-latitude-gold/50 hover:bg-white/5 transition-all duration-300 text-center">
                     <p className="font-playfair text-lg font-bold text-white">
                       {category}
@@ -129,10 +117,10 @@ export default function BlogIndex() {
                       {count} article{count > 1 ? "s" : ""}
                     </p>
                   </button>
-                </motion.div>
+                </div>
               );
             })}
-          </motion.div>
+          </div>
         </div>
       </section>
 

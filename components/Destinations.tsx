@@ -1,8 +1,27 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ComposableMap, Geographies, Geography, Marker, ZoomableGroup } from "react-simple-maps";
 import { destinations } from "@/lib/data";
 import { viewportConfig, staggerContainerFast, fadeInUp } from "@/lib/animations";
+
+// Coordonnées réelles (longitude, latitude) pour chaque destination
+const destinationCoords: Record<string, [number, number]> = {
+  "Paris": [2.35, 48.85],
+  "Lyon": [4.83, 45.75],
+  "Nice": [7.27, 43.70],
+  "Bordeaux": [-0.57, 44.84],
+  "Chamonix": [6.87, 45.92],
+  "Marrakech": [-7.99, 31.63],
+  "Lisbonne": [-9.14, 38.72],
+  "Barcelone": [2.17, 41.39],
+  "Rome": [12.50, 41.90],
+  "Genève": [6.14, 46.20],
+  "Montréal": [-73.57, 45.50],
+  "Île Maurice": [57.55, -20.20],
+};
+
+const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
 export default function Destinations() {
   return (
@@ -37,102 +56,98 @@ export default function Destinations() {
           </p>
         </motion.div>
 
-        {/* World Map SVG */}
+        {/* World Map */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={viewportConfig}
           transition={{ duration: 1 }}
-          className="relative w-full max-w-4xl mx-auto mb-16"
+          className="relative w-full max-w-5xl mx-auto mb-16"
           role="img"
-          aria-label="Carte des destinations événementielles de Latitude Organisation : France, Europe, Maroc, Île Maurice, Canada"
+          aria-label="Carte des destinations événementielles de Latitude Organisation"
         >
-          {/* Simplified world map using SVG paths */}
-          <svg
-            viewBox="0 0 1000 500"
-            className="w-full h-auto"
-            aria-hidden="true"
+          <ComposableMap
+            projection="geoMercator"
+            projectionConfig={{
+              scale: 130,
+              center: [15, 20],
+            }}
+            style={{ width: "100%", height: "auto" }}
+            viewBox="0 0 800 450"
           >
-            {/* Background */}
-            <rect width="1000" height="500" fill="transparent" />
+            <ZoomableGroup zoom={1} disableZooming disablePanning>
+              <Geographies geography={geoUrl}>
+                {({ geographies }) =>
+                  geographies.map((geo) => (
+                    <Geography
+                      key={geo.rsmKey}
+                      geography={geo}
+                      fill="#1a2e1a"
+                      stroke="#C9A961"
+                      strokeWidth={0.3}
+                      strokeOpacity={0.4}
+                      style={{
+                        default: { outline: "none" },
+                        hover: { outline: "none", fill: "#243824" },
+                        pressed: { outline: "none" },
+                      }}
+                    />
+                  ))
+                }
+              </Geographies>
 
-            {/* Grid lines */}
-            {[...Array(9)].map((_, i) => (
-              <line
-                key={`h-${i}`}
-                x1="0"
-                y1={(i + 1) * 50}
-                x2="1000"
-                y2={(i + 1) * 50}
-                stroke="#C9A961"
-                strokeOpacity="0.06"
-                strokeWidth="1"
-              />
-            ))}
-            {[...Array(19)].map((_, i) => (
-              <line
-                key={`v-${i}`}
-                x1={(i + 1) * 50}
-                y1="0"
-                x2={(i + 1) * 50}
-                y2="500"
-                stroke="#C9A961"
-                strokeOpacity="0.06"
-                strokeWidth="1"
-              />
-            ))}
-
-            {/* Simplified continent blobs */}
-            {/* Europe */}
-            <ellipse cx="490" cy="170" rx="80" ry="60" fill="#2A2A2A" opacity="0.8" />
-            {/* Africa */}
-            <ellipse cx="480" cy="300" rx="60" ry="90" fill="#2A2A2A" opacity="0.8" />
-            {/* North America */}
-            <ellipse cx="200" cy="200" rx="110" ry="100" fill="#2A2A2A" opacity="0.8" />
-            {/* South America */}
-            <ellipse cx="250" cy="370" rx="55" ry="80" fill="#2A2A2A" opacity="0.8" />
-            {/* Asia */}
-            <ellipse cx="700" cy="190" rx="160" ry="100" fill="#2A2A2A" opacity="0.8" />
-            {/* Oceania */}
-            <ellipse cx="780" cy="360" rx="70" ry="50" fill="#2A2A2A" opacity="0.8" />
-
-            {/* Destination pins */}
-            {destinations.map((dest, i) => {
-              const x = parseFloat(dest.x) * 10;
-              const y = parseFloat(dest.y) * 5;
-              return (
-                <motion.g
-                  key={dest.name}
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 + 0.5, duration: 0.4 }}
-                >
-                  {/* Pulse ring */}
-                  <motion.circle
-                    cx={x}
-                    cy={y}
-                    r="12"
-                    fill="none"
-                    stroke="#C9A961"
-                    strokeWidth="1"
-                    animate={{ r: [8, 16], opacity: [0.5, 0] }}
-                    transition={{
-                      repeat: Infinity,
-                      duration: 2,
-                      delay: i * 0.3,
-                      ease: "easeOut",
-                    }}
-                  />
-                  {/* Pin dot */}
-                  <circle cx={x} cy={y} r="4" fill="#C9A961" />
-                </motion.g>
-              );
-            })}
-          </svg>
+              {destinations.map((dest, i) => {
+                const coords = destinationCoords[dest.name];
+                if (!coords) return null;
+                return (
+                  <Marker key={dest.name} coordinates={coords}>
+                    {/* Pulse ring animé */}
+                    <motion.circle
+                      r={8}
+                      fill="none"
+                      stroke="#C9A961"
+                      strokeWidth={1}
+                      initial={{ opacity: 0 }}
+                      animate={{ r: [5, 14], opacity: [0.6, 0] }}
+                      transition={{
+                        repeat: Infinity,
+                        duration: 2.5,
+                        delay: i * 0.25,
+                        ease: "easeOut",
+                      }}
+                    />
+                    {/* Point central */}
+                    <motion.circle
+                      r={4}
+                      fill="#C9A961"
+                      initial={{ opacity: 0, scale: 0 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.1 + 0.3, duration: 0.4 }}
+                    />
+                    {/* Label */}
+                    <motion.text
+                      y={-10}
+                      textAnchor="middle"
+                      fontSize={6}
+                      fill="#C9A961"
+                      fillOpacity={0.85}
+                      fontFamily="Inter, sans-serif"
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.1 + 0.5 }}
+                    >
+                      {dest.name}
+                    </motion.text>
+                  </Marker>
+                );
+              })}
+            </ZoomableGroup>
+          </ComposableMap>
 
           {/* Legend */}
-          <div className="absolute bottom-0 right-0 flex items-center gap-2">
+          <div className="flex items-center justify-end gap-2 mt-2">
             <div
               className="w-3 h-3 rounded-full"
               style={{ background: "#C9A961" }}

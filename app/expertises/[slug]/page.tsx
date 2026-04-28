@@ -4,8 +4,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { PageHero, Breadcrumb, CTABand, SectionHeader } from "@/components/shared";
 import { expertiseDetails } from "@/lib/content";
-import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer, viewportConfig } from "@/lib/animations";
+
+
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -93,29 +93,33 @@ export default async function ExpertisePage({
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Main content */}
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={viewportConfig}
-              className="lg:col-span-2 space-y-8"
-            >
-              {expertise.sections.map((section, index) => (
-                <motion.div key={index} variants={fadeInUp}>
-                  <h2 className="font-playfair text-2xl font-bold text-white mb-4">
-                    {section.title}
-                  </h2>
-                  <p className="font-inter text-white/70 text-lg leading-relaxed">
-                    {section.content}
-                  </p>
-                </motion.div>
-              ))}
+            <div className="lg:col-span-2 space-y-12">
+              {expertise.sections.map((section, index) => {
+                const isStep = /^0[0-9] —/.test(section.title);
+                return (
+                  <div key={index} className={isStep ? "border-l-2 pl-8" : ""} style={isStep ? { borderColor: "#C9A961" } : {}}>
+                    <h2 className={`font-playfair font-bold text-white mb-4 ${isStep ? "text-xl" : "text-2xl"}`}>
+                      {section.title}
+                    </h2>
+                    <p className="font-inter text-white/65 text-base leading-relaxed mb-4">
+                      {section.content}
+                    </p>
+                    {section.items && section.items.length > 0 && (
+                      <ul className="space-y-3 mt-4">
+                        {section.items.map((item, i) => (
+                          <li key={i} className="flex items-start gap-3 font-inter text-white/70 text-sm leading-relaxed">
+                            <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: "#C9A961" }} />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                );
+              })}
 
               {/* CTA Section */}
-              <motion.div
-                variants={fadeInUp}
-                className="mt-12 pt-8 border-t border-white/10"
-              >
+              <div className="mt-12 pt-8 border-t border-white/10">
                 <h3 className="font-playfair text-xl font-bold text-white mb-4">
                   {expertise.ctaText}
                 </h3>
@@ -123,27 +127,16 @@ export default async function ExpertisePage({
                   href="/contact"
                   className="inline-block font-inter text-sm font-medium px-8 py-4 text-white transition-all duration-400 tracking-widest uppercase"
                   style={{ background: "#C9A961" }}
-                  onMouseEnter={(e) => (e.currentTarget.style.background = "#b8943f")}
-                  onMouseLeave={(e) => (e.currentTarget.style.background = "#C9A961")}
                 >
                   Demander un devis
                 </Link>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
 
             {/* Sidebar */}
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={viewportConfig}
-              className="lg:col-span-1"
-            >
+            <div className="lg:col-span-1">
               {/* FAQ */}
-              <motion.div
-                variants={fadeInUp}
-                className="bg-white/5 border border-white/10 p-8 mb-8"
-              >
+              <div className="bg-white/5 border border-white/10 p-8 mb-8">
                 <h3 className="font-playfair text-xl font-bold text-white mb-6">
                   Questions fréquentes
                 </h3>
@@ -159,10 +152,10 @@ export default async function ExpertisePage({
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
 
               {/* Related Expertises */}
-              <motion.div variants={fadeInUp}>
+              <div>
                 <h3 className="font-playfair text-xl font-bold text-white mb-4">
                   Autres expertises
                 </h3>
@@ -182,8 +175,8 @@ export default async function ExpertisePage({
                     </Link>
                   ))}
                 </div>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

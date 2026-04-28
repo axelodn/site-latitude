@@ -4,8 +4,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { PageHero, Breadcrumb, CTABand, SectionHeader } from "@/components/shared";
 import { destinationsDetails } from "@/lib/content";
-import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer, viewportConfig } from "@/lib/animations";
+
+
 
 export const metadata: Metadata = {
   title: "Destinations événementiel | Latitude Organisation",
@@ -42,6 +42,7 @@ export default function DestinationsIndex() {
         eyebrow="OÙ ORGANISER"
         title="10 destinations premium pour vos événements"
         subtitle="Paris, Lyon, Nice, Chamonix, Marrakech, Lisbonne, Barcelone, Rome, Genève, Montréal — trouvez la destination parfaite pour votre projet."
+        imageSrc="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1920&q=80"
       />
 
       {/* Destinations Grid */}
@@ -53,17 +54,10 @@ export default function DestinationsIndex() {
             centered={true}
           />
 
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportConfig}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mt-16"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mt-16">
             {destinationsDetails.map((destination) => (
-              <motion.div
+              <div
                 key={destination.slug}
-                variants={fadeInUp}
               >
                 <Link
                   href={`/destinations/${destination.slug}`}
@@ -77,16 +71,16 @@ export default function DestinationsIndex() {
                       {destination.name}
                     </h3>
                     <p className="font-inter text-white/70 text-sm leading-relaxed mb-6 flex-1">
-                      {destination.description.substring(0, 80)}...
+                      {destination.intro.substring(0, 80)}...
                     </p>
                     <span className="inline-block font-inter text-xs font-medium text-latitude-gold group-hover:underline">
                       Découvrir →
                     </span>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -99,13 +93,7 @@ export default function DestinationsIndex() {
             centered={true}
           />
 
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportConfig}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
             {[
               {
                 title: "Partenaires de confiance",
@@ -124,9 +112,8 @@ export default function DestinationsIndex() {
                 desc: "Transports, hébergement, repas, activités — nous orchestrons tout pour zéro stress.",
               },
             ].map((item, i) => (
-              <motion.div
+              <div
                 key={i}
-                variants={fadeInUp}
                 className="border-l-2 border-latitude-gold pl-6"
               >
                 <h3 className="font-playfair text-lg font-bold text-white mb-2">
@@ -135,9 +122,9 @@ export default function DestinationsIndex() {
                 <p className="font-inter text-white/70">
                   {item.desc}
                 </p>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 

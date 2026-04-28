@@ -4,8 +4,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { PageHero, Breadcrumb, CTABand, SectionHeader } from "@/components/shared";
 import { realisationsDetails } from "@/lib/content";
-import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer, viewportConfig } from "@/lib/animations";
+
+
 
 export const metadata: Metadata = {
   title: "Nos Réalisations | Latitude Organisation",
@@ -40,6 +40,7 @@ export default function RealisationsIndex() {
         eyebrow="NOTRE PORTFOLIO"
         title="8 réalisations qui ont marqué les esprits"
         subtitle="Des événements conçus sur mesure pour des entreprises et des publics variés. Nos succès sont vos succès."
+        imageSrc="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1920&q=80"
       />
 
       {/* Portfolio Grid */}
@@ -51,17 +52,10 @@ export default function RealisationsIndex() {
             centered={true}
           />
 
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportConfig}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
             {realisationsDetails.map((realisation) => (
-              <motion.div
+              <div
                 key={realisation.slug}
-                variants={fadeInUp}
               >
                 <Link
                   href={`/realisations/${realisation.slug}`}
@@ -82,9 +76,9 @@ export default function RealisationsIndex() {
                     </span>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -97,13 +91,7 @@ export default function RealisationsIndex() {
             centered={true}
           />
 
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportConfig}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             {[
               {
                 number: "500+",
@@ -118,9 +106,8 @@ export default function RealisationsIndex() {
                 label: "Experts dans l'équipe",
               },
             ].map((item, i) => (
-              <motion.div
+              <div
                 key={i}
-                variants={fadeInUp}
                 className="text-center"
               >
                 <p className="font-playfair text-4xl font-bold text-latitude-gold mb-2">
@@ -129,9 +116,9 @@ export default function RealisationsIndex() {
                 <p className="font-inter text-white/70">
                   {item.label}
                 </p>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 

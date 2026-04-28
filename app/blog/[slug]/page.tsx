@@ -4,8 +4,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { PageHero, Breadcrumb, CTABand } from "@/components/shared";
 import { blogArticles } from "@/lib/content";
-import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer, viewportConfig } from "@/lib/animations";
+
+
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -84,7 +84,7 @@ export default async function BlogArticlePage({
     .slice(0, 3);
 
   // Format date
-  const date = new Date(article.publishDate);
+  const date = new Date(article.date);
   const formattedDate = date.toLocaleDateString("fr-FR", {
     year: "numeric",
     month: "long",
@@ -106,18 +106,9 @@ export default async function BlogArticlePage({
       {/* Article Content */}
       <article className="py-20 lg:py-32 bg-latitude-black border-b border-white/5">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportConfig}
-            className="prose prose-invert max-w-none"
-          >
+          <div className="prose prose-invert max-w-none">
             {/* Meta */}
-            <motion.div
-              variants={fadeInUp}
-              className="flex items-center gap-4 mb-8 pb-8 border-b border-white/10"
-            >
+            <div className="flex items-center gap-4 mb-8 pb-8 border-b border-white/10">
               <span className="font-inter text-sm text-white/60">
                 {formattedDate}
               </span>
@@ -127,25 +118,37 @@ export default async function BlogArticlePage({
               </span>
               <span className="font-inter text-sm text-white/60">•</span>
               <span className="font-inter text-sm text-white/60">
-                {Math.ceil(article.content.split(" ").length / 200)} min de lecture
+                {Math.ceil(article.content.reduce((acc, section) => acc + section.paragraphs.join(" ").split(" ").length + (section.bullets?.join(" ").split(" ").length || 0), 0) / 200)} min de lecture
               </span>
-            </motion.div>
+            </div>
 
             {/* Content */}
-            <motion.div
-              variants={fadeInUp}
-              className="font-inter text-white/80 text-lg leading-relaxed space-y-6 mb-12"
-            >
-              {article.content.split("\n\n").map((paragraph, i) => (
-                <p key={i}>{paragraph}</p>
+            <div className="font-inter text-white/80 text-lg leading-relaxed space-y-6 mb-12">
+              {article.content.map((section, i) => (
+                <div key={i}>
+                  {section.heading && (
+                    <h3 className="font-playfair text-xl font-bold text-white mb-4 mt-6">
+                      {section.heading}
+                    </h3>
+                  )}
+                  <div className="space-y-4">
+                    {section.paragraphs.map((paragraph, j) => (
+                      <p key={j}>{paragraph}</p>
+                    ))}
+                  </div>
+                  {section.bullets && section.bullets.length > 0 && (
+                    <ul className="list-disc list-inside space-y-2 mt-4">
+                      {section.bullets.map((bullet, j) => (
+                        <li key={j}>{bullet}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               ))}
-            </motion.div>
+            </div>
 
             {/* CTA */}
-            <motion.div
-              variants={fadeInUp}
-              className="mt-12 pt-8 border-t border-white/10"
-            >
+            <div className="mt-12 pt-8 border-t border-white/10">
               <h3 className="font-playfair text-xl font-bold text-white mb-4">
                 Besoin de conseils personnalisés ?
               </h3>
@@ -153,38 +156,22 @@ export default async function BlogArticlePage({
                 href="/contact"
                 className="inline-block font-inter text-sm font-medium px-8 py-4 text-white transition-all duration-400 tracking-widest uppercase"
                 style={{ background: "#C9A961" }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.background = "#b8943f")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.background = "#C9A961")
-                }
               >
                 Demander une consultation
               </Link>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
           {/* Related Articles */}
           {relatedArticles.length > 0 && (
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={viewportConfig}
-              className="mt-20 pt-12 border-t border-white/10"
-            >
-              <motion.h2
-                variants={fadeInUp}
-                className="font-playfair text-2xl font-bold text-white mb-8"
-              >
+            <div className="mt-20 pt-12 border-t border-white/10">
+              <h2 className="font-playfair text-2xl font-bold text-white mb-8">
                 Articles similaires
-              </motion.h2>
+              </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {relatedArticles.map((relatedArticle) => (
-                  <motion.div
+                  <div
                     key={relatedArticle.slug}
-                    variants={fadeInUp}
                   >
                     <Link
                       href={`/blog/${relatedArticle.slug}`}
@@ -200,10 +187,10 @@ export default async function BlogArticlePage({
                         Lire la suite →
                       </p>
                     </Link>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           )}
         </div>
       </article>

@@ -43,7 +43,7 @@ export default function SectionHeader({
       {subtitle && (
         <motion.p
           variants={fadeInUp}
-          className="font-inter text-white/70 text-lg max-w-3xl"
+          className="font-inter text-white/70 text-lg max-w-3xl mx-auto"
         >
           {subtitle}
         </motion.p>

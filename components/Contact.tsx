@@ -34,10 +34,22 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="bg-latitude-black py-24 md:py-32"
+      className="relative py-24 md:py-32 overflow-hidden"
+      style={{ background: "#0A0A0A", borderTop: "1px solid rgba(255,255,255,0.05)" }}
       aria-labelledby="contact-title"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      {/* Subtle gold radial halo */}
+      <div
+        className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+        style={{
+          width: "800px",
+          height: "500px",
+          background: "radial-gradient(ellipse at center, rgba(201,169,97,0.10) 0%, rgba(201,169,97,0.04) 40%, transparent 70%)",
+          filter: "blur(20px)",
+        }}
+        aria-hidden="true"
+      />
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -462,3 +474,4 @@ export default function Contact() {
     </section>
   );
 }
+

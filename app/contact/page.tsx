@@ -5,8 +5,8 @@ import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { PageHero, Breadcrumb } from "@/components/shared";
-import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer, viewportConfig } from "@/lib/animations";
+
+
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const breadcrumbs = [
@@ -65,6 +65,7 @@ export default function ContactPage() {
         eyebrow="NOUS CONTACTER"
         title="Parlons de votre prochain événement"
         subtitle="Nos équipes sont disponibles pour discuter de vos projets et vous proposer des solutions sur mesure."
+        imageSrc="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80"
       />
 
       {/* Contact Section */}
@@ -72,18 +73,10 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Info */}
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={viewportConfig}
-            >
-              <motion.h2
-                variants={fadeInUp}
-                className="font-playfair text-3xl font-bold text-white mb-8"
-              >
+            <div>
+              <h2 className="font-playfair text-3xl font-bold text-white mb-8">
                 Nos coordonnées
-              </motion.h2>
+              </h2>
 
               <div className="space-y-8">
                 {[
@@ -106,9 +99,8 @@ export default function ContactPage() {
                     href: "#",
                   },
                 ].map(({ icon: Icon, label, value, href }, i) => (
-                  <motion.a
+                  <a
                     key={i}
-                    variants={fadeInUp}
                     href={href}
                     className="flex gap-4 group"
                   >
@@ -123,15 +115,12 @@ export default function ContactPage() {
                         {value}
                       </p>
                     </div>
-                  </motion.a>
+                  </a>
                 ))}
               </div>
 
               {/* Hours */}
-              <motion.div
-                variants={fadeInUp}
-                className="mt-12 pt-8 border-t border-white/10"
-              >
+              <div className="mt-12 pt-8 border-t border-white/10">
                 <h3 className="font-playfair text-lg font-bold text-white mb-4">
                   Horaires de bureau
                 </h3>
@@ -143,28 +132,17 @@ export default function ContactPage() {
                     Samedi - Dimanche: Fermé
                   </p>
                 </div>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
 
             {/* Contact Form */}
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={viewportConfig}
-            >
-              <motion.h2
-                variants={fadeInUp}
-                className="font-playfair text-3xl font-bold text-white mb-8"
-              >
+            <div>
+              <h2 className="font-playfair text-3xl font-bold text-white mb-8">
                 Envoyez-nous un message
-              </motion.h2>
+              </h2>
 
               {submitted ? (
-                <motion.div
-                  variants={fadeInUp}
-                  className="bg-latitude-gold/10 border border-latitude-gold p-8 text-center"
-                >
+                <div className="bg-latitude-gold/10 border border-latitude-gold p-8 text-center">
                   <p className="font-playfair text-2xl font-bold text-latitude-gold mb-2">
                     Merci !
                   </p>
@@ -172,10 +150,10 @@ export default function ContactPage() {
                     Nous avons reçu votre message et reviendrons vers vous très
                     bientôt.
                   </p>
-                </motion.div>
+                </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <motion.div variants={fadeInUp}>
+                  <div>
                     <label
                       htmlFor="name"
                       className="block font-inter text-sm font-medium text-white/80 mb-2"
@@ -192,9 +170,9 @@ export default function ContactPage() {
                       className="w-full bg-white/5 border border-white/10 text-white font-inter px-4 py-3 focus:outline-none focus:border-latitude-gold transition-colors duration-300 placeholder:text-white/20"
                       placeholder="Nom complet"
                     />
-                  </motion.div>
+                  </div>
 
-                  <motion.div variants={fadeInUp}>
+                  <div>
                     <label
                       htmlFor="email"
                       className="block font-inter text-sm font-medium text-white/80 mb-2"
@@ -211,9 +189,9 @@ export default function ContactPage() {
                       className="w-full bg-white/5 border border-white/10 text-white font-inter px-4 py-3 focus:outline-none focus:border-latitude-gold transition-colors duration-300 placeholder:text-white/20"
                       placeholder="votre@email.com"
                     />
-                  </motion.div>
+                  </div>
 
-                  <motion.div variants={fadeInUp}>
+                  <div>
                     <label
                       htmlFor="phone"
                       className="block font-inter text-sm font-medium text-white/80 mb-2"
@@ -229,9 +207,9 @@ export default function ContactPage() {
                       className="w-full bg-white/5 border border-white/10 text-white font-inter px-4 py-3 focus:outline-none focus:border-latitude-gold transition-colors duration-300 placeholder:text-white/20"
                       placeholder="+33 (0)X XX XX XX XX"
                     />
-                  </motion.div>
+                  </div>
 
-                  <motion.div variants={fadeInUp}>
+                  <div>
                     <label
                       htmlFor="company"
                       className="block font-inter text-sm font-medium text-white/80 mb-2"
@@ -247,9 +225,9 @@ export default function ContactPage() {
                       className="w-full bg-white/5 border border-white/10 text-white font-inter px-4 py-3 focus:outline-none focus:border-latitude-gold transition-colors duration-300 placeholder:text-white/20"
                       placeholder="Nom de votre entreprise"
                     />
-                  </motion.div>
+                  </div>
 
-                  <motion.div variants={fadeInUp}>
+                  <div>
                     <label
                       htmlFor="subject"
                       className="block font-inter text-sm font-medium text-white/80 mb-2"
@@ -273,9 +251,9 @@ export default function ContactPage() {
                       <option value="video">Production vidéo</option>
                       <option value="autre">Autre</option>
                     </select>
-                  </motion.div>
+                  </div>
 
-                  <motion.div variants={fadeInUp}>
+                  <div>
                     <label
                       htmlFor="message"
                       className="block font-inter text-sm font-medium text-white/80 mb-2"
@@ -292,10 +270,9 @@ export default function ContactPage() {
                       className="w-full bg-white/5 border border-white/10 text-white font-inter px-4 py-3 focus:outline-none focus:border-latitude-gold transition-colors duration-300 placeholder:text-white/20 resize-none"
                       placeholder="Décrivez votre projet..."
                     />
-                  </motion.div>
+                  </div>
 
-                  <motion.button
-                    variants={fadeInUp}
+                  <button
                     type="submit"
                     className="w-full font-inter text-sm font-medium px-8 py-4 text-white transition-all duration-400 tracking-widest uppercase cursor-pointer"
                     style={{ background: "#C9A961" }}
@@ -307,10 +284,10 @@ export default function ContactPage() {
                     }
                   >
                     Envoyer mon demande
-                  </motion.button>
+                  </button>
                 </form>
               )}
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { Logo } from "./Logo";
 
 const expertiseLinks = [
   { label: "Séminaires & Incentives", href: "/expertises/seminaires-incentives" },
@@ -46,17 +47,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="mb-4">
-              <span className="font-playfair text-2xl font-bold text-white tracking-tight">
-                Latitude
-              </span>
-              <br />
-              <span
-                className="font-inter text-xs font-light tracking-[0.3em] uppercase"
-                style={{ color: "#C9A961" }}
-              >
-                Organisation
-              </span>
+            <div className="mb-6">
+              <Logo height={52} />
             </div>
             <p className="font-inter text-sm text-white/50 leading-relaxed mb-6">
               Agence événementielle B2B française spécialisée dans

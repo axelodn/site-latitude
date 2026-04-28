@@ -22,7 +22,7 @@ export default function CTABand({
 }: CTABandProps) {
   return (
     <section
-      className={`py-16 lg:py-24 ${isDark ? "bg-latitude-black" : "bg-white/2"}`}
+      className={`py-16 lg:py-24 bg-latitude-black border-t border-white/5`}
     >
       <div className="max-w-4xl mx-auto px-6 lg:px-8">
         <motion.div
@@ -44,7 +44,7 @@ export default function CTABand({
           {subtitle && (
             <motion.p
               variants={fadeInUp}
-              className="font-inter text-white/70 text-lg mb-10 max-w-2xl mx-auto"
+              className="font-inter text-white/60 text-lg mb-10 max-w-2xl mx-auto"
             >
               {subtitle}
             </motion.p>

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { Logo } from "./Logo";
 
 const navLinks = [
   { label: "Accueil", href: "/" },
@@ -52,8 +53,8 @@ export default function Navigation() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-white/95 backdrop-blur-sm shadow-sm"
-            : "bg-transparent"
+            ? "bg-black/95 backdrop-blur-sm shadow-sm shadow-black/20"
+            : "bg-black/30 backdrop-blur-sm"
         }`}
         role="banner"
       >
@@ -62,22 +63,10 @@ export default function Navigation() {
             {/* Logo */}
             <Link
               href="/"
-              className="flex items-center gap-2 group"
+              className="flex items-center group"
               aria-label="Latitude Organisation - Retour à l'accueil"
             >
-              <span
-                className={`font-playfair text-xl font-bold tracking-tight transition-colors duration-300 ${
-                  scrolled ? "text-latitude-black" : "text-white"
-                }`}
-              >
-                Latitude
-              </span>
-              <span
-                className="font-inter text-xs font-light tracking-[0.3em] uppercase transition-colors duration-300"
-                style={{ color: "#C9A961" }}
-              >
-                Organisation
-              </span>
+              <Logo height={64} />
             </Link>
 
             {/* Desktop Nav */}
@@ -92,7 +81,7 @@ export default function Navigation() {
                   href={link.href}
                   onClick={() => handleNavClick(link.href)}
                   className={`font-inter text-sm font-medium tracking-wide transition-colors duration-300 hover:text-latitude-gold ${
-                    scrolled ? "text-latitude-black/80" : "text-white/90"
+                    scrolled ? "text-white/90" : "text-white/90"
                   }`}
                 >
                   {link.label}
@@ -121,17 +110,17 @@ export default function Navigation() {
             >
               <span
                 className={`block w-6 h-0.5 transition-all duration-300 ${
-                  scrolled || mobileOpen ? "bg-latitude-black" : "bg-white"
+                  scrolled || mobileOpen ? "bg-white" : "bg-white"
                 } ${mobileOpen ? "rotate-45 translate-y-2" : ""}`}
               />
               <span
                 className={`block w-6 h-0.5 transition-all duration-300 ${
-                  scrolled || mobileOpen ? "bg-latitude-black" : "bg-white"
+                  scrolled || mobileOpen ? "bg-white" : "bg-white"
                 } ${mobileOpen ? "opacity-0" : ""}`}
               />
               <span
                 className={`block w-6 h-0.5 transition-all duration-300 ${
-                  scrolled || mobileOpen ? "bg-latitude-black" : "bg-white"
+                  scrolled || mobileOpen ? "bg-white" : "bg-white"
                 } ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`}
               />
             </button>

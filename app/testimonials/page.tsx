@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { PageHero, Breadcrumb, CTABand } from "@/components/shared";
-import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer, viewportConfig } from "@/lib/animations";
+
+
 import { Star } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -85,48 +85,36 @@ export default function TestimonialsPage() {
         eyebrow="CE QUE DISENT NOS CLIENTS"
         title="Ils nous font confiance"
         subtitle="Depuis 20 ans, nos clients nous choisissent pour la qualité de nos services et notre engagement envers l'excellence."
+        imageSrc="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&q=80"
       />
 
       {/* Stats */}
       <section className="py-16 lg:py-24 bg-latitude-black border-b border-white/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportConfig}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { number: "98%", label: "Taux de satisfaction" },
               { number: "500+", label: "Événements organisés" },
               { number: "20+", label: "Années d'expérience" },
             ].map((stat, i) => (
-              <motion.div key={i} variants={fadeInUp} className="text-center">
+              <div key={i} className="text-center">
                 <p className="font-playfair text-4xl font-bold text-latitude-gold mb-2">
                   {stat.number}
                 </p>
                 <p className="font-inter text-white/70">{stat.label}</p>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Testimonials Grid */}
       <section className="py-20 lg:py-32 bg-latitude-black border-b border-white/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportConfig}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <motion.div
+              <div
                 key={index}
-                variants={fadeInUp}
                 className="border border-white/10 bg-white/5 p-8 hover:border-latitude-gold/50 hover:bg-white/10 transition-all duration-300"
               >
                 {/* Rating */}
@@ -157,27 +145,19 @@ export default function TestimonialsPage() {
                     {testimonial.company}
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Why Choose Us */}
       <section className="py-20 lg:py-32 bg-latitude-black border-b border-white/5">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportConfig}
-          >
-            <motion.h2
-              variants={fadeInUp}
-              className="font-playfair text-3xl lg:text-4xl font-bold text-white mb-12 text-center"
-            >
+          <div>
+            <h2 className="font-playfair text-3xl lg:text-4xl font-bold text-white mb-12 text-center">
               Pourquoi choisir Latitude Organisation
-            </motion.h2>
+            </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
@@ -206,9 +186,8 @@ export default function TestimonialsPage() {
                   desc: "Tarifs négociés grâce à nos partenariats long terme. Transparence totale, pas de surprises.",
                 },
               ].map((item, i) => (
-                <motion.div
+                <div
                   key={i}
-                  variants={fadeInUp}
                   className="border-l-2 border-latitude-gold pl-6"
                 >
                   <h3 className="font-playfair text-xl font-bold text-white mb-2">
@@ -217,10 +196,10 @@ export default function TestimonialsPage() {
                   <p className="font-inter text-white/70">
                     {item.desc}
                   </p>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

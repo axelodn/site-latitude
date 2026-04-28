@@ -8,8 +8,6 @@ import {
   timeline,
   certifications,
 } from "@/lib/content";
-import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer, viewportConfig } from "@/lib/animations";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -46,6 +44,7 @@ export default function QuiSommesNous() {
         eyebrow="NOTRE HISTOIRE"
         title="Une agence événementielle avec une vraie histoire"
         subtitle="Depuis 2004, nous organisons des événements qui marquent les esprits et renforcent les liens au sein des entreprises."
+        imageSrc="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80"
       />
 
       {/* About Section */}
@@ -53,63 +52,42 @@ export default function QuiSommesNous() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left: Content */}
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={viewportConfig}
-            >
+            <div>
               <SectionHeader
                 title="L'ADN de Latitude Organisation"
                 subtitle="Une approche personnalisée, un interlocuteur dédié, des solutions sur mesure."
                 centered={false}
               />
 
-              <motion.p
-                variants={fadeInUp}
-                className="font-inter text-white/70 text-lg leading-relaxed mt-8 mb-6"
-              >
+              <p className="font-inter text-white/70 text-lg leading-relaxed mt-8 mb-6">
                 Fondée en 2004 par des passionnés de l&apos;événementiel, Latitude Organisation
                 est née de la conviction que chaque événement doit être unique et mémorable.
                 Nous avons commencé modestement, avec une petite équipe motivée et une grande
                 ambition.
-              </motion.p>
+              </p>
 
-              <motion.p
-                variants={fadeInUp}
-                className="font-inter text-white/70 text-lg leading-relaxed mb-6"
-              >
-                Aujourd&apos;hui, nous sommes une équipe forte d&apos;une expérience de plus de
+              <p className="font-inter text-white/70 text-lg leading-relaxed mb-6">
+                Aujourd&apos;hui, nous sommes une équipe de 50+ experts, forte d&apos;une expérience de plus de
                 20 ans, capable de concevoir et de piloter tous les types d&apos;événements professionnels,
                 du séminaire d&apos;équipe de 30 personnes au congrès international de 5 000 délégués.
-              </motion.p>
+              </p>
 
-              <motion.p
-                variants={fadeInUp}
-                className="font-inter text-white/70 text-lg leading-relaxed"
-              >
+              <p className="font-inter text-white/70 text-lg leading-relaxed">
                 Nos clients? Des PME aux grandes entreprises du CAC 40, qui nous font confiance pour
                 transformer leurs enjeux en événements d&apos;exception.
-              </motion.p>
-            </motion.div>
+              </p>
+            </div>
 
             {/* Right: Stats */}
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={viewportConfig}
-              className="space-y-8"
-            >
+            <div className="space-y-8">
               {[
                 { number: "20+", label: "Années d'expérience" },
                 { number: "500+", label: "Événements organisés" },
                 { number: "50+", label: "Experts dans l'équipe" },
                 { number: "98%", label: "Taux de satisfaction client" },
               ].map((stat, i) => (
-                <motion.div
+                <div
                   key={i}
-                  variants={fadeInUp}
                   className="border-l-2 border-latitude-gold pl-6"
                 >
                   <p
@@ -120,9 +98,9 @@ export default function QuiSommesNous() {
                   <p className="font-inter text-white/70 text-lg">
                     {stat.label}
                   </p>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -136,17 +114,10 @@ export default function QuiSommesNous() {
             centered={true}
           />
 
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportConfig}
-            className="mt-16 space-y-12"
-          >
+          <div className="mt-16 space-y-12">
             {timeline.map((item, index) => (
-              <motion.div
+              <div
                 key={item.year}
-                variants={fadeInUp}
                 className="flex gap-8 items-start"
               >
                 <div className="flex-shrink-0 w-24">
@@ -162,9 +133,9 @@ export default function QuiSommesNous() {
                     {item.description}
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -178,17 +149,10 @@ export default function QuiSommesNous() {
             centered={true}
           />
 
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportConfig}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-16 max-w-4xl mx-auto">
             {team.map((member) => (
-              <motion.div
-                key={member.id}
-                variants={fadeInUp}
+              <div
+                key={member.name}
                 className="bg-white/5 border border-white/10 p-8 hover:border-latitude-gold/50 transition-all duration-300"
               >
                 {member.image && (
@@ -210,9 +174,9 @@ export default function QuiSommesNous() {
                 <p className="font-inter text-white/70 text-sm leading-relaxed">
                   {member.bio}
                 </p>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -225,31 +189,24 @@ export default function QuiSommesNous() {
             centered={true}
           />
 
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportConfig}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mt-16"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mt-16">
             {valeurs.map((valeur) => (
-              <motion.div
-                key={valeur.id}
-                variants={fadeInUp}
+              <div
+                key={valeur.titre}
                 className="text-center"
               >
                 <div className="w-16 h-16 rounded-full border-2 border-latitude-gold flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">{valeur.icon}</span>
                 </div>
                 <h3 className="font-playfair text-lg font-bold text-white mb-3">
-                  {valeur.name}
+                  {valeur.titre}
                 </h3>
                 <p className="font-inter text-white/70 text-sm leading-relaxed">
                   {valeur.description}
                 </p>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -262,31 +219,21 @@ export default function QuiSommesNous() {
             centered={true}
           />
 
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportConfig}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
             {certifications.map((cert) => (
-              <motion.div
-                key={cert.id}
-                variants={fadeInUp}
+              <div
+                key={cert.name}
                 className="border border-white/10 p-8 hover:border-latitude-gold/50 transition-all duration-300"
               >
                 <h3 className="font-playfair text-lg font-bold text-white mb-2">
                   {cert.name}
                 </h3>
-                <p className="font-inter text-white/70 text-sm mb-3">
-                  {cert.issuer}
-                </p>
-                <p className="font-inter text-white/50 text-xs">
+                <p className="font-inter text-white/70 text-sm">
                   {cert.description}
                 </p>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 

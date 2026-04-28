@@ -4,8 +4,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { PageHero, Breadcrumb, CTABand } from "@/components/shared";
 import { destinationsDetails } from "@/lib/content";
-import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer, viewportConfig } from "@/lib/animations";
+
+
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -23,18 +23,12 @@ export async function generateMetadata(
   }
 
   return {
-    title: `${destination.name} | Latitude Organisation`,
-    description: destination.description.substring(0, 160),
-    keywords: [
-      destination.name,
-      destination.country,
-      "événement",
-      "séminaire",
-      "destination",
-    ],
+    title: destination.metaTitle,
+    description: destination.metaDescription,
+    keywords: destination.keywords,
     openGraph: {
-      title: `${destination.name} | Latitude Organisation`,
-      description: destination.description.substring(0, 160),
+      title: destination.metaTitle,
+      description: destination.metaDescription,
       type: "website",
     },
   };
@@ -92,8 +86,8 @@ export default async function DestinationPage({
       {/* Hero */}
       <PageHero
         eyebrow={destination.country.toUpperCase()}
-        title={destination.name}
-        subtitle={destination.description.substring(0, 150)}
+        title={destination.h1}
+        subtitle={destination.intro.substring(0, 150)}
       />
 
       {/* Main Content */}
@@ -101,59 +95,59 @@ export default async function DestinationPage({
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Main content */}
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={viewportConfig}
-              className="lg:col-span-2"
-            >
-              <motion.div variants={fadeInUp} className="mb-8">
+            <div className="lg:col-span-2">
+              <div className="mb-8">
                 <h2 className="font-playfair text-2xl font-bold text-white mb-4">
                   À propos
                 </h2>
                 <p className="font-inter text-white/70 text-lg leading-relaxed">
-                  {destination.description}
+                  {destination.intro}
                 </p>
-              </motion.div>
+              </div>
 
-              <motion.div variants={fadeInUp} className="mb-8">
+              <div className="mb-8">
                 <h2 className="font-playfair text-2xl font-bold text-white mb-4">
                   Pourquoi choisir {destination.name} ?
                 </h2>
                 <ul className="space-y-3">
-                  {destination.highlights.map((highlight, i) => (
+                  {destination.why.map((item, i) => (
                     <li key={i} className="flex gap-3">
                       <span className="text-latitude-gold font-bold">✓</span>
-                      <span className="font-inter text-white/70">{highlight}</span>
+                      <span className="font-inter text-white/70">{item}</span>
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
 
-              <motion.div variants={fadeInUp} className="mb-8">
+              <div className="mb-8">
                 <h2 className="font-playfair text-2xl font-bold text-white mb-4">
-                  Recommandations événementielles
+                  Informations pratiques
                 </h2>
-                <div className="space-y-4">
-                  {destination.recommendations.map((rec, i) => (
-                    <div key={i} className="border-l-2 border-latitude-gold pl-4">
-                      <p className="font-inter font-medium text-white mb-1">
-                        {rec.title}
-                      </p>
-                      <p className="font-inter text-white/70 text-sm">
-                        {rec.description}
-                      </p>
-                    </div>
-                  ))}
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="font-inter font-bold text-white mb-2">Climat</h3>
+                    <p className="font-inter text-white/70">{destination.climat}</p>
+                  </div>
+                  <div>
+                    <h3 className="font-inter font-bold text-white mb-2">Meilleure saison</h3>
+                    <p className="font-inter text-white/70">{destination.bestSeason}</p>
+                  </div>
+                  <div>
+                    <h3 className="font-inter font-bold text-white mb-2">Lieux d'intérêt</h3>
+                    <ul className="space-y-2">
+                      {destination.lieux.slice(0, 4).map((lieu, i) => (
+                        <li key={i} className="flex gap-3">
+                          <span className="text-latitude-gold">•</span>
+                          <span className="font-inter text-white/70">{lieu}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* CTA */}
-              <motion.div
-                variants={fadeInUp}
-                className="mt-12 pt-8 border-t border-white/10"
-              >
+              <div className="mt-12 pt-8 border-t border-white/10">
                 <h3 className="font-playfair text-xl font-bold text-white mb-4">
                   Intéressé par {destination.name} ?
                 </h3>
@@ -161,60 +155,16 @@ export default async function DestinationPage({
                   href="/contact"
                   className="inline-block font-inter text-sm font-medium px-8 py-4 text-white transition-all duration-400 tracking-widest uppercase"
                   style={{ background: "#C9A961" }}
-                  onMouseEnter={(e) => (e.currentTarget.style.background = "#b8943f")}
-                  onMouseLeave={(e) => (e.currentTarget.style.background = "#C9A961")}
                 >
                   Demander un devis
                 </Link>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
 
             {/* Sidebar */}
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={viewportConfig}
-              className="lg:col-span-1 space-y-8"
-            >
-              {/* Quick Facts */}
-              <motion.div
-                variants={fadeInUp}
-                className="bg-white/5 border border-white/10 p-8"
-              >
-                <h3 className="font-playfair text-lg font-bold text-white mb-6">
-                  Informations pratiques
-                </h3>
-                <div className="space-y-4">
-                  <div className="border-b border-white/10 pb-4">
-                    <p className="font-inter text-sm text-white/60 mb-1">
-                      Fuseau horaire
-                    </p>
-                    <p className="font-playfair font-bold text-white">
-                      {destination.timezone}
-                    </p>
-                  </div>
-                  <div className="border-b border-white/10 pb-4">
-                    <p className="font-inter text-sm text-white/60 mb-1">
-                      Meilleure période
-                    </p>
-                    <p className="font-playfair font-bold text-white">
-                      {destination.bestPeriod}
-                    </p>
-                  </div>
-                  <div>
-                    <p className="font-inter text-sm text-white/60 mb-1">
-                      Langue officielle
-                    </p>
-                    <p className="font-playfair font-bold text-white">
-                      {destination.language}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-
+            <div className="lg:col-span-1 space-y-8">
               {/* Other Destinations */}
-              <motion.div variants={fadeInUp}>
+              <div>
                 <h3 className="font-playfair text-lg font-bold text-white mb-4">
                   Autres destinations
                 </h3>
@@ -234,8 +184,8 @@ export default async function DestinationPage({
                     </Link>
                   ))}
                 </div>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

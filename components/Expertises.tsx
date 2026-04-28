@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import Link from "next/link";
 import {
   Users,
   Presentation,
@@ -31,7 +32,8 @@ export default function Expertises() {
   return (
     <section
       id="expertises"
-      className="bg-latitude-cream py-24 md:py-32"
+      className="py-24 md:py-32"
+      style={{ background: "#F5F3EE" }}
       aria-labelledby="expertises-title"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -60,7 +62,7 @@ export default function Expertises() {
           </motion.h2>
           <motion.p
             variants={fadeInUp}
-            className="font-inter text-latitude-gray-dark text-lg max-w-2xl mx-auto leading-relaxed"
+            className="font-inter text-latitude-black/60 text-lg max-w-2xl mx-auto leading-relaxed"
           >
             6 domaines d&apos;excellence pour orchestrer vos événements
             d&apos;entreprise, de la conception à la réalisation, en France et à
@@ -83,9 +85,10 @@ export default function Expertises() {
               <motion.article
                 key={expertise.id}
                 variants={fadeInUp}
-                className="group bg-white border border-latitude-gray-light p-8 hover:shadow-xl transition-all duration-400 hover:-translate-y-1 cursor-default flex flex-col"
+                className="group relative bg-white border border-black/8 p-8 hover:border-latitude-gold/60 hover:shadow-lg transition-all duration-400 hover:-translate-y-1 flex flex-col"
                 aria-label={`Service : ${expertise.title}`}
               >
+                <Link href={`/expertises/${expertise.id}`} className="absolute inset-0 z-10" aria-label={`Voir ${expertise.title}`} />
                 {/* Icon */}
                 <div
                   className="w-12 h-12 mb-6 flex items-center justify-center border"
@@ -115,12 +118,12 @@ export default function Expertises() {
                 </p>
 
                 {/* Description */}
-                <p className="font-inter text-sm text-latitude-gray-dark leading-relaxed flex-1">
+                <p className="font-inter text-sm text-latitude-black/60 leading-relaxed flex-1">
                   {expertise.description}
                 </p>
 
                 {/* CTA */}
-                <div className="mt-6 flex items-center gap-2 text-sm font-medium text-latitude-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="mt-6 flex items-center gap-2 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ color: "#C9A961" }}>
                   <span className="font-inter tracking-wide">En savoir plus</span>
                   <ArrowRight size={14} aria-hidden="true" />
                 </div>

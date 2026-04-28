@@ -7,6 +7,7 @@ interface PageHeroProps {
   eyebrow?: string;
   title: string;
   subtitle?: string;
+  imageSrc?: string;
   cta?: {
     label: string;
     onClick?: () => void;
@@ -18,6 +19,7 @@ export default function PageHero({
   eyebrow,
   title,
   subtitle,
+  imageSrc,
   cta,
 }: PageHeroProps) {
   return (
@@ -26,11 +28,19 @@ export default function PageHero({
       aria-label={title}
     >
       {/* Background */}
-      <div className="absolute inset-0 bg-latitude-black" aria-hidden="true" />
+      {imageSrc ? (
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${imageSrc})` }}
+          aria-hidden="true"
+        />
+      ) : (
+        <div className="absolute inset-0 bg-latitude-black" aria-hidden="true" />
+      )}
 
-      {/* Gradient overlay */}
+      {/* Gradient overlay — plus sombre si image */}
       <div
-        className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60"
+        className={`absolute inset-0 bg-gradient-to-b ${imageSrc ? "from-black/60 via-black/50 to-black/80" : "from-black/40 via-black/20 to-black/60"}`}
         aria-hidden="true"
       />
 

@@ -1,6 +1,10 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
   staggerContainer,
   fadeInUp,
@@ -31,10 +35,31 @@ const steps = [
 ];
 
 export default function Approach() {
+  const imgRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    if (!imgRef.current || !sectionRef.current) return;
+
+    gsap.to(imgRef.current, {
+      yPercent: -12,
+      ease: "none",
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: 1.2,
+      },
+    });
+  }, []);
+
   return (
     <section
+      ref={sectionRef}
       id="approche"
-      className="bg-white py-24 md:py-32 overflow-hidden"
+      className="py-24 md:py-32 overflow-hidden"
+      style={{ background: "#0A0A0A", borderTop: "1px solid rgba(255,255,255,0.05)" }}
       aria-labelledby="approche-title"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -56,7 +81,7 @@ export default function Approach() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={viewportConfig}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-playfair font-bold text-latitude-black text-4xl md:text-5xl mb-16 text-center leading-tight"
+          className="font-playfair font-bold text-white text-4xl md:text-5xl mb-16 text-center leading-tight"
         >
           Une méthode éprouvée pour organiser
           <br className="hidden md:block" /> vos événements d&apos;entreprise
@@ -71,34 +96,22 @@ export default function Approach() {
             viewport={viewportConfig}
             className="relative"
           >
-            {/* TODO: Replace with real client photo — suggested: event atmosphere, elegant venue */}
             <div
-              className="w-full aspect-[4/5] bg-gradient-to-br from-latitude-gray-dark to-latitude-black relative overflow-hidden"
+              className="w-full aspect-[4/5] relative overflow-hidden"
               role="img"
-              aria-label="Organisation d'événement professionnel par Latitude Organisation — ambiance élégante et sophistiquée"
+              aria-label="Soirée gala d'entreprise organisée par Latitude Organisation"
             >
-              {/* Decorative grid overlay */}
-              <div
-                className="absolute inset-0 opacity-10"
-                style={{
-                  backgroundImage: `linear-gradient(#C9A961 1px, transparent 1px), linear-gradient(90deg, #C9A961 1px, transparent 1px)`,
-                  backgroundSize: "60px 60px",
-                }}
+              <div ref={imgRef} className="absolute inset-0 will-change-transform" style={{ top: "-15%", bottom: "-15%" }}>
+              <Image
+                src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=1000&fit=crop"
+                alt="Soirée gala d'entreprise organisée par Latitude Organisation"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
-              {/* Decorative text */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <p
-                    className="font-playfair text-6xl font-bold opacity-10"
-                    style={{ color: "#C9A961" }}
-                  >
-                    20+
-                  </p>
-                  <p className="font-inter text-sm text-white/20 tracking-widest uppercase mt-2">
-                    Années d&apos;excellence
-                  </p>
-                </div>
               </div>
+              {/* Dark gradient overlay at bottom */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             </div>
 
             {/* Floating badge */}
@@ -144,10 +157,10 @@ export default function Approach() {
 
                 {/* Content */}
                 <div className="pt-2">
-                  <h3 className="font-playfair font-bold text-latitude-black text-2xl mb-3">
+                  <h3 className="font-playfair font-bold text-white text-2xl mb-3">
                     {step.number} — {step.title}
                   </h3>
-                  <p className="font-inter text-latitude-gray-dark leading-relaxed text-[0.95rem]">
+                  <p className="font-inter text-white/60 leading-relaxed text-[0.95rem]">
                     {step.content}
                   </p>
                 </div>
@@ -167,7 +180,7 @@ export default function Approach() {
                     .getElementById("contact")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
-                className="group font-inter text-sm font-medium px-8 py-4 bg-latitude-black text-white hover:bg-latitude-gray-dark transition-all duration-300 tracking-widest uppercase cursor-pointer"
+                className="group font-inter text-sm font-medium px-8 py-4 border border-white/30 text-white hover:bg-white hover:text-latitude-black transition-all duration-300 tracking-widest uppercase cursor-pointer"
                 aria-label="Demander un devis pour votre événement d'entreprise"
               >
                 Démarrer votre projet
