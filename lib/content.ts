@@ -77,7 +77,7 @@ export const timeline = [
     year: "2024",
     title: "20 ans d'expertise",
     description:
-      "500+ événements orchestrés, 120+ centres de congrès partenaires, 95% de satisfaction client. La référence B2B française.",
+      "500+ événements orchestrés, 120+ centres de congrès partenaires en France et à l'international. 20 ans au service de l'événementiel professionnel.",
   },
 ];
 
@@ -197,23 +197,11 @@ export const expertiseDetails: ExpertiseDetail[] = [
         description: "Voyage incentive longue distance haut de gamme.",
       },
     ],
-    cases: [
-      {
-        title: "Incentive Montagne Novatec - 200 collaborateurs",
-        details:
-          "Un séminaire incentive de 3 jours à Chamonix combinant activités outdoor (escalade, raquettes), ateliers collaboratifs et soirée de gala au pied du Mont-Blanc.",
-      },
-      {
-        title: "Séminaire Direction Stratégique - 120 cadres dirigeants",
-        details:
-          "Séminaire stratégique au Château de Vaux-le-Vicomte alliant travail de fond, créativité et expérience patrimoniale d'exception.",
-      },
-    ],
     faq: [
       {
         question: "Quel budget prévoir pour un séminaire d'entreprise ?",
         answer:
-          "Le budget d'un séminaire varie selon le nombre de participants, la durée, la destination et le niveau de prestations. À titre indicatif, comptez entre 500€ et 2 500€ par participant pour un séminaire de 2-3 jours en France, et entre 1 200€ et 4 500€ pour un voyage incentive international. Nous adaptons notre offre à votre budget pour maximiser l'impact.",
+          "Le budget d'un séminaire varie selon le nombre de participants, la durée, la destination et le niveau de prestations. Contactez-nous pour un devis personnalisé adapté à vos objectifs et contraintes.",
       },
       {
         question: "Combien de temps à l'avance organiser un séminaire ?",
@@ -307,33 +295,16 @@ export const expertiseDetails: ExpertiseDetail[] = [
           "Un avantage décisif : 20 ans de relations privilégiées avec les meilleurs centres de congrès de France et d'Europe nous donnent accès à des dates, des tarifs et des prestations exclusives. Du Palais des Congrès de Paris aux structures internationales de Marrakech, Barcelone ou Lisbonne - nous trouvons le lieu qui fait la différence.",
       },
     ],
-    cases: [
-      {
-        title: "Convention Annuelle TechCorp - 850 participants",
-        details:
-          "Convention de 2 jours au Palais des Congrès de Paris : 4 keynotes, 18 ateliers parallèles, soirée gala au Musée d'Orsay, captation et live streaming, application mobile dédiée.",
-      },
-      {
-        title: "Forum Leadership Médiane - 350 dirigeants à Marrakech",
-        details:
-          "Forum international 3 jours au La Mamounia : sessions stratégiques, ateliers de leadership, soirée de gala dans la palmeraie, transfert de 350 personnes.",
-      },
-    ],
     faq: [
       {
         question: "À partir de combien de participants gérez-vous un congrès ?",
         answer:
-          "Nous gérons des congrès de 100 à 5 000 participants. Notre méthodologie s'adapte à toutes les tailles, avec une expertise particulière sur les événements de 300 à 1 500 personnes qui nécessitent une orchestration complexe.",
+          "Nous gérons des congrès de toutes tailles. Notre méthodologie s'adapte aussi bien aux événements de quelques dizaines de participants qu'aux grands rassemblements de plusieurs centaines ou milliers de personnes.",
       },
       {
         question: "Pouvez-vous organiser un congrès international ?",
         answer:
           "Oui, c'est l'une de nos spécialités. Notre licence d'agence de voyage et notre réseau international nous permettent d'organiser des congrès partout dans le monde, avec une attention particulière à la logistique transport-hébergement-traduction.",
-      },
-      {
-        question: "Combien coûte l'organisation d'un congrès ?",
-        answer:
-          "Le coût d'un congrès professionnel varie de 200€ à 1 500€ par participant selon le format, le lieu, la durée et les prestations. Nous établissons un devis détaillé poste par poste après échange sur vos objectifs et contraintes.",
       },
       {
         question: "Gérez-vous le live streaming et le format hybride ?",
@@ -366,7 +337,7 @@ export const expertiseDetails: ExpertiseDetail[] = [
       "Galas, soirées de fin d'année, soirées à thème : nous créons des expériences sensorielles uniques.",
     introTitle: "L'art de la soirée d'entreprise réussie",
     intro:
-      "Une soirée d'entreprise réussie est un moment suspendu où vos collaborateurs, clients ou partenaires vivent une expérience qu'ils n'oublieront pas. C'est l'art subtil de marier un lieu d'exception, une scénographie raffinée, une restauration mémorable et une animation à la hauteur de votre marque. Notre signature : transformer une soirée en moment de vérité, où les émotions partagées créent des liens durables. De la soirée de fin d'année à 50 personnes au gala d'entreprise réunissant 800 invités au Musée d'Orsay, nous concevons chaque soirée comme une œuvre unique.",
+      "Une soirée d'entreprise réussie est un moment suspendu où vos collaborateurs, clients ou partenaires vivent une expérience qu'ils n'oublieront pas. C'est l'art subtil de marier un lieu d'exception, une scénographie raffinée, une restauration mémorable et une animation à la hauteur de votre marque. Notre signature : transformer une soirée en moment de vérité, où les émotions partagées créent des liens durables. De la soirée de fin d'année intime au gala d'entreprise de grande envergure, nous concevons chaque soirée comme une œuvre unique.",
     sections: [
       {
         title: "Types de soirées événementielles",
@@ -383,18 +354,9 @@ export const expertiseDetails: ExpertiseDetail[] = [
         ],
       },
       {
-        title: "Nos lieux prestigieux partenaires",
+        title: "Des lieux d'exception",
         content:
-          "Un réseau soigneusement constitué de lieux d'exception qui placent immédiatement votre soirée dans une autre dimension.",
-        items: [
-          "Musée d'Orsay, Paris - galerie des Impressionnistes après fermeture",
-          "Hôtel de Crillon, Paris - salons historiques place de la Concorde",
-          "Château de Vaux-le-Vicomte - cadre patrimonial aux chandelles",
-          "Bourse de Commerce - lieu emblématique d'art contemporain",
-          "Palais Brongniart - l'ancien temple boursier de Paris",
-          "Domaine de Chantilly - château et jardins d'exception",
-          "Palais Royal - galeries du Conseil d'État",
-        ],
+          "Nous sélectionnons le lieu qui correspond parfaitement à votre image et vos ambitions. Châteaux, domaines, espaces atypiques, toits-terrasses, lieux patrimoniaux : notre réseau vous ouvre les portes de lieux rares pour des soirées qui marquent.",
       },
       {
         title: "Notre approche : créer un voyage sensoriel",
@@ -409,38 +371,16 @@ export const expertiseDetails: ExpertiseDetail[] = [
         ],
       },
     ],
-    cases: [
-      {
-        title: "Soirée Gala Groupe Éclipse - 400 personnes au Musée d'Orsay",
-        details:
-          "Privatisation exclusive du Musée d'Orsay : cocktail dans la nef, dîner gastronomique 3 services, animation jazz live et DJ set, accès privé aux collections impressionnistes.",
-      },
-      {
-        title: "Soirée de Fin d'Année Pharma - 500 invités à l'Hôtel de Crillon",
-        details:
-          "Soirée de gala dans les salons historiques du Crillon : cocktail dînatoire, show artistique exclusif, mapping vidéo personnalisé, dance floor jusqu'à 2h.",
-      },
-    ],
     faq: [
       {
-        question: "Combien coûte l'organisation d'une soirée d'entreprise ?",
+        question: "Combien de temps à l'avance préparer une soirée ?",
         answer:
-          "Le budget d'une soirée d'entreprise varie de 150€ à 800€ par invité selon le lieu, le format, la restauration et l'animation. Nous concevons des soirées sur tous types de budgets en optimisant la répartition lieu/restauration/animation.",
-      },
-      {
-        question: "Combien de temps à l'avance préparer une soirée gala ?",
-        answer:
-          "Idéalement 4 à 6 mois pour une soirée prestige dans un lieu d'exception, qui nécessite de réserver très en amont. Pour une soirée plus standard, 2 à 3 mois suffisent. Nous gérons aussi des soirées en mode commando en moins d'un mois.",
-      },
-      {
-        question: "Pouvez-vous privatiser un musée pour notre soirée ?",
-        answer:
-          "Oui, nous sommes accrédités auprès des principaux musées et lieux patrimoniaux français. Musée d'Orsay, Centre Pompidou, Bourse de Commerce, Palais Royal : nous orchestrons des privatisations exclusives.",
+          "Idéalement plusieurs mois pour une soirée prestige dans un lieu d'exception qui nécessite de réserver très en amont. Nous gérons aussi des projets plus courts selon la disponibilité des lieux et prestataires. Contactez-nous pour évaluer la faisabilité.",
       },
       {
         question: "Quelles animations proposez-vous pour une soirée ?",
         answer:
-          "Toute la palette de l'animation événementielle : DJ et orchestres, danseurs et chorégraphes, performers visuels, magiciens, mentalistes, chœurs gospel, mapping vidéo, scénographie immersive, photobooth haut de gamme.",
+          "Toute la palette de l'animation événementielle : DJ et orchestres, danseurs et chorégraphes, performers visuels, magiciens, mentalistes, mapping vidéo, scénographie immersive. Nous co-construisons le programme artistique avec vous.",
       },
     ],
     keywords: [
@@ -490,19 +430,19 @@ export const expertiseDetails: ExpertiseDetail[] = [
           "Ateliers culinaires avec grands chefs étoilés",
           "Rallye 4x4 dans le désert marocain",
           "Construction d'œuvres collectives (mosaïques géantes, fresques)",
-          "Survie en forêt avec ex-militaires (Vercors, Forêt de Fontainebleau)",
+          "Jeux d'orientation et défis nature en forêt (Vercors, Fontainebleau)",
         ],
       },
       {
-        title: "Les bénéfices mesurables d'un team-building",
+        title: "Les bénéfices d'un team-building",
         content:
           "Au-delà du moment partagé, un team-building bien conçu produit des effets durables.",
         items: [
-          "Renforcement de la cohésion d'équipe (+34% selon nos enquêtes post-événement)",
+          "Renforcement de la cohésion d'équipe",
           "Amélioration de la communication interservices",
           "Révélation de leaders informels et de talents cachés",
           "Création de souvenirs communs qui consolident l'identité d'équipe",
-          "Boost de motivation mesurable dans les semaines suivantes",
+          "Regain de motivation dans les semaines suivantes",
         ],
       },
     ],
@@ -513,28 +453,11 @@ export const expertiseDetails: ExpertiseDetail[] = [
       { name: "Marrakech", description: "Désert, rallye 4x4, médinas et palaces." },
       { name: "Forêt de Fontainebleau", description: "Survie, escalade, à 1h de Paris." },
     ],
-    cases: [
-      {
-        title: "Incentive Montagne Novatec - 200 collaborateurs à Chamonix",
-        details:
-          "3 jours d'aventure : escalade, via ferrata, ateliers en altitude, soirée de gala face au Mont-Blanc, film bilan projeté le dernier soir.",
-      },
-      {
-        title: "Régates & Mer - 80 personnes à Saint-Tropez",
-        details:
-          "2 jours en flottille : initiation à la voile, régate inter-équipes, déjeuner sur îles isolées, soirée plage.",
-      },
-    ],
     faq: [
       {
         question: "Quel est le bon nombre de personnes pour un team-building ?",
         answer:
-          "Tous les formats sont possibles : de 10 à 1 000 personnes. Pour un team-building intime favorisant les échanges profonds, privilégiez 15 à 30 participants. Pour une démarche de cohésion à grande échelle, nous gérons des dispositifs jusqu'à 1 000 personnes simultanément.",
-      },
-      {
-        question: "Combien coûte un team-building d'entreprise ?",
-        answer:
-          "Le budget varie de 80€ à 600€ par participant selon la durée (demi-journée, journée, weekend), la destination et le niveau de prestations. Nous adaptons toujours l'expérience à votre budget pour maximiser l'impact.",
+          "Tous les formats sont possibles, de petits groupes à des dispositifs de grande envergure. Nous adaptons les activités et la logistique au nombre de participants pour garantir une expérience optimale.",
       },
       {
         question: "Peut-on faire un team-building en demi-journée ?",
@@ -602,21 +525,14 @@ export const expertiseDetails: ExpertiseDetail[] = [
       {
         title: "Notre approche pédagogique",
         content:
-          "Nous croyons à la pédagogie expérientielle : on apprend en faisant, en réfléchissant, en se confrontant. Nos programmes mêlent théorie, mises en situation, outdoor learning et coaching. Tous nos coachs sont certifiés et expérimentés (15+ ans).",
-      },
-    ],
-    cases: [
-      {
-        title: "Programme Leadership COMEX - Groupe industriel",
-        details:
-          "Programme 12 mois pour les 15 membres du COMEX : 4 séminaires résidentiels, coaching individuel mensuel, 360° feedback, certification finale.",
+          "Nous croyons à la pédagogie expérientielle : on apprend en faisant, en réfléchissant, en se confrontant. Nos programmes mêlent théorie, mises en situation, outdoor learning et coaching, dans des formats adaptés à votre culture d'entreprise.",
       },
     ],
     faq: [
       {
-        question: "Tous vos coachs sont-ils certifiés ?",
+        question: "Pouvez-vous accompagner un dirigeant en coaching individuel ?",
         answer:
-          "Oui, l'intégralité de nos coachs et formateurs sont certifiés (HEC, ICF, CSA Coaching, Mozaïk International ou équivalent) et ont au minimum 10 ans d'expérience en accompagnement de dirigeants et d'équipes.",
+          "Oui, nous proposons des accompagnements individuels pour dirigeants et top managers. La durée et le format sont définis selon vos objectifs spécifiques.",
       },
       {
         question: "Pouvez-vous accompagner un dirigeant en coaching individuel ?",
@@ -654,13 +570,12 @@ export const expertiseDetails: ExpertiseDetail[] = [
       {
         title: "Notre signature : tournage + montage live + projection le soir même",
         content:
-          "Une équipe de 3 à 8 personnes selon l'événement, dont des cadreurs, un drone certifié, un monteur, un directeur de production.",
+          "Une équipe professionnelle intervient pendant toute la durée de votre événement pour filmer, monter et projeter le film bilan le soir même.",
         items: [
-          "Captation 4K multi-caméras pendant l'intégralité de l'événement",
-          "Drone DJI certifié pour les plans aériens spectaculaires",
-          "Montage en temps réel dans notre studio mobile (camion équipé)",
-          "Projection sur grand écran le soir même devant les participants",
-          "Livraison du fichier final en 24-48h après l'événement",
+          "Captation professionnelle multi-caméras pendant l'intégralité de l'événement",
+          "Montage en temps réel pour une projection le soir même",
+          "Projection sur grand écran devant les participants en clôture",
+          "Livraison du fichier final après l'événement",
         ],
       },
       {
@@ -684,24 +599,19 @@ export const expertiseDetails: ExpertiseDetail[] = [
     ],
     faq: [
       {
-        question: "Combien coûte L'Œil du Terrain ?",
-        answer:
-          "Le service complet (tournage + montage live + projection) démarre à 8 000€ HT pour un événement d'une journée. Le tarif évolue selon la durée, le nombre de caméras, l'équipe nécessaire et la complexité du montage.",
-      },
-      {
-        question: "Combien de personnes mobilisez-vous ?",
-        answer:
-          "Une équipe de 3 à 8 personnes : 1 directeur de production, 2-4 cadreurs, 1 télépilote drone si besoin, 1-2 monteurs en studio mobile. L'équipe est calibrée selon la taille et la complexité de l'événement.",
-      },
-      {
         question: "Pouvez-vous filmer en plein air, en montagne, en mer ?",
         answer:
-          "Oui, nos équipes sont rompues à toutes les conditions de tournage : altitude, mer, désert, espaces clos. Notre matériel est adapté à tous les environnements et nos pilotes drones sont certifiés.",
+          "Oui, nos équipes interviennent dans tous types d'environnements : en intérieur comme en extérieur, quelle que soit la destination ou les conditions. L'Œil du Terrain s'adapte à votre contexte.",
       },
       {
-        question: "Combien de temps avant l'événement faut-il vous engager ?",
+        question: "Combien de temps avant l'événement faut-il vous contacter ?",
         answer:
-          "Idéalement 4 à 6 semaines avant pour un cadrage scénaristique et logistique optimal. Nous gérons aussi des événements en urgence avec un préavis de 7-10 jours.",
+          "Idéalement plusieurs semaines avant pour un cadrage scénaristique et logistique optimal. N'hésitez pas à nous contacter pour évaluer la faisabilité selon votre calendrier.",
+      },
+      {
+        question: "Le film est-il vraiment prêt le soir même ?",
+        answer:
+          "Oui. C'est précisément notre signature L'Œil du Terrain : nos équipes filment et montent en temps réel pendant l'événement pour une projection en clôture, le soir même.",
       },
     ],
     keywords: [
@@ -740,317 +650,316 @@ export type RealisationDetail = {
 
 export const realisationsDetails: RealisationDetail[] = [
   {
-    slug: "convention-techcorp",
-    title: "Convention Annuelle TechCorp",
-    metaTitle: "Convention Annuelle TechCorp Paris - Cas Client",
+    slug: "convention-annuelle-paris",
+    title: "Convention Annuelle - Paris",
+    metaTitle: "Convention Annuelle Paris - Realisation Latitude Organisation",
     metaDescription:
-      "Découvrez l'organisation de la Convention Annuelle TechCorp : 850 participants au Palais des Congrès de Paris.",
-    h1: "Convention Annuelle TechCorp - 850 participants au Palais des Congrès",
+      "Organisation d'une convention annuelle de grande envergure au coeur de Paris : plénières, ateliers parallèles et soirée de gala.",
+    h1: "Convention Annuelle - Grande envergure à Paris",
     category: "Congrès",
-    lieu: "Palais des Congrès, Paris",
-    date: "Octobre 2024",
+    lieu: "Paris",
+    date: "2024",
     participants: 850,
     duree: "2 jours",
     description:
-      "Pour la 12ème édition de leur convention annuelle, TechCorp nous a confié l'orchestration complète d'un rendez-vous stratégique réunissant 850 collaborateurs au Palais des Congrès de Paris. L'enjeu : aligner les équipes sur la nouvelle vision 3 ans, célébrer les succès de l'année, et créer un moment de cohésion fort dans un contexte post-acquisition. Nous avons conçu une scénographie immersive autour du concept 'Horizons', avec une plénière scénographiée, 18 ateliers parallèles, et une soirée de gala au Musée d'Orsay.",
+      "Un rendez-vous stratégique réunissant plusieurs centaines de collaborateurs en plein coeur de Paris. L'enjeu : aligner les équipes sur une vision commune, célébrer les succès de l'année et créer un moment de cohésion fort. Nous avons orchestré la scénographie, les sessions plénières, les ateliers parallèles, la soirée de gala et la production vidéo L'Œil du Terrain projetée en clôture.",
     challenges: [
-      "Aligner 850 collaborateurs issus de 4 entités récemment fusionnées",
-      "Diffuser le contenu en hybride pour 200 collaborateurs distants",
-      "Tenir un planning serré sur 2 jours avec 4 keynotes et 18 ateliers parallèles",
-      "Créer un fil narratif cohérent jour 1 + jour 2 + soirée gala",
+      "Aligner des équipes issues d'entités multiples",
+      "Tenir un planning dense sur 2 jours avec sessions parallèles",
+      "Créer un fil narratif cohérent du jour 1 à la soirée de clôture",
+      "Coordonner l'ensemble des prestataires techniques et logistiques",
     ],
     solutions: [
-      "Scénographie immersive 'Horizons' déclinée du Palais des Congrès au Musée d'Orsay",
-      "Application mobile dédiée : programme, votes, networking, Q&A",
-      "Captation 6 caméras + live streaming sécurisé pour les 200 distants",
+      "Scénographie immersive et identité visuelle déclinée sur tous les supports",
+      "Coordination des prestataires techniques, restauration et hébergement",
       "Production vidéo L'Œil du Terrain projetée en clôture",
+      "Suivi logistique et gestion des flux participants",
     ],
     resultats: [
-      { label: "Satisfaction participants", value: "97%" },
-      { label: "Ateliers tenus à 100%", value: "18/18" },
-      { label: "Engagement digital (votes)", value: "+62%" },
-      { label: "NPS marque employeur post", value: "+18 pts" },
+      { label: "Participants", value: "850+" },
+      { label: "Jours d'événement", value: "2" },
+      { label: "Sessions animées", value: "20+" },
     ],
     testimonial: {
       quote:
-        "Une convention parfaitement orchestrée. Latitude a su comprendre notre culture post-fusion et créer un moment fédérateur dont on parle encore 6 mois après.",
-      author: "Sandrine Vasseur",
-      role: "VP Communication, TechCorp",
+        "Une convention parfaitement orchestrée. Latitude a su créer un moment fédérateur et une expérience dont nos équipes parlent encore.",
+      author: "Direction Communication",
+      role: "Groupe industriel français",
     },
-    keywords: ["congrès Paris", "convention annuelle", "850 participants", "Palais des Congrès"],
+    keywords: ["congrès Paris", "convention annuelle", "grand événement entreprise"],
   },
   {
     slug: "seminaire-direction-strategique",
-    title: "Séminaire Direction Stratégique",
-    metaTitle: "Séminaire Direction Stratégique Vaux-le-Vicomte - Cas Client",
+    title: "Séminaire de Direction Stratégique",
+    metaTitle: "Séminaire Direction Stratégique - Realisation Latitude Organisation",
     metaDescription:
-      "Séminaire de direction stratégique au Château de Vaux-le-Vicomte pour 120 cadres dirigeants.",
-    h1: "Séminaire Direction Stratégique - 120 dirigeants à Vaux-le-Vicomte",
+      "Séminaire de direction stratégique dans un cadre d'exception pour des cadres dirigeants, alliant travail de fond et expérience mémorable.",
+    h1: "Séminaire Direction Stratégique - Cadre d'exception",
     category: "Séminaires",
-    lieu: "Château de Vaux-le-Vicomte",
-    date: "Septembre 2024",
+    lieu: "France",
+    date: "2024",
     participants: 120,
     duree: "2 jours",
     description:
-      "120 cadres dirigeants d'un groupe industriel français se sont réunis au Château de Vaux-le-Vicomte pour 2 jours de séminaire stratégique. Nous avons orchestré un format hybride entre intensité business (ateliers stratégiques, alignement vision 5 ans) et expérience patrimoniale d'exception (visite privée du château, dîner aux chandelles dans la galerie). Le défi : créer un cadre propice à la décision tout en marquant les esprits par une expérience mémorable.",
+      "Des cadres dirigeants réunis dans un cadre patrimonial d'exception pour 2 jours de séminaire stratégique. Un format alliant intensité business (ateliers stratégiques, alignement de vision) et expérience humaine forte. Le défi : créer un cadre propice à la décision tout en marquant les esprits par un moment mémorable.",
     challenges: [
-      "Combiner 12h d'ateliers stratégiques et expérience patrimoniale",
-      "Privatiser un site classé Monument Historique avec contraintes",
-      "Logistique fine : 120 chambres en hôtels partenaires + transferts",
-      "Confidentialité absolue sur les contenus business",
+      "Combiner des ateliers stratégiques denses et une expérience de lieu",
+      "Logistique hébergement et transferts pour un groupe de dirigeants",
+      "Confidentialité des contenus business",
+      "Equilibre entre travail de fond et moments de convivialité",
     ],
     solutions: [
-      "Privatisation totale du Château de Vaux-le-Vicomte sur 2 jours",
-      "Transferts en navettes privées depuis Paris matin et soir",
+      "Sélection d'un lieu d'exception adapté aux exigences du groupe",
+      "Transferts privés et logistique entièrement prise en charge",
       "Set-up technique discret pour préserver l'authenticité du lieu",
-      "Dîner aux chandelles avec animation classique (orchestre baroque)",
+      "Programme rythmé alliant sessions de travail et dîner de cohésion",
     ],
     resultats: [
-      { label: "Satisfaction dirigeants", value: "99%" },
-      { label: "Décisions stratégiques validées", value: "11/11" },
-      { label: "Suivi des plans d'action 6 mois", value: "92%" },
+      { label: "Participants", value: "120" },
+      { label: "Jours", value: "2" },
+      { label: "Sessions stratégiques", value: "Complètes" },
     ],
     testimonial: {
       quote:
-        "Un cadre d'exception pour des décisions d'exception. Latitude a réussi à conjuguer l'intensité business et l'émotion patrimoniale.",
-      author: "Olivier Mercier",
-      role: "Directeur Général",
+        "Un cadre d'exception pour des décisions d'exception. Latitude a réussi à conjuguer l'intensité business et l'émotion du lieu.",
+      author: "Direction Générale",
+      role: "Groupe industriel",
     },
-    keywords: ["séminaire direction", "château Vaux-le-Vicomte", "séminaire stratégique"],
+    keywords: ["séminaire direction", "séminaire stratégique", "séminaire dirigeants"],
   },
   {
-    slug: "soiree-gala-eclipse",
-    title: "Soirée Gala Groupe Éclipse",
-    metaTitle: "Soirée Gala Groupe Éclipse Musée d'Orsay - Cas Client",
+    slug: "soiree-gala-entreprise",
+    title: "Soirée de Gala d'Entreprise",
+    metaTitle: "Soirée Gala Entreprise - Realisation Latitude Organisation",
     metaDescription:
-      "Soirée de gala d'entreprise au Musée d'Orsay pour 400 collaborateurs et clients du Groupe Éclipse.",
-    h1: "Soirée Gala Groupe Éclipse - 400 invités au Musée d'Orsay",
+      "Soirée de gala d'entreprise dans un lieu d'exception : scénographie, restauration, animation et production vidéo.",
+    h1: "Soirée de Gala - Célébration d'exception",
     category: "Soirées",
-    lieu: "Musée d'Orsay, Paris",
-    date: "Décembre 2024",
+    lieu: "Paris",
+    date: "2024",
     participants: 400,
     duree: "Soirée",
     description:
-      "Pour célébrer ses 50 ans, le Groupe Éclipse a souhaité une soirée d'exception réunissant 400 collaborateurs, clients et partenaires. Nous avons orchestré une privatisation exclusive du Musée d'Orsay : cocktail dans la nef centrale, accès privé aux galeries des Impressionnistes, dîner gastronomique 3 services dans la salle des fêtes, animation jazz live et DJ set jusqu'à 2h. Une scénographie immersive autour du thème 'Lumières' a été déclinée du carton d'invitation au mapping vidéo final.",
+      "Pour célébrer un anniversaire d'entreprise, nous avons orchestré une soirée d'exception réunissant collaborateurs, clients et partenaires dans un lieu d'exception à Paris. Au programme : cocktail de bienvenue, dîner gastronomique, animation artistique live et ambiance musicale jusqu'en fin de soirée. Une scénographie immersive déclinée du carton d'invitation à la projection de clôture.",
     challenges: [
-      "Privatiser un musée national avec contraintes patrimoniales strictes",
-      "Servir 400 couverts dans un cadre muséal sans risque pour les œuvres",
-      "Orchestrer une scénographie 'Lumières' cohérente sur 6h",
-      "Préserver l'élégance malgré la dimension festive jusqu'à tard",
+      "Accueillir plusieurs centaines d'invités dans un lieu exigeant",
+      "Orchestrer une scénographie cohérente sur l'ensemble de la soirée",
+      "Coordonner restauration, animation et technique en simultané",
+      "Maintenir un niveau d'élégance tout au long de la soirée",
     ],
     solutions: [
-      "Privatisation exclusive Musée d'Orsay (fermeture publique anticipée)",
-      "Traiteur étoilé Lenôtre : 3 services + buffet sucré",
-      "Scénographie 'Lumières' : décoration florale, mapping, ambiance",
-      "Photographe officiel + Photobooth haut de gamme",
+      "Sélection et négociation d'un lieu de prestige",
+      "Scénographie sur mesure : décoration, lumière, ambiance",
+      "Coordination traiteur et animations artistiques",
+      "Production photo et vidéo en soirée",
     ],
     resultats: [
-      { label: "Satisfaction invités", value: "98%" },
-      { label: "Mentions sociales positives", value: "320+" },
-      { label: "Couverture média obtenue", value: "8 articles" },
+      { label: "Invités", value: "400+" },
+      { label: "Format", value: "Soirée gala" },
+      { label: "Animations", value: "Live & DJ" },
     ],
     testimonial: {
       quote:
-        "Une soirée mythique. Encore aujourd'hui, nos clients en parlent. Latitude a su transformer un anniversaire d'entreprise en moment d'histoire.",
-      author: "Patricia Léger",
-      role: "Directrice Communication, Groupe Éclipse",
+        "Une soirée d'exception. Latitude a su transformer notre anniversaire d'entreprise en un moment dont nos collaborateurs parlent encore.",
+      author: "Direction Communication",
+      role: "Grande entreprise française",
     },
-    keywords: ["gala Paris", "soirée Musée d'Orsay", "soirée gala entreprise"],
+    keywords: ["gala Paris", "soirée gala entreprise", "soirée d'entreprise"],
   },
   {
-    slug: "incentive-montagne-novatec",
-    title: "Incentive Montagne Novatec",
-    metaTitle: "Incentive Montagne Novatec Chamonix - Cas Client",
+    slug: "incentive-montagne",
+    title: "Incentive Montagne",
+    metaTitle: "Incentive Montagne - Realisation Latitude Organisation",
     metaDescription:
-      "Voyage incentive et team-building en montagne à Chamonix pour 200 collaborateurs Novatec.",
-    h1: "Incentive Montagne Novatec - 200 collaborateurs à Chamonix",
+      "Voyage incentive en montagne : activités outdoor, hébergement d'exception et production vidéo L'Oeil du Terrain.",
+    h1: "Incentive Montagne - Expérience altitude",
     category: "Team-building",
-    lieu: "Chamonix-Mont-Blanc",
-    date: "Mars 2024",
+    lieu: "Alpes françaises",
+    date: "2024",
     participants: 200,
     duree: "3 jours",
     description:
-      "200 commerciaux de Novatec, lauréats de l'opération annuelle de motivation, ont vécu 3 jours d'incentive d'exception à Chamonix. Au programme : ascensions accompagnées par guides de haute montagne, ateliers en altitude au Plan de l'Aiguille, repas gastronomique au refuge du Couvercle, soirée de gala face au Mont-Blanc avec orchestre live. Notre signature L'Œil du Terrain a capturé chaque moment, projeté le film bilan en clôture.",
+      "Des collaborateurs récompensés pour leurs résultats ont vécu 3 jours d'incentive en montagne. Au programme : activités outdoor encadrées, repas en altitude, soirée de gala dans un cadre exceptionnel face aux sommets. Notre signature L'Œil du Terrain a capturé chaque moment, avec le film bilan projeté en clôture.",
     challenges: [
-      "Activités outdoor en haute montagne avec sécurité maximale",
-      "Niveaux physiques très hétérogènes (200 personnes)",
-      "Logistique repas en altitude (refuges, hélicoptérage)",
-      "Météo imprévisible en mars",
+      "Activités outdoor sécurisées pour des niveaux physiques hétérogènes",
+      "Logistique en haute altitude (transferts, repas, hébergement)",
+      "Météo montagne imprévisible",
+      "Créer un programme inclusif pour tous les profils",
     ],
     solutions: [
-      "Sélection de 12 guides de haute montagne certifiés",
-      "3 niveaux d'activités proposés en parallèle (débutants à experts)",
-      "Plan B météo prévu pour chaque journée",
-      "Hôtels 4* exclusifs et navettes privées",
+      "Encadrement professionnel pour toutes les activités",
+      "Plusieurs niveaux d'activités proposés en parallèle",
+      "Plans alternatifs prévus pour chaque journée",
+      "Hébergement et navettes privées coordonnés",
     ],
     resultats: [
-      { label: "Satisfaction (NPS)", value: "+89" },
-      { label: "Engagement post-incentive (CA)", value: "+24%" },
-      { label: "Demandes pour rééditions", value: "100% des participants" },
+      { label: "Participants", value: "200" },
+      { label: "Jours", value: "3" },
+      { label: "Film bilan", value: "Projeté le soir même" },
     ],
     testimonial: {
       quote:
-        "Le meilleur incentive de ma carrière. L'équipe Latitude a tout maîtrisé : la montagne, la logistique, l'émotion. On en parle encore au bureau.",
-      author: "Romain Calvet",
-      role: "Directeur Commercial, Novatec",
+        "L'équipe Latitude a tout maîtrisé : la montagne, la logistique, l'émotion. Un incentive dont on parle encore.",
+      author: "Direction Commerciale",
+      role: "Entreprise française",
     },
-    keywords: ["incentive Chamonix", "team building montagne", "voyage incentive"],
+    keywords: ["incentive montagne", "team building montagne", "voyage incentive"],
   },
   {
-    slug: "forum-leadership-mediane",
-    title: "Forum Leadership Médiane",
-    metaTitle: "Forum Leadership Médiane Marrakech - Cas Client",
+    slug: "forum-international",
+    title: "Forum International",
+    metaTitle: "Forum International - Realisation Latitude Organisation",
     metaDescription:
-      "Forum international Leadership à Marrakech pour 350 dirigeants du Groupe Médiane.",
-    h1: "Forum Leadership Médiane - 350 dirigeants à Marrakech",
+      "Organisation d'un forum international : logistique multi-pays, programme multi-langues et soirée de gala.",
+    h1: "Forum International - Orchestration multi-pays",
     category: "Congrès",
-    lieu: "Marrakech, Maroc",
-    date: "Mai 2024",
+    lieu: "Maroc",
+    date: "2024",
     participants: 350,
     duree: "3 jours",
     description:
-      "Le Groupe Médiane a réuni ses 350 dirigeants internationaux au La Mamounia à Marrakech pour un forum de 3 jours sur le thème 'Leadership in Motion'. Nous avons orchestré l'intégralité : transfert international des 350 participants depuis 12 pays, hébergement, programme de sessions plénières et masterclasses, expérience culturelle marocaine, soirée de gala dans la palmeraie. Format hybride avec live streaming pour 80 participants distants.",
+      "Plusieurs centaines de dirigeants internationaux réunis au Maroc pour un forum de 3 jours. Nous avons orchestré l'intégralité de l'événement : transferts internationaux, hébergement, programme de sessions et masterclasses, expérience culturelle et soirée de gala. Un défi logistique et humain relevé grâce à notre licence d'agence de voyage et à notre réseau de partenaires internationaux.",
     challenges: [
-      "Logistique internationale : 350 personnes depuis 12 pays",
-      "Programme intense : 18 sessions sur 3 jours en multi-langues",
-      "Sécurité internationale et gestion des passeports",
-      "Format hybride avec 80 distants en live streaming",
+      "Logistique internationale depuis plusieurs pays",
+      "Programme dense en multi-langues",
+      "Coordination de l'ensemble des prestataires locaux et internationaux",
+      "Expérience culturelle authentique intégrée au programme",
     ],
     solutions: [
-      "Cellule logistique dédiée 24/7 pendant l'événement",
-      "Privatisation La Mamounia + 4 villas annexes",
-      "Traduction simultanée 4 langues (FR/EN/ES/AR)",
-      "Soirée gala dans la palmeraie privée + show équestre traditionnel",
+      "Cellule logistique dédiée pour les transferts et l'hébergement",
+      "Coordination prestataires techniques, restauration, animations",
+      "Programme bilingue et animation culturelle sur mesure",
+      "Soirée de gala en cadre exceptionnel",
     ],
     resultats: [
-      { label: "Satisfaction internationale", value: "96%" },
-      { label: "Sessions à l'heure", value: "18/18" },
-      { label: "Connexions networking enregistrées", value: "1240" },
+      { label: "Participants", value: "350" },
+      { label: "Pays représentés", value: "Plusieurs" },
+      { label: "Jours", value: "3" },
     ],
     testimonial: {
       quote:
-        "Un forum hors normes, parfaitement maîtrisé malgré l'envergure internationale. Latitude est devenu notre partenaire de confiance pour tous nos grands rendez-vous.",
-      author: "Jean-Charles Forget",
-      role: "Président, Groupe Médiane",
+        "Un forum hors normes, parfaitement maîtrisé malgré l'envergure internationale. Latitude est devenu notre partenaire de confiance.",
+      author: "Présidence",
+      role: "Groupe international",
     },
-    keywords: ["forum Marrakech", "événement international", "congrès Maroc"],
+    keywords: ["forum Maroc", "événement international", "congrès international"],
   },
   {
-    slug: "team-building-regates-mer",
-    title: "Team-Building Régates & Mer",
-    metaTitle: "Team-Building Régates Saint-Tropez - Cas Client",
+    slug: "team-building-nautique",
+    title: "Team-Building Nautique",
+    metaTitle: "Team-Building Nautique - Realisation Latitude Organisation",
     metaDescription:
-      "Team-building voile et régates à Saint-Tropez pour 80 collaborateurs.",
-    h1: "Team-Building Régates & Mer - 80 personnes à Saint-Tropez",
+      "Team-building voile et activités nautiques en Méditerranée : régates, convivialité et cohésion d'équipe.",
+    h1: "Team-Building Nautique - Cohésion en mer",
     category: "Team-building",
-    lieu: "Saint-Tropez",
-    date: "Juin 2024",
+    lieu: "Méditerranée",
+    date: "2024",
     participants: 80,
     duree: "2 jours",
     description:
-      "80 collaborateurs d'un cabinet de conseil ont vécu 2 jours d'aventure méditerranéenne à Saint-Tropez. Au programme : initiation à la voile en flottille de 8 voiliers, régate inter-équipes dans le golfe, déjeuner sur l'île de Porquerolles, soirée plage privée au coucher du soleil. Une expérience qui a soudé les équipes après une année de croissance rapide et de recrutements importants.",
+      "Des collaborateurs ont vécu 2 jours d'aventure maritime en Méditerranée. Au programme : initiation à la voile en flottille, régate inter-équipes, déjeuner en mer et soirée sur les quais au coucher du soleil. Une expérience qui a renforcé la cohésion des équipes autour d'un défi collectif partagé.",
     challenges: [
-      "Niveaux nautiques hétérogènes (80% novices)",
-      "Logistique flottille : 8 voiliers + équipages professionnels",
-      "Météo méditerranéenne imprévisible",
-      "Soirée plage privée avec contraintes environnementales",
+      "Niveaux nautiques hétérogènes au sein du groupe",
+      "Logistique flottille et coordination des équipages",
+      "Créer une vraie compétition ludique et inclusive",
+      "Soirée conviviale intégrée au programme",
     ],
     solutions: [
-      "Skippers professionnels sur chaque voilier (formation rassurante)",
-      "Briefing collectif détaillé matinal",
-      "Plan B activité indoor en cas de gros temps",
-      "Plage privée éco-responsable, traiteur 0 plastique",
+      "Skippers professionnels sur chaque embarcation",
+      "Briefing collectif et règles de régate adaptées à tous niveaux",
+      "Repas en mer et soirée conviviale sur les quais",
+      "Programme inclusif pour les participants non-sportifs",
     ],
     resultats: [
-      { label: "Satisfaction participants", value: "98%" },
-      { label: "Sentiment de cohésion (post-survey)", value: "+45%" },
-      { label: "Volonté de réitération", value: "100%" },
+      { label: "Participants", value: "80" },
+      { label: "Jours", value: "2" },
+      { label: "Format", value: "Régate + soirée" },
     ],
     testimonial: {
       quote:
-        "Un team-building qui a vraiment changé quelque chose dans nos équipes. La régate a libéré une énergie collective qu'on retrouve aujourd'hui dans nos projets.",
-      author: "Claire Vidal",
-      role: "Directrice RH",
+        "Un team-building qui a changé quelque chose dans nos équipes. La régate a libéré une énergie collective que l'on retrouve dans nos projets.",
+      author: "Direction RH",
+      role: "Cabinet de conseil",
     },
-    keywords: ["team building voile", "Saint-Tropez", "team building mer"],
+    keywords: ["team building voile", "team building mer", "activite nautique entreprise"],
   },
   {
-    slug: "soiree-fin-annee-pharma",
-    title: "Soirée Fin d'Année Pharma",
-    metaTitle: "Soirée Fin d'Année Pharma Hôtel de Crillon - Cas Client",
+    slug: "soiree-fin-annee",
+    title: "Soirée de Fin d'Année",
+    metaTitle: "Soiree de Fin d'Annee Entreprise - Realisation Latitude Organisation",
     metaDescription:
-      "Soirée de fin d'année à l'Hôtel de Crillon pour 500 collaborateurs d'un groupe pharmaceutique.",
-    h1: "Soirée Fin d'Année Pharma - 500 invités à l'Hôtel de Crillon",
+      "Soirée de fin d'année d'entreprise dans un lieu de prestige : cocktail dînatoire, show artistique et ambiance festive.",
+    h1: "Soirée de Fin d'Année - Célébration collective",
     category: "Soirées",
-    lieu: "Hôtel de Crillon, Paris",
-    date: "Décembre 2024",
+    lieu: "Paris",
+    date: "2024",
     participants: 500,
     duree: "Soirée",
     description:
-      "Pour clôturer une année record, un groupe pharmaceutique majeur a réuni ses 500 collaborateurs dans les salons historiques de l'Hôtel de Crillon. Cocktail dînatoire d'exception, show artistique exclusif (danseuse étoile + ensemble jazz), mapping vidéo personnalisé reprenant les highlights de l'année, dance floor jusqu'à 2h. Une soirée de prestige qui a marqué les esprits et célébré collectivement les succès.",
+      "Pour clôturer une belle année, une entreprise a réuni ses collaborateurs dans un lieu de prestige parisien. Cocktail dînatoire d'exception, show artistique sur mesure, ambiance musicale festive jusqu'en fin de soirée. Une soirée qui a célébré collectivement les succès de l'année.",
     challenges: [
-      "Privatisation salons historiques avec contraintes patrimoniales",
-      "500 personnes en cocktail dînatoire (et non assis)",
-      "Show artistique sur mesure intégré au programme",
-      "Maintien du niveau d'élégance jusqu'à tard",
+      "Accueillir plusieurs centaines de convives en format cocktail dînatoire",
+      "Orchestrer un show artistique intégré au programme",
+      "Coordonner traiteur, technique et animations",
+      "Maintenir l'ambiance festive tout au long de la soirée",
     ],
     solutions: [
-      "Privatisation 4 salons + cour intérieure",
-      "Traiteur étoilé : 12 stations cocktail + buffet sucré",
-      "Show artistique exclusif : Danseuse étoile Opéra de Paris + ensemble jazz",
-      "Mapping vidéo personnalisé sur 3 murs",
+      "Lieu de prestige sélectionné et négocié",
+      "Show artistique exclusif conçu sur mesure",
+      "Coordination de l'ensemble des prestataires",
+      "Ambiance musicale progressive de la soirée",
     ],
     resultats: [
-      { label: "Satisfaction collaborateurs", value: "97%" },
-      { label: "Mentions LinkedIn positives", value: "180+" },
-      { label: "ROI marque employeur", value: "Mesurable +12 pts NPS" },
+      { label: "Invités", value: "500+" },
+      { label: "Format", value: "Cocktail dînatoire" },
+      { label: "Show", value: "Artistique sur mesure" },
     ],
     testimonial: {
       quote:
-        "Une soirée de fin d'année qui a fait l'effet d'un véritable bonus émotionnel. Nos collaborateurs en parlent encore et c'est devenu une référence interne.",
-      author: "Sophie Tanguy",
-      role: "Responsable Événementiel",
+        "Une soirée qui a fait l'effet d'un véritable cadeau pour nos collaborateurs. Une réussite dont ils parlent encore.",
+      author: "Responsable Evenementiel",
+      role: "Grande entreprise",
     },
-    keywords: ["soirée fin d'année", "Hôtel Crillon Paris", "soirée gala"],
+    keywords: ["soiree fin d'annee", "soiree entreprise Paris", "soiree gala"],
   },
   {
-    slug: "seminaire-cohesion-alpes",
-    title: "Séminaire Cohésion Alpes",
-    metaTitle: "Séminaire Cohésion Val d'Isère - Cas Client",
+    slug: "seminaire-cohesion-montagne",
+    title: "Séminaire Cohésion Montagne",
+    metaTitle: "Seminaire Cohesion Montagne - Realisation Latitude Organisation",
     metaDescription:
-      "Séminaire de cohésion d'équipe à Val d'Isère pour 150 collaborateurs.",
-    h1: "Séminaire Cohésion Alpes - 150 collaborateurs à Val d'Isère",
+      "Séminaire de cohésion d'équipe en montagne : ateliers stratégiques, activités outdoor et hébergement de charme.",
+    h1: "Séminaire Cohésion Montagne - Ressourcement en altitude",
     category: "Séminaires",
-    lieu: "Val d'Isère",
-    date: "Février 2024",
+    lieu: "Alpes françaises",
+    date: "2024",
     participants: 150,
     duree: "3 jours",
     description:
-      "150 collaborateurs ont vécu 3 jours de séminaire de cohésion à Val d'Isère, alternant ateliers stratégiques, activités outdoor (ski en groupe, raquettes, motoneige) et moments de relaxation au spa du Yellowstone Lodge. Un format pensé pour resserrer les liens après une période de transformation organisationnelle.",
+      "Des collaborateurs ont vécu 3 jours de séminaire de cohésion en montagne, alternant ateliers de travail, activités outdoor et moments de convivialité. Un format pensé pour resserrer les liens dans un cadre inspirant, loin du quotidien de bureau.",
     challenges: [
-      "Cohésion post-réorganisation interne",
-      "Mix générationnel et niveaux sportifs très hétérogènes",
-      "Logistique haute saison ski (réservations, transferts)",
-      "Sessions stratégiques denses entre activités outdoor",
+      "Alterner efficacement temps de travail et activités de cohésion",
+      "Adapter les activités aux différents profils physiques du groupe",
+      "Logistique hébergement et transferts en haute saison",
+      "Créer une vraie rupture avec le quotidien pour favoriser la cohésion",
     ],
     solutions: [
-      "Hôtel privatisé 4* Yellowstone Lodge",
-      "Activités à 3 niveaux : sportif, modéré, contemplatif",
-      "Salle de séminaire pleinement équipée + breakout rooms",
-      "Spa réservé en exclusivité 2 demi-journées",
+      "Hébergement de caractère privatisé pour le groupe",
+      "Activités proposées à plusieurs niveaux d'engagement",
+      "Salle de séminaire équipée et espaces de travail dédiés",
+      "Programme rythmé combinant sessions et moments informels",
     ],
     resultats: [
-      { label: "Satisfaction post-séminaire", value: "95%" },
-      { label: "Sentiment de cohésion", value: "+38%" },
-      { label: "Engagement collaborateurs (3 mois)", value: "+18%" },
+      { label: "Participants", value: "150" },
+      { label: "Jours", value: "3" },
+      { label: "Format", value: "Séminaire résidentiel" },
     ],
     testimonial: {
       quote:
-        "Latitude a parfaitement compris notre besoin de retisser des liens après une période compliquée. Le résultat dépasse nos attentes.",
-      author: "Antoine Brun",
-      role: "DRH",
+        "Latitude a parfaitement compris notre besoin. Un séminaire qui a vraiment renforcé les liens au sein de nos équipes.",
+      author: "DRH",
+      role: "Entreprise française",
     },
-    keywords: ["séminaire Val d'Isère", "cohésion équipe", "séminaire montagne"],
+    keywords: ["seminaire montagne", "cohesion equipe", "seminaire residentiel"],
   },
 ];
 
