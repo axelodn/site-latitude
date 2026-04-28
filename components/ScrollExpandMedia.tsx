@@ -192,6 +192,8 @@ const ScrollExpandMedia = ({
                 objectPosition: 'center',
               }}
               priority
+              fetchPriority="high"
+              quality={85}
             />
             <div className='absolute inset-0 bg-black/10' />
           </motion.div>
