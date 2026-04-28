@@ -1,4 +1,4 @@
-// Centralized content for all pages — SEO-optimized
+// Centralized content for all pages - SEO-optimized
 
 export const team = [
   {
@@ -133,7 +133,7 @@ export const expertiseDetails: ExpertiseDetail[] = [
   {
     slug: "seminaires-incentives",
     title: "Séminaires & Incentives",
-    metaTitle: "Séminaires & Incentives d'Entreprise — Agence Spécialisée",
+    metaTitle: "Séminaires & Incentives d'Entreprise - Agence Spécialisée",
     metaDescription:
       "Organisez un séminaire ou voyage incentive d'exception. Expertise, destinations variées, service sur mesure depuis 2004. Devis gratuit sous 24h.",
     h1: "Séminaires & Incentives : Fédérer vos équipes avec des expériences sur mesure",
@@ -199,12 +199,12 @@ export const expertiseDetails: ExpertiseDetail[] = [
     ],
     cases: [
       {
-        title: "Incentive Montagne Novatec — 200 collaborateurs",
+        title: "Incentive Montagne Novatec - 200 collaborateurs",
         details:
           "Un séminaire incentive de 3 jours à Chamonix combinant activités outdoor (escalade, raquettes), ateliers collaboratifs et soirée de gala au pied du Mont-Blanc.",
       },
       {
-        title: "Séminaire Direction Stratégique — 120 cadres dirigeants",
+        title: "Séminaire Direction Stratégique - 120 cadres dirigeants",
         details:
           "Séminaire stratégique au Château de Vaux-le-Vicomte alliant travail de fond, créativité et expérience patrimoniale d'exception.",
       },
@@ -218,7 +218,7 @@ export const expertiseDetails: ExpertiseDetail[] = [
       {
         question: "Combien de temps à l'avance organiser un séminaire ?",
         answer:
-          "Nous recommandons 3 mois minimum pour un séminaire de 50-100 personnes en France, et 6 mois ou plus pour un événement international ou de grande envergure. Cela dit, nous gérons régulièrement des projets en urgence — n'hésitez pas à nous solliciter.",
+          "Nous recommandons 3 mois minimum pour un séminaire de 50-100 personnes en France, et 6 mois ou plus pour un événement international ou de grande envergure. Cela dit, nous gérons régulièrement des projets en urgence - n'hésitez pas à nous solliciter.",
       },
       {
         question: "Quelles activités proposer en séminaire ?",
@@ -249,7 +249,7 @@ export const expertiseDetails: ExpertiseDetail[] = [
   {
     slug: "congres-forums",
     title: "Congrès & Forums",
-    metaTitle: "Congrès & Forums Professionnels — Agence Spécialisée",
+    metaTitle: "Congrès & Forums Professionnels - Agence Spécialisée",
     metaDescription:
       "Organisation complète de congrès, conventions et forums professionnels. 120+ centres partenaires, 20 ans d'expertise. Devis gratuit sous 24h.",
     h1: "Congrès & Forums : Orchestrer vos grands rendez-vous professionnels",
@@ -265,7 +265,7 @@ export const expertiseDetails: ExpertiseDetail[] = [
           "Considéré comme un événement majeur dans la vie et le développement de votre entreprise, nous mettons tous les outils dont nous disposons pour la réussite de votre forum ou congrès. Notre méthode repose sur trois phases complémentaires, pensées pour garantir une exécution sans faille.",
       },
       {
-        title: "01 — La Préparation",
+        title: "01 - La Préparation",
         content:
           "Tout se joue en amont. Nous posons les fondations logistiques et stratégiques qui garantiront le bon déroulement de votre événement.",
         items: [
@@ -278,7 +278,7 @@ export const expertiseDetails: ExpertiseDetail[] = [
         ],
       },
       {
-        title: "02 — La Réalisation",
+        title: "02 - La Réalisation",
         content:
           "Le jour J, nous sommes là. Sur place, en coulisses, au contact de chaque prestataire pour que rien ne soit laissé au hasard.",
         items: [
@@ -291,7 +291,7 @@ export const expertiseDetails: ExpertiseDetail[] = [
         ],
       },
       {
-        title: "03 — Le Bilan",
+        title: "03 - Le Bilan",
         content:
           "Un événement réussi se mesure aussi après. Nous livrons une analyse complète pour valoriser votre investissement.",
         items: [
@@ -304,17 +304,17 @@ export const expertiseDetails: ExpertiseDetail[] = [
       {
         title: "Notre réseau de 120+ centres partenaires",
         content:
-          "Un avantage décisif : 20 ans de relations privilégiées avec les meilleurs centres de congrès de France et d'Europe nous donnent accès à des dates, des tarifs et des prestations exclusives. Du Palais des Congrès de Paris aux structures internationales de Marrakech, Barcelone ou Lisbonne — nous trouvons le lieu qui fait la différence.",
+          "Un avantage décisif : 20 ans de relations privilégiées avec les meilleurs centres de congrès de France et d'Europe nous donnent accès à des dates, des tarifs et des prestations exclusives. Du Palais des Congrès de Paris aux structures internationales de Marrakech, Barcelone ou Lisbonne - nous trouvons le lieu qui fait la différence.",
       },
     ],
     cases: [
       {
-        title: "Convention Annuelle TechCorp — 850 participants",
+        title: "Convention Annuelle TechCorp - 850 participants",
         details:
           "Convention de 2 jours au Palais des Congrès de Paris : 4 keynotes, 18 ateliers parallèles, soirée gala au Musée d'Orsay, captation et live streaming, application mobile dédiée.",
       },
       {
-        title: "Forum Leadership Médiane — 350 dirigeants à Marrakech",
+        title: "Forum Leadership Médiane - 350 dirigeants à Marrakech",
         details:
           "Forum international 3 jours au La Mamounia : sessions stratégiques, ateliers de leadership, soirée de gala dans la palmeraie, transfert de 350 personnes.",
       },
@@ -358,7 +358,7 @@ export const expertiseDetails: ExpertiseDetail[] = [
   {
     slug: "soirees-evenementielles",
     title: "Soirées Événementielles",
-    metaTitle: "Soirées Événementielles & Galas d'Entreprise — Agence",
+    metaTitle: "Soirées Événementielles & Galas d'Entreprise - Agence",
     metaDescription:
       "Créez une soirée d'exception : galas, soirées d'entreprise, événements à thème dans les plus beaux lieux de France. Devis gratuit.",
     h1: "Soirées Événementielles : Des soirées mémorables et élégantes",
@@ -387,13 +387,13 @@ export const expertiseDetails: ExpertiseDetail[] = [
         content:
           "Un réseau soigneusement constitué de lieux d'exception qui placent immédiatement votre soirée dans une autre dimension.",
         items: [
-          "Musée d'Orsay, Paris — galerie des Impressionnistes après fermeture",
-          "Hôtel de Crillon, Paris — salons historiques place de la Concorde",
-          "Château de Vaux-le-Vicomte — cadre patrimonial aux chandelles",
-          "Bourse de Commerce — lieu emblématique d'art contemporain",
-          "Palais Brongniart — l'ancien temple boursier de Paris",
-          "Domaine de Chantilly — château et jardins d'exception",
-          "Palais Royal — galeries du Conseil d'État",
+          "Musée d'Orsay, Paris - galerie des Impressionnistes après fermeture",
+          "Hôtel de Crillon, Paris - salons historiques place de la Concorde",
+          "Château de Vaux-le-Vicomte - cadre patrimonial aux chandelles",
+          "Bourse de Commerce - lieu emblématique d'art contemporain",
+          "Palais Brongniart - l'ancien temple boursier de Paris",
+          "Domaine de Chantilly - château et jardins d'exception",
+          "Palais Royal - galeries du Conseil d'État",
         ],
       },
       {
@@ -411,12 +411,12 @@ export const expertiseDetails: ExpertiseDetail[] = [
     ],
     cases: [
       {
-        title: "Soirée Gala Groupe Éclipse — 400 personnes au Musée d'Orsay",
+        title: "Soirée Gala Groupe Éclipse - 400 personnes au Musée d'Orsay",
         details:
           "Privatisation exclusive du Musée d'Orsay : cocktail dans la nef, dîner gastronomique 3 services, animation jazz live et DJ set, accès privé aux collections impressionnistes.",
       },
       {
-        title: "Soirée de Fin d'Année Pharma — 500 invités à l'Hôtel de Crillon",
+        title: "Soirée de Fin d'Année Pharma - 500 invités à l'Hôtel de Crillon",
         details:
           "Soirée de gala dans les salons historiques du Crillon : cocktail dînatoire, show artistique exclusif, mapping vidéo personnalisé, dance floor jusqu'à 2h.",
       },
@@ -455,7 +455,7 @@ export const expertiseDetails: ExpertiseDetail[] = [
   {
     slug: "team-building",
     title: "Team-Building",
-    metaTitle: "Team-Building Original — Cohésion d'Équipe Sur Mesure",
+    metaTitle: "Team-Building Original - Cohésion d'Équipe Sur Mesure",
     metaDescription:
       "Organisez un team-building mémorable. Activités originales, destinations variées, experts depuis 20 ans. Devis gratuit sous 24h.",
     h1: "Team-Building : Tisser des liens forts sous toutes les latitudes",
@@ -515,12 +515,12 @@ export const expertiseDetails: ExpertiseDetail[] = [
     ],
     cases: [
       {
-        title: "Incentive Montagne Novatec — 200 collaborateurs à Chamonix",
+        title: "Incentive Montagne Novatec - 200 collaborateurs à Chamonix",
         details:
           "3 jours d'aventure : escalade, via ferrata, ateliers en altitude, soirée de gala face au Mont-Blanc, film bilan projeté le dernier soir.",
       },
       {
-        title: "Régates & Mer — 80 personnes à Saint-Tropez",
+        title: "Régates & Mer - 80 personnes à Saint-Tropez",
         details:
           "2 jours en flottille : initiation à la voile, régate inter-équipes, déjeuner sur îles isolées, soirée plage.",
       },
@@ -564,7 +564,7 @@ export const expertiseDetails: ExpertiseDetail[] = [
   {
     slug: "management-coaching",
     title: "Management & Coaching",
-    metaTitle: "Formation Management & Coaching — Séminaires Leadership",
+    metaTitle: "Formation Management & Coaching - Séminaires Leadership",
     metaDescription:
       "Formations management et coaching adaptées à vos enjeux : leadership, cohésion, communication, performance d'équipe.",
     h1: "Management & Coaching : Formations pour vos enjeux stratégiques",
@@ -607,7 +607,7 @@ export const expertiseDetails: ExpertiseDetail[] = [
     ],
     cases: [
       {
-        title: "Programme Leadership COMEX — Groupe industriel",
+        title: "Programme Leadership COMEX - Groupe industriel",
         details:
           "Programme 12 mois pour les 15 membres du COMEX : 4 séminaires résidentiels, coaching individuel mensuel, 360° feedback, certification finale.",
       },
@@ -641,7 +641,7 @@ export const expertiseDetails: ExpertiseDetail[] = [
   {
     slug: "production-video",
     title: "Production Vidéo",
-    metaTitle: "Production Vidéo Événement — L'Œil du Terrain",
+    metaTitle: "Production Vidéo Événement - L'Œil du Terrain",
     metaDescription:
       "Production vidéo événement professionnelle. Tournage, montage live, projection immédiate. La signature unique de Latitude Organisation.",
     h1: "Production Vidéo : L'Œil du Terrain",
@@ -742,10 +742,10 @@ export const realisationsDetails: RealisationDetail[] = [
   {
     slug: "convention-techcorp",
     title: "Convention Annuelle TechCorp",
-    metaTitle: "Convention Annuelle TechCorp Paris — Cas Client",
+    metaTitle: "Convention Annuelle TechCorp Paris - Cas Client",
     metaDescription:
       "Découvrez l'organisation de la Convention Annuelle TechCorp : 850 participants au Palais des Congrès de Paris.",
-    h1: "Convention Annuelle TechCorp — 850 participants au Palais des Congrès",
+    h1: "Convention Annuelle TechCorp - 850 participants au Palais des Congrès",
     category: "Congrès",
     lieu: "Palais des Congrès, Paris",
     date: "Octobre 2024",
@@ -782,10 +782,10 @@ export const realisationsDetails: RealisationDetail[] = [
   {
     slug: "seminaire-direction-strategique",
     title: "Séminaire Direction Stratégique",
-    metaTitle: "Séminaire Direction Stratégique Vaux-le-Vicomte — Cas Client",
+    metaTitle: "Séminaire Direction Stratégique Vaux-le-Vicomte - Cas Client",
     metaDescription:
       "Séminaire de direction stratégique au Château de Vaux-le-Vicomte pour 120 cadres dirigeants.",
-    h1: "Séminaire Direction Stratégique — 120 dirigeants à Vaux-le-Vicomte",
+    h1: "Séminaire Direction Stratégique - 120 dirigeants à Vaux-le-Vicomte",
     category: "Séminaires",
     lieu: "Château de Vaux-le-Vicomte",
     date: "Septembre 2024",
@@ -821,10 +821,10 @@ export const realisationsDetails: RealisationDetail[] = [
   {
     slug: "soiree-gala-eclipse",
     title: "Soirée Gala Groupe Éclipse",
-    metaTitle: "Soirée Gala Groupe Éclipse Musée d'Orsay — Cas Client",
+    metaTitle: "Soirée Gala Groupe Éclipse Musée d'Orsay - Cas Client",
     metaDescription:
       "Soirée de gala d'entreprise au Musée d'Orsay pour 400 collaborateurs et clients du Groupe Éclipse.",
-    h1: "Soirée Gala Groupe Éclipse — 400 invités au Musée d'Orsay",
+    h1: "Soirée Gala Groupe Éclipse - 400 invités au Musée d'Orsay",
     category: "Soirées",
     lieu: "Musée d'Orsay, Paris",
     date: "Décembre 2024",
@@ -860,10 +860,10 @@ export const realisationsDetails: RealisationDetail[] = [
   {
     slug: "incentive-montagne-novatec",
     title: "Incentive Montagne Novatec",
-    metaTitle: "Incentive Montagne Novatec Chamonix — Cas Client",
+    metaTitle: "Incentive Montagne Novatec Chamonix - Cas Client",
     metaDescription:
       "Voyage incentive et team-building en montagne à Chamonix pour 200 collaborateurs Novatec.",
-    h1: "Incentive Montagne Novatec — 200 collaborateurs à Chamonix",
+    h1: "Incentive Montagne Novatec - 200 collaborateurs à Chamonix",
     category: "Team-building",
     lieu: "Chamonix-Mont-Blanc",
     date: "Mars 2024",
@@ -899,10 +899,10 @@ export const realisationsDetails: RealisationDetail[] = [
   {
     slug: "forum-leadership-mediane",
     title: "Forum Leadership Médiane",
-    metaTitle: "Forum Leadership Médiane Marrakech — Cas Client",
+    metaTitle: "Forum Leadership Médiane Marrakech - Cas Client",
     metaDescription:
       "Forum international Leadership à Marrakech pour 350 dirigeants du Groupe Médiane.",
-    h1: "Forum Leadership Médiane — 350 dirigeants à Marrakech",
+    h1: "Forum Leadership Médiane - 350 dirigeants à Marrakech",
     category: "Congrès",
     lieu: "Marrakech, Maroc",
     date: "Mai 2024",
@@ -938,10 +938,10 @@ export const realisationsDetails: RealisationDetail[] = [
   {
     slug: "team-building-regates-mer",
     title: "Team-Building Régates & Mer",
-    metaTitle: "Team-Building Régates Saint-Tropez — Cas Client",
+    metaTitle: "Team-Building Régates Saint-Tropez - Cas Client",
     metaDescription:
       "Team-building voile et régates à Saint-Tropez pour 80 collaborateurs.",
-    h1: "Team-Building Régates & Mer — 80 personnes à Saint-Tropez",
+    h1: "Team-Building Régates & Mer - 80 personnes à Saint-Tropez",
     category: "Team-building",
     lieu: "Saint-Tropez",
     date: "Juin 2024",
@@ -977,10 +977,10 @@ export const realisationsDetails: RealisationDetail[] = [
   {
     slug: "soiree-fin-annee-pharma",
     title: "Soirée Fin d'Année Pharma",
-    metaTitle: "Soirée Fin d'Année Pharma Hôtel de Crillon — Cas Client",
+    metaTitle: "Soirée Fin d'Année Pharma Hôtel de Crillon - Cas Client",
     metaDescription:
       "Soirée de fin d'année à l'Hôtel de Crillon pour 500 collaborateurs d'un groupe pharmaceutique.",
-    h1: "Soirée Fin d'Année Pharma — 500 invités à l'Hôtel de Crillon",
+    h1: "Soirée Fin d'Année Pharma - 500 invités à l'Hôtel de Crillon",
     category: "Soirées",
     lieu: "Hôtel de Crillon, Paris",
     date: "Décembre 2024",
@@ -1016,10 +1016,10 @@ export const realisationsDetails: RealisationDetail[] = [
   {
     slug: "seminaire-cohesion-alpes",
     title: "Séminaire Cohésion Alpes",
-    metaTitle: "Séminaire Cohésion Val d'Isère — Cas Client",
+    metaTitle: "Séminaire Cohésion Val d'Isère - Cas Client",
     metaDescription:
       "Séminaire de cohésion d'équipe à Val d'Isère pour 150 collaborateurs.",
-    h1: "Séminaire Cohésion Alpes — 150 collaborateurs à Val d'Isère",
+    h1: "Séminaire Cohésion Alpes - 150 collaborateurs à Val d'Isère",
     category: "Séminaires",
     lieu: "Val d'Isère",
     date: "Février 2024",
@@ -1815,7 +1815,7 @@ export const destinationsDetails: DestinationDetail[] = [
     slug: "paris",
     name: "Paris",
     country: "France",
-    metaTitle: "Organiser un Événement à Paris — Lieux & Conseils",
+    metaTitle: "Organiser un Événement à Paris - Lieux & Conseils",
     metaDescription:
       "Organiser un séminaire, congrès ou soirée à Paris. Lieux d'exception, conseils logistique. Latitude Organisation.",
     h1: "Organiser un événement à Paris",
@@ -1829,12 +1829,12 @@ export const destinationsDetails: DestinationDetail[] = [
       "Image de marque immédiate pour vos invités",
     ],
     lieux: [
-      "Palais des Congrès, Porte Maillot — congrès jusqu'à 3 700 places",
-      "Hôtel de Crillon — soirée prestige place de la Concorde",
-      "Musée d'Orsay — privatisations exceptionnelles",
-      "Palais Brongniart — ancienne Bourse, lieu emblématique",
-      "Bourse de Commerce — art contemporain",
-      "Palais Royal — galeries du Conseil d'État",
+      "Palais des Congrès, Porte Maillot - congrès jusqu'à 3 700 places",
+      "Hôtel de Crillon - soirée prestige place de la Concorde",
+      "Musée d'Orsay - privatisations exceptionnelles",
+      "Palais Brongniart - ancienne Bourse, lieu emblématique",
+      "Bourse de Commerce - art contemporain",
+      "Palais Royal - galeries du Conseil d'État",
       "Centre des Congrès Paris-La Défense",
       "Théâtre du Châtelet",
     ],
@@ -1849,14 +1849,14 @@ export const destinationsDetails: DestinationDetail[] = [
     ],
     climat: "Tempéré océanique. Étés doux, hivers frais.",
     bestSeason: "Mai-juin et septembre-octobre.",
-    cas: "Convention Annuelle TechCorp — 850 personnes au Palais des Congrès",
+    cas: "Convention Annuelle TechCorp - 850 personnes au Palais des Congrès",
     keywords: ["événement Paris", "séminaire Paris", "congrès Paris", "soirée Paris"],
   },
   {
     slug: "lyon",
     name: "Lyon",
     country: "France",
-    metaTitle: "Organiser un Événement à Lyon — Lieux & Conseils",
+    metaTitle: "Organiser un Événement à Lyon - Lieux & Conseils",
     metaDescription:
       "Organiser séminaire, congrès, soirée à Lyon. Lieux, gastronomie, logistique. Latitude Organisation.",
     h1: "Organiser un événement à Lyon",
@@ -1886,14 +1886,14 @@ export const destinationsDetails: DestinationDetail[] = [
     ],
     climat: "Continental. Étés chauds, hivers froids.",
     bestSeason: "Mai-juin et septembre.",
-    cas: "Séminaire Bouchons Gastronomiques — 80 dirigeants",
+    cas: "Séminaire Bouchons Gastronomiques - 80 dirigeants",
     keywords: ["événement Lyon", "séminaire Lyon", "congrès Lyon"],
   },
   {
     slug: "nice",
     name: "Nice",
     country: "France",
-    metaTitle: "Organiser un Événement à Nice — Côte d'Azur",
+    metaTitle: "Organiser un Événement à Nice - Côte d'Azur",
     metaDescription:
       "Organiser séminaire, congrès à Nice et Côte d'Azur. Cadre méditerranéen, lieux d'exception. Latitude.",
     h1: "Organiser un événement à Nice & Côte d'Azur",
@@ -1921,14 +1921,14 @@ export const destinationsDetails: DestinationDetail[] = [
     ],
     climat: "Méditerranéen. Doux toute l'année.",
     bestSeason: "Mars à octobre.",
-    cas: "Séminaire Direction Cap-Ferrat — 120 dirigeants",
+    cas: "Séminaire Direction Cap-Ferrat - 120 dirigeants",
     keywords: ["événement Nice", "séminaire Côte d'Azur", "incentive Nice"],
   },
   {
     slug: "chamonix",
     name: "Chamonix",
     country: "France",
-    metaTitle: "Organiser un Événement à Chamonix — Mont-Blanc",
+    metaTitle: "Organiser un Événement à Chamonix - Mont-Blanc",
     metaDescription:
       "Séminaire, team-building, incentive à Chamonix Mont-Blanc. Cadre haute montagne d'exception.",
     h1: "Organiser un événement à Chamonix",
@@ -1942,10 +1942,10 @@ export const destinationsDetails: DestinationDetail[] = [
       "Ambiance authentique alpine",
     ],
     lieux: [
-      "Hameau Albert 1er — Relais & Châteaux",
-      "Hôtel Mont-Blanc — emblématique de la vallée",
+      "Hameau Albert 1er - Relais & Châteaux",
+      "Hôtel Mont-Blanc - emblématique de la vallée",
       "Refuges d'altitude pour expériences uniques",
-      "Aiguille du Midi — déjeuner à 3 842m",
+      "Aiguille du Midi - déjeuner à 3 842m",
     ],
     activites: [
       "Escalade et via ferrata accompagnée",
@@ -1957,14 +1957,14 @@ export const destinationsDetails: DestinationDetail[] = [
     ],
     climat: "Montagnard. Hivers neigeux, étés frais.",
     bestSeason: "Décembre-mars (ski) et juin-septembre (été).",
-    cas: "Incentive Montagne Novatec — 200 commerciaux",
+    cas: "Incentive Montagne Novatec - 200 commerciaux",
     keywords: ["événement Chamonix", "séminaire Mont-Blanc", "incentive montagne"],
   },
   {
     slug: "marrakech",
     name: "Marrakech",
     country: "Maroc",
-    metaTitle: "Organiser un Événement à Marrakech — Maroc",
+    metaTitle: "Organiser un Événement à Marrakech - Maroc",
     metaDescription:
       "Séminaire, congrès, incentive à Marrakech. Palaces d'exception, désert, expériences uniques.",
     h1: "Organiser un événement à Marrakech",
@@ -1978,9 +1978,9 @@ export const destinationsDetails: DestinationDetail[] = [
       "Climat doux d'octobre à mai",
     ],
     lieux: [
-      "La Mamounia — palace mythique",
-      "Royal Mansour — palace royal",
-      "Selman Marrakech — élégance contemporaine",
+      "La Mamounia - palace mythique",
+      "Royal Mansour - palace royal",
+      "Selman Marrakech - élégance contemporaine",
       "Riads privatisables dans la médina",
       "Palmeraie pour soirées en extérieur",
       "Désert d'Agafay (à 45 min)",
@@ -1996,14 +1996,14 @@ export const destinationsDetails: DestinationDetail[] = [
     ],
     climat: "Méditerranéen sec. Étés très chauds, hivers doux.",
     bestSeason: "Mars-juin et septembre-novembre.",
-    cas: "Forum Leadership Médiane — 350 dirigeants à La Mamounia",
+    cas: "Forum Leadership Médiane - 350 dirigeants à La Mamounia",
     keywords: ["événement Marrakech", "incentive Maroc", "séminaire Marrakech"],
   },
   {
     slug: "lisbonne",
     name: "Lisbonne",
     country: "Portugal",
-    metaTitle: "Organiser un Événement à Lisbonne — Portugal",
+    metaTitle: "Organiser un Événement à Lisbonne - Portugal",
     metaDescription:
       "Séminaire, congrès, incentive à Lisbonne. Charme atlantique, gastronomie, design hôtels.",
     h1: "Organiser un événement à Lisbonne",
@@ -2033,14 +2033,14 @@ export const destinationsDetails: DestinationDetail[] = [
     ],
     climat: "Méditerranéen océanique. Doux toute l'année.",
     bestSeason: "Avril-juin et septembre-octobre.",
-    cas: "Séminaire Marketing Atlantique — 100 collaborateurs",
+    cas: "Séminaire Marketing Atlantique - 100 collaborateurs",
     keywords: ["événement Lisbonne", "séminaire Portugal", "incentive Lisbonne"],
   },
   {
     slug: "barcelone",
     name: "Barcelone",
     country: "Espagne",
-    metaTitle: "Organiser un Événement à Barcelone — Espagne",
+    metaTitle: "Organiser un Événement à Barcelone - Espagne",
     metaDescription:
       "Séminaire, congrès à Barcelone. Architecture, mer, gastronomie. Latitude Organisation.",
     h1: "Organiser un événement à Barcelone",
@@ -2069,14 +2069,14 @@ export const destinationsDetails: DestinationDetail[] = [
     ],
     climat: "Méditerranéen. Étés chauds, hivers doux.",
     bestSeason: "Avril-juin et septembre-octobre.",
-    cas: "Convention Tech Européenne — 600 participants",
+    cas: "Convention Tech Européenne - 600 participants",
     keywords: ["événement Barcelone", "séminaire Espagne", "congrès Barcelone"],
   },
   {
     slug: "rome",
     name: "Rome",
     country: "Italie",
-    metaTitle: "Organiser un Événement à Rome — Italie",
+    metaTitle: "Organiser un Événement à Rome - Italie",
     metaDescription:
       "Séminaire, congrès à Rome. Patrimoine antique, hôtels d'exception, dolce vita.",
     h1: "Organiser un événement à Rome",
@@ -2090,9 +2090,9 @@ export const destinationsDetails: DestinationDetail[] = [
       "Vol direct 2h depuis Paris",
     ],
     lieux: [
-      "Hassler Roma — vue sur la Trinità dei Monti",
+      "Hassler Roma - vue sur la Trinità dei Monti",
       "Hotel de Russie",
-      "Palazzo Manfredi — vue Colisée",
+      "Palazzo Manfredi - vue Colisée",
       "Villa Medici",
       "Castel Sant'Angelo (privatisations rares)",
     ],
@@ -2105,14 +2105,14 @@ export const destinationsDetails: DestinationDetail[] = [
     ],
     climat: "Méditerranéen. Étés chauds, hivers doux.",
     bestSeason: "Avril-juin et septembre-octobre.",
-    cas: "Soirée Gala 30 ans — 300 invités au Castel Sant'Angelo",
+    cas: "Soirée Gala 30 ans - 300 invités au Castel Sant'Angelo",
     keywords: ["événement Rome", "séminaire Italie", "soirée Rome"],
   },
   {
     slug: "geneve",
     name: "Genève",
     country: "Suisse",
-    metaTitle: "Organiser un Événement à Genève — Suisse",
+    metaTitle: "Organiser un Événement à Genève - Suisse",
     metaDescription:
       "Séminaire, congrès à Genève. Lac, Alpes, infrastructure suisse premium.",
     h1: "Organiser un événement à Genève",
@@ -2126,8 +2126,8 @@ export const destinationsDetails: DestinationDetail[] = [
       "Aéroport international au cœur de la ville",
     ],
     lieux: [
-      "Hôtel des Bergues — palace lacustre",
-      "Beau-Rivage — institution genevoise",
+      "Hôtel des Bergues - palace lacustre",
+      "Beau-Rivage - institution genevoise",
       "Mandarin Oriental Geneva",
       "Centre des Congrès CICG",
       "Domaines viticoles du Léman",
@@ -2141,14 +2141,14 @@ export const destinationsDetails: DestinationDetail[] = [
     ],
     climat: "Continental. Étés doux, hivers froids.",
     bestSeason: "Mai-juin et septembre.",
-    cas: "Convention Finance Internationale — 250 participants",
+    cas: "Convention Finance Internationale - 250 participants",
     keywords: ["événement Genève", "séminaire Suisse", "congrès Genève"],
   },
   {
     slug: "montreal",
     name: "Montréal",
     country: "Canada",
-    metaTitle: "Organiser un Événement à Montréal — Canada",
+    metaTitle: "Organiser un Événement à Montréal - Canada",
     metaDescription:
       "Séminaire, congrès à Montréal. Métropole francophone du Canada, dynamique tech.",
     h1: "Organiser un événement à Montréal",
@@ -2177,7 +2177,7 @@ export const destinationsDetails: DestinationDetail[] = [
     ],
     climat: "Continental humide. Étés chauds, hivers très froids.",
     bestSeason: "Mai-juin et septembre-octobre.",
-    cas: "Convention Tech Internationale — 400 participants",
+    cas: "Convention Tech Internationale - 400 participants",
     keywords: ["événement Montréal", "incentive Canada", "congrès Montréal"],
   },
 ];
