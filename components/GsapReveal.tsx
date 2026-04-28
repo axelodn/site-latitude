@@ -1,8 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 interface GsapRevealProps {
   children: React.ReactNode;
@@ -10,35 +8,37 @@ interface GsapRevealProps {
   className?: string;
 }
 
-/**
- * Wraps content in a clip-path reveal : le texte monte de derrière un masque.
- * Effet visible : plus dramatique qu'un simple fade.
- */
 export function GsapReveal({ children, delay = 0, className }: GsapRevealProps) {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
     const el = innerRef.current;
-    if (!el) return;
+    const trigger = wrapperRef.current;
+    if (!el || !trigger) return;
 
-    gsap.fromTo(
-      el,
-      { yPercent: 105, opacity: 0 },
-      {
-        yPercent: 0,
-        opacity: 1,
-        duration: 0.9,
-        delay,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: wrapperRef.current,
-          start: "top 88%",
-          once: true,
-        },
-      }
-    );
+    // Lazy-load GSAP seulement quand le composant est monté
+    import("gsap").then(({ gsap }) => {
+      import("gsap/ScrollTrigger").then(({ ScrollTrigger }) => {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.fromTo(
+          el,
+          { yPercent: 105, opacity: 0 },
+          {
+            yPercent: 0,
+            opacity: 1,
+            duration: 0.9,
+            delay,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger,
+              start: "top 88%",
+              once: true,
+            },
+          }
+        );
+      });
+    });
   }, [delay]);
 
   return (

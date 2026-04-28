@@ -3,8 +3,7 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// GSAP chargé dynamiquement pour réduire le bundle initial
 import {
   staggerContainer,
   fadeInUp,
@@ -39,18 +38,23 @@ export default function Approach() {
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
     if (!imgRef.current || !sectionRef.current) return;
-
-    gsap.to(imgRef.current, {
-      yPercent: -12,
-      ease: "none",
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top bottom",
-        end: "bottom top",
-        scrub: 1.2,
-      },
+    const img = imgRef.current;
+    const section = sectionRef.current;
+    import("gsap").then(({ gsap }) => {
+      import("gsap/ScrollTrigger").then(({ ScrollTrigger }) => {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.to(img, {
+          yPercent: -12,
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 1.2,
+          },
+        });
+      });
     });
   }, []);
 

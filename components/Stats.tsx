@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// GSAP chargé dynamiquement pour réduire le bundle initial
 import { stats } from "@/lib/data";
 
 export default function Stats() {
@@ -10,25 +9,27 @@ export default function Stats() {
   const numRefs = useRef<(HTMLSpanElement | null)[]>([]);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    numRefs.current.forEach((el, i) => {
-      if (!el) return;
-      const stat = stats[i];
-      const counter = { val: 0 };
-
-      gsap.to(counter, {
-        val: stat.value,
-        duration: 2.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-          once: true,
-        },
-        onUpdate() {
-          if (el) el.textContent = Math.round(counter.val) + stat.suffix;
-        },
+    import("gsap").then(({ gsap }) => {
+      import("gsap/ScrollTrigger").then(({ ScrollTrigger }) => {
+        gsap.registerPlugin(ScrollTrigger);
+        numRefs.current.forEach((el, i) => {
+          if (!el) return;
+          const stat = stats[i];
+          const counter = { val: 0 };
+          gsap.to(counter, {
+            val: stat.value,
+            duration: 2.2,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "top 80%",
+              once: true,
+            },
+            onUpdate() {
+              if (el) el.textContent = Math.round(counter.val) + stat.suffix;
+            },
+          });
+        });
       });
     });
   }, []);
