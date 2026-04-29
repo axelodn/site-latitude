@@ -15,7 +15,7 @@ export function generateOrganizationSchema() {
       height: 60,
     },
     description:
-      "Agence événementielle B2B française spécialisée dans l'organisation de séminaires, congrès, soirées, team-building et incentives depuis plus de 20 ans.",
+      "Agence événementielle B2B française spécialisée dans l'organisation de séminaires, soirées et team-building depuis plus de 20 ans.",
     foundingDate: "2004",
     address: {
       "@type": "PostalAddress",
@@ -62,12 +62,6 @@ export function generateServicesSchema() {
       keywords: "organisation séminaire entreprise, incentive",
     },
     {
-      name: "Organisation de Congrès & Forums",
-      description:
-        "Gestion complète de congrès professionnels et forums d'entreprise, de la conception à la réalisation.",
-      keywords: "organisation congrès professionnel, forum d'entreprise",
-    },
-    {
       name: "Organisation de Soirées Événementielles",
       description:
         "Conception et organisation de soirées d'entreprise, galas et soirées à thème mémorables.",
@@ -78,18 +72,6 @@ export function generateServicesSchema() {
       description:
         "Activités de team-building outdoor et indoor originales pour renforcer la cohésion de vos équipes.",
       keywords: "team building nature outdoor, cohésion équipe",
-    },
-    {
-      name: "Management & Coaching d'Équipe",
-      description:
-        "Formations et programmes de management et de coaching d'équipe personnalisés.",
-      keywords: "formation management coaching",
-    },
-    {
-      name: "Production Vidéo Événementielle - L'œil du terrain",
-      description:
-        "Tournage, montage et projection en temps réel pendant vos événements d'entreprise.",
-      keywords: "production vidéo événement entreprise",
     },
   ];
 

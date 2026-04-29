@@ -5,11 +5,8 @@ import { Logo } from "./Logo";
 
 const expertiseLinks = [
   { label: "Séminaires & Incentives", href: "/expertises/seminaires-incentives" },
-  { label: "Congrès & Forums", href: "/expertises/congres-forums" },
   { label: "Soirées Événementielles", href: "/expertises/soirees-evenementielles" },
   { label: "Team-Building", href: "/expertises/team-building" },
-  { label: "Management & Coaching", href: "/expertises/management-coaching" },
-  { label: "Production Vidéo", href: "/expertises/production-video" },
 ];
 
 const quickLinks = [
@@ -52,7 +49,7 @@ export default function Footer() {
             </div>
             <p className="font-inter text-sm text-white/50 leading-relaxed mb-6">
               Agence événementielle B2B française spécialisée dans
-              l&apos;organisation de séminaires, congrès et soirées. 20 ans
+              l&apos;organisation de séminaires, soirées et team-building. 20 ans
               d&apos;expertise au service de vos événements d&apos;entreprise.
             </p>
             <div className="flex items-center gap-3">

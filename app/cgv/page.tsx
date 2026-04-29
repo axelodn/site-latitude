@@ -52,11 +52,8 @@ export default function CGV() {
               </p>
               <ul className="list-disc list-inside space-y-2 mt-4">
                 <li>Organisation de séminaires et incentives</li>
-                <li>Gestion de congrès et forums</li>
                 <li>Organisation de soirées événementielles</li>
                 <li>Programmes de team-building</li>
-                <li>Coaching et formations managériales</li>
-                <li>Production vidéo et contenus</li>
               </ul>
             </section>
 

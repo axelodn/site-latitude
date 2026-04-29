@@ -22,15 +22,14 @@ const BASE_URL = "https://www.latitude-organisation.com";
 export const metadata: Metadata = {
   title: {
     default:
-      "Latitude Organisation | Agence événementielle France — Séminaires, Congrès, Soirées",
+      "Latitude Organisation | Agence événementielle France — Séminaires, Soirées, Team-Building",
     template: "%s | Latitude Organisation",
   },
   description:
-    "Agence événementielle B2B depuis 20 ans. Organisation de séminaires, congrès, soirées et team-building en France et à l'international. Un interlocuteur dédié, une prestation sur mesure.",
+    "Agence événementielle B2B depuis 20 ans. Organisation de séminaires, soirées et team-building en France et à l'international. Un interlocuteur dédié, une prestation sur mesure.",
   keywords: [
     "agence événementielle France",
     "organisation séminaire entreprise",
-    "agence organisation congrès",
     "organisation soirée entreprise",
     "agence team building France",
     "organisation événement professionnel",
@@ -55,7 +54,7 @@ export const metadata: Metadata = {
     title:
       "Latitude Organisation — Agence événementielle premium France & International",
     description:
-      "20 ans d'expertise dans l'organisation d'événements professionnels sur mesure. Séminaires, congrès, soirées, team-building. Un seul interlocuteur. Zéro stress.",
+      "20 ans d'expertise dans l'organisation d'événements professionnels sur mesure. Séminaires, soirées, team-building. Un seul interlocuteur. Zéro stress.",
     url: BASE_URL,
     siteName: "Latitude Organisation",
     locale: "fr_FR",
@@ -73,7 +72,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Latitude Organisation — Agence événementielle premium",
     description:
-      "20 ans d'expertise en organisation d'événements professionnels. Séminaires, congrès, soirées, team-building.",
+      "20 ans d'expertise en organisation d'événements professionnels. Séminaires, soirées, team-building.",
     images: [`${BASE_URL}/og-image.jpg`],
     creator: "@LatitudeOrg",
   },

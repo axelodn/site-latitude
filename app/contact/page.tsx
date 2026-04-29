@@ -244,11 +244,8 @@ export default function ContactPage() {
                     >
                       <option value="">Choisir un sujet</option>
                       <option value="seminaire">Séminaire</option>
-                      <option value="congres">Congrès</option>
                       <option value="soiree">Soirée événementielle</option>
                       <option value="team-building">Team-building</option>
-                      <option value="coaching">Coaching & Management</option>
-                      <option value="video">Production vidéo</option>
                       <option value="autre">Autre</option>
                     </select>
                   </div>

@@ -64,7 +64,7 @@ export default function Expertises() {
             variants={fadeInUp}
             className="font-inter text-latitude-black/60 text-lg max-w-2xl mx-auto leading-relaxed"
           >
-            6 domaines d&apos;excellence pour orchestrer vos événements
+            3 domaines d&apos;excellence pour orchestrer vos événements
             d&apos;entreprise, de la conception à la réalisation, en France et à
             l&apos;international.
           </motion.p>

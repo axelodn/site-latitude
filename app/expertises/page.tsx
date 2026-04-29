@@ -10,18 +10,17 @@ import { expertiseDetails } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Nos Expertises | Latitude Organisation",
   description:
-    "Découvrez nos 6 domaines d'expertise en organisation événementielle : séminaires, congrès, soirées, team-building, coaching et production vidéo.",
+    "Découvrez nos expertises en organisation événementielle : séminaires, soirées et team-building sur mesure en France et à l'international.",
   keywords: [
     "expertises événementiel",
     "séminaires entreprise",
-    "congrès organisation",
     "team-building",
     "soirées événementielles",
   ],
   openGraph: {
     title: "Nos Expertises | Latitude Organisation",
     description:
-      "6 domaines d'expertise pour tous vos événements professionnels",
+      "Nos expertises pour tous vos événements professionnels",
     type: "website",
   },
 };
@@ -40,8 +39,8 @@ export default function ExpertisesIndex() {
       {/* Hero */}
       <PageHero
         eyebrow="NOS DOMAINES"
-        title="6 expertises au service de vos événements"
-        subtitle="Séminaires, congrès, soirées, team-building, coaching ou production vidéo — nous maîtrisons tous les formats."
+        title="Nos expertises au service de vos événements"
+        subtitle="Séminaires & incentives, soirées événementielles, team-building — des expériences sur mesure, orchestrées de A à Z."
         imageSrc="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&q=80"
       />
 

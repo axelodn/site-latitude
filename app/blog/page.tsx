@@ -10,7 +10,7 @@ import { blogArticles } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Blog | Latitude Organisation",
   description:
-    "Conseils, tendances et actualités en organisation d'événements professionnels. Articles d'experts sur séminaires, team-building, congrès et plus.",
+    "Conseils, tendances et actualités en organisation d'événements professionnels. Articles d'experts sur séminaires, soirées et team-building.",
   keywords: [
     "blog événementiel",
     "conseils organisation événements",

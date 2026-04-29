@@ -13,7 +13,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Qui sommes-nous | Latitude Organisation",
   description:
-    "Découvrez l'histoire de Latitude Organisation, agence événementielle depuis 20 ans. Équipe de 50+ experts en séminaires, congrès et événements professionnels.",
+    "Découvrez l'histoire de Latitude Organisation, agence événementielle depuis 20 ans. Experts en séminaires, soirées et team-building en France et à l'international.",
   keywords: [
     "Latitude Organisation",
     "agence événementielle histoire",
@@ -69,7 +69,7 @@ export default function QuiSommesNous() {
               <p className="font-inter text-white/70 text-lg leading-relaxed mb-6">
                 Aujourd&apos;hui, nous sommes une équipe de 50+ experts, forte d&apos;une expérience de plus de
                 20 ans, capable de concevoir et de piloter tous les types d&apos;événements professionnels,
-                du séminaire d&apos;équipe de 30 personnes au congrès international de 5 000 délégués.
+                du séminaire d&apos;équipe de 30 personnes à la soirée de gala ou au team-building d&apos;envergure.
               </p>
 
               <p className="font-inter text-white/70 text-lg leading-relaxed">
