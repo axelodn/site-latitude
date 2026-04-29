@@ -7,7 +7,6 @@ import { viewportConfig, staggerContainer, fadeInUp, slideInLeft, slideInRight }
 
 const eventTypes = [
   "Séminaire",
-  "Congrès / Forum",
   "Soirée événementielle",
   "Team-building",
   "Convention",

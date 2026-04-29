@@ -9,15 +9,6 @@ export const expertises = [
     keywords: "organisation séminaire entreprise",
   },
   {
-    id: "congres-forums",
-    icon: "PresentationChart",
-    title: "Congrès & Forums",
-    subtitle: "Orchestrer vos grands rendez-vous professionnels",
-    description:
-      "Congrès annuels, forums professionnels, assemblées générales : nous gérons chaque dimension de vos grands événements. Logistique, scénographie, technique, hébergement — zéro détail n'est laissé au hasard.",
-    keywords: "agence organisation congrès professionnel",
-  },
-  {
     id: "soirees-evenementielles",
     icon: "Sparkles",
     title: "Soirées Événementielles",
@@ -34,24 +25,6 @@ export const expertises = [
     description:
       "Des challenges sportifs en montagne aux ateliers créatifs en ville, des régates en mer aux vols en montgolfière : nous créons des expériences de cohésion originales qui marquent durablement les esprits.",
     keywords: "team building original nature outdoor",
-  },
-  {
-    id: "management-coaching",
-    icon: "Target",
-    title: "Management & Coaching",
-    subtitle: "Formations indoor/outdoor pour vos équipes",
-    description:
-      "Nos programmes de management et de coaching s'articulent autour de vos enjeux stratégiques. Ateliers de leadership, séminaires de cohésion managériale, coaching d'équipe : des formats adaptés à vos objectifs.",
-    keywords: "formation management coaching entreprise",
-  },
-  {
-    id: "production-video",
-    icon: "Film",
-    title: "Production Vidéo",
-    subtitle: "L'œil du terrain : revivre l'événement en direct",
-    description:
-      "Notre signature unique : tournage professionnel pendant l'événement, montage en temps réel, projection le soir même. Vos équipes revivent les meilleurs moments avant même de rentrer chez elles.",
-    keywords: "agence événementielle avec production vidéo",
   },
 ];
 
@@ -73,24 +46,6 @@ export const testimonials = [
     rating: 5,
   },
   {
-    id: 2,
-    quote:
-      "20 ans d'expérience, ça se voit. Ils ont géré notre congrès de 800 personnes avec une fluidité impressionnante. Un seul interlocuteur du brief à la clôture, zéro stress pour nos équipes. Je recommande sans réserve.",
-    author: "Thomas Lefèvre",
-    role: "Directeur Général",
-    company: "Groupe Médiane",
-    rating: 5,
-  },
-  {
-    id: 3,
-    quote:
-      "L'œil du terrain est leur signature, et c'est tout simplement magique. Revoir la journée le soir même, c'est un moment fort pour les équipes. Cela crée une émotion collective qui prolonge l'événement bien au-delà.",
-    author: "Sophie Tanguy",
-    role: "Responsable Événementiel",
-    company: "Pharma Santé+",
-    rating: 5,
-  },
-  {
     id: 4,
     quote:
       "Du team-building en Corse à notre soirée de gala parisienne, Latitude a su comprendre notre culture d'entreprise et la retranscrire dans chaque événement. Partenaire de confiance depuis 5 ans.",
@@ -102,16 +57,6 @@ export const testimonials = [
 ];
 
 export const portfolio = [
-  {
-    id: 1,
-    title: "Convention Annuelle TechCorp",
-    category: "Congrès",
-    lieu: "Palais des Congrès, Paris",
-    participants: 850,
-    gradient: "from-slate-800 to-slate-900",
-    alt: "Congrès d'entreprise au Palais des Congrès de Paris avec 850 participants",
-    size: "large",
-  },
   {
     id: 2,
     title: "Séminaire Direction Stratégique",
@@ -140,16 +85,6 @@ export const portfolio = [
     participants: 200,
     gradient: "from-neutral-700 to-neutral-900",
     alt: "Team-building et incentive en montagne à Chamonix avec 200 collaborateurs",
-    size: "medium",
-  },
-  {
-    id: 5,
-    title: "Forum Leadership Médiane",
-    category: "Congrès",
-    lieu: "Marrakech, Maroc",
-    participants: 350,
-    gradient: "from-amber-900 to-stone-900",
-    alt: "Forum leadership international à Marrakech Maroc pour 350 dirigeants",
     size: "medium",
   },
   {
@@ -196,14 +131,9 @@ export const faqItems = [
       "Oui, absolument. Titulaires de la Licence Agence de Voyage N°026-09-001, nous organisons des événements dans le monde entier. Nos destinations récurrentes incluent le Maroc, le Portugal, l'Espagne, l'Italie, la Suisse, la Turquie, l'Île Maurice, le Canada et les Caraïbes. Partout où vous souhaitez emmener vos équipes, nous avons le réseau et l'expertise pour le faire.",
   },
   {
-    question: "Combien coûte l'organisation d'un congrès professionnel ?",
-    answer:
-      "Chaque événement est unique et les tarifs varient en fonction du nombre de participants, de la destination, de la durée et du niveau de prestations souhaité. Nous travaillons avec des budgets allant de quelques dizaines à plusieurs centaines de milliers d'euros. Contactez-nous pour un devis personnalisé et gratuit — nous nous adaptons à votre budget tout en garantissant la qualité.",
-  },
-  {
     question: "Qu'est-ce qui différencie Latitude Organisation des autres agences événementielles ?",
     answer:
-      "Trois choses nous distinguent fondamentalement. D'abord, l'interlocuteur unique : une seule personne vous accompagne du brief au bilan, garantissant cohérence et réactivité. Ensuite, notre réseau de 120+ centres partenaires en France, constitué depuis 20 ans, nous permet d'accéder à des lieux exclusifs aux meilleures conditions. Enfin, notre signature 'L'œil du terrain' : une production vidéo temps réel qui permet à vos équipes de revivre l'événement le soir même.",
+      "Deux choses nous distinguent fondamentalement. D'abord, l'interlocuteur unique : une seule personne vous accompagne du brief au bilan, garantissant cohérence et réactivité. Ensuite, notre réseau de 120+ centres partenaires en France, constitué depuis 20 ans, nous permet d'accéder à des lieux exclusifs aux meilleures conditions.",
   },
   {
     question: "Pouvez-vous gérer des événements de plus de 500 personnes ?",
@@ -214,11 +144,6 @@ export const faqItems = [
     question: "Proposez-vous des team-buildings originaux en pleine nature ?",
     answer:
       "C'est l'une de nos spécialités. Randonnées en montagne, régates en mer, survie en forêt, vols en montgolfière, rallyes 4x4 dans le désert marocain : nous créons des expériences outdoor qui sortent du cadre habituel et créent des souvenirs durables. Nous adaptons toujours l'activité à votre équipe, à ses capacités physiques et à vos objectifs de cohésion.",
-  },
-  {
-    question: "Comment se déroule la production vidéo 'L'œil du terrain' ?",
-    answer:
-      "Notre équipe de tournage intervient tout au long de l'événement, capturant les moments forts, les émotions et les coulisses. Le montage se fait en temps réel dans notre studio mobile. Le soir même, lors du dîner ou de la soirée de clôture, nous projetons le film de la journée devant vos participants. C'est un moment fort, systématiquement plébiscité comme le temps fort de l'événement.",
   },
   {
     question: "Quelle est votre zone géographique d'intervention ?",
@@ -242,5 +167,5 @@ export const destinations = [
   { name: "Île Maurice", x: "63%", y: "62%", country: "Île Maurice" },
 ];
 
-export type PortfolioCategory = "Tous" | "Séminaires" | "Congrès" | "Soirées" | "Team-building";
-export const portfolioCategories: PortfolioCategory[] = ["Tous", "Séminaires", "Congrès", "Soirées", "Team-building"];
+export type PortfolioCategory = "Tous" | "Séminaires" | "Soirées" | "Team-building";
+export const portfolioCategories: PortfolioCategory[] = ["Tous", "Séminaires", "Soirées", "Team-building"];
