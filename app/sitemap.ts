@@ -3,7 +3,6 @@ import {
   expertiseDetails,
   realisationsDetails,
   blogArticles,
-  destinationsDetails,
 } from "@/lib/content";
 
 const BASE_URL = "https://www.latitude-organisation.com";
@@ -27,13 +26,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${BASE_URL}/blog/${article.slug}`,
     lastModified: new Date(article.date),
     changeFrequency: "monthly" as const,
-    priority: 0.6,
-  }));
-
-  const destinationPages = destinationsDetails.map((destination) => ({
-    url: `${BASE_URL}/destinations/${destination.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "yearly" as const,
     priority: 0.6,
   }));
 
@@ -71,13 +63,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     ...blogPages,
-    {
-      url: `${BASE_URL}/destinations`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.7,
-    },
-    ...destinationPages,
     {
       url: `${BASE_URL}/testimonials`,
       lastModified: new Date(),

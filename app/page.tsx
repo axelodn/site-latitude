@@ -13,7 +13,6 @@ const Expertises       = dynamic(() => import("@/components/Expertises"));
 const Approach         = dynamic(() => import("@/components/Approach"));
 const Portfolio        = dynamic(() => import("@/components/Portfolio"));
 const Testimonials     = dynamic(() => import("@/components/Testimonials"));
-const Destinations     = dynamic(() => import("@/components/Destinations"));
 const FAQ              = dynamic(() => import("@/components/FAQ"));
 const Contact          = dynamic(() => import("@/components/Contact"));
 const Footer           = dynamic(() => import("@/components/Footer"));
@@ -41,7 +40,6 @@ export default function HomePage() {
         <Approach />
         <Portfolio />
         <Testimonials />
-        <Destinations />
         <FAQ />
         <Contact />
       </main>
