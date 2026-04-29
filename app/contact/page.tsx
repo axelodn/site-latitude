@@ -83,14 +83,14 @@ export default function ContactPage() {
                   {
                     icon: Phone,
                     label: "Téléphone",
-                    value: "+33 (0)1 XX XX XX XX",
-                    href: "tel:+33",
+                    value: "06 86 70 65 20",
+                    href: "tel:+33686706520",
                   },
                   {
                     icon: Mail,
                     label: "Email",
-                    value: "contact@latitude-organisation.com",
-                    href: "mailto:contact@latitude-organisation.com",
+                    value: "jerome@latitude-organisation.com",
+                    href: "mailto:jerome@latitude-organisation.com",
                   },
                   {
                     icon: MapPin,

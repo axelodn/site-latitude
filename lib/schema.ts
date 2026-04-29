@@ -24,8 +24,8 @@ export function generateOrganizationSchema() {
       postalCode: "75008",
       addressCountry: "FR",
     },
-    telephone: "+33-1-42-00-00-00",
-    email: "contact@latitude-organisation.com",
+    telephone: "+33-6-86-70-65-20",
+    email: "jerome@latitude-organisation.com",
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",

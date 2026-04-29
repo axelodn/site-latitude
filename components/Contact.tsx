@@ -350,9 +350,9 @@ export default function Contact() {
                 aria-label="Coordonnées de Latitude Organisation"
               >
                 <a
-                  href="tel:+33142000000"
+                  href="tel:+33686706520"
                   className="flex items-start gap-4 group"
-                  aria-label="Appeler Latitude Organisation au 01 42 00 00 00"
+                  aria-label="Appeler Latitude Organisation au 06 86 70 65 20"
                 >
                   <div
                     className="w-10 h-10 flex-shrink-0 flex items-center justify-center border mt-0.5"
@@ -369,13 +369,13 @@ export default function Contact() {
                       Téléphone
                     </p>
                     <p className="font-inter text-white group-hover:text-latitude-gold transition-colors duration-300">
-                      +33 (0)1 42 00 00 00
+                      06 86 70 65 20
                     </p>
                   </div>
                 </a>
 
                 <a
-                  href="mailto:contact@latitude-organisation.com"
+                  href="mailto:jerome@latitude-organisation.com"
                   className="flex items-start gap-4 group"
                   aria-label="Envoyer un email à Latitude Organisation"
                 >
@@ -394,7 +394,7 @@ export default function Contact() {
                       Email
                     </p>
                     <p className="font-inter text-white group-hover:text-latitude-gold transition-colors duration-300 break-all">
-                      contact@latitude-organisation.com
+                      jerome@latitude-organisation.com
                     </p>
                   </div>
                 </a>

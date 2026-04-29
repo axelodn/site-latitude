@@ -142,8 +142,8 @@ export default function PolitiqueConfidentialite() {
               </ul>
               <p className="mt-4">
                 Pour exercer ces droits, contactez-nous à{" "}
-                <a href="mailto:contact@latitude-organisation.com" className="text-latitude-gold hover:underline">
-                  contact@latitude-organisation.com
+                <a href="mailto:jerome@latitude-organisation.com" className="text-latitude-gold hover:underline">
+                  jerome@latitude-organisation.com
                 </a>
               </p>
             </section>
@@ -169,9 +169,9 @@ export default function PolitiqueConfidentialite() {
               <p className="mt-4">
                 <strong>Latitude Organisation</strong>
                 <br />
-                Email: <a href="mailto:contact@latitude-organisation.com" className="text-latitude-gold hover:underline">contact@latitude-organisation.com</a>
+                Email: <a href="mailto:jerome@latitude-organisation.com" className="text-latitude-gold hover:underline">jerome@latitude-organisation.com</a>
                 <br />
-                Téléphone: +33 (0)1 XX XX XX XX
+                Téléphone: 06 86 70 65 20
               </p>
             </section>
 
