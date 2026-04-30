@@ -21,7 +21,7 @@ const concepts = [
     subtitle: "La Galerie des Lumières — Scénario 2026",
     description:
       "Plongez vos équipes dans un scénario inédit signé Latitude Organisation : une nuit de vernissage tourne au drame dans une galerie d'art contemporain. Témoins, suspects, enquêteurs — chaque collaborateur tient un rôle. Comédiens professionnels, décors immersifs et faux indices distillés tout au long de la soirée.",
-    highlights: ["Comédiens professionnels", "Scénario exclusif 2026", "10 à 300 participants", "En intérieur"],
+    highlights: ["Comédiens professionnels", "Scénario exclusif 2026", "10 à 100 participants", "Indoor"],
     mainImage: "/images/murder-atelier.jpg",
     secondaryImages: ["/images/murder-karim.jpg", "/images/murder-sergio.jpg"],
     gallery: [],
@@ -46,6 +46,7 @@ const concepts = [
       "/images/archeo-tir-arc.jpg",
       "/images/archeo-jerome.jpg",
       "/images/archeo-famille-2.jpg",
+      "/images/MEDIEVAL FANTASY 2.HEIC.jpg"
     ],
     dark: false,
   },
@@ -57,7 +58,7 @@ const concepts = [
     subtitle: "L'élégance anglaise revisitée",
     description:
       "Un concept signé Latitude Organisation qui plonge vos équipes dans l'univers raffiné et décalé de l'Angleterre. Croquet sur pelouse, tea time animé, quiz Beatles, course de plateau de thé, défis fléchettes… Un parcours en stations où l'humour britannique et la compétition bienveillante font bon ménage.",
-    highlights: ["Format demi-journée", "Création originale", "15 à 150 participants", "Indoor / Outdoor"],
+    highlights: ["Format demi-journée", "Création originale", "15 à 150 participants", "Outdoor"],
     mainImage: "/images/so-british-croquet.png",
     secondaryImages: ["/images/so-british-the.png", "/images/so-british-flechettes.jpg"],
     gallery: [],
