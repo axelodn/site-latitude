@@ -53,7 +53,7 @@ export default function MentionsLegales() {
                 2. Directeur de la publication
               </h2>
               <p>
-                Le directeur de la publication est [Nom du responsable].
+                Le directeur de la publication est Jérome Aviotte.
               </p>
             </section>
 
