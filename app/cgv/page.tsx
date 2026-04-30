@@ -74,7 +74,7 @@ export default function CGV() {
               </h2>
               <p>
                 Les prix sont indiqués en euros, TVA comprise, sauf indication contraire.
-                Un acompte de [X%] est requis à la signature du contrat. Le solde est
+                Un acompte de 30% est requis à la signature du contrat. Le solde est
                 facturé avant l&apos;événement ou selon les modalités convenues.
               </p>
             </section>
