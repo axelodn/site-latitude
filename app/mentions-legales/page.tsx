@@ -40,9 +40,9 @@ export default function MentionsLegales() {
                 <br />
                 SARL au capital variable
                 <br />
-                Siège social: Paris, France
+                Siège social: 36 AVENUE SAINT LAZARE, 26200 MONTELIMAR, France
                 <br />
-                Numéro de SIRET: [À compléter]
+                Numéro de SIRET: 488 983 875 00011
                 <br />
                 Licence Agence de Voyage N°026-09-001
               </p>
