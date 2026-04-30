@@ -221,7 +221,10 @@ export const activities: Activity[] = [
     slug: "medieval-fantasy",
     name: "Medieval Fantasy",
     category: "interieur",
-    images: [],
+    images: [
+      "/images/medieval-fantasy.jpg",
+      "/images/medieval-fantasy-2.jpg",
+    ],
     excerpt: "Une plongée dans l'univers médiéval-fantastique : costumes, défis épiques, aventure imaginaire.",
     description: "Medieval Fantasy plonge vos équipes dans un univers d'aventure inspiré du Moyen-Âge et des grandes sagas heroic-fantasy. Costumes, défis tactiques, énigmes et combats à l'arme en mousse : un terrain de jeu décalé qui libère l'imaginaire et soude les groupes par l'aventure partagée.",
     duration: "1/2 à journée",
