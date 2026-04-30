@@ -37,7 +37,7 @@ const concepts = [
       "Une création originale Latitude Organisation qui transforme vos équipes en archéologues en herbe. Sur un site authentique du patrimoine français, vos collaborateurs fouillent, analysent et reconstituent des vestiges pour percer un mystère historique. Un team-building intellectuel, ludique et spectaculaire qui mêle culture, cohésion et dépassement de soi en plein air.",
     highlights: ["Sites patrimoniaux authentiques", "Création Latitude", "20 à 200 participants", "Outdoor"],
     mainImage: "/images/archeo-rochefort.jpg",
-    secondaryImages: ["/images/archeo-rochefort-2.jpg", "/images/MEDIEVAL FANTASY 2.HEIC.jpg"],
+    secondaryImages: ["/images/archeo-rochefort-2.jpg", "/images/MEDIEVAL FANTASY 2.HEIC"],
     gallery: [
       "/images/archeo-rochefort-3.jpg",
       "/images/archeo-rochefort-4.jpg",
