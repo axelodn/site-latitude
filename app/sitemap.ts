@@ -3,7 +3,6 @@ export const dynamic = "force-static";
 import type { MetadataRoute } from "next";
 import {
   expertiseDetails,
-  realisationsDetails,
   blogArticles,
 } from "@/lib/content";
 
@@ -15,13 +14,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.8,
-  }));
-
-  const realisationPages = realisationsDetails.map((realisation) => ({
-    url: `${BASE_URL}/realisations/${realisation.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
   }));
 
   const blogPages = blogArticles.map((article) => ({
@@ -51,13 +43,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     ...expertisePages,
-    {
-      url: `${BASE_URL}/realisations`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    ...realisationPages,
     {
       url: `${BASE_URL}/blog`,
       lastModified: new Date(),

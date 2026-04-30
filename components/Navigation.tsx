@@ -11,7 +11,6 @@ const navLinks = [
   { label: "Expertises", href: "/expertises" },
   { label: "Nouveautés", href: "/nouveautes" },
   { label: "Séjours", href: "/sejours" },
-  { label: "Réalisations", href: "/realisations" },
   { label: "Contact", href: "/contact" },
 ];
 
