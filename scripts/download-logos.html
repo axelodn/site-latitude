@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Téléchargement logos Latitude</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; background: #f5f5f5; }
+    h1 { color: #333; }
+    button { background: #C9A961; color: white; border: none; padding: 14px 28px; font-size: 16px; cursor: pointer; border-radius: 4px; margin: 10px 0; }
+    button:hover { background: #b8943f; }
+    #log { margin-top: 20px; padding: 15px; background: white; border-radius: 4px; font-size: 13px; line-height: 2; min-height: 100px; }
+    .ok { color: green; } .err { color: red; } .info { color: #666; }
+  </style>
+</head>
+<body>
+  <h1>📥 Téléchargement des logos</h1>
+  <p>Clique sur le bouton — les logos se téléchargent dans ton dossier <strong>Téléchargements</strong>.<br>
+  Ensuite déplace-les dans <code>public/images/logos/</code>.</p>
+  <button onclick="downloadAll()">⬇️ Télécharger tous les logos</button>
+  <div id="log"></div>
+
+  <script>
+    const logos = [
+      { name: "edf.png",              url: "https://upload.wikimedia.org/wikipedia/commons/b/be/EDF_logo.svg" },
+      { name: "credit-mutuel.png",    url: "https://upload.wikimedia.org/wikipedia/commons/8/8c/Logo_Cr%C3%A9dit_Mutuel.svg" },
+      { name: "coca-cola.png",        url: "https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg" },
+      { name: "bnp-paribas.png",      url: "https://upload.wikimedia.org/wikipedia/commons/0/0e/BNP_Paribas_logo.svg" },
+      { name: "loreal.png",           url: "https://upload.wikimedia.org/wikipedia/commons/9/93/Logo_L%27Or%C3%A9al.svg" },
+      { name: "volvo.png",            url: "https://upload.wikimedia.org/wikipedia/commons/3/39/Volvo_Cars_logo.svg" },
+      { name: "lvmh.png",             url: "https://upload.wikimedia.org/wikipedia/commons/8/8c/Logo_LVMH.svg" },
+      { name: "sanofi.png",           url: "https://upload.wikimedia.org/wikipedia/commons/e/e5/Sanofi_logo.svg" },
+      { name: "axa.png",              url: "https://upload.wikimedia.org/wikipedia/commons/3/37/AXA_Logo.svg" },
+      { name: "bouygues.png",         url: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Bouygues-logo.svg" },
+      { name: "eiffage.png",          url: "https://upload.wikimedia.org/wikipedia/commons/6/62/Eiffage_logo.svg" },
+      { name: "vinci.png",            url: "https://upload.wikimedia.org/wikipedia/commons/8/82/VINCI_logo.svg" },
+      { name: "engie.png",            url: "https://upload.wikimedia.org/wikipedia/commons/d/d8/Logo_ENGIE.svg" },
+      { name: "totalenergies.png",    url: "https://upload.wikimedia.org/wikipedia/commons/5/5f/TotalEnergies_logo.svg" },
+      { name: "societe-generale.png", url: "https://upload.wikimedia.org/wikipedia/commons/6/6d/Soci%C3%A9t%C3%A9_G%C3%A9n%C3%A9rale_logo.svg" },
+      { name: "sncf.png",             url: "https://upload.wikimedia.org/wikipedia/commons/1/15/Logo_SNCF.svg" },
+      { name: "renault.png",          url: "https://upload.wikimedia.org/wikipedia/commons/b/b7/Renault_2021_Text.svg" },
+      { name: "danone.png",           url: "https://upload.wikimedia.org/wikipedia/commons/a/a6/Danone.svg" },
+      { name: "manomano.png",         url: "https://upload.wikimedia.org/wikipedia/commons/1/1e/ManoMano_logo.svg" },
+      { name: "veolia.png",           url: "https://upload.wikimedia.org/wikipedia/commons/f/f7/Logo_veolia.svg" },
+      { name: "thales.png",           url: "https://upload.wikimedia.org/wikipedia/commons/a/a3/Thales_Logo.svg" },
+      { name: "capgemini.png",        url: "https://upload.wikimedia.org/wikipedia/commons/1/14/Capgemini_201x_logo.svg" },
+      { name: "air-france.png",       url: "https://upload.wikimedia.org/wikipedia/commons/4/44/Air_France_Logo.svg" },
+    ];
+
+    const log = document.getElementById('log');
+    function addLog(msg, type='info') {
+      log.innerHTML += `<div class="${type}">${msg}</div>`;
+    }
+
+    async function downloadOne(logo, delay) {
+      await new Promise(r => setTimeout(r, delay));
+      try {
+        const res = await fetch(logo.url);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const blob = await res.blob();
+        // Convert SVG to PNG via canvas if needed
+        const svgBlob = new Blob([await blob.text()], { type: 'image/svg+xml' });
+        const url = URL.createObjectURL(svgBlob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = logo.name.replace('.png', '.svg');
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        addLog(`✅ ${logo.name}`, 'ok');
+      } catch(e) {
+        addLog(`❌ ${logo.name} — ${e.message}`, 'err');
+      }
+    }
+
+    async function downloadAll() {
+      log.innerHTML = '<div class="info">Téléchargement en cours...</div>';
+      for (let i = 0; i < logos.length; i++) {
+        await downloadOne(logos[i], i * 600);
+      }
+      addLog('---', 'info');
+      addLog('✨ Terminé ! Déplace les fichiers SVG dans <code>public/images/logos/</code>', 'ok');
+    }
+  </script>
+</body>
+</html>

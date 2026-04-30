@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { portfolio, portfolioCategories, type PortfolioCategory } from "@/lib/data";
 import { MapPin, Users } from "lucide-react";
@@ -102,12 +103,18 @@ export default function Portfolio() {
                 }`}
                 aria-label={`Réalisation : ${item.title} — ${item.category} à ${item.lieu}`}
               >
-                {/* TODO: Replace with real event photos — file naming: seminaire-[client]-[lieu].jpg */}
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${item.gradient} transition-transform duration-700 group-hover:scale-105`}
-                  role="img"
-                  aria-label={item.alt}
-                />
+                {/* Real event photo */}
+                <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-105">
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  {/* Permanent dark overlay for readability */}
+                  <div className="absolute inset-0 bg-black/20" />
+                </div>
 
                 {/* Category badge */}
                 <div className="absolute top-4 left-4 z-10">

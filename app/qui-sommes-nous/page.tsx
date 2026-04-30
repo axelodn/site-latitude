@@ -44,7 +44,7 @@ export default function QuiSommesNous() {
         eyebrow="NOTRE HISTOIRE"
         title="Une agence événementielle avec une vraie histoire"
         subtitle="Depuis 2004, nous organisons des événements qui marquent les esprits et renforcent les liens au sein des entreprises."
-        imageSrc="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80"
+        imageSrc="/images/koh-lanta-groupe.jpg"
       />
 
       {/* About Section */}
@@ -72,10 +72,23 @@ export default function QuiSommesNous() {
                 du séminaire d&apos;équipe de 30 personnes à la soirée de gala ou au team-building d&apos;envergure.
               </p>
 
-              <p className="font-inter text-white/70 text-lg leading-relaxed">
+              <p className="font-inter text-white/70 text-lg leading-relaxed mb-10">
                 Nos clients? Des PME aux grandes entreprises du CAC 40, qui nous font confiance pour
                 transformer leurs enjeux en événements d&apos;exception.
               </p>
+
+              {/* Phrase fétiche */}
+              <blockquote
+                className="border-l-4 pl-6 py-2"
+                style={{ borderColor: "#C9A961" }}
+              >
+                <p className="font-playfair italic text-white text-xl leading-relaxed">
+                  &laquo;&nbsp;La bienveillance fait partie de notre ADN.&nbsp;&raquo;
+                </p>
+                <footer className="mt-3 font-inter text-xs tracking-[0.25em] uppercase" style={{ color: "#C9A961" }}>
+                  Jérôme Aviotte, Fondateur
+                </footer>
+              </blockquote>
             </div>
 
             {/* Right: Stats */}
@@ -149,31 +162,34 @@ export default function QuiSommesNous() {
             centered={true}
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-16 max-w-4xl mx-auto">
+          <div className="flex justify-center mt-16">
             {team.map((member) => (
               <div
                 key={member.name}
-                className="bg-white/5 border border-white/10 p-8 hover:border-latitude-gold/50 transition-all duration-300"
+                className="bg-white/5 border border-white/10 hover:border-latitude-gold/50 transition-all duration-300 w-full max-w-sm overflow-hidden"
               >
                 {member.image && (
-                  <div className="relative h-48 mb-6 overflow-hidden">
+                  <div className="relative h-[480px] overflow-hidden">
                     <Image
                       src={member.image}
                       alt={member.name}
                       fill
-                      className="object-cover object-center"
+                      className="object-cover"
+                      style={{ objectPosition: "50% 15%" }}
                     />
                   </div>
                 )}
-                <h3 className="font-playfair text-xl font-bold text-white mb-1">
-                  {member.name}
-                </h3>
-                <p className="font-inter text-sm text-latitude-gold mb-4">
-                  {member.role}
-                </p>
-                <p className="font-inter text-white/70 text-sm leading-relaxed">
-                  {member.bio}
-                </p>
+                <div className="p-8">
+                  <h3 className="font-playfair text-2xl font-bold text-white mb-1">
+                    {member.name}
+                  </h3>
+                  <p className="font-inter text-sm text-latitude-gold mb-4 tracking-widest uppercase">
+                    {member.role}
+                  </p>
+                  <p className="font-inter text-white/70 text-sm leading-relaxed">
+                    {member.bio}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -206,6 +222,59 @@ export default function QuiSommesNous() {
                 </p>
               </div>
             ))}
+          </div>
+
+          {/* Engagement patrimonial */}
+          <div
+            className="mt-20 border border-white/10 p-10 lg:p-14 relative overflow-hidden"
+            style={{ background: "rgba(201,169,97,0.04)" }}
+          >
+            {/* Croix pattée des Templiers */}
+            <div className="absolute top-8 right-10 select-none pointer-events-none" aria-hidden>
+              <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                <g fill="#d92828">
+                  <path d="M30,144.097 C96.9686,223.907,195.815,270,300,270 C404.185,270,503.031,223.907,570,144.097 V455.903 C503.031,376.093,404.185,330,300,330 C195.815,330,96.9686,376.093,30,455.903Z" />
+                  <path d="M455.903,30 C376.093,96.9686,330,195.815,330,300 C330,404.185,376.093,503.031,455.903,570 H144.097 C223.907,503.031,270,404.185,270,300 C270,195.815,223.907,96.9686,144.097,30Z" />
+                </g>
+              </svg>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-10 items-center relative z-10">
+              <div>
+                <span
+                  className="inline-block font-inter text-xs font-medium tracking-[0.3em] uppercase px-4 py-2 border mb-6"
+                  style={{ borderColor: "#C9A961", color: "#C9A961" }}
+                >
+                  Engagement patrimonial
+                </span>
+                <h3 className="font-playfair text-3xl md:text-4xl text-white font-normal leading-tight mb-6">
+                  Gardiens d&apos;un héritage{" "}
+                  <span className="font-bold">vieux de huit siècles</span>
+                </h3>
+                <p className="font-inter text-white/70 text-lg leading-relaxed">
+                  Au-delà de l&apos;événementiel, Latitude Organisation s&apos;engage dans la préservation
+                  du patrimoine historique français. Nous participons activement à la restauration
+                  de deux sites du <strong className="text-white/90">XII<sup>e</sup> siècle</strong>{" "}ayant
+                  appartenu aux Chevaliers Templiers — témoins d&apos;une histoire millénaire que nous
+                  nous devons de transmettre aux générations futures.
+                </p>
+              </div>
+              <div className="space-y-6">
+                <div className="border-l-2 pl-6" style={{ borderColor: "#C9A961" }}>
+                  <p className="font-inter text-white/60 text-sm leading-relaxed">
+                    Cet engagement reflète nos valeurs profondes&nbsp;: le respect du temps long,
+                    le soin du détail et la conviction que les lieux ont une âme. Les mêmes
+                    valeurs que nous mettons au service de chaque événement que nous concevons.
+                  </p>
+                </div>
+                <div className="border-l-2 pl-6" style={{ borderColor: "rgba(201,169,97,0.3)" }}>
+                  <p className="font-inter text-white/60 text-sm leading-relaxed">
+                    Parce que bâtir, restaurer et rassembler sont des actes qui participent
+                    d&apos;un même idéal&nbsp;: laisser quelque chose de beau derrière soi.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

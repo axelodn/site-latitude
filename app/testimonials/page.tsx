@@ -85,7 +85,7 @@ export default function TestimonialsPage() {
         eyebrow="CE QUE DISENT NOS CLIENTS"
         title="Ils nous font confiance"
         subtitle="Depuis 20 ans, nos clients nous choisissent pour la qualité de nos services et notre engagement envers l'excellence."
-        imageSrc="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&q=80"
+        imageSrc="/images/impressionnistes-satillieu.png"
       />
 
       {/* Stats */}

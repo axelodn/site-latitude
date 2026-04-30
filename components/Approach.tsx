@@ -107,8 +107,8 @@ export default function Approach() {
             >
               <div ref={imgRef} className="absolute inset-0 will-change-transform" style={{ top: "-15%", bottom: "-15%" }}>
               <Image
-                src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=1000&fit=crop"
-                alt="Soirée gala d'entreprise organisée par Latitude Organisation"
+                src="/images/speleo.png"
+                alt="Team-building spéléologie organisé par Latitude Organisation"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Users,
   Presentation,
@@ -85,47 +86,73 @@ export default function Expertises() {
               <motion.article
                 key={expertise.id}
                 variants={fadeInUp}
-                className="group relative bg-white border border-black/8 p-8 hover:border-latitude-gold/60 hover:shadow-lg transition-all duration-400 hover:-translate-y-1 flex flex-col"
+                className="group relative overflow-hidden flex flex-col min-h-[420px] hover:-translate-y-1 transition-transform duration-400"
                 aria-label={`Service : ${expertise.title}`}
               >
-                <Link href={`/expertises/${expertise.id}`} className="absolute inset-0 z-10" aria-label={`Voir ${expertise.title}`} />
-                {/* Icon */}
+                <Link href={`/expertises/${expertise.id}`} className="absolute inset-0 z-20" aria-label={`Voir ${expertise.title}`} />
+
+                {/* Background image */}
+                {expertise.image && (
+                  <Image
+                    src={expertise.image}
+                    alt={expertise.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                )}
+
+                {/* Dark gradient overlay */}
                 <div
-                  className="w-12 h-12 mb-6 flex items-center justify-center border"
-                  style={{ borderColor: "#C9A961" }}
-                >
-                  {IconComponent && (
-                    <IconComponent
-                      size={22}
-                      strokeWidth={1.5}
-                      style={{ color: "#C9A961" }}
-                      aria-hidden="true"
-                    />
-                  )}
-                </div>
+                  className="absolute inset-0 transition-opacity duration-400"
+                  style={{ background: "linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.25) 100%)" }}
+                />
+                {/* Gold hover tint */}
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400"
+                  style={{ background: "rgba(201,169,97,0.12)" }}
+                />
 
-                {/* Title */}
-                <h3 className="font-playfair font-bold text-latitude-black text-xl mb-3 leading-tight">
-                  {expertise.title}
-                </h3>
+                {/* Content */}
+                <div className="relative z-10 flex flex-col flex-1 p-8 justify-end">
+                  {/* Icon */}
+                  <div
+                    className="w-11 h-11 mb-5 flex items-center justify-center border"
+                    style={{ borderColor: "rgba(201,169,97,0.7)" }}
+                  >
+                    {IconComponent && (
+                      <IconComponent
+                        size={20}
+                        strokeWidth={1.5}
+                        style={{ color: "#C9A961" }}
+                        aria-hidden="true"
+                      />
+                    )}
+                  </div>
 
-                {/* Subtitle */}
-                <p
-                  className="font-inter text-sm font-medium mb-4 tracking-wide"
-                  style={{ color: "#C9A961" }}
-                >
-                  {expertise.subtitle}
-                </p>
+                  {/* Title */}
+                  <h3 className="font-playfair font-bold text-white text-2xl mb-2 leading-tight">
+                    {expertise.title}
+                  </h3>
 
-                {/* Description */}
-                <p className="font-inter text-sm text-latitude-black/60 leading-relaxed flex-1">
-                  {expertise.description}
-                </p>
+                  {/* Subtitle */}
+                  <p
+                    className="font-inter text-sm font-medium mb-4 tracking-wide"
+                    style={{ color: "#C9A961" }}
+                  >
+                    {expertise.subtitle}
+                  </p>
 
-                {/* CTA */}
-                <div className="mt-6 flex items-center gap-2 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ color: "#C9A961" }}>
-                  <span className="font-inter tracking-wide">En savoir plus</span>
-                  <ArrowRight size={14} aria-hidden="true" />
+                  {/* Description */}
+                  <p className="font-inter text-sm text-white/70 leading-relaxed mb-5">
+                    {expertise.description}
+                  </p>
+
+                  {/* CTA */}
+                  <div className="flex items-center gap-2 text-sm font-medium" style={{ color: "#C9A961" }}>
+                    <span className="font-inter tracking-wide">En savoir plus</span>
+                    <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />
+                  </div>
                 </div>
               </motion.article>
             );

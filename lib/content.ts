@@ -5,13 +5,7 @@ export const team = [
     name: "Jérôme Aviotte",
     role: "Directeur Général & Fondateur",
     bio: "Fondateur de Latitude Organisation en 2004. 25 ans d'expérience dans l'événementiel B2B. Visionnaire passionné, il a tissé le réseau de partenaires qui fait notre force aujourd'hui.",
-    image: "/team/antoine.jpg",
-  },
-  {
-    name: "Sandra David",
-    role: "Cheffe de projet",
-    bio: "Cheffe d'orchestre des projets complexes. 15 ans d'expérience en pilotage logistique d'événements jusqu'à 3 000 personnes. Garante de l'excellence opérationnelle.",
-    image: "/team/camille.jpg",
+    image: "/images/jerome-casino.jpg",
   },
 ];
 
@@ -68,10 +62,16 @@ export const timeline = [
       "Ouverture des destinations Maroc, Portugal, Italie. Premier congrès international à Marrakech pour 350 dirigeants.",
   },
   {
-    year: "2018",
-    title: "Lancement de L'Œil du Terrain",
+    year: "2017",
+    title: "Soirée au Stade Français Paris",
     description:
-      "Création de notre signature unique : production vidéo en temps réel pendant l'événement, projection le soir même.",
+      "Organisation d'une soirée de gala pour plus de 500 personnes au sein de l'enceinte du Stade Français Paris — scénographie immersive, animations live et dîner de prestige dans un cadre sportif et emblématique.",
+  },
+  {
+    year: "2019",
+    title: "Séminaire Renault Group",
+    description:
+      "Pilotage du séminaire stratégique annuel de Renault Group : deux jours de plénières, ateliers de cohésion et soirée de gala pour 400 cadres dirigeants. Un événement d'envergure internationale confié à Latitude Organisation de A à Z.",
   },
   {
     year: "2024",
@@ -105,6 +105,614 @@ export const certifications = [
 ];
 
 // =============================
+// ACTIVITÉS TEAM-BUILDING
+// =============================
+
+export type Activity = {
+  slug: string;
+  name: string;
+  category: "interieur" | "exterieur";
+  image?: string;
+  images: string[];
+  excerpt: string;
+  description: string;
+  isLatitudeOriginal?: boolean;
+  duration?: string;
+  participants?: string;
+};
+
+export const activities: Activity[] = [
+  // ========== INTÉRIEUR ==========
+  {
+    slug: "sens-et-conscience",
+    name: "Sens et conscience",
+    category: "interieur",
+    image: "/images/sens-conscience-bulle.png",
+    images: ["/images/sens-conscience-bulle.png"],
+    excerpt: "Une expérience immersive et sensorielle pour développer écoute, confiance et cohésion d'équipe.",
+    description: "Sens et conscience est une activité indoor immersive qui plonge vos collaborateurs dans une bulle d'expérience sensorielle. À travers des ateliers de pleine conscience, d'écoute active et de découverte des sens (vue, ouïe, toucher, goût, odorat), vos équipes développent une nouvelle qualité de présence et d'écoute mutuelle. Une activité ressourçante qui renforce la cohésion durablement.",
+    duration: "2h à 1/2 journée",
+    participants: "10 à 80",
+  },
+  {
+    slug: "energie-c",
+    name: "Energie C",
+    category: "interieur",
+    images: [],
+    excerpt: "Un atelier dynamique qui libère l'énergie collective et booste la motivation à travers des défis créatifs.",
+    description: "Energie C est conçu pour réveiller la dynamique d'équipe et libérer l'énergie collective. Au programme : défis créatifs, exercices participatifs et challenges à relever ensemble. Une animation indoor pleine de rythme qui remet votre équipe en mouvement et renforce l'esprit collectif.",
+    duration: "2h à 3h",
+    participants: "10 à 100",
+  },
+  {
+    slug: "atelier-beaux-arts",
+    name: "Atelier Beaux Arts",
+    category: "interieur",
+    images: [],
+    excerpt: "Initiez-vous aux beaux-arts en équipe : peinture, dessin, sculpture. Une activité créative qui révèle les talents.",
+    description: "Plongez dans l'univers des beaux-arts à travers une activité collective encadrée par un artiste professionnel. Peinture, dessin, sculpture ou techniques mixtes : chaque équipe crée une œuvre qui sera dévoilée en fin de session. Une activité indoor accessible qui révèle les talents cachés et fédère les collaborateurs autour d'une expérience créative.",
+    duration: "2h à 1/2 journée",
+    participants: "8 à 60",
+  },
+  {
+    slug: "challenge-temps-x",
+    name: "Challenge Temps X",
+    category: "interieur",
+    images: [],
+    excerpt: "Un challenge contre la montre où chaque équipe relève des épreuves variées. Coopération, stratégie et adrénaline.",
+    description: "Challenge Temps X est une compétition rythmée par le chrono. Vos équipes enchaînent des épreuves variées (logique, manuelle, créative, sportive) avec un temps limité pour chacune. Coordination, prise de décision rapide et coopération sont les clés du succès. Idéal pour insuffler une dynamique de défi et de performance collective.",
+    duration: "2h à 1/2 journée",
+    participants: "12 à 100",
+  },
+  {
+    slug: "atelier-culinaire",
+    name: "Atelier Culinaire",
+    category: "interieur",
+    images: [],
+    excerpt: "Mettez la main à la pâte : un chef vous accompagne pour créer un repas en équipe à déguster ensemble.",
+    description: "L'Atelier Culinaire est une activité conviviale qui réunit vos collaborateurs autour d'un projet gourmand. Sous la conduite d'un chef, chaque équipe prépare un plat ou un menu complet, à partager ensuite tous ensemble. Au-delà du simple cours de cuisine, c'est un moment fédérateur, sensoriel et chaleureux qui renforce les liens.",
+    duration: "1/2 journée",
+    participants: "8 à 50",
+  },
+  {
+    slug: "oeno-academy",
+    name: "Oeno Academy",
+    category: "interieur",
+    image: "/images/cocktail-spirits.jpg",
+    images: [
+      "/images/cocktail-spirits.jpg",
+      "/images/cocktail-bar.jpg",
+      "/images/cocktail-setup.jpg",
+      "/images/cocktail-workshop.jpg",
+    ],
+    excerpt: "Initiation à l'œnologie : dégustation à l'aveugle, découverte des cépages, accord mets et vins.",
+    description: "Oeno Academy invite vos équipes à explorer le monde du vin avec un sommelier expert. Au programme : dégustation à l'aveugle, reconnaissance des cépages, étude des terroirs et exercices d'accord mets et vins. Une expérience sensorielle, ludique et culturelle qui plaît à tous, néophytes comme amateurs.",
+    duration: "2h à 3h",
+    participants: "8 à 60",
+  },
+  {
+    slug: "murder-party",
+    name: "Murder Party",
+    category: "interieur",
+    image: "/images/murder-atelier.jpg",
+    images: [
+      "/images/murder-atelier.jpg",
+      "/images/murder-atelier-2.jpg",
+      "/images/murder-karim.jpg",
+      "/images/murder-sergio.jpg",
+    ],
+    excerpt: "Plongez dans une enquête grandeur nature : interrogez les suspects, recoupez les indices, démasquez le coupable.",
+    description: "Une Murder Party transforme votre événement en véritable scène de crime. Comédiens professionnels, suspects à interroger, indices disséminés et énigmes à résoudre : vos collaborateurs deviennent enquêteurs le temps d'une soirée. Mystère, déduction, frissons et fous rires garantis dans cette expérience théâtrale immersive.",
+    duration: "2h à soirée complète",
+    participants: "15 à 200",
+  },
+  {
+    slug: "zen-attitude",
+    name: "Zen Attitude",
+    category: "interieur",
+    images: [],
+    excerpt: "Une pause bien-être collective : yoga, méditation, sophrologie. Ressourçante et fédératrice.",
+    description: "Zen Attitude est une parenthèse de calme et de ressourcement. Yoga, méditation guidée, sophrologie ou ateliers de respiration : vos collaborateurs prennent soin d'eux, ensemble. Une activité indoor douce qui apaise les tensions, recentre l'équipe et installe un climat de bien-être durable.",
+    duration: "1h à 1/2 journée",
+    participants: "8 à 80",
+  },
+  {
+    slug: "medieval-fantasy",
+    name: "Medieval Fantasy",
+    category: "interieur",
+    images: [],
+    excerpt: "Une plongée dans l'univers médiéval-fantastique : costumes, défis épiques, aventure imaginaire.",
+    description: "Medieval Fantasy plonge vos équipes dans un univers d'aventure inspiré du Moyen-Âge et des grandes sagas heroic-fantasy. Costumes, défis tactiques, énigmes et combats à l'arme en mousse : un terrain de jeu décalé qui libère l'imaginaire et soude les groupes par l'aventure partagée.",
+    duration: "1/2 à journée",
+    participants: "12 à 80",
+  },
+  {
+    slug: "compagnons-de-notre-dame",
+    name: "Compagnons de Notre-Dame",
+    category: "interieur",
+    images: [],
+    excerpt: "À la manière des bâtisseurs : défis de construction et d'artisanat. Patrimoine et coopération.",
+    description: "Inspirés par l'esprit des compagnons bâtisseurs qui ont relevé Notre-Dame, vos équipes affrontent des défis d'artisanat et de construction : taille de pierre miniature, vitrail, charpente, calligraphie. Un team-building patrimonial et exigeant qui valorise le savoir-faire, la patience et la coopération.",
+    duration: "1/2 à journée",
+    participants: "10 à 60",
+  },
+  {
+    slug: "creation-cocktail",
+    name: "Création Cocktail",
+    category: "interieur",
+    image: "/images/cocktail-bar.jpg",
+    images: [
+      "/images/cocktail-bar.jpg",
+      "/images/cocktail-workshop.jpg",
+      "/images/cocktail-setup.jpg",
+      "/images/cocktail-spirits.jpg",
+    ],
+    excerpt: "Créez vos propres cocktails sous la houlette d'un mixologue. Créativité, dégustation, convivialité.",
+    description: "Création Cocktail est un atelier mixologie où chaque équipe imagine, compose et présente ses propres créations. Sous la conduite d'un barman expert, vos collaborateurs apprennent les techniques de base puis laissent libre cours à leur créativité. Le tout dans une ambiance conviviale qui clôture parfaitement un séminaire.",
+    duration: "2h",
+    participants: "8 à 60",
+  },
+  {
+    slug: "enigma",
+    name: "Enigma",
+    category: "interieur",
+    images: [],
+    excerpt: "Un escape game grandeur nature : résolvez les énigmes pour vous échapper. Stratégie et communication.",
+    description: "Enigma est un escape game collectif où vos équipes doivent résoudre une succession d'énigmes pour s'échapper d'une pièce mystérieuse dans un temps limité. Logique, observation, communication et coopération sont indispensables. Une activité indoor immersive parfaite pour révéler les dynamiques d'équipe.",
+    duration: "1h à 2h",
+    participants: "8 à 60",
+  },
+  {
+    slug: "les-brocanteurs",
+    name: "Les Brocanteurs",
+    category: "interieur",
+    images: [],
+    excerpt: "À la manière de l'émission : chinez et négociez des objets pour reconstituer une collection.",
+    description: "Inspiré de la célèbre émission, ce team-building transforme vos équipes en brocanteurs. Mission : chiner, négocier et collecter les objets demandés en respectant un budget. Stratégie, observation, négociation et bonne humeur garantie. Un format original et ludique qui sort des sentiers battus.",
+    duration: "1/2 journée",
+    participants: "10 à 80",
+  },
+
+  {
+    slug: "koh-lantable",
+    name: "Koh Lantable",
+    category: "interieur",
+    image: "/images/koh-lantable-ambiance.png",
+    images: [
+      "/images/koh-lantable-ambiance.png",
+      "/images/koh-lantable-degustation.png",
+      "/images/koh-lantable-kapla.png",
+      "/images/koh-lantable-poteaux.png",
+      "/images/koh-lantable-puzzle.png",
+    ],
+    excerpt: "L'esprit Koh Lanta en version indoor : épreuves de table, dégustation, construction et épreuve des poteaux miniature.",
+    description: "Koh Lantable transpose l'univers de Koh Lanta dans un format 100 % indoor. Vos équipes s'affrontent autour de tables dans des épreuves originales : dégustation à l'aveugle, construction Kapla, puzzle géant, jeux d'adresse et la fameuse épreuve des poteaux revisitée. Idéal pour les séminaires en intérieur, Koh Lantable crée une atmosphère de compétition festive et bienveillante.",
+    duration: "2h à 1/2 journée",
+    participants: "15 à 120",
+  },
+
+  // ========== EXTÉRIEUR ==========
+  {
+    slug: "archimede",
+    name: "Archimède",
+    category: "exterieur",
+    images: [],
+    excerpt: "Un défi d'ingénierie collaborative : conception et test de machines, ponts ou systèmes en équipe.",
+    description: "Inspirée du célèbre savant, l'activité Archimède propose à vos équipes de relever des défis d'ingénierie en plein air : construction de ponts, de catapultes, de systèmes de levage ou de machines à eau. Conception, prototypage et test grandeur nature. Ingéniosité et coopération sont les clés du succès.",
+    duration: "1/2 à journée",
+    participants: "12 à 80",
+  },
+  {
+    slug: "projet-h",
+    name: "Projet H",
+    category: "exterieur",
+    image: "/images/projet-fontenille.png",
+    images: ["/images/projet-fontenille.png"],
+    excerpt: "Une activité de construction collective en pleine nature : vos équipes assemblent une œuvre commune.",
+    description: "Projet H est une activité outdoor où vos équipes assemblent ensemble une œuvre collective de grande envergure. Coordination, créativité et persévérance s'unissent pour aboutir à un résultat visible et fédérateur. Une expérience qui laisse une trace concrète et fierté d'avoir construit ensemble.",
+    duration: "1/2 à journée",
+    participants: "15 à 100",
+  },
+  {
+    slug: "green-concept",
+    name: "Green Concept",
+    category: "exterieur",
+    images: [],
+    excerpt: "Un team-building éco-responsable : défis nature, sensibilisation et action concrète sur le terrain.",
+    description: "Green Concept allie cohésion d'équipe et engagement environnemental. Vos collaborateurs participent à des actions concrètes en plein air : nettoyage de site, reforestation, défis nature, ateliers de sensibilisation. Un team-building qui a du sens, conjugue plaisir et impact positif.",
+    duration: "1/2 à journée",
+    participants: "10 à 100",
+  },
+  {
+    slug: "cybertraque",
+    name: "Cybertraque",
+    category: "exterieur",
+    images: [],
+    excerpt: "Une chasse à l'homme high-tech en milieu urbain ou naturel. GPS, indices numériques, stratégie.",
+    description: "Cybertraque est une chasse à l'homme moderne qui utilise les outils numériques : GPS, smartphones, applications de géolocalisation et indices high-tech. Vos équipes traquent ou échappent à leurs adversaires sur un terrain défini. Stratégie, technologie et adrénaline pour un team-building 21e siècle.",
+    duration: "1/2 à journée",
+    participants: "16 à 100",
+  },
+  {
+    slug: "c-comme-a-la-montagne",
+    name: "C comme à la montagne",
+    category: "exterieur",
+    image: "/images/igloo-team.png",
+    images: [
+      "/images/igloo-team.png",
+      "/images/ski-geant-team.png",
+    ],
+    excerpt: "L'ambiance montagnarde sans quitter votre région : igloos, ski géant, raquettes, biathlon.",
+    description: "C comme à la montagne recrée l'ambiance des stations de ski près de chez vous. Construction d'igloos, ski géant collectif, raquettes, biathlon laser : une journée 100% montagne, accessible et originale. Idéal pour un séminaire d'hiver dépaysant ou une animation de fin d'année.",
+    duration: "1/2 à journée",
+    participants: "20 à 150",
+  },
+  {
+    slug: "biathlon",
+    name: "Biathlon",
+    category: "exterieur",
+    images: [],
+    excerpt: "Le grand classique outdoor : tir laser et course. Précision, endurance et esprit d'équipe.",
+    description: "Le Biathlon team-building reprend les codes du sport olympique avec tir laser et course en relais ou par équipe. Précision, gestion du souffle, endurance et stratégie collective : un défi sportif accessible à tous, ludique et adrénaline garantie.",
+    duration: "2h à 1/2 journée",
+    participants: "12 à 100",
+  },
+  {
+    slug: "course-d-orientation",
+    name: "Course d'orientation",
+    category: "exterieur",
+    image: "/images/rando-vercors.png",
+    images: ["/images/rando-vercors.png"],
+    excerpt: "Carte, boussole et balises : à vous de retrouver le chemin. Stratégie, lecture de carte et coopération.",
+    description: "La Course d'orientation est un classique inusable du team-building outdoor. Munies d'une carte et d'une boussole, vos équipes doivent retrouver des balises disséminées dans la nature. Lecture de carte, stratégie, prise de décision et endurance s'allient pour relever le défi. Adaptable à tous les niveaux.",
+    duration: "1/2 à journée",
+    participants: "12 à 150",
+  },
+  {
+    slug: "jeux-du-vin",
+    name: "Jeux du vin",
+    category: "exterieur",
+    images: [],
+    excerpt: "Sur le terrain : ateliers viticoles, dégustations et énigmes œnologiques. Approche ludique du vin.",
+    description: "Les Jeux du vin emmènent vos équipes au cœur d'un domaine viticole pour une journée alliant découverte et défis. Vendange ludique, dégustation à l'aveugle, énigmes œnologiques, ateliers d'assemblage : une approche conviviale et accessible du monde du vin, dans un cadre champêtre.",
+    duration: "1/2 à journée",
+    participants: "10 à 80",
+  },
+  {
+    slug: "trophees-du-rugby",
+    name: "Trophées du Rugby",
+    category: "exterieur",
+    images: [],
+    excerpt: "Inspirés de l'esprit rugby : défis de passes, mêlées, drop. Activité physique et fédératrice.",
+    description: "Les Trophées du Rugby plongent vos équipes dans l'univers du rugby sans contact : défis de passes, mêlées techniques, drop goal, atelier transformation. Encadré par d'anciens joueurs, l'esprit rugby — engagement, solidarité, respect — se vit pleinement. Bonne humeur et cohésion garanties.",
+    duration: "1/2 à journée",
+    participants: "15 à 80",
+  },
+  {
+    slug: "samba",
+    name: "Samba",
+    category: "exterieur",
+    images: [],
+    excerpt: "Une initiation à la samba en équipe : rythme, percussions, danse. Animation festive et solaire.",
+    description: "Samba est une animation festive et chaleureuse qui plonge vos équipes dans l'ambiance brésilienne. Initiation aux percussions (surdo, caixa, tamborim), apprentissage de chorégraphies, parade collective : une activité solaire et engageante qui clôture un événement avec énergie et joie.",
+    duration: "1h à 2h",
+    participants: "15 à 200",
+  },
+  {
+    slug: "agent-secret",
+    name: "Agent secret",
+    category: "exterieur",
+    images: [],
+    excerpt: "Mission top secrète en équipe : indices, infiltration, déchiffrement. Une chasse au trésor d'espionnage.",
+    description: "Agent secret transforme vos collaborateurs en espions sur le terrain. Mission confidentielle, indices codés, dead drops, déchiffrement et infiltration : une chasse au trésor immersive aux allures de film d'espionnage qui sollicite logique, observation et travail collectif.",
+    duration: "1/2 à journée",
+    participants: "16 à 100",
+  },
+  {
+    slug: "rallye-des-impressionnistes",
+    name: "Rallye des Impressionnistes",
+    category: "exterieur",
+    image: "/images/impressionnistes-satillieu.png",
+    images: [
+      "/images/impressionnistes-satillieu.png",
+      "/images/impressionnistes-corot.png",
+      "/images/impressionnistes-etangs.png",
+      "/images/impressionnistes-paillottes.png",
+    ],
+    excerpt: "Sur les pas des grands maîtres : étapes culturelles, ateliers de peinture, défis créatifs.",
+    description: "Le Rallye des Impressionnistes emmène vos équipes sur les pas des grands peintres de la fin du 19e siècle. Étapes culturelles dans des lieux emblématiques, ateliers de peinture en plein air, défis créatifs et énigmes artistiques : une expérience patrimoniale, sensible et fédératrice.",
+    duration: "Journée",
+    participants: "12 à 80",
+  },
+  {
+    slug: "challenge-a-la-ferme",
+    name: "Challenge à la ferme",
+    category: "exterieur",
+    image: "/images/jeux-ferme.png",
+    images: [
+      "/images/jeux-ferme.png",
+      "/images/jeux-ferme-2.png",
+      "/images/jeux-ferme-brouette.png",
+    ],
+    excerpt: "Animations rurales et défis agricoles : course de brouettes, traite, ateliers fermiers. Authenticité.",
+    description: "Le Challenge à la ferme reconnecte vos équipes avec le monde rural à travers une succession d'épreuves agricoles ludiques : course de brouettes, lancer de bottes, traite (modèle d'entraînement), reconnaissance d'animaux, parcours fermier. Authenticité, bonne humeur et dépaysement garantis.",
+    duration: "1/2 à journée",
+    participants: "15 à 100",
+  },
+  {
+    slug: "so-british",
+    name: "So British",
+    category: "exterieur",
+    image: "/images/so-british-beatles.png",
+    images: [
+      "/images/so-british-beatles.png",
+      "/images/so-british-croquet.png",
+      "/images/so-british-karim.jpg",
+      "/images/so-british-the.png",
+      "/images/so-british-flechettes.jpg",
+      "/images/so-british-flechettes-2.jpg",
+      "/images/so-british-staff.jpg",
+    ],
+    excerpt: "Plongez dans l'ambiance anglaise : croquet, tea time, défis Beatles, course de thé. Élégance et humour.",
+    description: "So British est un team-building original qui plonge vos équipes dans l'élégance et l'humour anglais. Croquet, tea time animé, défi quiz Beatles, course de plateau de thé, jeu de fléchettes : un parcours dépaysant qui fait sourire autant qu'il fédère. Une création signée Latitude Organisation.",
+    isLatitudeOriginal: true,
+    duration: "1/2 à journée",
+    participants: "15 à 100",
+  },
+  {
+    slug: "koh-lanta",
+    name: "Koh Lanta",
+    category: "exterieur",
+    image: "/images/koh-lanta-groupe.jpg",
+    images: [
+      "/images/koh-lanta-groupe.jpg",
+      "/images/koh-lanta-equilibre.png",
+      "/images/koh-lanta-faisanderie.png",
+      "/images/koh-lanta-kapla.png",
+      "/images/koh-lanta-tir-arc.png",
+    ],
+    excerpt: "À la manière de l'émission : épreuves d'équilibre, de force, de stratégie et l'incontournable épreuve des poteaux. Le team-building outdoor par excellence.",
+    description: "Koh Lanta plonge vos équipes dans l'univers de l'aventure et de la survie. Réparties en tribus, vos équipes s'affrontent sur des épreuves emblématiques inspirées de la célèbre émission : équilibre, force, agilité, tir à l'arc, et bien sûr l'épreuve finale des poteaux. Cohésion, stratégie et bonne humeur sont au rendez-vous pour cette journée d'adrénaline collective.",
+    duration: "1/2 à journée",
+    participants: "20 à 150",
+  },
+  {
+    slug: "multi-sports",
+    name: "Multi sports",
+    category: "exterieur",
+    images: [],
+    excerpt: "Un parcours multi-disciplines : tir à l'arc, sarbacane, frisbee, slack-line. Variété et accessibilité.",
+    description: "Multi sports est un parcours collectif qui permet à chaque participant de découvrir plusieurs disciplines en une seule animation : tir à l'arc, sarbacane, ultimate frisbee, slack-line, lancer de hache, et bien d'autres. Format ludique, accessible à tous les niveaux et idéal pour découvrir des sports inattendus.",
+    duration: "1/2 à journée",
+    participants: "12 à 100",
+  },
+  {
+    slug: "archeo",
+    name: "Archéo",
+    category: "exterieur",
+    image: "/images/archeo-rochefort.jpg",
+    images: [
+      "/images/archeo-rochefort.jpg",
+      "/images/archeo-rochefort-2.jpg",
+      "/images/archeo-rochefort-3.jpg",
+      "/images/archeo-rochefort-4.jpg",
+      "/images/archeo-rochefort-5.jpg",
+      "/images/archeo-rochefort-6.jpg",
+      "/images/archeo-bilboquet.jpg",
+      "/images/archeo-tir-arc.jpg",
+      "/images/archeo-famille-2.jpg",
+      "/images/archeo-jerome.jpg",
+    ],
+    excerpt: "Une fouille archéologique en équipe sur un site historique : indices, énigmes patrimoniales, découverte.",
+    description: "Archéo plonge vos équipes dans la peau d'archéologues sur un site historique réel. Fouilles minutieuses, identification d'objets, déchiffrement d'inscriptions, énigmes patrimoniales : une activité culturelle et coopérative dans un cadre exceptionnel. Une création originale signée Latitude Organisation.",
+    isLatitudeOriginal: true,
+    duration: "1/2 à journée",
+    participants: "15 à 80",
+  },
+  {
+    slug: "rallye-vis-ma-vie",
+    name: "Rallye vis ma vie / Découverte Patrimoine",
+    category: "exterieur",
+    image: "/images/rallye-2cv.png",
+    images: ["/images/rallye-2cv.png"],
+    excerpt: "Un rallye-découverte qui plonge vos équipes au cœur du patrimoine local : défis, artisans, énigmes.",
+    description: "Le Rallye vis ma vie / Découverte Patrimoine est un rallye unique conçu par Latitude Organisation. À la manière d'un reportage immersif, vos équipes parcourent un territoire à la rencontre de ses artisans, de ses lieux secrets et de ses traditions. Énigmes, défis et expériences authentiques rythment le parcours. Une création originale Latitude.",
+    isLatitudeOriginal: true,
+    duration: "Journée",
+    participants: "12 à 80",
+  },
+  {
+    slug: "rallyes-historiques-drome-ardeche",
+    name: "Rallyes Historiques Drôme/Ardèche",
+    category: "exterieur",
+    images: [],
+    excerpt: "Un rallye au cœur des paysages spectaculaires de la Drôme et de l'Ardèche : étapes patrimoniales et défis.",
+    description: "Les Rallyes Historiques Drôme/Ardèche emmènent vos équipes au cœur de deux régions au patrimoine d'exception. Étapes dans des villages perchés, châteaux, gorges et grottes, défis culturels et ludiques : une expérience qui marie découverte, beauté des paysages et cohésion. Une création signée Latitude Organisation.",
+    isLatitudeOriginal: true,
+    duration: "Journée à 2 jours",
+    participants: "12 à 60",
+  },
+  {
+    slug: "chasse-au-tresor",
+    name: "Chasse au trésor",
+    category: "exterieur",
+    image: "/images/archeo-bilboquet.jpg",
+    images: ["/images/archeo-bilboquet.jpg"],
+    excerpt: "Le grand classique revisité : indices, énigmes, course contre la montre pour trouver le trésor.",
+    description: "La Chasse au trésor reste un grand classique du team-building, et pour cause : c'est un format universellement fédérateur. Vos équipes suivent des indices, résolvent des énigmes et arpentent un territoire pour découvrir le trésor avant les autres. Adaptable à tous les âges, lieux et thématiques.",
+    duration: "1/2 à journée",
+    participants: "12 à 150",
+  },
+  {
+    slug: "biengarde",
+    name: "Biengardé",
+    category: "exterieur",
+    images: [],
+    excerpt: "Une activité 100% nature centrée sur la garde, l'observation et l'immersion. Approche originale et sensible.",
+    description: "Biengardé est un team-building original signé Latitude Organisation, qui plonge vos équipes dans un univers de garde, de surveillance bienveillante et d'observation fine. Une approche sensible et immersive en pleine nature, qui développe la concentration, la coopération discrète et le sens du détail.",
+    isLatitudeOriginal: true,
+    duration: "1/2 à journée",
+    participants: "10 à 60",
+  },
+  {
+    slug: "formule-1-carton",
+    name: "Formule 1 Carton",
+    category: "exterieur",
+    images: [],
+    excerpt: "Construisez et pilotez votre propre Formule 1... en carton ! Créativité, défi mécanique et course.",
+    description: "Formule 1 Carton est une activité décalée et fédératrice. Chaque équipe conçoit, construit et décore son propre bolide à partir de carton et matériaux fournis. La grande course finale couronne le meilleur design ET la meilleure équipe pilote. Créativité, manuel et fun garanti.",
+    duration: "1/2 à journée",
+    participants: "12 à 80",
+  },
+  {
+    slug: "tiger-academy",
+    name: "Tiger Academy",
+    category: "exterieur",
+    images: [],
+    excerpt: "Un parcours sportif et tactique inspiré de l'entraînement : endurance, communication, dépassement de soi.",
+    description: "Tiger Academy est un team-building outdoor exigeant, conçu par Latitude Organisation. Inspiré des parcours d'entraînement militaires et sportifs, il met vos équipes au défi à travers obstacles, épreuves d'endurance, missions tactiques et exercices de communication. Pour les équipes qui veulent se dépasser.",
+    isLatitudeOriginal: true,
+    duration: "1/2 à journée",
+    participants: "15 à 80",
+  },
+  {
+    slug: "trappeurs",
+    name: "Trappeurs",
+    category: "exterieur",
+    image: "/images/groupe-cascade.png",
+    images: ["/images/groupe-cascade.png"],
+    excerpt: "Une immersion en mode trappeur : feu, abri, orientation, pêche. Reconnexion à la nature et au collectif.",
+    description: "Trappeurs est une immersion en pleine nature qui reconnecte vos équipes avec les fondamentaux : allumer un feu sans briquet, construire un abri, s'orienter, pêcher, cuisiner en pleine forêt. Une création originale Latitude Organisation pour les équipes qui veulent vivre une vraie aventure.",
+    isLatitudeOriginal: true,
+    duration: "Journée",
+    participants: "10 à 50",
+  },
+];
+
+// =============================
+// SOIRÉES ÉVÉNEMENTIELLES
+// =============================
+
+export type SoireeEvent = {
+  slug: string;
+  name: string;
+  image?: string;
+  images: string[];
+  excerpt: string;
+  description: string;
+  duration?: string;
+  participants?: string;
+};
+
+export const soireeEvents: SoireeEvent[] = [
+  {
+    slug: "bingo-musical",
+    name: "Bingo Musical",
+    image: "/images/famille-animation.jpg",
+    images: [
+      "/images/famille-animation.jpg",
+      "/images/famille-animation-2.jpg",
+      "/images/animation-soiree-groupe.png",
+    ],
+    excerpt: "Un bingo revisité autour de la musique : extraits, artistes, décennies. Ambiance garantie.",
+    description: "Le Bingo Musical transforme le classique bingo en un jeu musical interactif et festif. Animateur en scène, extraits de chansons à reconnaître, cartons à composter : vos collaborateurs se découvrent une passion commune pour la musique à travers les décennies. Accessible à tous, irrésistiblement convivial, le Bingo Musical est la soirée parfaite pour briser la glace et finir en beauté.",
+    duration: "1h à 2h",
+    participants: "20 à 500",
+  },
+  {
+    slug: "quiz-karaoke",
+    name: "Quiz Karaoké",
+    image: "/images/animation-soiree-groupe.png",
+    images: [
+      "/images/animation-soiree-groupe.png",
+      "/images/famille-animation.jpg",
+      "/images/famille-animation-2.jpg",
+    ],
+    excerpt: "Quiz musical et karaoké en équipe : culture générale, devinettes et prestations scéniques.",
+    description: "Le Quiz Karaoké mixe le meilleur des deux mondes : la compétition stimulante du quiz musical et la convivialité décomplexée du karaoké. Par équipes, vos collaborateurs répondent à des questions sur la musique, puis montent sur scène pour interpréter les plus grands tubes. Fous rires, révélations vocales et souvenirs mémorables garantis.",
+    duration: "2h à 3h",
+    participants: "20 à 300",
+  },
+  {
+    slug: "casino-vente-encheres",
+    name: "Casino et Vente aux Enchères",
+    image: "/images/casino-roulette.png",
+    images: [
+      "/images/casino-roulette.png",
+      "/images/casino.png",
+      "/images/jerome-casino.jpg",
+    ],
+    excerpt: "L'élégance du casino et le frisson des enchères réunis en une soirée sur mesure.",
+    description: "Casino et Vente aux Enchères offre à vos convives une soirée alliant le glamour des grandes tables de jeu et l'adrénaline des enchères. Roulette, black jack, poker : des croupiers professionnels animent vos tables. La soirée se clôture par une vente aux enchères d'objets insolites ou de lots premium, animée par un commissaire-priseur comédien. Une formule premium pour une soirée d'entreprise mémorable.",
+    duration: "Soirée complète",
+    participants: "30 à 400",
+  },
+  {
+    slug: "cabaret",
+    name: "Cabaret",
+    image: "/images/masque-venitien.jpg",
+    images: [
+      "/images/masque-venitien.jpg",
+      "/images/jerome-peaky.png",
+      "/images/jerome-nabil-peaky.jpg",
+      "/images/karim-nabil-peaky.png",
+    ],
+    excerpt: "Plumes, strass et music-hall : une soirée cabaret somptueuse qui transporte vos invités.",
+    description: "La Soirée Cabaret plonge vos invités dans l'univers flamboyant du Moulin Rouge et des grandes scènes parisiennes. Danseurs, chanteurs, numéros de music-hall et décors somptueux : un spectacle vivant conçu sur mesure pour éblouir vos collaborateurs et clients. Costume encouragé, ambiance folle assurée.",
+    duration: "Soirée complète",
+    participants: "30 à 500",
+  },
+  {
+    slug: "spectacle",
+    name: "Spectacle",
+    image: "/images/presentateurs.jpg",
+    images: [
+      "/images/presentateurs.jpg",
+      "/images/animation-soiree-groupe.png",
+    ],
+    excerpt: "Un spectacle vivant clé en main : stand-up, danse, cirque ou show thématique sur mesure.",
+    description: "La formule Spectacle propose un divertissement vivant conçu et produit sur mesure pour votre événement. Stand-up, danse contemporaine, numéro de cirque, show thématique ou performance artistique : Latitude Organisation sélectionne et coordonne les meilleurs artistes pour un final de soirée mémorable qui marquera durablement vos convives.",
+    duration: "45 min à 2h",
+    participants: "30 à 1000",
+  },
+  {
+    slug: "magie",
+    name: "Magie",
+    image: "/images/presentateurs.jpg",
+    images: [
+      "/images/presentateurs.jpg",
+    ],
+    excerpt: "Prestidigitation, close-up ou grand illusion : la magie au service de votre soirée d'entreprise.",
+    description: "La Magie se décline en plusieurs formules adaptées à votre événement : close-up au cocktail dînatoire (le magicien circule entre les tables), spectacle de scène pour toute la salle, ou grande illusion pour un moment d'exception. Nos artistes sont sélectionnés pour leur niveau d'excellence et leur capacité à adapter leur programme à l'univers de votre entreprise.",
+    duration: "30 min à 1h30",
+    participants: "10 à 800",
+  },
+  {
+    slug: "caricature",
+    name: "Caricature",
+    images: [],
+    excerpt: "Des caricaturistes professionnels capturent vos invités avec talent. Souvenirs originaux.",
+    description: "La Caricature est une animation de cocktail ou dîner où des artistes dessinateurs professionnels réalisent en direct le portrait caricatural de vos invités. Chaque convive repart avec son dessin : un souvenir original et personnalisé de votre événement. Une animation légère, élégante et toujours très appréciée qui installe une ambiance chaleureuse et brise la glace.",
+    duration: "2h à soirée complète",
+    participants: "20 à 500",
+  },
+  {
+    slug: "au-theatre-ce-soir",
+    name: "Au Théâtre Ce Soir",
+    image: "/images/jerome-police.jpg",
+    images: [
+      "/images/jerome-police.jpg",
+      "/images/jerome-peaky.png",
+      "/images/jerome-nabil-peaky.jpg",
+    ],
+    excerpt: "Vos collaborateurs deviennent acteurs le temps d'une soirée théâtrale immersive.",
+    description: "Au Théâtre Ce Soir transforme vos collaborateurs en comédiens le temps d'une soirée. Guidés par des metteurs en scène professionnels, vos équipes répètent et jouent une scène devant le reste du groupe. Improvisation, saynètes comiques ou théâtre-forum : une expérience ludique qui lève les inhibitions, révèle les personnalités et soude le groupe par le rire et l'émotion partagée.",
+    duration: "2h à soirée complète",
+    participants: "15 à 200",
+  },
+];
+
+// =============================
 // ÉTENDU : DÉTAILS EXPERTISES
 // =============================
 
@@ -117,6 +725,8 @@ export type ExpertiseDetail = {
   subtitle: string;
   introTitle: string;
   intro: string;
+  heroImage?: string;
+  gallery?: { src: string; alt: string }[];
   sections: {
     title: string;
     content: string;
@@ -128,6 +738,213 @@ export type ExpertiseDetail = {
   keywords: string[];
   ctaText: string;
 };
+
+export type IncentiveItem = {
+  slug: string;
+  name: string;
+  image?: string;
+  images: string[];
+  excerpt: string;
+  description: string;
+  duration?: string;
+  participants?: string;
+};
+
+export const incentiveItems: IncentiveItem[] = [
+  {
+    slug: "rallye-2cv",
+    name: "Rallye 2CV",
+    image: "/images/rallye-2cv.png",
+    images: ["/images/rallye-2cv.png"],
+    excerpt: "Un rallye inoubliable à bord de la mythique Deux Chevaux : roadbook, défis et découverte du patrimoine local.",
+    description: "Le Rallye 2CV est l'une de nos activités signatures. Répartis en équipages à bord de 2CV iconiques, vos collaborateurs parcourent un territoire à travers un roadbook jalonné d'énigmes, de défis photo et d'arrêts patrimoniaux. Stratégie de navigation, complicité entre équipiers et fous rires garantis. Une expérience décalée et conviviale qui marque durablement les esprits.",
+    duration: "1/2 à journée",
+    participants: "20 à 200",
+  },
+  {
+    slug: "raids-vercors",
+    name: "Raids Vercors",
+    image: "/images/rando-vercors.png",
+    images: ["/images/rando-vercors.png", "/images/groupe-cascade.png"],
+    excerpt: "Raids et randonnées dans les gorges sauvages du Vercors — nature, cohésion et dépassement de soi.",
+    description: "Le Vercors offre un cadre naturel exceptionnel pour des raids incentive mémorables. Randonnées panoramiques, traversées de gorges, bivouac et vues à couper le souffle : vos équipes se dépassent ensemble dans un environnement qui force le respect. Latitude Organisation conçoit le programme, la logistique et l'encadrement pour une expérience outdoor sûre et inoubliable.",
+    duration: "1 à 3 jours",
+    participants: "15 à 80",
+  },
+  {
+    slug: "raids-gorges-du-tarn",
+    name: "Raids Gorges du Tarn",
+    image: "/images/groupe-cascade.png",
+    images: ["/images/groupe-cascade.png", "/images/canyoning.jpg"],
+    excerpt: "Descente des Gorges du Tarn : kayak, randonnée aquatique et bivouac dans un cadre naturel grandiose.",
+    description: "Les Gorges du Tarn constituent l'un des plus beaux terrains d'aventure de France. Vos équipes s'immergent dans des paysages de falaises calcaires et de rivières turquoise : kayak, randonnée aquatique, rappels, bivouac sous les étoiles. Un raid qui mêle effort collectif, émerveillement et dépassement de soi dans l'un des plus beaux sites naturels d'Europe.",
+    duration: "2 à 4 jours",
+    participants: "10 à 60",
+  },
+  {
+    slug: "canyoning",
+    name: "Canyoning",
+    image: "/images/canyoning.jpg",
+    images: ["/images/canyoning.jpg", "/images/canyoning-2.jpg", "/images/canyoning-3.jpg"],
+    excerpt: "Rappels, toboggans naturels et sauts dans les vasques : le canyoning est l'incentive aquatique ultime.",
+    description: "Le canyoning plonge vos équipes au cœur des torrents et des gorges pour une expérience aquatique intense. Progression en rappel le long des falaises, glissades naturelles, sauts dans les vasques d'eau turquoise : chaque obstacle se franchit en équipe, dans un esprit de confiance et d'entraide. Encadré par des moniteurs professionnels, accessible à partir d'un bon niveau de condition physique.",
+    duration: "1/2 à journée",
+    participants: "8 à 50",
+  },
+  {
+    slug: "buggy",
+    name: "Buggy",
+    images: [],
+    excerpt: "Pilotage de buggies tout-terrain en équipage : sensations fortes, piste balisée et compétition bienveillante.",
+    description: "Le buggy est l'activité idéale pour les équipes qui veulent des sensations sans prise de risque. Sur une piste sécurisée, vos équipages s'affrontent en chronométrage ou participent à des épreuves de maniabilité. Adrénaline, rires et esprit de compétition festif composent cette animation incontournable des séminaires incentive.",
+    duration: "2h à 1/2 journée",
+    participants: "10 à 100",
+  },
+  {
+    slug: "quad",
+    name: "Quad",
+    images: [],
+    excerpt: "Balades ou raids en quad sur des parcours nature : liberté, sensations et cohésion au grand air.",
+    description: "Le quad offre une liberté de déplacement unique dans des environnements naturels variés. Forêts, pistes de terre, collines : vos équipes partent en convoi ou s'affrontent sur des parcours balisés. Sensation de liberté, communion avec la nature et esprit d'équipage font du quad une activité incentive très appréciée.",
+    duration: "2h à journée",
+    participants: "8 à 60",
+  },
+  {
+    slug: "jet-ski-en-corse",
+    name: "Jet Ski en Corse",
+    images: [],
+    excerpt: "Randonnée en jet ski le long des côtes corses : criques secrètes, eaux cristallines et adrénaline maritime.",
+    description: "La Corse offre un décor de rêve pour une journée incentive en jet ski. Vos équipes partent en convoi guidé longer des falaises de granite rose, découvrir des criques inaccessibles par voie terrestre et plonger dans des eaux d'un bleu irréel. Une expérience maritime d'exception qui combine adrénaline, découverte et émerveillement.",
+    duration: "1/2 à journée",
+    participants: "8 à 40",
+  },
+  {
+    slug: "char-a-voile-st-malo",
+    name: "Char à Voile à St Malo",
+    images: [],
+    excerpt: "Pilotage de chars à voile sur les plages bretonnes — vitesse, vent et compétition face à l'Atlantique.",
+    description: "Sur les grandes plages de Saint-Malo, le char à voile offre des sensations de vitesse incomparables. Propulsés par le vent atlantique, vos équipes apprennent rapidement les bases du pilotage avant de s'affronter en régate ou en slalom. Un sport accessible, intense et convivial qui crée une vraie dynamique de groupe dans un cadre maritime spectaculaire.",
+    duration: "2h à 1/2 journée",
+    participants: "10 à 80",
+  },
+  {
+    slug: "zodiac-en-sardaigne",
+    name: "Zodiac en Sardaigne",
+    images: [],
+    excerpt: "Navigation en zodiac le long des côtes de Sardaigne : grottes marines, plages secrètes et eaux turquoise.",
+    description: "La Sardaigne déroule ses kilomètres de côtes parmi les plus belles du monde. En zodiac, vos équipes explorent des criques inaccessibles autrement, s'engouffrent dans des grottes marines, nagent dans des eaux d'un bleu absolu. Une aventure nautique en petit groupe, encadrée par des guides locaux, qui transforme un séminaire en expérience inoubliable.",
+    duration: "Journée",
+    participants: "8 à 40",
+  },
+  {
+    slug: "4x4-au-maroc",
+    name: "4×4 au Maroc",
+    images: ["/images/archeo-rochefort.jpg"],
+    excerpt: "Raid en 4×4 dans les pistes du désert marocain : dunes, kasbahs et nuit sous les étoiles.",
+    description: "Le Maroc est un terrain de raid 4×4 d'exception. Vos équipes s'élancent sur les pistes de l'Atlas ou du désert à bord de 4×4, guidées par des pilotes locaux experts. Dunes de l'Erg Chebbi, kasbahs de Ouarzazate, bivouac berbère et dîner sous les étoiles : un incentive hors du commun qui confronte vos collaborateurs à des paysages et des cultures radicalement différents.",
+    duration: "3 à 5 jours",
+    participants: "10 à 60",
+  },
+  {
+    slug: "4x4-en-tunisie",
+    name: "4×4 en Tunisie",
+    images: [],
+    excerpt: "Raid 4×4 à travers les paysages sahariens de Tunisie : chotts, oasis et désert de sel.",
+    description: "La Tunisie offre une diversité de paysages saisissante pour un raid 4×4 : chotts (lacs de sel), oasis verdoyants, dunes sahariennes et ksour troglodytes. Vos équipes traversent ces décors lunaires en convoi, s'affrontent sur des épreuves de navigation et partagent la vie des nomades le temps d'un bivouac. Un dépaysement total garanti.",
+    duration: "3 à 5 jours",
+    participants: "10 à 60",
+  },
+  {
+    slug: "conference-mer-de-glace",
+    name: "Conférence sur la Mer de Glace",
+    images: ["/images/ski-geant-team.png"],
+    excerpt: "Séminaire d'exception face au glacier de la Mer de Glace à Chamonix — altitude, silence et inspiration.",
+    description: "Organiser une conférence ou un séminaire face à la Mer de Glace, à plus de 1 900 mètres d'altitude, c'est créer les conditions d'une réflexion hors du commun. L'altitude, le silence glaciaire et le spectacle du Mont-Blanc inspirent une forme de recul rarement accessible en salle classique. Latitude Organisation gère la logistique complète : hébergement, accès, équipement et restauration d'altitude.",
+    duration: "1 à 2 jours",
+    participants: "10 à 80",
+  },
+  {
+    slug: "motoneige-au-canada",
+    name: "Motoneige au Canada",
+    images: ["/images/igloo-team.png"],
+    excerpt: "Expédition en motoneige dans les forêts enneigées du Québec — grands espaces et adrénaline polaire.",
+    description: "Le Québec offre des conditions uniques pour une expédition en motoneige. Des forêts de sapins enneigées aux plaines gelées, vos équipes pilotent en convoi des centaines de kilomètres de sentiers balisés. Cabane en forêt, feu de camp, cuisine traditionnelle québécoise et nuit dans un lodge au cœur des bois complètent cette aventure nordique inoubliable.",
+    duration: "4 à 6 jours",
+    participants: "8 à 40",
+  },
+  {
+    slug: "chien-de-traineau-canada",
+    name: "Chien de Traîneaux au Canada",
+    images: ["/images/igloo-team.png"],
+    excerpt: "Conduire un attelage de huskies dans les forêts boréales du Québec — liberté, silence et complicité animale.",
+    description: "Le chien de traîneaux est l'une des expériences les plus dépaysantes qu'il soit. Après un briefing avec les mushers, vos équipiers prennent les commandes de leur attelage de huskies dans les forêts silencieuses du Québec. La communion avec les chiens, le glissement silencieux sur la neige et les paysages immaculés créent une bulle d'exception qui efface tous les stress du quotidien.",
+    duration: "2 à 4 jours",
+    participants: "8 à 40",
+  },
+  {
+    slug: "tour-mont-blanc-helicoptere",
+    name: "Tour du Mont Blanc en Hélicoptère",
+    images: ["/images/rando-vercors.png"],
+    excerpt: "Survol du toit de l'Europe en hélicoptère — panoramas glaciaires, Mont Blanc et Alpes à 360°.",
+    description: "Le tour du Mont Blanc en hélicoptère est l'expérience incentive ultime pour les équipes de direction. Depuis Chamonix, l'hélicoptère s'élève au-dessus des glaciers, frôle les arêtes de granit et offre une vue à 360° sur les Alpes franco-italo-suisses. Un moment de contemplation partagée qui marque les esprits bien au-delà du séminaire.",
+    duration: "1h à 2h",
+    participants: "4 à 20",
+  },
+  {
+    slug: "cheval-en-camargue",
+    name: "Cheval en Camargue",
+    images: ["/images/jeux-ferme.png"],
+    excerpt: "Randonnée équestre dans les marais de Camargue — flamants roses, chevaux blancs et liberté sauvage.",
+    description: "La Camargue est l'un des territoires les plus sauvages et les plus mystérieux de France. À cheval, vos équipes traversent les étangs, les roselières et les plages désertes en compagnie des gardians et des célèbres chevaux blancs. Une immersion dans la nature brute qui réveille les sens et invite à la contemplation, accessible à tous niveaux équestres.",
+    duration: "1/2 à journée",
+    participants: "8 à 40",
+  },
+  {
+    slug: "snorkeling-plongee",
+    name: "Snorkeling & Plongée",
+    images: ["/images/canyoning.jpg"],
+    excerpt: "Exploration sous-marine en Méditerranée ou dans les eaux tropicales — faune colorée et découverte des fonds marins.",
+    description: "Snorkeling ou plongée bouteille, nos incentives aquatiques sont organisés dans les plus beaux spots méditerranéens ou tropicaux. Corse, Sardaigne, Île Maurice, Antilles : vos équipes découvrent les fonds marins guidées par des moniteurs diplômés. Une expérience sensorielle unique qui replace l'humain face à la beauté fragile des écosystèmes sous-marins.",
+    duration: "1/2 à journée",
+    participants: "8 à 60",
+  },
+  {
+    slug: "stage-de-pilotage",
+    name: "Stage de Pilotage",
+    images: ["/images/rallye-2cv.png"],
+    excerpt: "Stage de pilotage sur circuit homologué — sensations de F1, conduite sportive et chronos en équipe.",
+    description: "Sur un circuit homologué, vos collaborateurs se glissent dans la peau de pilotes professionnels. Conduite sportive en GT, figures de maniabilité, chronométrage et coaching personnalisé : le stage de pilotage mêle adrénaline individuelle et esprit de compétition collective. Une activité premium très appréciée des comités de direction et des équipes commerciales.",
+    duration: "1/2 à journée",
+    participants: "8 à 60",
+  },
+  {
+    slug: "raids-iles-de-lerins",
+    name: "Raids Îles de Lérins",
+    images: [],
+    excerpt: "Régates et raids nautiques autour des Îles de Lérins face à Cannes — voile, kayak et soleil méditerranéen.",
+    description: "Les Îles de Lérins, à quelques miles des côtes cannoises, offrent un cadre méditerranéen exceptionnel pour un raid nautique. Vos équipes s'affrontent en régate de voiliers, en course de kayak ou en challenge multisports sur l'eau bleue de la Méditerranée. Baignade, déjeuner sur l'île Saint-Honorat et retour au coucher du soleil complètent cette journée d'exception.",
+    duration: "Journée",
+    participants: "10 à 80",
+  },
+  {
+    slug: "montgolfiere",
+    name: "Montgolfière",
+    images: ["/images/rando-vercors.png"],
+    excerpt: "Vol en montgolfière au lever du soleil — silence, sérénité et panorama exceptionnel sur les paysages français.",
+    description: "Le vol en montgolfière est une parenthèse de silence et de beauté absolue. Au lever du soleil, vos équipes s'élèvent doucement au-dessus des vignobles de Bourgogne, des châteaux de la Loire ou des gorges du Verdon. Silence, panoramas à 360°, brûleur qui crépite : une heure de vol qui invite au lâcher-prise et à la contemplation partagée.",
+    duration: "2h à 3h",
+    participants: "4 à 30",
+  },
+  {
+    slug: "nuit-en-tipis",
+    name: "Nuit en Tipis",
+    images: ["/images/koh-lanta-faisanderie.png"],
+    excerpt: "Bivouac en tipis dans la nature — feu de camp, ciel étoilé et immersion dans la vie amérindienne.",
+    description: "La nuit en tipis est l'expérience de déconnexion totale par excellence. Dans un camp de tipis authentiques installé en pleine nature, vos équipes vivent au rythme de la nature : feu de camp, cuisine sur braise, veillée sous les étoiles. Une nuit hors du temps qui crée des souvenirs durables et renforce les liens d'une façon que aucune salle de réunion ne peut égaler.",
+    duration: "1 nuit à 2 jours",
+    participants: "10 à 60",
+  },
+];
 
 export const expertiseDetails: ExpertiseDetail[] = [
   {
@@ -142,6 +959,17 @@ export const expertiseDetails: ExpertiseDetail[] = [
     introTitle: "Qu'est-ce qu'un séminaire d'entreprise réussi ?",
     intro:
       "Un séminaire d'entreprise réussi conjugue trois dimensions essentielles : un objectif business clair (cohésion, formation, lancement, célébration), une expérience humaine forte qui marque durablement les esprits, et une exécution logistique irréprochable. C'est cette alchimie que nous orchestrons depuis plus de 20 ans pour les plus grands groupes français et internationaux. Que vous organisiez un séminaire d'intégration pour 30 nouveaux collaborateurs, un séminaire stratégique pour votre comité de direction, ou un voyage incentive récompense pour 200 commerciaux, notre méthodologie garantit un résultat à la hauteur de votre ambition.",
+    heroImage: "/images/impressionnistes-satillieu.png",
+    gallery: [
+      { src: "/images/sens-conscience-bulle.png", alt: "Séminaire atypique sous bulle en pleine nature" },
+      { src: "/images/projet-fontenille.png", alt: "Activité outdoor incentive au Domaine de Fontenille" },
+      { src: "/images/impressionnistes-corot.png", alt: "Team building créatif peinture inspiré de Corot" },
+      { src: "/images/impressionnistes-etangs.png", alt: "Activité peinture en plein air aux étangs" },
+      { src: "/images/impressionnistes-paillottes.png", alt: "Séminaire en extérieur sous paillottes" },
+      { src: "/images/rallye-2cv.png", alt: "Rallye 2CV incentive team building" },
+      { src: "/images/archeo-rochefort.jpg", alt: "Activité archéologie en château médiéval de Rochefort" },
+      { src: "/images/archeo-rochefort-2.jpg", alt: "Challenge archéologique outdoor en ruines" },
+    ],
     sections: [
       {
         title: "Nos types de séminaires d'entreprise",
@@ -160,7 +988,7 @@ export const expertiseDetails: ExpertiseDetail[] = [
       {
         title: "Notre approche : Conception → Orchestration → Immortalisation",
         content:
-          "Trois temps qui structurent l'ensemble de nos projets. La phase de conception définit les objectifs, la scénographie et le cadre. La phase d'orchestration pilote la logistique, la coordination des prestataires et l'animation. La phase d'immortalisation, à travers notre signature L'Œil du Terrain, capture les moments forts en vidéo pour prolonger l'impact bien au-delà de l'événement.",
+          "Trois temps qui structurent l'ensemble de nos projets. La phase de conception définit les objectifs, la scénographie et le cadre. La phase d'orchestration pilote la logistique, la coordination des prestataires et l'animation. La phase d'immortalisation capture les moments forts pour prolonger l'impact bien au-delà de l'événement.",
       },
       {
         title: "Pourquoi choisir Latitude Organisation pour votre séminaire ?",
@@ -171,7 +999,6 @@ export const expertiseDetails: ExpertiseDetail[] = [
           "120+ centres de congrès partenaires : accès à des lieux exclusifs aux meilleures conditions",
           "Licence Agence de Voyage : pris en charge complet international en toute sécurité juridique",
           "20 ans d'expérience : méthodologie éprouvée sur des centaines d'événements",
-          "L'Œil du Terrain : production vidéo temps réel projetée le soir même",
         ],
       },
     ],
@@ -246,6 +1073,18 @@ export const expertiseDetails: ExpertiseDetail[] = [
     introTitle: "L'art de la soirée d'entreprise réussie",
     intro:
       "Une soirée d'entreprise réussie est un moment suspendu où vos collaborateurs, clients ou partenaires vivent une expérience qu'ils n'oublieront pas. C'est l'art subtil de marier un lieu d'exception, une scénographie raffinée, une restauration mémorable et une animation à la hauteur de votre marque. Notre signature : transformer une soirée en moment de vérité, où les émotions partagées créent des liens durables. De la soirée de fin d'année intime au gala d'entreprise de grande envergure, nous concevons chaque soirée comme une œuvre unique.",
+    heroImage: "/images/animation-soiree-groupe.png",
+    gallery: [
+      { src: "/images/masque-venitien.jpg", alt: "Soirée à thème vénitien avec masques et décors somptueux" },
+      { src: "/images/casino-roulette.png", alt: "Animation casino roulette lors d'une soirée d'entreprise" },
+      { src: "/images/casino.png", alt: "Ambiance casino soirée gala entreprise" },
+      { src: "/images/presentateurs.jpg", alt: "Animateurs soirée thème Gatsby Great Gatsby" },
+      { src: "/images/jerome-peaky.png", alt: "Animation soirée thème Peaky Blinders" },
+      { src: "/images/karim-nabil-peaky.png", alt: "Soirée costumée thème Peaky Blinders" },
+      { src: "/images/murder-atelier.jpg", alt: "Atelier murder party enquête policière en soirée" },
+      { src: "/images/cocktail-spirits.jpg", alt: "Atelier cocktail dégustation spiritueux en soirée" },
+      { src: "/images/cocktail-setup.jpg", alt: "Bar à cocktails lors d'une soirée événementielle" },
+    ],
     sections: [
       {
         title: "Types de soirées événementielles",
@@ -312,6 +1151,25 @@ export const expertiseDetails: ExpertiseDetail[] = [
     introTitle: "Pourquoi investir dans le team-building ?",
     intro:
       "Le team-building n'est pas un luxe, c'est un investissement. Les équipes qui partagent des expériences fortes hors du cadre professionnel développent une confiance mutuelle, une meilleure communication et une capacité de coopération qui se traduisent directement en performance. Notre conviction : un bon team-building n'est pas un divertissement déconnecté du travail, c'est une expérience qui révèle des dimensions individuelles et collectives invisibles au bureau. Depuis 20 ans, nous concevons des expériences qui sortent des sentiers battus et marquent durablement les esprits.",
+    heroImage: "/images/groupe.png",
+    gallery: [
+      { src: "/images/koh-lanta-groupe.jpg", alt: "Koh Lanta team-building groupe en plein air" },
+      { src: "/images/koh-lanta-equilibre.png", alt: "Épreuve d'équilibre Koh Lanta team-building" },
+      { src: "/images/koh-lantable-kapla.png", alt: "Construction Kapla en équipe team-building" },
+      { src: "/images/koh-lanta-tir-arc.png", alt: "Tir à l'arc Koh Lanta team-building" },
+      { src: "/images/koh-lantable-poteaux.png", alt: "Épreuve des poteaux Koh Lantable team-building" },
+      { src: "/images/koh-lantable-puzzle.png", alt: "Puzzle géant team-building Koh Lantable" },
+      { src: "/images/rando-vercors.png", alt: "Randonnée incentive dans le Vercors avec vue panoramique" },
+      { src: "/images/groupe-cascade.png", alt: "Team-building randonnée groupe sous une cascade" },
+      { src: "/images/canyoning.jpg", alt: "Canyoning rappel en falaise team-building aventure" },
+      { src: "/images/speleo.png", alt: "Spéléologie team-building groupe en combinaison rouge" },
+      { src: "/images/igloo-team.png", alt: "Construction d'igloos en équipe activité hivernale" },
+      { src: "/images/jeux-ferme.png", alt: "Jeux de la ferme team-building en plein air" },
+      { src: "/images/so-british-beatles.png", alt: "So British team-building thème Beatles" },
+      { src: "/images/so-british-croquet.png", alt: "Croquet anglais So British team-building" },
+      { src: "/images/archeo-bilboquet.jpg", alt: "Activité archéologie bilboquet médiéval" },
+      { src: "/images/archeo-tir-arc.jpg", alt: "Tir à l'arc médiéval dans un château en ruines" },
+    ],
     sections: [
       {
         title: "Nos types de team-building",

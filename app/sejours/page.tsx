@@ -1,0 +1,271 @@
+import { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import { CTABand } from "@/components/shared";
+import { ArrowRight, Sun, Snowflake, MapPin, Users, Calendar } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Séjours Sur-Mesure | Latitude Organisation",
+  description:
+    "Séjours incentive et team-building sur-mesure été comme hiver. Montagne, mer, campagne ou étranger : Latitude Organisation conçoit l'expérience parfaite pour vos équipes.",
+};
+
+const sejours_ete = [
+  {
+    title: "Randonnée & Canyoning Vercors",
+    lieu: "Vercors, France",
+    duree: "2 à 4 jours",
+    participants: "10 – 80 pers.",
+    description: "Gorges sauvages, tyroliennes et bivouac sous les étoiles. Un séjour outdoor intense qui soude les équipes comme rien d'autre.",
+    image: "/images/rando-vercors.png",
+    tags: ["Outdoor", "Aventure", "Nature"],
+  },
+  {
+    title: "Canyoning & Via Ferrata",
+    lieu: "Ardèche / Pyrénées",
+    duree: "2 à 3 jours",
+    participants: "8 – 50 pers.",
+    description: "Descentes en rappel, sauts dans les vasques, progression en falaise : un séjour qui repousse les limites et crée des souvenirs indélébiles.",
+    image: "/images/canyoning.jpg",
+    tags: ["Adrénaline", "Sport", "Montagne"],
+  },
+  {
+    title: "Cascade & Grands Espaces",
+    lieu: "Alpes / Pyrénées",
+    duree: "3 à 5 jours",
+    participants: "15 – 100 pers.",
+    description: "Randonnées panoramiques, baignades en altitude et soirées au refuge. La reconnexion à la nature comme levier de cohésion.",
+    image: "/images/groupe-cascade.png",
+    tags: ["Bien-être", "Nature", "Randonnée"],
+  },
+];
+
+const sejours_hiver = [
+  {
+    title: "Ski & Olympiades en Station",
+    lieu: "Alpes françaises",
+    duree: "2 à 4 jours",
+    participants: "20 – 150 pers.",
+    description: "Géant parallèle, biathlon laser, chasse aux trésors sur les pistes, soirée raclette en chalet privatisé. La montagne comme vous ne l'avez jamais vécue en équipe.",
+    image: "/images/ski-geant-team.png",
+    tags: ["Ski", "Compétition", "Montagne"],
+  },
+  {
+    title: "Igloo & Grand Nord",
+    lieu: "Laponie / Dolomites",
+    duree: "3 à 5 jours",
+    participants: "10 – 60 pers.",
+    description: "Construction d'igloos, randonnée en raquettes, chiens de traîneaux et bain nordique sous les aurores boréales. Une aventure polaire inoubliable.",
+    image: "/images/igloo-team.png",
+    tags: ["Expédition", "Grand Nord", "Immersion"],
+  },
+  {
+    title: "Spéléologie & Aventure Souterraine",
+    lieu: "Dordogne / Ardèche",
+    duree: "1 à 2 jours",
+    participants: "8 – 40 pers.",
+    description: "Progression dans des grottes millénaires, rappels verticaux, découverte de concrétions féeriques. Un défi qui teste la confiance et la solidarité.",
+    image: "/images/speleo.png",
+    tags: ["Spéléo", "Exploration", "Challenge"],
+  },
+];
+
+const destinations = [
+  { name: "Marrakech", desc: "Riad privatisé, souk & désert", icon: "🇲🇦" },
+  { name: "Lisbonne", desc: "Fado, surf & gastronomie", icon: "🇵🇹" },
+  { name: "Toscane", desc: "Vignobles, villas & gastronomie", icon: "🇮🇹" },
+  { name: "Laponie", desc: "Aurores boréales & traîneaux", icon: "🇫🇮" },
+  { name: "Barcelone", desc: "Architecture, mer & culture", icon: "🇪🇸" },
+  { name: "Écosse", desc: "Châteaux, lacs & whisky", icon: "🏴󠁧󠁢󠁳󠁣󠁴󠁿" },
+];
+
+export default function Sejours() {
+  return (
+    <>
+      <Navigation />
+
+      {/* Hero */}
+      <section className="relative min-h-[70vh] flex items-end overflow-hidden" style={{ background: "#08080A" }}>
+        <div className="absolute inset-0">
+          <Image
+            src="/images/ski-geant-team.png"
+            alt="Séjours sur-mesure"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(8,8,10,1) 0%, rgba(8,8,10,0.5) 50%, rgba(8,8,10,0.3) 100%)" }} />
+        </div>
+
+        <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 pb-20 w-full">
+          <p className="font-inter text-xs tracking-[0.4em] uppercase mb-6" style={{ color: "#C9A961" }}>
+            Licence Agence de Voyage N°026-09-001
+          </p>
+          <h1 className="font-playfair font-bold text-white text-5xl md:text-7xl leading-tight mb-6">
+            Séjours <span className="italic font-normal">Sur-Mesure</span>
+          </h1>
+          <p className="font-inter text-white/70 text-xl leading-relaxed max-w-2xl mb-10">
+            Été comme hiver, en France ou à l'international — nous concevons des séjours incentive
+            et team-building qui marquent durablement les esprits de vos équipes.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <a href="#ete" className="inline-flex items-center gap-2 px-6 py-3 font-inter text-sm font-medium transition-all duration-300 hover:opacity-80" style={{ background: "#C9A961", color: "#08080A" }}>
+              <Sun size={16} /> Séjours Été
+            </a>
+            <a href="#hiver" className="inline-flex items-center gap-2 px-6 py-3 font-inter text-sm font-medium border border-white/30 text-white transition-all duration-300 hover:bg-white/10">
+              <Snowflake size={16} /> Séjours Hiver
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Été */}
+      <section id="ete" className="py-20 lg:py-28" style={{ background: "#0D0C09", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex items-center gap-4 mb-16">
+            <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ background: "rgba(201,169,97,0.15)" }}>
+              <Sun size={22} style={{ color: "#C9A961" }} />
+            </div>
+            <div>
+              <p className="font-inter text-xs tracking-[0.3em] uppercase mb-1" style={{ color: "#C9A961" }}>Saison chaude</p>
+              <h2 className="font-playfair text-4xl md:text-5xl text-white font-bold">Séjours <em className="font-normal">Été</em></h2>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {sejours_ete.map((sejour) => (
+              <div key={sejour.title} className="group relative overflow-hidden flex flex-col" style={{ background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                <div className="relative h-64 overflow-hidden flex-shrink-0">
+                  <Image
+                    src={sejour.image}
+                    alt={sejour.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 1024px) 100vw, 33vw"
+                  />
+                  <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 60%)" }} />
+                  <div className="absolute bottom-4 left-4 flex gap-2 flex-wrap">
+                    {sejour.tags.map((tag) => (
+                      <span key={tag} className="font-inter text-xs px-2 py-1" style={{ background: "rgba(201,169,97,0.9)", color: "#08080A", fontWeight: 600 }}>{tag}</span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="font-playfair text-xl font-bold text-white mb-2">{sejour.title}</h3>
+                  <div className="flex flex-wrap gap-4 mb-4">
+                    <span className="flex items-center gap-1.5 font-inter text-xs text-white/50">
+                      <MapPin size={12} /> {sejour.lieu}
+                    </span>
+                    <span className="flex items-center gap-1.5 font-inter text-xs text-white/50">
+                      <Calendar size={12} /> {sejour.duree}
+                    </span>
+                    <span className="flex items-center gap-1.5 font-inter text-xs text-white/50">
+                      <Users size={12} /> {sejour.participants}
+                    </span>
+                  </div>
+                  <p className="font-inter text-sm text-white/60 leading-relaxed flex-1">{sejour.description}</p>
+                </div>
+
+                <div className="h-px w-0 group-hover:w-full transition-all duration-500" style={{ background: "linear-gradient(90deg, #C9A961, transparent)" }} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Hiver */}
+      <section id="hiver" className="py-20 lg:py-28" style={{ background: "#08080A", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex items-center gap-4 mb-16">
+            <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ background: "rgba(201,169,97,0.15)" }}>
+              <Snowflake size={22} style={{ color: "#C9A961" }} />
+            </div>
+            <div>
+              <p className="font-inter text-xs tracking-[0.3em] uppercase mb-1" style={{ color: "#C9A961" }}>Saison froide</p>
+              <h2 className="font-playfair text-4xl md:text-5xl text-white font-bold">Séjours <em className="font-normal">Hiver</em></h2>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {sejours_hiver.map((sejour) => (
+              <div key={sejour.title} className="group relative overflow-hidden flex flex-col" style={{ background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                <div className="relative h-64 overflow-hidden flex-shrink-0">
+                  <Image
+                    src={sejour.image}
+                    alt={sejour.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 1024px) 100vw, 33vw"
+                  />
+                  <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 60%)" }} />
+                  <div className="absolute bottom-4 left-4 flex gap-2 flex-wrap">
+                    {sejour.tags.map((tag) => (
+                      <span key={tag} className="font-inter text-xs px-2 py-1" style={{ background: "rgba(201,169,97,0.9)", color: "#08080A", fontWeight: 600 }}>{tag}</span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="font-playfair text-xl font-bold text-white mb-2">{sejour.title}</h3>
+                  <div className="flex flex-wrap gap-4 mb-4">
+                    <span className="flex items-center gap-1.5 font-inter text-xs text-white/50">
+                      <MapPin size={12} /> {sejour.lieu}
+                    </span>
+                    <span className="flex items-center gap-1.5 font-inter text-xs text-white/50">
+                      <Calendar size={12} /> {sejour.duree}
+                    </span>
+                    <span className="flex items-center gap-1.5 font-inter text-xs text-white/50">
+                      <Users size={12} /> {sejour.participants}
+                    </span>
+                  </div>
+                  <p className="font-inter text-sm text-white/60 leading-relaxed flex-1">{sejour.description}</p>
+                </div>
+
+                <div className="h-px w-0 group-hover:w-full transition-all duration-500" style={{ background: "linear-gradient(90deg, #C9A961, transparent)" }} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Destinations internationales */}
+      <section className="py-20 lg:py-28" style={{ background: "#0D0C09", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <p className="font-inter text-xs tracking-[0.4em] uppercase mb-4" style={{ color: "#C9A961" }}>Clé en main</p>
+            <h2 className="font-playfair text-4xl md:text-5xl text-white font-bold mb-4">Destinations <em className="font-normal">Internationales</em></h2>
+            <p className="font-inter text-white/50 text-lg max-w-xl mx-auto">
+              Grâce à notre Licence Agence de Voyage, nous gérons visas, hébergements, vols et programme sur mesure.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {destinations.map((dest) => (
+              <div
+                key={dest.name}
+                className="text-center p-6 border border-white/8 hover:border-latitude-gold/40 transition-all duration-300"
+                style={{ background: "rgba(255,255,255,0.02)" }}
+              >
+                <div className="text-4xl mb-3">{dest.icon}</div>
+                <p className="font-playfair font-bold text-white text-lg mb-1">{dest.name}</p>
+                <p className="font-inter text-xs text-white/40">{dest.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <CTABand
+        title="Votre séjour idéal, on le construit ensemble"
+        subtitle="Devis personnalisé sous 48h — Licence Agence de Voyage N°026-09-001"
+        buttonLabel="Demander un devis"
+        buttonHref="/contact"
+      />
+
+      <Footer />
+    </>
+  );
+}

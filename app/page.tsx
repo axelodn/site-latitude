@@ -24,8 +24,8 @@ export default function HomePage() {
       <main id="main-content">
         <ScrollExpandMedia
           mediaType="image"
-          mediaSrc="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1280&h=720&fit=crop"
-          bgImageSrc="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1920&h=1080&fit=crop"
+          mediaSrc="/images/groupe.png"
+          bgImageSrc="/images/animation-soiree-groupe.png"
           title="L'excellence événementielle depuis 2004"
           date="20 ans d'expertise"
           scrollToExpand="Scroll pour explorer"

@@ -1,9 +1,13 @@
 import { Metadata, ResolvingMetadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { PageHero, Breadcrumb, CTABand, SectionHeader } from "@/components/shared";
 import { expertiseDetails } from "@/lib/content";
+import ActivitiesGrid from "@/components/ActivitiesGrid";
+import SoireesGrid from "@/components/SoireesGrid";
+import DejaFaitPourVous from "@/components/DejaFaitPourVous";
 
 
 
@@ -86,9 +90,19 @@ export default async function ExpertisePage({
         eyebrow={expertise.h1.split(" — ")[1] || "EXPERTISE"}
         title={expertise.h1.split(" — ")[0]}
         subtitle={expertise.metaDescription}
+        imageSrc={expertise.heroImage}
       />
 
-      {/* Main Content */}
+      {/* Déjà fait pour vous (séminaires only) */}
+      {slug === "seminaires-incentives" && <DejaFaitPourVous />}
+
+      {/* Activities Grid (team-building only) */}
+      {slug === "team-building" && <ActivitiesGrid />}
+
+      {/* Soirées Grid (soirees-evenementielles only) */}
+      {slug === "soirees-evenementielles" && <SoireesGrid />}
+
+      {/* Main Content — sections + FAQ + sidebar (all expertises) */}
       <section className="py-20 lg:py-32 bg-latitude-black border-b border-white/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-12">
@@ -180,6 +194,36 @@ export default async function ExpertisePage({
           </div>
         </div>
       </section>
+
+      {/* Photo Gallery (other expertises) */}
+      {slug !== "team-building" && slug !== "soirees-evenementielles" && expertise.gallery && expertise.gallery.length > 0 && (
+        <section className="py-20 lg:py-32 bg-latitude-black border-b border-white/5">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <SectionHeader
+              eyebrow="NOS RÉALISATIONS"
+              title="Quelques images de nos événements"
+              centered={true}
+            />
+            <div className="columns-2 md:columns-3 lg:columns-4 gap-3 mt-12 space-y-3">
+              {expertise.gallery.map((photo, i) => (
+                <div key={i} className="break-inside-avoid overflow-hidden">
+                  <div className="relative overflow-hidden group">
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      width={600}
+                      height={400}
+                      className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA */}
       <CTABand

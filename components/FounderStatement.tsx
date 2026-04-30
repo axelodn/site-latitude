@@ -53,6 +53,16 @@ export default function FounderStatement() {
               Lancer mon projet
               <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
+
+            {/* Phrase fétiche */}
+            <div className="mt-10 pt-10 border-t border-white/10">
+              <p
+                className="font-playfair italic text-2xl md:text-3xl leading-snug"
+                style={{ color: "#C9A961" }}
+              >
+                &laquo;&nbsp;La bienveillance fait partie de notre ADN.&nbsp;&raquo;
+              </p>
+            </div>
           </motion.div>
 
           {/* Right — Founder */}
@@ -77,8 +87,8 @@ export default function FounderStatement() {
                 style={{ borderColor: "#C9A961" }}
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face"
-                  alt="Jérôme Aviotte, Directeur Général de Latitude Organisation"
+                  src="/images/jerome-stade-de-france.png"
+                  alt="Jérôme, Directeur Général de Latitude Organisation"
                   fill
                   className="object-cover"
                 />

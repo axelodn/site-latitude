@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { PageHero, Breadcrumb, CTABand, SectionHeader } from "@/components/shared";
@@ -41,7 +42,7 @@ export default function ExpertisesIndex() {
         eyebrow="NOS DOMAINES"
         title="Nos expertises au service de vos événements"
         subtitle="Séminaires & incentives, soirées événementielles, team-building — des expériences sur mesure, orchestrées de A à Z."
-        imageSrc="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&q=80"
+        imageSrc="/images/rando-vercors.png"
       />
 
       {/* Expertises Grid */}
@@ -55,26 +56,41 @@ export default function ExpertisesIndex() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
             {expertiseDetails.map((expertise) => (
-              <div
+              <Link
                 key={expertise.slug}
+                href={`/expertises/${expertise.slug}`}
+                className="group relative overflow-hidden block min-h-[420px]"
               >
-                <Link
-                  href={`/expertises/${expertise.slug}`}
-                  className="group block h-full"
-                >
-                  <div className="h-full border border-white/10 bg-white/2 p-8 hover:border-latitude-gold/50 hover:bg-white/5 transition-all duration-300">
-                    <h3 className="font-playfair text-2xl font-bold text-white mb-3 group-hover:text-latitude-gold transition-colors duration-300">
-                      {expertise.h1.split(" — ")[0]}
-                    </h3>
-                    <p className="font-inter text-white/70 leading-relaxed mb-6">
-                      {expertise.sections[0].content.substring(0, 150)}...
-                    </p>
-                    <span className="inline-block font-inter text-sm font-medium text-latitude-gold group-hover:underline">
-                      En savoir plus →
-                    </span>
-                  </div>
-                </Link>
-              </div>
+                {/* Background image */}
+                {expertise.heroImage && (
+                  <Image
+                    src={expertise.heroImage}
+                    alt={expertise.h1.split(" — ")[0]}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                )}
+                {/* Gradient overlay */}
+                <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.55) 55%, rgba(0,0,0,0.25) 100%)" }} />
+                {/* Gold tint on hover */}
+                <div className="absolute inset-0 bg-latitude-gold/0 group-hover:bg-latitude-gold/8 transition-all duration-400" />
+                {/* Border */}
+                <div className="absolute inset-0 border border-white/10 group-hover:border-latitude-gold/50 transition-colors duration-300" />
+
+                {/* Content pinned to bottom */}
+                <div className="absolute bottom-0 left-0 right-0 p-8">
+                  <h3 className="font-playfair text-2xl font-bold text-white mb-3 group-hover:text-latitude-gold transition-colors duration-300 leading-tight">
+                    {expertise.h1.split(" — ")[0]}
+                  </h3>
+                  <p className="font-inter text-white/70 text-sm leading-relaxed mb-5">
+                    {expertise.sections[0].content.substring(0, 120)}...
+                  </p>
+                  <span className="inline-block font-inter text-sm font-medium text-latitude-gold group-hover:underline">
+                    En savoir plus →
+                  </span>
+                </div>
+              </Link>
             ))}
           </div>
         </div>

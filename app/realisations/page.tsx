@@ -40,7 +40,7 @@ export default function RealisationsIndex() {
         eyebrow="NOTRE PORTFOLIO"
         title="8 réalisations qui ont marqué les esprits"
         subtitle="Des événements conçus sur mesure pour des entreprises et des publics variés. Nos succès sont vos succès."
-        imageSrc="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1920&q=80"
+        imageSrc="/images/masque-venitien.jpg"
       />
 
       {/* Portfolio Grid */}

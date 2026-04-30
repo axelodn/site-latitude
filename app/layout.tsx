@@ -107,13 +107,11 @@ export default function RootLayout({
         {/* Preconnect Google Fonts — réduit le render-blocking */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* Preconnect Unsplash — réduit le LCP */}
-        <link rel="preconnect" href="https://images.unsplash.com" />
         {/* Preload image hero LCP */}
         <link
           rel="preload"
           as="image"
-          href="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1920&h=1080&fit=crop&auto=format&q=80"
+          href="/images/animation-soiree-groupe.png"
           fetchPriority="high"
         />
       </head>
