@@ -12,60 +12,27 @@ const expertiseLinks = [
 const quickLinks = [
   { label: "Accueil", href: "/" },
   { label: "Qui sommes-nous", href: "/qui-sommes-nous" },
-  { label: "Réalisations", href: "/realisations" },
   { label: "Blog", href: "/blog" },
   { label: "Contact & Devis", href: "/contact" },
   { label: "Mentions légales", href: "/mentions-legales" },
   { label: "CGV", href: "/cgv" },
 ];
 
-const socialLinks = [
-  {
-    label: "LinkedIn de Latitude Organisation",
-    href: "https://www.linkedin.com/company/latitude-organisation",
-    name: "in",
-  },
-  {
-    label: "Instagram de Latitude Organisation",
-    href: "https://www.instagram.com/latitude_organisation",
-    name: "ig",
-  },
-  {
-    label: "YouTube de Latitude Organisation",
-    href: "https://www.youtube.com/@latitudeorganisation",
-    name: "yt",
-  },
-];
-
 export default function Footer() {
   return (
     <footer className="bg-latitude-black border-t border-white/5" role="contentinfo">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-16 pb-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
           {/* Brand */}
-          <div className="lg:col-span-1">
+          <div>
             <div className="mb-6">
               <Logo height={52} />
             </div>
-            <p className="font-inter text-sm text-white/50 leading-relaxed mb-6">
+            <p className="font-inter text-sm text-white/50 leading-relaxed">
               Agence événementielle B2B française spécialisée dans
               l&apos;organisation de séminaires, soirées et team-building. 20 ans
               d&apos;expertise au service de vos événements d&apos;entreprise.
             </p>
-            <div className="flex items-center gap-3">
-              {socialLinks.map(({ label, href, name }) => (
-                <a
-                  key={href}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="w-8 h-8 border border-white/10 flex items-center justify-center text-white/40 hover:text-latitude-gold hover:border-latitude-gold/50 transition-all duration-300"
-                >
-                  <span className="font-inter text-[10px] font-bold uppercase" aria-hidden="true">{name}</span>
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Expertises */}
@@ -106,43 +73,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Newsletter */}
-          <div>
-            <h3 className="font-inter text-xs font-medium tracking-[0.3em] uppercase text-white/50 mb-5">
-              Restez informé
-            </h3>
-            <p className="font-inter text-sm text-white/50 mb-4 leading-relaxed">
-              Inspirations événementielles, tendances et actualités du secteur,
-              directement dans votre boîte mail.
-            </p>
-            <form
-              onSubmit={(e) => e.preventDefault()}
-              className="flex gap-2"
-              aria-label="S'inscrire à la newsletter de Latitude Organisation"
-            >
-              <input
-                type="email"
-                placeholder="Votre email"
-                aria-label="Votre adresse email pour la newsletter"
-                required
-                className="flex-1 bg-white/5 border border-white/10 text-white font-inter text-sm px-3 py-2.5 focus:outline-none focus:border-latitude-gold transition-colors duration-300 placeholder:text-white/20 min-w-0"
-              />
-              <button
-                type="submit"
-                className="px-4 py-2.5 font-inter text-xs text-white tracking-wider cursor-pointer transition-all duration-300 flex-shrink-0"
-                style={{ background: "#C9A961" }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.background = "#b8943f")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.background = "#C9A961")
-                }
-                aria-label="S'abonner à la newsletter"
-              >
-                OK
-              </button>
-            </form>
-          </div>
         </div>
 
         {/* Bottom bar */}
