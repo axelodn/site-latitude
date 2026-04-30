@@ -199,7 +199,8 @@ export const activities: Activity[] = [
       "/images/murder-atelier.jpg",
       "/images/murder-atelier-2.jpg",
       "/images/murder-karim.jpg",
-      "/images/murder-sergio.jpg",
+      "/images/murder-sergio.jpg"
+     "/images/murder présentation atelier 2.HEIC",
     ],
     excerpt: "Plongez dans une enquête grandeur nature : interrogez les suspects, recoupez les indices, démasquez le coupable.",
     description: "Une Murder Party transforme votre événement en véritable scène de crime. Comédiens professionnels, suspects à interroger, indices disséminés et énigmes à résoudre : vos collaborateurs deviennent enquêteurs le temps d'une soirée. Mystère, déduction, frissons et fous rires garantis dans cette expérience théâtrale immersive.",
