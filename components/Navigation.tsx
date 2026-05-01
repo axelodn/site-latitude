@@ -73,14 +73,14 @@ export default function Navigation() {
             <nav
               role="navigation"
               aria-label="Navigation principale"
-              className="hidden md:flex items-center gap-8"
+              className="hidden md:flex items-center gap-4 lg:gap-8"
             >
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => handleNavClick(link.href)}
-                  className={`font-inter text-sm font-medium tracking-wide transition-colors duration-300 hover:text-latitude-gold ${
+                  className={`font-inter text-xs lg:text-sm font-medium tracking-wide transition-colors duration-300 hover:text-latitude-gold whitespace-nowrap ${
                     scrolled ? "text-white/90" : "text-white/90"
                   }`}
                 >
@@ -93,7 +93,7 @@ export default function Navigation() {
             <div className="hidden md:flex items-center">
               <Link
                 href="/contact"
-                className="font-inter text-sm font-medium px-6 py-2.5 border border-latitude-gold text-latitude-gold hover:bg-latitude-gold hover:text-white transition-all duration-300 tracking-wide"
+                className="font-inter text-xs lg:text-sm font-medium px-4 lg:px-6 py-2.5 border border-latitude-gold text-latitude-gold hover:bg-latitude-gold hover:text-white transition-all duration-300 tracking-wide whitespace-nowrap"
                 aria-label="Demander un devis pour votre événement"
               >
                 Demander un devis
