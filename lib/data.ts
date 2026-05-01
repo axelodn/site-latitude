@@ -220,7 +220,7 @@ export const portfolio = [
     id: 13,
     title: "Soirée Danone — Défense Arena",
     category: "Soirées",
-    lieu: "La Défense",
+    lieu: "Paris",
     participants: 1200,
     image: "/images/danone-arena.jpg",
     alt: "Soirée d'entreprise Danone à la Défense Arena",
