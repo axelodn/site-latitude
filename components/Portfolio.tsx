@@ -82,7 +82,7 @@ export default function Portfolio() {
           variants={staggerContainerFast}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+          className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4"
         >
           <AnimatePresence mode="popLayout">
             {filtered.map((item) => (
@@ -96,10 +96,10 @@ export default function Portfolio() {
                 transition={{ duration: 0.4 }}
                 className={`group relative overflow-hidden cursor-default ${
                   item.size === "large"
-                    ? "sm:col-span-2 aspect-[16/9]"
+                    ? "col-span-2 aspect-[3/2] sm:aspect-[16/9]"
                     : item.size === "medium"
-                    ? "aspect-[4/3]"
-                    : "aspect-square"
+                    ? "col-span-1 aspect-[3/2] sm:aspect-[4/3]"
+                    : "aspect-[3/2] sm:aspect-square"
                 }`}
                 aria-label={`Réalisation : ${item.title} — ${item.category} à ${item.lieu}`}
               >
@@ -110,7 +110,7 @@ export default function Portfolio() {
                     alt={item.alt}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   {/* Permanent dark overlay for readability */}
                   <div className="absolute inset-0 bg-black/20" />
