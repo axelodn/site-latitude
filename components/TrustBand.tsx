@@ -92,12 +92,12 @@ export default function TrustBand() {
             ))}
           </InfiniteSlider>
 
-          {/* Progressive blur edges */}
-          <div className="absolute inset-y-0 left-0 w-32 z-10">
+          {/* Progressive blur edges — desktop only */}
+          <div className="hidden md:block absolute inset-y-0 left-0 w-32 z-10">
             <ProgressiveBlur direction="left" blurIntensity={6} className="absolute inset-0" />
             <div className="absolute inset-0" style={{ background: "linear-gradient(to right, #08080A 0%, transparent 100%)" }} />
           </div>
-          <div className="absolute inset-y-0 right-0 w-32 z-10">
+          <div className="hidden md:block absolute inset-y-0 right-0 w-32 z-10">
             <ProgressiveBlur direction="right" blurIntensity={6} className="absolute inset-0" />
             <div className="absolute inset-0" style={{ background: "linear-gradient(to left, #08080A 0%, transparent 100%)" }} />
           </div>
