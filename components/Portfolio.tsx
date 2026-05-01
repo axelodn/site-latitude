@@ -82,7 +82,7 @@ export default function Portfolio() {
           variants={staggerContainerFast}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-3 lg:grid-cols-3 gap-2 md:gap-4"
+          className="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 [grid-auto-flow:dense]"
         >
           <AnimatePresence mode="popLayout">
             {filtered.map((item) => (
@@ -96,10 +96,10 @@ export default function Portfolio() {
                 transition={{ duration: 0.4 }}
                 className={`group relative overflow-hidden cursor-default ${
                   item.size === "large"
-                    ? "col-span-3 aspect-[3/2] sm:aspect-[16/9]"
+                    ? "col-span-3 sm:col-span-2 aspect-[3/2] sm:aspect-[16/9]"
                     : item.size === "medium"
                     ? "col-span-3 sm:col-span-1 aspect-[3/2] sm:aspect-[4/3]"
-                    : "aspect-square"
+                    : "col-span-1 aspect-square"
                 }`}
                 aria-label={`Réalisation : ${item.title} — ${item.category} à ${item.lieu}`}
               >
