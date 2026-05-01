@@ -41,9 +41,9 @@ export default function HeroExpansion() {
         mediaRef.current.style.borderRadius = `${br}px`;
       }
 
-      // Overlay éclaircit
+      // Overlay s'assombrit au fur et à mesure
       if (overlayRef.current)
-        overlayRef.current.style.opacity = String(Math.max(0.1, 0.5 - p * 0.4));
+        overlayRef.current.style.opacity = String(0.45 + p * 0.35);
 
       // Titres s'écartent verticalement
       const ty = p * (m ? 55 : 75);
@@ -147,7 +147,7 @@ export default function HeroExpansion() {
           fetchPriority="high"
           quality={85}
         />
-        <div className="absolute inset-0 bg-black/25" />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.3) 100%)' }} />
       </div>
 
       {/* Image centrale qui s'expand */}
@@ -162,7 +162,7 @@ export default function HeroExpansion() {
         }}
       >
         <Image
-          src="/images/groupe.png"
+          src="/images/animation-soiree-groupe.png"
           alt="Événement Latitude Organisation"
           fill
           className="object-cover"
