@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import Navigation from "@/components/Navigation";
-import ScrollExpandMedia from "@/components/ScrollExpandMedia";
+import HeroExpansion from "@/components/HeroExpansion";
 
 // Sections above/near fold — chargées normalement
 import EventsMarquee from "@/components/EventsMarquee";
@@ -22,15 +22,7 @@ export default function HomePage() {
     <>
       <Navigation />
       <main id="main-content">
-        <ScrollExpandMedia
-          mediaType="image"
-          mediaSrc="/images/groupe.png"
-          bgImageSrc="/images/animation-soiree-groupe.png"
-          title="L'excellence événementielle depuis 2004"
-          date="20 ans d'expertise"
-          scrollToExpand="Scroll pour explorer"
-          textBlend={false}
-        />
+        <HeroExpansion />
 
         <EventsMarquee />
         <Stats />

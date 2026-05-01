@@ -27,9 +27,9 @@ const steps = [
   },
   {
     number: "03",
-    title: "Immortalisation",
+    title: "Impact",
     content:
-      "Notre signature \"L'œil du terrain\" capture les émotions en temps réel tout au long de l'événement. Tournage professionnel, montage en direct, projection le soir même : vos équipes revivent les meilleurs moments avant même de rentrer chez elles. Un souvenir ancré.",
+      "L'événement est terminé, mais son effet ne fait que commencer. Cohésion renforcée, souvenirs partagés, dynamiques nouvelles : nous mesurons avec vous les bénéfices concrets et vous accompagnons pour ancrer durablement ce que vous avez vécu ensemble.",
   },
 ];
 
