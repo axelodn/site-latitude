@@ -262,7 +262,7 @@ export const portfolio = [
     category: "Séminaires",
     lieu: "Île-de-France",
     participants: 60,
-    image: "/images/rallye-2cv.png",
+    image: "/images/rallye-2cv-new.jpg",
     alt: "Incentive rallye en Deux Chevaux découverte patrimoine",
     size: "small",
   },
