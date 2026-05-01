@@ -760,8 +760,8 @@ export const incentiveItems: IncentiveItem[] = [
   {
     slug: "rallye-2cv",
     name: "Rallye 2CV",
-    image: "/images/rallye-2cv.png",
-    images: ["/images/rallye-2cv.png"],
+    image: "/images/rallye-2cv-new.jpg",
+    images: ["/images/rallye-2cv-new.jpg", "/images/rallye-2cv.png"],
     excerpt: "Un rallye inoubliable à bord de la mythique Deux Chevaux : roadbook, défis et découverte du patrimoine local.",
     description: "Le Rallye 2CV est l'une de nos activités signatures. Répartis en équipages à bord de 2CV iconiques, vos collaborateurs parcourent un territoire à travers un roadbook jalonné d'énigmes, de défis photo et d'arrêts patrimoniaux. Stratégie de navigation, complicité entre équipiers et fous rires garantis. Une expérience décalée et conviviale qui marque durablement les esprits.",
     duration: "1/2 à journée",
