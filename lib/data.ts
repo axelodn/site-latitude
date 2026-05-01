@@ -2,7 +2,7 @@ export const expertises = [
   {
     id: "seminaires-incentives",
     icon: "Users",
-    title: "Séminaires & Incentives",
+    title: "Séminaires",
     subtitle: "Fédérer vos équipes autour d'expériences sur mesure",
     description:
       "Du séminaire de direction au voyage incentive en passant par les activités de team-building : nous imaginons des moments forts qui renforcent l'engagement et la cohésion de vos collaborateurs. Sur mesure, de A à Z.",
@@ -119,7 +119,7 @@ export const portfolio = [
   {
     id: 3,
     title: "Incentive Vercors",
-    category: "Séminaires & Incentives",
+    category: "Séminaires",
     lieu: "Vercors",
     participants: 200,
     image: "/images/rando-vercors.png",
@@ -159,7 +159,7 @@ export const portfolio = [
   {
     id: 7,
     title: "Spéléologie",
-    category: "Séminaires & Incentives",
+    category: "Séminaires",
     lieu: "Ardèche",
     participants: 25,
     image: "/images/speleo.jpg",
@@ -179,7 +179,7 @@ export const portfolio = [
   {
     id: 9,
     title: "Canyoning",
-    category: "Séminaires & Incentives",
+    category: "Séminaires",
     lieu: "Alpes",
     participants: 40,
     image: "/images/canyoning.jpg",
@@ -189,7 +189,7 @@ export const portfolio = [
   {
     id: 10,
     title: "Raids Gorges du Tarn",
-    category: "Séminaires & Incentives",
+    category: "Séminaires",
     lieu: "Ardèche",
     participants: 150,
     image: "/images/groupe-cascade.png",
@@ -259,7 +259,7 @@ export const portfolio = [
   {
     id: 17,
     title: "Rallye 2CV",
-    category: "Séminaires & Incentives",
+    category: "Séminaires",
     lieu: "Île-de-France",
     participants: 60,
     image: "/images/rallye-2cv.png",
@@ -346,5 +346,5 @@ export const destinations = [
   { name: "Île Maurice", x: "63%", y: "62%", country: "Île Maurice" },
 ];
 
-export type PortfolioCategory = "Tous" | "Soirées" | "Team-building" | "Séminaires & Incentives";
-export const portfolioCategories: PortfolioCategory[] = ["Tous", "Soirées", "Team-building", "Séminaires & Incentives"];
+export type PortfolioCategory = "Tous" | "Soirées" | "Team-building" | "Séminaires";
+export const portfolioCategories: PortfolioCategory[] = ["Tous", "Soirées", "Team-building", "Séminaires"];
