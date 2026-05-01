@@ -6,10 +6,10 @@ interface LogoProps {
 }
 
 export function Logo({ className, height = 52 }: LogoProps) {
-  const width = Math.round(height * (1296 / 832));
+  const width = Math.round(height * (728 / 296));
   return (
     <Image
-      src="/latitude-organisation-logo.png"
+      src="/logolatitudeorganisation.jpeg"
       alt="Latitude Organisation"
       width={width}
       height={height}
