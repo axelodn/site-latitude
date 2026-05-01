@@ -277,16 +277,6 @@ export const portfolio = [
     size: "small",
   },
   {
-    id: 19,
-    title: "Rallyes Historiques Drôme/Ardèche",
-    category: "Séminaires & Incentives",
-    lieu: "Drôme/Ardèche",
-    participants: 45,
-    image: "/images/rallye-historique-drome.jpg",
-    alt: "Incentive rallyes historiques Drôme Ardèche",
-    size: "small",
-  },
-  {
     id: 20,
     title: "Soirée Peaky Blinders",
     category: "Soirées",
