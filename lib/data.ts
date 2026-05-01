@@ -216,6 +216,16 @@ export const portfolio = [
     alt: "Team-building So British croquet et activités anglaises",
     size: "small",
   },
+  {
+    id: 13,
+    title: "Gala Danone Arena",
+    category: "Soirées",
+    lieu: "Paris",
+    participants: 1200,
+    image: "/images/danone-arena.jpg",
+    alt: "Soirée d'entreprise grand format à la Danone Arena Paris",
+    size: "large",
+  },
 ];
 
 export const faqItems = [
