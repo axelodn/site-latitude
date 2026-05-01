@@ -98,8 +98,8 @@ export const testimonials = [
 export const portfolio = [
   {
     id: 1,
-    title: "Séminaire Impressionnistes",
-    category: "Séminaires",
+    title: "Rallye des Impressionnistes",
+    category: "Team-building",
     lieu: "Île-de-France",
     participants: 60,
     image: "/images/impressionnistes-satillieu.png",
@@ -119,7 +119,7 @@ export const portfolio = [
   {
     id: 3,
     title: "Incentive Vercors",
-    category: "Team-building",
+    category: "Incentive",
     lieu: "Vercors",
     participants: 200,
     image: "/images/rando-vercors.png",
@@ -148,22 +148,22 @@ export const portfolio = [
   },
   {
     id: 6,
-    title: "Séminaire Sous Bulle",
-    category: "Séminaires",
+    title: "Sens et Conscience",
+    category: "Team-building",
     lieu: "Île-de-France",
     participants: 30,
     image: "/images/sens-conscience-bulle.png",
-    alt: "Séminaire atypique sous bulle en pleine nature",
+    alt: "Team-building Sens et Conscience expérience sensorielle",
     size: "small",
   },
   {
     id: 7,
     title: "Spéléologie",
-    category: "Team-building",
+    category: "Incentive",
     lieu: "Ardèche",
     participants: 25,
     image: "/images/speleo.png",
-    alt: "Team-building spéléologie groupe devant une grotte",
+    alt: "Incentive spéléologie groupe devant une grotte",
     size: "small",
   },
   {
@@ -179,11 +179,11 @@ export const portfolio = [
   {
     id: 9,
     title: "Canyoning Adventure",
-    category: "Team-building",
+    category: "Incentive",
     lieu: "Alpes",
     participants: 40,
     image: "/images/canyoning.jpg",
-    alt: "Team-building canyoning rappel en falaise",
+    alt: "Incentive canyoning rappel en falaise",
     size: "small",
   },
   {
@@ -199,7 +199,7 @@ export const portfolio = [
   {
     id: 11,
     title: "Murder Party",
-    category: "Soirées",
+    category: "Team-building",
     lieu: "Paris",
     participants: 60,
     image: "/images/murder-atelier.jpg",
@@ -276,5 +276,5 @@ export const destinations = [
   { name: "Île Maurice", x: "63%", y: "62%", country: "Île Maurice" },
 ];
 
-export type PortfolioCategory = "Tous" | "Séminaires" | "Soirées" | "Team-building";
-export const portfolioCategories: PortfolioCategory[] = ["Tous", "Séminaires", "Soirées", "Team-building"];
+export type PortfolioCategory = "Tous" | "Séminaires" | "Soirées" | "Team-building" | "Incentive";
+export const portfolioCategories: PortfolioCategory[] = ["Tous", "Séminaires", "Soirées", "Team-building", "Incentive"];
