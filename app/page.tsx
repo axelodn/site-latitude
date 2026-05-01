@@ -10,7 +10,6 @@ import Stats from "@/components/Stats";
 const FounderStatement = dynamic(() => import("@/components/FounderStatement"));
 const TrustBand        = dynamic(() => import("@/components/TrustBand"));
 const Expertises       = dynamic(() => import("@/components/Expertises"));
-const Approach         = dynamic(() => import("@/components/Approach"));
 const Portfolio        = dynamic(() => import("@/components/Portfolio"));
 const Testimonials     = dynamic(() => import("@/components/Testimonials"));
 const FAQ              = dynamic(() => import("@/components/FAQ"));
@@ -29,7 +28,6 @@ export default function HomePage() {
         <FounderStatement />
         <TrustBand />
         <Expertises />
-        <Approach />
         <Portfolio />
         <Testimonials />
         <FAQ />
