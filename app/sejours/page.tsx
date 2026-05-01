@@ -49,7 +49,7 @@ const sejours_hiver = [
     duree: "2 à 4 jours",
     participants: "20 – 150 pers.",
     description: "Géant parallèle, biathlon laser, chasse aux trésors sur les pistes, soirée raclette en chalet privatisé. La montagne comme vous ne l'avez jamais vécue en équipe.",
-    image: "/images/ski-geant-team.png",
+    image: "/images/sejour-ski-olympiades.jpg",
     tags: ["Ski", "Compétition", "Montagne"],
   },
   {
@@ -58,7 +58,7 @@ const sejours_hiver = [
     duree: "3 à 5 jours",
     participants: "10 – 60 pers.",
     description: "Construction d'igloos, randonnée en raquettes, chiens de traîneaux et bain nordique sous les aurores boréales. Une aventure polaire inoubliable.",
-    image: "/images/igloo-team.png",
+    image: "/images/sejour-igloo-grand-nord.jpg",
     tags: ["Expédition", "Grand Nord", "Immersion"],
   },
   {
@@ -67,7 +67,7 @@ const sejours_hiver = [
     duree: "1 à 2 jours",
     participants: "8 – 40 pers.",
     description: "Progression dans des grottes millénaires, rappels verticaux, découverte de concrétions féeriques. Un défi qui teste la confiance et la solidarité.",
-    image: "/images/speleo.png",
+    image: "/images/sejour-speleo-aventure.jpg",
     tags: ["Spéléo", "Exploration", "Challenge"],
   },
 ];
