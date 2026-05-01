@@ -67,7 +67,7 @@ const sejours_hiver = [
     duree: "1 à 2 jours",
     participants: "8 – 40 pers.",
     description: "Progression dans des grottes millénaires, rappels verticaux, découverte de concrétions féeriques. Un défi qui teste la confiance et la solidarité.",
-    image: "/images/sejour-speleo-aventure.jpg",
+    image: "/images/speleo.png",
     tags: ["Spéléo", "Exploration", "Challenge"],
   },
 ];
