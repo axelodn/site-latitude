@@ -218,12 +218,12 @@ export const portfolio = [
   },
   {
     id: 13,
-    title: "Gala Danone Arena",
+    title: "Soirée Danone — Défense Arena",
     category: "Soirées",
-    lieu: "Paris",
+    lieu: "La Défense",
     participants: 1200,
     image: "/images/danone-arena.jpg",
-    alt: "Soirée d'entreprise grand format à la Danone Arena Paris",
+    alt: "Soirée d'entreprise Danone à la Défense Arena",
     size: "large",
   },
 ];
