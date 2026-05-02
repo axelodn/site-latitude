@@ -191,8 +191,9 @@ export const activities: Activity[] = [
     slug: "murder-party",
     name: "Murder Party",
     category: "interieur",
-    image: "/images/murder-atelier.jpg",
+    image: "/images/murder-presentation-atelier-2.jpg",
     images: [
+      "/images/murder-presentation-atelier-2.jpg",
       "/images/murder-atelier.jpg",
       "/images/murder-atelier-2.jpg",
       "/images/murder-karim.jpg",
