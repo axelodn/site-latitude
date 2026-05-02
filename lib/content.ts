@@ -386,7 +386,11 @@ export const activities: Activity[] = [
     slug: "trophees-du-rugby",
     name: "Trophées du Rugby",
     category: "exterieur",
-    images: [],
+    image: "/images/trophees-rugby-1.jpg",
+    images: [
+      "/images/trophees-rugby-1.jpg",
+      "/images/trophees-rugby-2.jpg",
+    ],
     excerpt: "Inspirés de l'esprit rugby : défis de passes, mêlées, drop. Activité physique et fédératrice.",
     description: "Les Trophées du Rugby plongent vos équipes dans l'univers du rugby sans contact : défis de passes, mêlées techniques, drop goal, atelier transformation. Encadré par d'anciens joueurs, l'esprit rugby — engagement, solidarité, respect — se vit pleinement. Bonne humeur et cohésion garanties.",
     duration: "1/2 à journée",
