@@ -139,7 +139,7 @@ export default function HeroExpansion() {
       {/* Background atmosphère */}
       <div ref={bgRef} className="absolute inset-0 z-0" style={{ willChange: 'opacity' }}>
         <Image
-          src="/images/animation-soiree-groupe.png"
+          src="/images/groupe extérieur.jpg"
           alt=""
           fill
           className="object-cover object-center"
@@ -162,7 +162,7 @@ export default function HeroExpansion() {
         }}
       >
         <Image
-          src="/images/animation-soiree-groupe.png"
+          src="/images/groupe extérieur.jpg"
           alt="Événement Latitude Organisation"
           fill
           className="object-cover"
