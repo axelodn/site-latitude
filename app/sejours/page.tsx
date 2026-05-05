@@ -71,6 +71,16 @@ const sejours_hiver = [
     tags: ["Spéléo", "Exploration", "Challenge"],
   },
 ];
+
+const destinations = [
+  { icon: "🇮🇹", name: "Italie", desc: "Rome, Toscane, Sicile" },
+  { icon: "🇪🇸", name: "Espagne", desc: "Barcelone, Séville, Madrid" },
+  { icon: "🇵🇹", name: "Portugal", desc: "Lisbonne, Porto, Algarve" },
+  { icon: "🇲🇦", name: "Maroc", desc: "Marrakech, Atlas, Sahara" },
+  { icon: "🇬🇷", name: "Grèce", desc: "Santorin, Crète, Athènes" },
+  { icon: "🇮🇸", name: "Islande", desc: "Aurores boréales, geysers" },
+];
+
 export default function Sejours() {
   return (
     <>
