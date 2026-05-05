@@ -139,7 +139,7 @@ export default function HeroExpansion() {
       {/* Background atmosphère */}
       <div ref={bgRef} className="absolute inset-0 z-0" style={{ willChange: 'opacity' }}>
         <Image
-          src="/images/groupe-extérieur.jpg"
+          src="/images/groupe-cascade.png"
           alt=""
           fill
           className="object-cover object-center"
