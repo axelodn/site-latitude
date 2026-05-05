@@ -71,16 +71,6 @@ const sejours_hiver = [
     tags: ["Spéléo", "Exploration", "Challenge"],
   },
 ];
-
-const destinations = [
-  { name: "Marrakech", desc: "Riad privatisé, souk & désert", icon: "🇲🇦" },
-  { name: "Lisbonne", desc: "Fado, surf & gastronomie", icon: "🇵🇹" },
-  { name: "Toscane", desc: "Vignobles, villas & gastronomie", icon: "🇮🇹" },
-  { name: "Laponie", desc: "Aurores boréales & traîneaux", icon: "🇫🇮" },
-  { name: "Barcelone", desc: "Architecture, mer & culture", icon: "🇪🇸" },
-  { name: "Écosse", desc: "Châteaux, lacs & whisky", icon: "🏴󠁧󠁢󠁳󠁣󠁴󠁿" },
-];
-
 export default function Sejours() {
   return (
     <>
