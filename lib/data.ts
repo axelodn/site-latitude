@@ -1,13 +1,13 @@
 export const expertises = [
   {
-    id: "seminaires-incentives",
-    icon: "Users",
-    title: "Séminaires",
-    subtitle: "Fédérer vos équipes autour d'expériences sur mesure",
+    id: "team-building",
+    icon: "Mountain",
+    title: "Team-Building",
+    subtitle: "Sur terre, mer, air : tisser des liens forts",
     description:
-      "Du séminaire de direction au voyage incentive en passant par les activités de team-building : nous imaginons des moments forts qui renforcent l'engagement et la cohésion de vos collaborateurs. Sur mesure, de A à Z.",
-    keywords: "organisation séminaire entreprise",
-    image: "/images/koh-lanta-groupe.jpg",
+      "Des challenges sportifs en montagne aux ateliers créatifs en ville, des régates en mer aux vols en montgolfière : nous créons des expériences de cohésion originales qui marquent durablement les esprits.",
+    keywords: "team building original nature outdoor",
+    image: "/images/koh-lanta-equilibre.png",
   },
   {
     id: "soirees-evenementielles",
@@ -20,14 +20,14 @@ export const expertises = [
     image: "/images/masque-venitien.jpg",
   },
   {
-    id: "team-building",
-    icon: "Mountain",
-    title: "Team-Building",
-    subtitle: "Sur terre, mer, air : tisser des liens forts",
+    id: "seminaires-incentives",
+    icon: "Users",
+    title: "Séminaires",
+    subtitle: "Fédérer vos équipes autour d'expériences sur mesure",
     description:
-      "Des challenges sportifs en montagne aux ateliers créatifs en ville, des régates en mer aux vols en montgolfière : nous créons des expériences de cohésion originales qui marquent durablement les esprits.",
-    keywords: "team building original nature outdoor",
-    image: "/images/koh-lanta-equilibre.png",
+      "Du séminaire de direction au voyage incentive en passant par les activités de team-building : nous imaginons des moments forts qui renforcent l'engagement et la cohésion de vos collaborateurs. Sur mesure, de A à Z.",
+    keywords: "organisation séminaire entreprise",
+    image: "/images/koh-lanta-groupe.jpg",
   },
 ];
 
