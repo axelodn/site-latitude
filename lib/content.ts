@@ -989,6 +989,195 @@ export const incentiveItems: IncentiveItem[] = [
 
 export const expertiseDetails: ExpertiseDetail[] = [
   {
+    slug: "team-building",
+    title: "Team-Building",
+    metaTitle: "Team-Building Original - Cohésion d'Équipe Sur Mesure",
+    metaDescription:
+      "Organisez un team-building mémorable. Activités originales, destinations variées, experts depuis 20 ans. Devis gratuit sous 24h.",
+    h1: "Team-Building : Tisser des liens forts sous toutes les latitudes",
+    subtitle:
+      "De la montagne à la mer, en passant par la ville : nous créons des expériences de cohésion originales.",
+    introTitle: "Pourquoi investir dans le team-building ?",
+    intro:
+      "Le team-building n'est pas un luxe, c'est un investissement. Les équipes qui partagent des expériences fortes hors du cadre professionnel développent une confiance mutuelle, une meilleure communication et une capacité de coopération qui se traduisent directement en performance. Notre conviction : un bon team-building n'est pas un divertissement déconnecté du travail, c'est une expérience qui révèle des dimensions individuelles et collectives invisibles au bureau. Depuis 20 ans, nous concevons des expériences qui sortent des sentiers battus et marquent durablement les esprits.",
+    heroImage: "/images/groupe.png",
+    gallery: [
+      { src: "/images/koh-lanta-groupe.jpg", alt: "Koh Lanta team-building groupe en plein air" },
+      { src: "/images/koh-lanta-equilibre.png", alt: "Épreuve d'équilibre Koh Lanta team-building" },
+      { src: "/images/koh-lantable-kapla.png", alt: "Construction Kapla en équipe team-building" },
+      { src: "/images/koh-lanta-tir-arc.png", alt: "Tir à l'arc Koh Lanta team-building" },
+      { src: "/images/koh-lantable-poteaux.png", alt: "Épreuve des poteaux Koh Lantable team-building" },
+      { src: "/images/koh-lantable-puzzle.png", alt: "Puzzle géant team-building Koh Lantable" },
+      { src: "/images/rando-vercors.png", alt: "Randonnée incentive dans le Vercors avec vue panoramique" },
+      { src: "/images/groupe-cascade.png", alt: "Team-building randonnée groupe sous une cascade" },
+      { src: "/images/canyoning.jpg", alt: "Canyoning rappel en falaise team-building aventure" },
+      { src: "/images/speleo.png", alt: "Spéléologie team-building groupe en combinaison rouge" },
+      { src: "/images/igloo-team.png", alt: "Construction d'igloos en équipe activité hivernale" },
+      { src: "/images/jeux-ferme.png", alt: "Jeux de la ferme team-building en plein air" },
+      { src: "/images/so-british-beatles.png", alt: "So British team-building thème Beatles" },
+      { src: "/images/so-british-croquet.png", alt: "Croquet anglais So British team-building" },
+      { src: "/images/archeo-bilboquet.jpg", alt: "Activité archéologie bilboquet médiéval" },
+      { src: "/images/archeo-tir-arc.jpg", alt: "Tir à l'arc médiéval dans un château en ruines" },
+    ],
+    sections: [
+      {
+        title: "Nos types de team-building",
+        content:
+          "Une grande diversité de formats pour s'adapter à votre culture, vos objectifs et votre environnement.",
+        items: [
+          "Team-building outdoor : Koh Lanta, jeux d'orientation, défis nature, olympiades",
+          "Team-building urbain : rallyes citadins, escape games géants, treasure hunts",
+          "Team-building créatif : ateliers cuisine, peinture, musique, scénographie",
+          "Team-building sportif : tir à l'arc, karting, laser game, sports collectifs",
+          "Team-building solidaire : actions caritatives concrètes en groupe",
+          "Team-building culturel : visites guidées en mode jeu, ateliers patrimoniaux",
+          "Team-building digital : escape rooms virtuels, jeux interactifs, quizz en ligne",
+        ],
+      },
+      {
+        title: "Nos activités phares",
+        content:
+          "Une sélection d'activités testées et approuvées par des centaines d'équipes — toutes adaptables en demi-journée ou journée.",
+        items: [
+          "Koh Lanta & Koh Lantable : olympiades outdoor ou indoor en équipes",
+          "Rallye urbain / chasse au trésor en ville (Paris, Lyon, Bordeaux…)",
+          "Escape game géant en extérieur sur mesure",
+          "Ateliers créatifs : cuisine, peinture, musique, scénographie",
+          "Jeux d'orientation et défis nature en forêt (Vercors, Fontainebleau)",
+          "Construction collective : mosaïques géantes, fresques murales",
+          "Archéo Concept : fouilles et énigmes sur sites patrimoniaux",
+        ],
+      },
+      {
+        title: "Les bénéfices d'un team-building",
+        content:
+          "Au-delà du moment partagé, un team-building bien conçu produit des effets durables.",
+        items: [
+          "Renforcement de la cohésion d'équipe",
+          "Amélioration de la communication interservices",
+          "Révélation de leaders informels et de talents cachés",
+          "Création de souvenirs communs qui consolident l'identité d'équipe",
+          "Regain de motivation dans les semaines suivantes",
+        ],
+      },
+    ],
+    destinations: [
+      { name: "Paris & Île-de-France", description: "Rallyes urbains, escape games, ateliers créatifs à 1h max." },
+      { name: "Forêt de Fontainebleau", description: "Jeux d'orientation, défis nature, à 1h de Paris." },
+      { name: "Lyon", description: "Ateliers cuisine avec chefs, rallyes patrimoniaux." },
+      { name: "Annecy", description: "Lac alpin, activités nautiques et montagne à la journée." },
+      { name: "Vercors", description: "Randonnée, Archéo Concept, défis montagne en journée." },
+    ],
+    faq: [
+      {
+        question: "Quel est le bon nombre de personnes pour un team-building ?",
+        answer:
+          "Tous les formats sont possibles, de petits groupes à des dispositifs de grande envergure. Nous adaptons les activités et la logistique au nombre de participants pour garantir une expérience optimale.",
+      },
+      {
+        question: "Peut-on faire un team-building en demi-journée ?",
+        answer:
+          "Absolument. Les formats courts (3-4h) sont parfaits pour briser la routine. Rallye urbain, escape game, atelier créatif, dégustation : nous proposons des formats compacts à fort impact.",
+      },
+      {
+        question: "Quelles activités si certains participants ont des limitations physiques ?",
+        answer:
+          "Nous concevons systématiquement des programmes inclusifs : activités à plusieurs niveaux d'engagement, alternatives non-sportives, prise en compte des contraintes médicales. La cohésion ne doit jamais exclure.",
+      },
+      {
+        question: "Le team-building, est-ce vraiment efficace ?",
+        answer:
+          "Oui, à condition qu'il soit bien conçu. Un team-building qui aligne objectifs business, expérience humaine forte et debriefing post-événement produit des effets mesurables sur la cohésion, la motivation et la performance des équipes.",
+      },
+    ],
+    keywords: [
+      "team building",
+      "activité team building",
+      "cohésion équipe",
+      "team building original",
+      "team building entreprise",
+    ],
+    ctaText: "Créer votre team-building",
+  },
+  {
+    slug: "soirees-evenementielles",
+    title: "Soirées Événementielles",
+    metaTitle: "Soirées Événementielles & Galas d'Entreprise - Agence",
+    metaDescription:
+      "Créez une soirée d'exception : galas, soirées d'entreprise, événements à thème dans les plus beaux lieux de France. Devis gratuit.",
+    h1: "Soirées Événementielles : Des soirées mémorables et élégantes",
+    subtitle:
+      "Galas, soirées de fin d'année, soirées à thème : nous créons des expériences sensorielles uniques.",
+    introTitle: "L'art de la soirée d'entreprise réussie",
+    intro:
+      "Une soirée d'entreprise réussie est un moment suspendu où vos collaborateurs, clients ou partenaires vivent une expérience qu'ils n'oublieront pas. C'est l'art subtil de marier un lieu d'exception, une scénographie raffinée, une restauration mémorable et une animation à la hauteur de votre marque. Notre signature : transformer une soirée en moment de vérité, où les émotions partagées créent des liens durables. De la soirée de fin d'année intime au gala d'entreprise de grande envergure, nous concevons chaque soirée comme une œuvre unique.",
+    heroImage: "/images/animation-soiree-groupe.png",
+    gallery: [
+      { src: "/images/masque-venitien.jpg", alt: "Soirée à thème vénitien avec masques et décors somptueux" },
+      { src: "/images/casino-roulette.png", alt: "Animation casino roulette lors d'une soirée d'entreprise" },
+      { src: "/images/casino.png", alt: "Ambiance casino soirée gala entreprise" },
+      { src: "/images/presentateurs.jpg", alt: "Animateurs soirée thème Gatsby Great Gatsby" },
+      { src: "/images/jerome-peaky.png", alt: "Animation soirée thème Peaky Blinders" },
+      { src: "/images/karim-nabil-peaky.png", alt: "Soirée costumée thème Peaky Blinders" },
+      { src: "/images/murder-atelier.jpg", alt: "Atelier murder party enquête policière en soirée" },
+      { src: "/images/cocktail-spirits.jpg", alt: "Atelier cocktail dégustation spiritueux en soirée" },
+      { src: "/images/cocktail-setup.jpg", alt: "Bar à cocktails lors d'une soirée événementielle" },
+    ],
+    sections: [
+      {
+        title: "Types de soirées événementielles",
+        content:
+          "Chaque soirée a sa raison d'être, son ambiance, son ton. Nous adaptons notre approche à votre objectif.",
+        items: [
+          "Soirée de gala : prestige et célébration des grands moments de l'entreprise",
+          "Soirée de fin d'année : célébrer collectivement et marquer le calendrier",
+          "Soirée de lancement produit : créer l'événement médiatique et commercial",
+          "Soirée à thème : voyage immersif dans un univers cohérent",
+          "Soirée de remerciement clients : fidéliser et créer du lien",
+          "Soirée d'inauguration : marquer l'ouverture d'un site, d'une marque",
+          "Cocktail dînatoire prestige : networking en cadre d'exception",
+        ],
+      },
+      {
+        title: "Des lieux d'exception",
+        content:
+          "Nous sélectionnons le lieu qui correspond parfaitement à votre image et vos ambitions. Châteaux, domaines, espaces atypiques, toits-terrasses, lieux patrimoniaux : notre réseau vous ouvre les portes de lieux rares pour des soirées qui marquent.",
+      },
+      {
+        title: "Notre approche : créer un voyage sensoriel",
+        content:
+          "Chaque soirée est conçue comme un parcours d'émotions. De l'arrivée au cocktail, du dîner aux animations, jusqu'à la sortie : chaque moment est pensé pour surprendre, ravir, marquer.",
+        items: [
+          "Décoration scénographique sur mesure : fleuristerie, lumière, mobilier",
+          "Restauration d'exception : grands chefs et traiteurs sélectionnés",
+          "Animation artistique : DJ stars, orchestres jazz, danseurs, performers",
+          "Wow effects : feu d'artifice, mapping vidéo, scénographie immersive",
+          "Production vidéo : captation et film bilan",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "Combien de temps à l'avance préparer une soirée ?",
+        answer:
+          "Idéalement plusieurs mois pour une soirée prestige dans un lieu d'exception qui nécessite de réserver très en amont. Nous gérons aussi des projets plus courts selon la disponibilité des lieux et prestataires. Contactez-nous pour évaluer la faisabilité.",
+      },
+      {
+        question: "Quelles animations proposez-vous pour une soirée ?",
+        answer:
+          "Toute la palette de l'animation événementielle : DJ et orchestres, danseurs et chorégraphes, performers visuels, magiciens, mentalistes, mapping vidéo, scénographie immersive. Nous co-construisons le programme artistique avec vous.",
+      },
+    ],
+    keywords: [
+      "soirée gala",
+      "soirée entreprise",
+      "gala professionnel",
+      "soirée fin d'année",
+      "événement soirée",
+    ],
+    ctaText: "Organiser votre soirée",
+  },
+  {
     slug: "seminaires-incentives",
     title: "Séminaires & Incentives",
     metaTitle: "Séminaires & Incentives d'Entreprise - Agence Spécialisée",
@@ -1101,195 +1290,6 @@ export const expertiseDetails: ExpertiseDetail[] = [
       "team building séminaire",
     ],
     ctaText: "Organiser votre séminaire",
-  },
-  {
-    slug: "soirees-evenementielles",
-    title: "Soirées Événementielles",
-    metaTitle: "Soirées Événementielles & Galas d'Entreprise - Agence",
-    metaDescription:
-      "Créez une soirée d'exception : galas, soirées d'entreprise, événements à thème dans les plus beaux lieux de France. Devis gratuit.",
-    h1: "Soirées Événementielles : Des soirées mémorables et élégantes",
-    subtitle:
-      "Galas, soirées de fin d'année, soirées à thème : nous créons des expériences sensorielles uniques.",
-    introTitle: "L'art de la soirée d'entreprise réussie",
-    intro:
-      "Une soirée d'entreprise réussie est un moment suspendu où vos collaborateurs, clients ou partenaires vivent une expérience qu'ils n'oublieront pas. C'est l'art subtil de marier un lieu d'exception, une scénographie raffinée, une restauration mémorable et une animation à la hauteur de votre marque. Notre signature : transformer une soirée en moment de vérité, où les émotions partagées créent des liens durables. De la soirée de fin d'année intime au gala d'entreprise de grande envergure, nous concevons chaque soirée comme une œuvre unique.",
-    heroImage: "/images/animation-soiree-groupe.png",
-    gallery: [
-      { src: "/images/masque-venitien.jpg", alt: "Soirée à thème vénitien avec masques et décors somptueux" },
-      { src: "/images/casino-roulette.png", alt: "Animation casino roulette lors d'une soirée d'entreprise" },
-      { src: "/images/casino.png", alt: "Ambiance casino soirée gala entreprise" },
-      { src: "/images/presentateurs.jpg", alt: "Animateurs soirée thème Gatsby Great Gatsby" },
-      { src: "/images/jerome-peaky.png", alt: "Animation soirée thème Peaky Blinders" },
-      { src: "/images/karim-nabil-peaky.png", alt: "Soirée costumée thème Peaky Blinders" },
-      { src: "/images/murder-atelier.jpg", alt: "Atelier murder party enquête policière en soirée" },
-      { src: "/images/cocktail-spirits.jpg", alt: "Atelier cocktail dégustation spiritueux en soirée" },
-      { src: "/images/cocktail-setup.jpg", alt: "Bar à cocktails lors d'une soirée événementielle" },
-    ],
-    sections: [
-      {
-        title: "Types de soirées événementielles",
-        content:
-          "Chaque soirée a sa raison d'être, son ambiance, son ton. Nous adaptons notre approche à votre objectif.",
-        items: [
-          "Soirée de gala : prestige et célébration des grands moments de l'entreprise",
-          "Soirée de fin d'année : célébrer collectivement et marquer le calendrier",
-          "Soirée de lancement produit : créer l'événement médiatique et commercial",
-          "Soirée à thème : voyage immersif dans un univers cohérent",
-          "Soirée de remerciement clients : fidéliser et créer du lien",
-          "Soirée d'inauguration : marquer l'ouverture d'un site, d'une marque",
-          "Cocktail dînatoire prestige : networking en cadre d'exception",
-        ],
-      },
-      {
-        title: "Des lieux d'exception",
-        content:
-          "Nous sélectionnons le lieu qui correspond parfaitement à votre image et vos ambitions. Châteaux, domaines, espaces atypiques, toits-terrasses, lieux patrimoniaux : notre réseau vous ouvre les portes de lieux rares pour des soirées qui marquent.",
-      },
-      {
-        title: "Notre approche : créer un voyage sensoriel",
-        content:
-          "Chaque soirée est conçue comme un parcours d'émotions. De l'arrivée au cocktail, du dîner aux animations, jusqu'à la sortie : chaque moment est pensé pour surprendre, ravir, marquer.",
-        items: [
-          "Décoration scénographique sur mesure : fleuristerie, lumière, mobilier",
-          "Restauration d'exception : grands chefs et traiteurs sélectionnés",
-          "Animation artistique : DJ stars, orchestres jazz, danseurs, performers",
-          "Wow effects : feu d'artifice, mapping vidéo, scénographie immersive",
-          "Production vidéo : captation et film bilan",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "Combien de temps à l'avance préparer une soirée ?",
-        answer:
-          "Idéalement plusieurs mois pour une soirée prestige dans un lieu d'exception qui nécessite de réserver très en amont. Nous gérons aussi des projets plus courts selon la disponibilité des lieux et prestataires. Contactez-nous pour évaluer la faisabilité.",
-      },
-      {
-        question: "Quelles animations proposez-vous pour une soirée ?",
-        answer:
-          "Toute la palette de l'animation événementielle : DJ et orchestres, danseurs et chorégraphes, performers visuels, magiciens, mentalistes, mapping vidéo, scénographie immersive. Nous co-construisons le programme artistique avec vous.",
-      },
-    ],
-    keywords: [
-      "soirée gala",
-      "soirée entreprise",
-      "gala professionnel",
-      "soirée fin d'année",
-      "événement soirée",
-    ],
-    ctaText: "Organiser votre soirée",
-  },
-  {
-    slug: "team-building",
-    title: "Team-Building",
-    metaTitle: "Team-Building Original - Cohésion d'Équipe Sur Mesure",
-    metaDescription:
-      "Organisez un team-building mémorable. Activités originales, destinations variées, experts depuis 20 ans. Devis gratuit sous 24h.",
-    h1: "Team-Building : Tisser des liens forts sous toutes les latitudes",
-    subtitle:
-      "De la montagne à la mer, en passant par la ville : nous créons des expériences de cohésion originales.",
-    introTitle: "Pourquoi investir dans le team-building ?",
-    intro:
-      "Le team-building n'est pas un luxe, c'est un investissement. Les équipes qui partagent des expériences fortes hors du cadre professionnel développent une confiance mutuelle, une meilleure communication et une capacité de coopération qui se traduisent directement en performance. Notre conviction : un bon team-building n'est pas un divertissement déconnecté du travail, c'est une expérience qui révèle des dimensions individuelles et collectives invisibles au bureau. Depuis 20 ans, nous concevons des expériences qui sortent des sentiers battus et marquent durablement les esprits.",
-    heroImage: "/images/groupe.png",
-    gallery: [
-      { src: "/images/koh-lanta-groupe.jpg", alt: "Koh Lanta team-building groupe en plein air" },
-      { src: "/images/koh-lanta-equilibre.png", alt: "Épreuve d'équilibre Koh Lanta team-building" },
-      { src: "/images/koh-lantable-kapla.png", alt: "Construction Kapla en équipe team-building" },
-      { src: "/images/koh-lanta-tir-arc.png", alt: "Tir à l'arc Koh Lanta team-building" },
-      { src: "/images/koh-lantable-poteaux.png", alt: "Épreuve des poteaux Koh Lantable team-building" },
-      { src: "/images/koh-lantable-puzzle.png", alt: "Puzzle géant team-building Koh Lantable" },
-      { src: "/images/rando-vercors.png", alt: "Randonnée incentive dans le Vercors avec vue panoramique" },
-      { src: "/images/groupe-cascade.png", alt: "Team-building randonnée groupe sous une cascade" },
-      { src: "/images/canyoning.jpg", alt: "Canyoning rappel en falaise team-building aventure" },
-      { src: "/images/speleo.png", alt: "Spéléologie team-building groupe en combinaison rouge" },
-      { src: "/images/igloo-team.png", alt: "Construction d'igloos en équipe activité hivernale" },
-      { src: "/images/jeux-ferme.png", alt: "Jeux de la ferme team-building en plein air" },
-      { src: "/images/so-british-beatles.png", alt: "So British team-building thème Beatles" },
-      { src: "/images/so-british-croquet.png", alt: "Croquet anglais So British team-building" },
-      { src: "/images/archeo-bilboquet.jpg", alt: "Activité archéologie bilboquet médiéval" },
-      { src: "/images/archeo-tir-arc.jpg", alt: "Tir à l'arc médiéval dans un château en ruines" },
-    ],
-    sections: [
-      {
-        title: "Nos types de team-building",
-        content:
-          "Une grande diversité de formats pour s'adapter à votre culture, vos objectifs et votre environnement.",
-        items: [
-          "Team-building outdoor : Koh Lanta, jeux d'orientation, défis nature, olympiades",
-          "Team-building urbain : rallyes citadins, escape games géants, treasure hunts",
-          "Team-building créatif : ateliers cuisine, peinture, musique, scénographie",
-          "Team-building sportif : tir à l'arc, karting, laser game, sports collectifs",
-          "Team-building solidaire : actions caritatives concrètes en groupe",
-          "Team-building culturel : visites guidées en mode jeu, ateliers patrimoniaux",
-          "Team-building digital : escape rooms virtuels, jeux interactifs, quizz en ligne",
-        ],
-      },
-      {
-        title: "Nos activités phares",
-        content:
-          "Une sélection d'activités testées et approuvées par des centaines d'équipes — toutes adaptables en demi-journée ou journée.",
-        items: [
-          "Koh Lanta & Koh Lantable : olympiades outdoor ou indoor en équipes",
-          "Rallye urbain / chasse au trésor en ville (Paris, Lyon, Bordeaux…)",
-          "Escape game géant en extérieur sur mesure",
-          "Ateliers créatifs : cuisine, peinture, musique, scénographie",
-          "Jeux d'orientation et défis nature en forêt (Vercors, Fontainebleau)",
-          "Construction collective : mosaïques géantes, fresques murales",
-          "Archéo Concept : fouilles et énigmes sur sites patrimoniaux",
-        ],
-      },
-      {
-        title: "Les bénéfices d'un team-building",
-        content:
-          "Au-delà du moment partagé, un team-building bien conçu produit des effets durables.",
-        items: [
-          "Renforcement de la cohésion d'équipe",
-          "Amélioration de la communication interservices",
-          "Révélation de leaders informels et de talents cachés",
-          "Création de souvenirs communs qui consolident l'identité d'équipe",
-          "Regain de motivation dans les semaines suivantes",
-        ],
-      },
-    ],
-    destinations: [
-      { name: "Paris & Île-de-France", description: "Rallyes urbains, escape games, ateliers créatifs à 1h max." },
-      { name: "Forêt de Fontainebleau", description: "Jeux d'orientation, défis nature, à 1h de Paris." },
-      { name: "Lyon", description: "Ateliers cuisine avec chefs, rallyes patrimoniaux." },
-      { name: "Annecy", description: "Lac alpin, activités nautiques et montagne à la journée." },
-      { name: "Vercors", description: "Randonnée, Archéo Concept, défis montagne en journée." },
-    ],
-    faq: [
-      {
-        question: "Quel est le bon nombre de personnes pour un team-building ?",
-        answer:
-          "Tous les formats sont possibles, de petits groupes à des dispositifs de grande envergure. Nous adaptons les activités et la logistique au nombre de participants pour garantir une expérience optimale.",
-      },
-      {
-        question: "Peut-on faire un team-building en demi-journée ?",
-        answer:
-          "Absolument. Les formats courts (3-4h) sont parfaits pour briser la routine. Rallye urbain, escape game, atelier créatif, dégustation : nous proposons des formats compacts à fort impact.",
-      },
-      {
-        question: "Quelles activités si certains participants ont des limitations physiques ?",
-        answer:
-          "Nous concevons systématiquement des programmes inclusifs : activités à plusieurs niveaux d'engagement, alternatives non-sportives, prise en compte des contraintes médicales. La cohésion ne doit jamais exclure.",
-      },
-      {
-        question: "Le team-building, est-ce vraiment efficace ?",
-        answer:
-          "Oui, à condition qu'il soit bien conçu. Un team-building qui aligne objectifs business, expérience humaine forte et debriefing post-événement produit des effets mesurables sur la cohésion, la motivation et la performance des équipes.",
-      },
-    ],
-    keywords: [
-      "team building",
-      "activité team building",
-      "cohésion équipe",
-      "team building original",
-      "team building entreprise",
-    ],
-    ctaText: "Créer votre team-building",
   },
 ];
 
