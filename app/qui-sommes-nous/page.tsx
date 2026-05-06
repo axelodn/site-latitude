@@ -270,7 +270,7 @@ export default function QuiSommesNous() {
                 <div className="border-l-2 pl-6" style={{ borderColor: "rgba(201,169,97,0.3)" }}>
                   <p className="font-inter text-white/60 text-sm leading-relaxed">
                     Parce que bâtir, restaurer et rassembler sont des actes qui participent
-                    d&apos;un même idéal&nbsp;: laisser quelque chose de beau derrière soi.
+                    d&apos;un même idéal&nbsp;: honorer l&apos;héritage de ceux qui nous ont précédés et le préserver pour les générations futures.
                   </p>
                 </div>
               </div>
