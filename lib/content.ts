@@ -738,9 +738,6 @@ export const soireeEvents: SoireeEvent[] = [
     image: "/images/masque-venitien.jpg",
     images: [
       "/images/masque-venitien.jpg",
-      "/images/jerome-peaky.png",
-      "/images/jerome-nabil-peaky.jpg",
-      "/images/karim-nabil-peaky.png",
     ],
     excerpt: "Plumes, strass et music-hall : une soirée cabaret somptueuse qui transporte vos invités.",
     description: "La Soirée Cabaret plonge vos invités dans l'univers flamboyant du Moulin Rouge et des grandes scènes parisiennes. Danseurs, chanteurs, numéros de music-hall et décors somptueux : un spectacle vivant conçu sur mesure pour éblouir vos collaborateurs et clients. Costume encouragé, ambiance folle assurée.",
