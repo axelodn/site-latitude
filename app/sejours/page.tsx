@@ -14,31 +14,31 @@ export const metadata: Metadata = {
 
 const sejours_ete = [
   {
-    title: "Randonnée & Canyoning Vercors",
+    title: "Corse",
+    lieu: "Corse, France",
+    duree: "3 à 5 jours",
+    participants: "10 – 80 pers.",
+    description: "Entre mer et montagne, terre de rencontre et de traditions, où la lumière d'une simple bougie éclaire son monde.",
+    image: "/images/rando-vercors.png",
+    tags: ["Mer", "Montagne", "Traditions"],
+  },
+  {
+    title: "Vercors",
     lieu: "Vercors, France",
     duree: "2 à 4 jours",
     participants: "10 – 80 pers.",
-    description: "Gorges sauvages, tyroliennes et bivouac sous les étoiles. Un séjour outdoor intense qui soude les équipes comme rien d'autre.",
-    image: "/images/rando-vercors.png",
-    tags: ["Outdoor", "Aventure", "Nature"],
-  },
-  {
-    title: "Canyoning & Via Ferrata",
-    lieu: "Ardèche / Pyrénées",
-    duree: "2 à 3 jours",
-    participants: "8 – 50 pers.",
-    description: "Descentes en rappel, sauts dans les vasques, progression en falaise : un séjour qui repousse les limites et crée des souvenirs indélébiles.",
-    image: "/images/canyoning.jpg",
-    tags: ["Adrénaline", "Sport", "Montagne"],
-  },
-  {
-    title: "Cascade & Grands Espaces",
-    lieu: "Alpes / Pyrénées",
-    duree: "3 à 5 jours",
-    participants: "15 – 100 pers.",
-    description: "Randonnées panoramiques, baignades en altitude et soirées au refuge. La reconnexion à la nature comme levier de cohésion.",
+    description: "était comme hiver, 12 années de vie, passée sur ce plateau perché, pour redécouvrir l'essentiel. L'effort au service d'une randonnée pour prendre de la hauteur et côtoyer ses propres sommets.",
     image: "/images/groupe-cascade.png",
-    tags: ["Bien-être", "Nature", "Randonnée"],
+    tags: ["Randonnée", "Nature", "Altitude"],
+  },
+  {
+    title: "Ardèche",
+    lieu: "Ardèche, France",
+    duree: "2 à 4 jours",
+    participants: "8 – 60 pers.",
+    description: "Profonde et solennelle, le temps n'y a pas de prises. Ardèche des Gorges ou des collines, du nord ou la cuisine est au beurre quand le sud chante sous les olivier.",
+    image: "/images/canyoning.jpg",
+    tags: ["Gorges", "Nature", "Authenticité"],
   },
 ];
 
