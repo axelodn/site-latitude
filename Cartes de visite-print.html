@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<style data-omelette-injected>html,body{background:transparent}</style><script data-omelette-injected>(()=>{var j=["https://claude.ai","https://preview.claude.ai","https://eap-omelette.claude.ai"];var x=true;var S=30000;var f=3000;document.addEventListener("DOMContentLoaded",()=>{const H=window.Babel;const G="om-src-id";if(H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[G])){H.registerPlugin(G,({types:Y})=>({visitor:{JSXOpeningElement(U,Q){const J=U.node;if(J.name&&J.name.type==="JSXMemberExpression")return;for(let V=0;V<J.attributes.length;V++){const L=J.attributes[V];if(L.type==="JSXAttribute"&&L.name&&L.name.name==="data-om-id")return}const W=Q.file&&Q.file.opts&&Q.file.opts.filename||"?";const Z=J.loc&&J.loc.start;const z=`jsx:${W}:${J.start??0}:${Z?Z.line:0}:${Z?Z.column+1:0}`;J.attributes.push(Y.jsxAttribute(Y.jsxIdentifier("data-om-id"),Y.stringLiteral(z)))}}}))}const k="om-text-extract";let A=false;if(x&&H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[k])){const Y=window.React;if(Y&&Y.useSyncExternalStore&&Y.createElement){A=true;const U={};const Q=new Set;let J=0;window.__omTextO=U;window.__omTextSet=(z)=>{for(const V in z){const L=z[V];if(L==null)delete U[V];else U[V]=L}J++;Q.forEach((V)=>V())};const W=(z)=>{Q.add(z);return()=>Q.delete(z)};const Z=()=>J;window.__OmT=function z(V){Y.useSyncExternalStore(W,Z,Z);return Y.createElement("span",{"data-om-text":V.i,className:"__om-t"},V.i in U?U[V.i]:V.children)};H.registerPlugin(k,({types:z})=>{const V={style:1,script:1,noscript:1,textarea:1,title:1,option:1,text:1,tspan:1,textPath:1};const L={placeholder:1,alt:1,title:1,label:1,"aria-label":1,"aria-description":1,"aria-placeholder":1};const _=($,C)=>z.logicalExpression("??",z.memberExpression(z.logicalExpression("||",z.memberExpression(z.identifier("window"),z.identifier("__omTextO")),z.objectExpression([])),z.stringLiteral($),true),C);const E=($)=>$.file&&$.file.opts&&$.file.opts.filename||"?";const B=($)=>$.file&&$.file.code||"";const b=($,C)=>{const X=(F)=>F&&F.start!=null&&F.end!=null&&(F.type==="StringLiteral"||F.type==="TemplateLiteral"&&F.expressions.length===0)?[F.start,F.end]:null;const N=X(C);if(N)return N;if(C&&C.type==="Identifier"){const F=$.scope.getBinding(C.name);if(F&&F.constant&&F.path.node.type==="VariableDeclarator"){return X(F.path.node.init)}}return null};const m=($,C,X)=>{const N=$.node;let F=false;const w=(K,q)=>{F=true;return z.jsxElement(z.jsxOpeningElement(z.jsxIdentifier("__OmT"),[z.jsxAttribute(z.jsxIdentifier("i"),z.stringLiteral(K))],false),z.jsxClosingElement(z.jsxIdentifier("__OmT")),[q],false)};const D=N.children.map((K)=>{if(K.type==="JSXText"){if(K.start==null||K.end==null)return K;const q=X.slice(K.start,K.end);const M=q.length-q.trimStart().length;const R=q.length-q.trimEnd().length;if(M+R>=q.length)return K;return w(`txt:${C}:${K.start+M}:${K.end-R}`,K)}if(K.type==="JSXExpressionContainer"){const q=b($,K.expression);if(q)return w(`str:${C}:${q[0]}:${q[1]}`,K)}return K});if(F)N.children=D};return{visitor:{JSXOpeningElement($,C){const X=$.node;const N=E(C);const F={};for(let w=0;w<X.attributes.length;w++){const D=X.attributes[w];if(D.type!=="JSXAttribute"||!D.name)continue;const K=D.name.name;if(!L[K])continue;if(!D.value||D.value.type!=="StringLiteral")continue;if(D.value.start==null||D.value.end==null)continue;const q=`txt:${N}:${D.value.start}:${D.value.end}`;F[K]=q;D.value=z.jsxExpressionContainer(_(q,z.stringLiteral(D.value.value)))}if(Object.keys(F).length){X.attributes.push(z.jsxAttribute(z.jsxIdentifier("data-om-text-attrs"),z.stringLiteral(JSON.stringify(F))))}},JSXElement($,C){const X=$.node.openingElement;const N=X&&X.name&&X.name.name;if(N==="__OmT")return;if(typeof N==="string"&&V[N])return;m($,E(C),B(C))},JSXFragment($,C){m($,E(C),B(C))}}}})}}const u=A?["transform-react-jsx-source",G,k]:["transform-react-jsx-source",G];document.querySelectorAll('script[type="text/babel"],script[type="text/jsx"]').forEach((Y,U)=>{const Q=Y.getAttribute("data-plugins")||"";const J=u.filter((W)=>Q.indexOf(W)<0);if(J.length){Y.setAttribute("data-plugins",Q?`${Q},${J.join(",")}`:J.join(","))}if(!Y.hasAttribute("data-filename")){Y.setAttribute("data-filename",Y.getAttribute("src")||`inline-${U}`)}})});var y=window.parent;if(y&&y!==window){const H=(Q,J)=>{try{y.postMessage({__omelette_log:true,type:Q,data:J},"*")}catch{}};["log","warn","error"].forEach((Q)=>{const J=console[Q];console[Q]=(...W)=>{const Z=W.map((z)=>{try{return typeof z==="object"?JSON.stringify(z):String(z)}catch{try{return String(z)}catch{return"[unstringifiable]"}}}).join(" ");H(Q,Z);J.apply(console,W)}});window.addEventListener("error",(Q)=>{const J=Q.target;if(J&&J!==window&&J.tagName){const W=J.src||J.href||"";H("resource_error",`${J.tagName} failed to load: ${W}`)}else{H("error",`${Q.message||"Unknown error"} at ${Q.filename||"?"}:${Q.lineno||0}:${Q.colno||0}`)}},true);window.addEventListener("unhandledrejection",(Q)=>{const J=Q.reason;const W=J instanceof Error?`${J.message} ${J.stack}`:String(J);H("error",`Unhandled rejection: ${W}`)});const G=()=>{try{y.postMessage({type:"omelette:height",height:document.documentElement.scrollHeight},"*")}catch{}};if(document.readyState==="complete")G();else window.addEventListener("load",G);if(window.ResizeObserver)new ResizeObserver(G).observe(document.documentElement);const k={};let A=0;window.claude={complete(Q){return new Promise((J,W)=>{if(!j.length){W(new Error("claude.complete: no parent origin"));return}const Z=`c${++A}`;const z=()=>setTimeout(()=>{delete k[Z];W(new Error(`claude.complete: no data for ${S/1000}s`))},S);const V=z();k[Z]={resolve:J,reject:W,text:"",t:V,arm:z};try{for(const L of j){y.postMessage({__om_api:true,id:Z,body:Q},L)}}catch(L){clearTimeout(V);delete k[Z];W(L)}})}};const u={};let Y=0;window.omelette={writeFile:(Q,J)=>new Promise((W,Z)=>{if(!j.length){W();return}const z=`f${++Y}`;const V=setTimeout(()=>{delete u[z];W()},f);u[z]={resolve:W,reject:Z,t:V};try{for(const L of j){y.postMessage({__om_file:true,id:z,op:"write",path:Q,content:J},L)}}catch{clearTimeout(V);delete u[z];W()}})};const U=(Q)=>{try{return JSON.stringify(Q)}catch{return JSON.stringify(String(Q))}};window.addEventListener("message",(Q)=>{if(j.indexOf(Q.origin)<0)return;if(Q.source!==y)return;const J=Q.data;if(!J)return;if(J.__om_file_r){const z=u[J.id];if(!z)return;clearTimeout(z.t);delete u[J.id];if(J.ok)z.resolve();else z.reject(new Error(J.error||"write failed"));return}if(J.__om_api_r){const z=k[J.id];if(!z)return;if(J.error!=null){clearTimeout(z.t);delete k[J.id];z.reject(new Error(J.error));return}if(J.chunk!=null){clearTimeout(z.t);z.t=z.arm();z.text+=J.chunk;return}if(J.done){clearTimeout(z.t);delete k[J.id];z.resolve(J.text!=null?J.text:z.text);return}return}if(!J.__om_eval)return;const W=J;const Z=(z)=>{Q.source.postMessage({...z,__om_eval_r:1,id:W.id},Q.origin)};try{const z=(0,eval)(W.code);if(z&&typeof z.then==="function"){z.then((V)=>Z({ok:1,v:U(V)}),(V)=>Z({ok:0,e:String(V)}))}else{Z({ok:1,v:U(z)})}}catch(z){Z({ok:0,e:String(z)})}})}})();
+</script>
+
+<meta charset="utf-8"/>
+<title>Cartes de visite — Impression</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<style>
+  :root {
+    --gold-1: #f4dca0;
+    --gold-2: #d4af5f;
+    --gold-3: #a87f31;
+    --gold-deep: #6e5318;
+    --ink: #0a0a0a;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #e8e6e1;
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #1a1a1a;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  /* On-screen layout */
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 16px auto;
+    background: #fff;
+    padding: 24mm 20mm;
+    box-sizing: border-box;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    page-break-after: always;
+    break-after: page;
+  }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+
+  .page-title {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 9pt;
+    font-weight: 500;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #888;
+    margin: 0 0 16mm;
+    text-align: center;
+  }
+
+  /* Card real-size: 85 × 55 mm → at 96dpi => 321.26 × 207.87 px */
+  /* We render the React card at its design size (510 × 330 px) and scale it to 85×55mm via transform */
+  .card-frame {
+    width: 85mm;
+    height: 55mm;
+    position: relative;
+    overflow: visible;
+    margin-bottom: 14mm;
+  }
+  .card-frame .scale-wrap {
+    width: 510px;
+    height: 330px;
+    transform: scale(calc(85 / 25.4 * 96 / 510));
+    transform-origin: top left;
+    position: absolute;
+    top: 0; left: 0;
+  }
+  /* Crop marks */
+  .card-frame::before, .card-frame::after,
+  .card-frame > .cm-tl, .card-frame > .cm-tr, .card-frame > .cm-bl, .card-frame > .cm-br {
+    content: "";
+    position: absolute;
+    width: 4mm; height: 4mm;
+    pointer-events: none;
+  }
+  .card-frame > .cm-tl { top: -6mm; left: -6mm; border-left: 0.5pt solid #999; border-top: 0.5pt solid #999; }
+  .card-frame > .cm-tr { top: -6mm; right: -6mm; border-right: 0.5pt solid #999; border-top: 0.5pt solid #999; }
+  .card-frame > .cm-bl { bottom: -6mm; left: -6mm; border-left: 0.5pt solid #999; border-bottom: 0.5pt solid #999; }
+  .card-frame > .cm-br { bottom: -6mm; right: -6mm; border-right: 0.5pt solid #999; border-bottom: 0.5pt solid #999; }
+
+  .card-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .var-label {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 8.5pt;
+    color: #555;
+    margin-bottom: 8mm;
+    letter-spacing: .04em;
+  }
+  .size-label {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 7.5pt;
+    color: #999;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-top: 2mm;
+  }
+
+  /* Card styles — copied from main file */
+  .card {
+    width: 510px; height: 330px;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  .card.paper { color: #1a1a1a; }
+  .card .bleed { position:absolute; inset:0; }
+  .gold-text {
+    background: linear-gradient(135deg, #f4dca0 0%, #d4af5f 35%, #b8923f 60%, #e9c97a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  .gold-flat { color: #c9a24a; }
+  .hairline-gold { background: linear-gradient(90deg, transparent, #d4af5f, transparent); height:1px; }
+  .grain::after {
+    content:""; position:absolute; inset:0; pointer-events:none; opacity:.18; mix-blend-mode:overlay;
+    background-image: radial-gradient(rgba(255,255,255,.4) 1px, transparent 1px), radial-gradient(rgba(0,0,0,.4) 1px, transparent 1px);
+    background-size: 3px 3px, 4px 4px;
+    background-position: 0 0, 1px 1px;
+  }
+
+  /* Specs page */
+  .specs-page {
+    padding: 28mm 24mm;
+  }
+  .specs-page h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 28pt;
+    margin: 0 0 14mm;
+    color: #0a0a0a;
+  }
+  .specs-page h2 {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 9pt;
+    font-weight: 600;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #888;
+    margin: 8mm 0 3mm;
+  }
+  .specs-page p, .specs-page li {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 11pt;
+    line-height: 1.7;
+    color: #1a1a1a;
+    margin: 0 0 4mm;
+  }
+  .specs-page ul { padding-left: 6mm; margin: 0 0 6mm; }
+  .specs-page strong { color: #0a0a0a; font-weight: 600; }
+
+  @media print {
+    html, body { background: #fff; }
+    .page {
+      margin: 0;
+      box-shadow: none;
+      padding: 24mm 20mm;
+      page-break-after: always;
+      break-after: page;
+    }
+    .page:last-child { page-break-after: auto; break-after: auto; }
+    @page { size: A4 portrait; margin: 0; }
+  }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+const LOGO = 'assets/logo-v4-clean.png';
+
+const LogoFull = ({ width, opacity = 1, style = {} }) =>
+  <img src={LOGO} alt="Latitude Organisation"
+       style={{ width, height: 'auto', display: 'block', opacity, ...style }} />;
+
+const LogoMark = ({ size = 60, opacity = 1 }) => {
+  const imgW = size * 2.7;
+  const imgH = imgW / 2.459;
+  return (
+    <div style={{ width: size, height: size, overflow: 'hidden', position: 'relative', opacity }}>
+      <img src={LOGO} alt=""
+           style={{ width: imgW, height: imgH, position: 'absolute',
+                    left: 0, top: (size - imgH) / 2, display: 'block' }} />
+    </div>
+  );
+};
+
+const Icon = ({ name, size = 12, color = '#d4af5f' }) => {
+  const props = { width: size, height: size, viewBox: '0 0 24 24', fill: 'none', stroke: color, strokeWidth: 1.6, strokeLinecap: 'round', strokeLinejoin: 'round' };
+  if (name === 'phone') return <svg {...props}><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72a2 2 0 0 1 1.72 2.01z"/></svg>;
+  if (name === 'mail') return <svg {...props}><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 6-10 7L2 6" /></svg>;
+  if (name === 'web') return <svg {...props}><circle cx="12" cy="12" r="10" /><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20" /></svg>;
+  return null;
+};
+
+const SPECIALTIES = ['Team Building', 'Séminaires & Incentives', 'Soirées Événementielles'];
+
+const SpecialtiesStrip = ({ size = 7.5, color = 'rgba(255,255,255,.85)', dotColor = '#d4af5f', weight = 400, spacing = '.28em', uppercase = true, gap = 10, style = {} }) =>
+  <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap, fontFamily:'Montserrat', fontSize:size, fontWeight:weight, letterSpacing:spacing, color, textTransform: uppercase ? 'uppercase' : 'none', ...style }}>
+    {SPECIALTIES.map((s, i) =>
+      <React.Fragment key={i}>
+        <span>{s}</span>
+        {i < SPECIALTIES.length - 1 && <span style={{ color:dotColor, fontSize: size * 1.4, lineHeight:0, transform:'translateY(-1px)' }}>•</span>}
+      </React.Fragment>
+    )}
+  </div>;
+
+/* V1 */
+const V1 = () =>
+<div className="card grain" style={{ background: 'radial-gradient(ellipse at 50% 35%, #1a1814 0%, #0a0a0a 80%)' }}>
+  <div className="bleed" style={{ display: 'flex', flexDirection: 'column', padding: '30px 38px 26px', justifyContent: 'space-between' }}>
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <LogoFull width={270}/>
+    </div>
+    <SpecialtiesStrip size={7} color="rgba(255,255,255,.78)" gap={9}/>
+    <div style={{ width: '100%' }} className="hairline-gold"/>
+    <div>
+      <div style={{ marginBottom: 14 }}>
+        <div className="gold-text" style={{ fontFamily: 'Cormorant Garamond', fontWeight: 500, fontSize: 26, lineHeight: 1, whiteSpace:'nowrap' }}>
+          Jérôme Aviotte
+        </div>
+        <div style={{ color: 'rgba(255,255,255,.6)', fontFamily: 'Montserrat', fontWeight: 300, fontSize: 9.5, letterSpacing: '.34em', marginTop: 6 }}>
+          GÉRANT
+        </div>
+      </div>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px 18px', fontFamily: 'Inter', fontSize: 10, color: '#fff', fontWeight: 300 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}><Icon name="phone" size={11} /><span>06 86 70 65 20</span></div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}><Icon name="web" size={11} /><span>latitude-organisation.com</span></div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, gridColumn: '1 / -1' }}><Icon name="mail" size={11} /><span>jerome@latitude-organisation.com</span></div>
+      </div>
+    </div>
+  </div>
+</div>;
+
+/* V2 */
+const V2 = () =>
+<div className="card grain" style={{ background: '#0a0a0a', display: 'flex' }}>
+  <div style={{ width: 200, position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRight: '1px solid rgba(212,175,95,.18)' }}>
+    <LogoMark size={140}/>
+  </div>
+  <div style={{ flex: 1, padding: '28px 30px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+    <div>
+      <div className="gold-text" style={{ fontFamily: 'Montserrat', fontWeight: 700, fontSize: 18, letterSpacing: '.18em', lineHeight: 1 }}>LATITUDE</div>
+      <div style={{ color: '#fff', fontFamily: 'Montserrat', fontWeight: 300, fontSize: 9, letterSpacing: '.42em', marginTop: 5 }}>ORGANISATION</div>
+      <div style={{ marginTop:10, display:'flex', flexDirection:'column', gap:3, fontFamily:'Montserrat', fontSize:7, letterSpacing:'.22em', color:'rgba(212,175,95,.85)', textTransform:'uppercase', fontWeight:500 }}>
+        {SPECIALTIES.map((s, i) => <span key={i}>— {s}</span>)}
+      </div>
+    </div>
+    <div>
+      <div style={{ fontFamily: 'Cormorant Garamond', fontWeight: 500, fontSize: 24, color: '#fff', lineHeight: 1 }}>Jérôme Aviotte</div>
+      <div className="gold-flat" style={{ fontFamily: 'Montserrat', fontWeight: 400, fontSize: 9, letterSpacing: '.32em', marginTop: 5 }}>GÉRANT</div>
+    </div>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 5, fontFamily: 'Inter', fontSize: 9.5, color: 'rgba(255,255,255,.85)', fontWeight: 300 }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 9 }}><Icon name="phone" size={10}/><span>06 86 70 65 20</span></div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 9 }}><Icon name="mail" size={10}/><span>jerome@latitude-organisation.com</span></div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 9 }}><Icon name="web" size={10}/><span>www.latitude-organisation.com</span></div>
+    </div>
+  </div>
+</div>;
+
+/* V3 */
+const V3 = () =>
+<div className="card" style={{ background: '#080808' }}>
+  <div className="bleed" style={{ padding: '26px 36px 24px', display: 'flex', flexDirection: 'column' }}>
+    <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: -2 }}>
+      <LogoFull width={360}/>
+    </div>
+    <SpecialtiesStrip size={7} color="rgba(255,255,255,.78)" gap={9} style={{ marginTop:6 }}/>
+    <div style={{ height: 1, background: 'linear-gradient(90deg, transparent, #d4af5f, transparent)', margin: '10px 0 12px' }}/>
+    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontFamily: 'Inter', fontSize: 9.5, color: 'rgba(255,255,255,.85)', fontWeight: 300 }}>
+      <div>
+        <div className="gold-flat" style={{ fontFamily: 'Cormorant Garamond', fontWeight: 500, fontSize: 17, color: '#e9c97a', lineHeight: 1, whiteSpace:'nowrap' }}>Jérôme Aviotte</div>
+        <div style={{ color: 'rgba(255,255,255,.5)', fontSize: 8, letterSpacing: '.34em', marginTop: 3, fontFamily: 'Montserrat' }}>GÉRANT</div>
+      </div>
+      <div style={{ textAlign: 'right', display: 'flex', flexDirection: 'column', gap: 2 }}>
+        <span>06 86 70 65 20</span>
+        <span>jerome@latitude-organisation.com</span>
+        <span style={{ color: '#d4af5f' }}>latitude-organisation.com</span>
+      </div>
+    </div>
+  </div>
+</div>;
+
+/* V4 */
+const V4 = () =>
+<div className="card" style={{ background: '#0a0a0a', position: 'relative', overflow: 'hidden' }}>
+  <div className="gold-text" style={{ position: 'absolute', left: -22, top: -60, fontFamily: 'Cormorant Garamond', fontWeight: 500, fontSize: 380, lineHeight: .85, letterSpacing: '-.04em' }}>J</div>
+  <div className="bleed" style={{ padding: '30px 36px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+    <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+      <LogoFull width={170}/>
+    </div>
+    <div style={{ position:'relative', zIndex:1, maxWidth:'82%' }}>
+      <div style={{ fontFamily: 'Cormorant Garamond', fontWeight: 400, fontSize: 32, color: '#fff', lineHeight: 1, letterSpacing: '.01em', whiteSpace:'nowrap' }}>
+        Jérôme <span style={{ fontStyle: 'italic', fontWeight: 300 }}>Aviotte</span>
+      </div>
+      <div style={{ height: 1, width: 30, background: '#d4af5f', margin: '12px 0 10px' }}/>
+      <div style={{ color: 'rgba(255,255,255,.6)', fontFamily: 'Inter', fontWeight: 300, fontSize: 10.5, letterSpacing: '.04em' }}>
+        Gérant — Latitude Organisation
+      </div>
+      <div style={{ marginTop: 12, display:'flex', gap:10, alignItems:'center', fontFamily:'Montserrat', fontSize:7, letterSpacing:'.24em', color:'rgba(212,175,95,.95)', textTransform:'uppercase', fontWeight:500 }}>
+        {SPECIALTIES.map((s, i) =>
+          <React.Fragment key={i}>
+            <span>{s}</span>
+            {i < SPECIALTIES.length - 1 && <span style={{ color:'#d4af5f' }}>•</span>}
+          </React.Fragment>
+        )}
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 4, marginTop: 14, fontFamily: 'Inter', fontSize: 9.5, color: '#fff', fontWeight: 300 }}>
+        <span>06 86 70 65 20 &nbsp;·&nbsp; <span style={{ color: '#d4af5f' }}>jerome@latitude-organisation.com</span></span>
+        <span style={{ color: 'rgba(255,255,255,.55)' }}>www.latitude-organisation.com</span>
+      </div>
+    </div>
+  </div>
+</div>;
+
+const Page = ({ label, Card }) =>
+  <div className="page">
+    <div className="page-title">{label}</div>
+    <div className="card-row">
+      <div className="card-frame">
+        <span className="cm-tl"/><span className="cm-tr"/><span className="cm-bl"/><span className="cm-br"/>
+        <div className="scale-wrap"><Card/></div>
+      </div>
+      <div className="size-label">85 × 55 mm</div>
+    </div>
+  </div>;
+
+const SpecsPage = () =>
+  <div className="page specs-page">
+    <h1>Cartes de visite — Latitude Organisation</h1>
+    <p style={{ color:'#666', marginBottom:'14mm' }}>Recommandations pour l'impression professionnelle des 4 variations.</p>
+
+    <h2>Format</h2>
+    <p>85 × 55 mm — standard européen. Fonds perdus : +3 mm sur chaque bord. Marge de sécurité : 3 mm.</p>
+
+    <h2>Papier suggéré</h2>
+    <p>350 g/m² mat soyeux ou couché demi-mat — pour un toucher haut de gamme et un noir profond.</p>
+
+    <h2>Finitions à envisager</h2>
+    <ul>
+      <li>Dorure à chaud or sur le logo et le nom</li>
+      <li>Vernis sélectif sur le globe</li>
+      <li>Tranche dorée — effet luxe sur tout le bord de la carte</li>
+    </ul>
+
+    <h2>Couleurs Pantone</h2>
+    <ul>
+      <li>Noir profond — Pantone Black 6 C</li>
+      <li>Or métallique — Pantone 871 C (à privilégier en dorure à chaud)</li>
+      <li>Or impression — Pantone 7563 C (équivalent en quadrichromie)</li>
+    </ul>
+
+    <h2>Note</h2>
+    <p style={{ color:'#666' }}>Les marques de coupe (en gris clair autour de chaque carte) indiquent le format final ;
+    elles ne s'impriment pas sur le produit final.</p>
+  </div>;
+
+const App = () =>
+  <>
+    <Page label="Variation 01 · Classique — logo centré" Card={V1}/>
+    <Page label="Variation 02 · Asymétrique — globe à gauche" Card={V2}/>
+    <Page label="Variation 03 · Logo plein-cadre" Card={V3}/>
+    <Page label="Variation 04 · Éditorial — initiale" Card={V4}/>
+    <SpecsPage/>
+  </>;
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+
+// Auto-print after fonts and content are ready
+(async () => {
+  try {
+    if (document.fonts && document.fonts.ready) {
+      await document.fonts.ready;
+    }
+  } catch(e) {}
+  // Wait for images to load
+  const imgs = Array.from(document.querySelectorAll('img'));
+  await Promise.all(imgs.map(img => img.complete ? Promise.resolve() : new Promise(r => { img.onload = img.onerror = r; })));
+  setTimeout(() => { window.print(); }, 600);
+})();
+</script>
+</body>
+</html>

@@ -304,7 +304,7 @@ export const activities: Activity[] = [
       "/images/koh-lantable-poteaux.png",
       "/images/koh-lantable-puzzle.png",
     ],
-    excerpt: "L'esprit Koh Lanta en version indoor : épreuves de table, dégustation, construction et épreuve des poteaux miniature.",
+    excerpt: "L'esprit d'aventure en version indoor : épreuves de table, dégustation, construction et épreuve des poteaux miniature.",
     description: "Koh Lantable transpose l'univers de Koh Lanta dans un format 100 % indoor. Vos équipes s'affrontent autour de tables dans des épreuves originales : dégustation à l'aveugle, construction Kapla, puzzle géant, jeux d'adresse et la fameuse épreuve des poteaux revisitée. Idéal pour les séminaires en intérieur, Koh Lantable crée une atmosphère de compétition festive et bienveillante.",
     isLatitudeOriginal: true,
     duration: "2h à 1/2 journée",
@@ -348,8 +348,8 @@ export const activities: Activity[] = [
     participants: "20 à 150",
   },
   {
-    slug: "koh-lanta",
-    name: "Koh Lanta",
+    slug: "les-aventuriers",
+    name: "Les Aventuriers",
     category: "exterieur",
     image: "/images/koh-lanta-groupe.jpg",
     images: [
@@ -359,8 +359,8 @@ export const activities: Activity[] = [
       "/images/koh-lanta-kapla.png",
       "/images/koh-lanta-tir-arc.png",
     ],
-    excerpt: "À la manière de l'émission : épreuves d'équilibre, de force, de stratégie et l'incontournable épreuve des poteaux. Le team-building outdoor par excellence.",
-    description: "Koh Lanta plonge vos équipes dans l'univers de l'aventure et de la survie. Réparties en tribus, vos équipes s'affrontent sur des épreuves emblématiques inspirées de la célèbre émission : équilibre, force, agilité, tir à l'arc, et bien sûr l'épreuve finale des poteaux. Cohésion, stratégie et bonne humeur sont au rendez-vous pour cette journée d'adrénaline collective.",
+    excerpt: "Épreuves d'équilibre, de force, de stratégie et l'incontournable épreuve des poteaux. Le team-building outdoor par excellence.",
+    description: "Les Aventuriers plonge vos équipes dans l'univers de l'aventure et de la survie. Réparties en tribus, vos équipes s'affrontent sur des épreuves de cohésion et de dépassement : équilibre, force, agilité, tir à l'arc, et bien sûr l'épreuve finale des poteaux. Cohésion, stratégie et bonne humeur sont au rendez-vous pour cette journée d'adrénaline collective.",
     duration: "1/2 à journée",
     participants: "20 à 150",
   },
@@ -1017,10 +1017,10 @@ export const expertiseDetails: ExpertiseDetail[] = [
       "Le team-building n'est pas un luxe, c'est un investissement. Les équipes qui partagent des expériences fortes hors du cadre professionnel développent une confiance mutuelle, une meilleure communication et une capacité de coopération qui se traduisent directement en performance. Notre conviction : un bon team-building n'est pas un divertissement déconnecté du travail, c'est une expérience qui révèle des dimensions individuelles et collectives invisibles au bureau. Depuis 20 ans, nous concevons des expériences qui sortent des sentiers battus et marquent durablement les esprits.",
     heroImage: "/images/groupe.png",
     gallery: [
-      { src: "/images/koh-lanta-groupe.jpg", alt: "Koh Lanta team-building groupe en plein air" },
-      { src: "/images/koh-lanta-equilibre.png", alt: "Épreuve d'équilibre Koh Lanta team-building" },
+      { src: "/images/koh-lanta-groupe.jpg", alt: "Les Aventuriers team-building groupe en plein air" },
+      { src: "/images/koh-lanta-equilibre.png", alt: "Épreuve d'équilibre Les Aventuriers team-building" },
       { src: "/images/koh-lantable-kapla.png", alt: "Construction Kapla en équipe team-building" },
-      { src: "/images/koh-lanta-tir-arc.png", alt: "Tir à l'arc Koh Lanta team-building" },
+      { src: "/images/koh-lanta-tir-arc.png", alt: "Tir à l'arc Les Aventuriers team-building" },
       { src: "/images/koh-lantable-poteaux.png", alt: "Épreuve des poteaux Koh Lantable team-building" },
       { src: "/images/koh-lantable-puzzle.png", alt: "Puzzle géant team-building Koh Lantable" },
       { src: "/images/rando-vercors.png", alt: "Randonnée incentive dans le Vercors avec vue panoramique" },
@@ -1040,7 +1040,7 @@ export const expertiseDetails: ExpertiseDetail[] = [
         content:
           "Une grande diversité de formats pour s'adapter à votre culture, vos objectifs et votre environnement.",
         items: [
-          "Team-building outdoor : Koh Lanta, jeux d'orientation, défis nature, olympiades",
+          "Team-building outdoor : Les Aventuriers, jeux d'orientation, défis nature, olympiades",
           "Team-building urbain : rallyes citadins, escape games géants, treasure hunts",
           "Team-building créatif : ateliers cuisine, peinture, musique, scénographie",
           "Team-building sportif : tir à l'arc, karting, laser game, sports collectifs",
@@ -1054,7 +1054,7 @@ export const expertiseDetails: ExpertiseDetail[] = [
         content:
           "Une sélection d'activités testées et approuvées par des centaines d'équipes — toutes adaptables en demi-journée ou journée.",
         items: [
-          "Koh Lanta & Koh Lantable : olympiades outdoor ou indoor en équipes",
+          "Les Aventuriers & Koh Lantable : olympiades outdoor ou indoor en équipes",
           "Rallye urbain / chasse au trésor en ville (Paris, Lyon, Bordeaux…)",
           "Escape game géant en extérieur sur mesure",
           "Ateliers créatifs : cuisine, peinture, musique, scénographie",

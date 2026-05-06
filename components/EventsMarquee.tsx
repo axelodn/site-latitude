@@ -43,8 +43,8 @@ const images = [
   },
   {
     src: "/images/koh-lanta-groupe.jpg",
-    alt: "Koh Lanta team-building en plein air",
-    label: "Koh Lanta",
+    alt: "Les Aventuriers team-building en plein air",
+    label: "Les Aventuriers",
   },
 ];
 

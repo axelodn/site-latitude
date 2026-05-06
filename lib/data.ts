@@ -128,12 +128,12 @@ export const portfolio = [
   },
   {
     id: 4,
-    title: "Koh Lanta",
+    title: "Les Aventuriers",
     category: "Team-building",
     lieu: "Île-de-France",
     participants: 80,
     image: "/images/koh-lanta-groupe.jpg",
-    alt: "Team-building Koh Lanta en plein air",
+    alt: "Team-building Les Aventuriers en plein air",
     size: "small",
   },
   {
