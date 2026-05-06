@@ -80,7 +80,7 @@ export default function Sejours() {
       <section className="relative min-h-[70vh] flex items-end overflow-hidden" style={{ background: "#08080A" }}>
         <div className="absolute inset-0">
           <Image
-            src="/images/ski-geant-team.png"
+            src="public/images/4x4-5.jpg"
             alt="Séjours sur-mesure"
             fill
             className="object-cover object-center"
