@@ -603,7 +603,7 @@ export const activities: Activity[] = [
     name: "Tiger Academy",
     category: "exterieur",
     image: "/images/tiger-golf-1.jpg",
-    images: ["/images/tiger-golf-1.jpg", "/images/tiger-golf-2.jpg"],
+    images: ["/images/tiger-golf-1.jpg", "/images/tiger-golf-2.jpg", "/images/golf.png"],
     excerpt: "Un parcours sportif et tactique inspiré de l'entraînement : endurance, communication, dépassement de soi.",
     description: "Tiger Academy est un team-building outdoor exigeant, conçu par Latitude Organisation. Inspiré des parcours d'entraînement militaires et sportifs, il met vos équipes au défi à travers obstacles, épreuves d'endurance, missions tactiques et exercices de communication. Pour les équipes qui veulent se dépasser.",
     isLatitudeOriginal: true,
