@@ -372,8 +372,8 @@ export const activities: Activity[] = [
     images: [
       "/images/koh-lanta-groupe.jpg",
     ],
-    excerpt: "Une enquête immersive dans un cadre de caractère : indices, énigmes et esprit de déduction au cœur d'une gentilhommière.",
-    description: "Les Mystères de la Gentilhommière plonge vos équipes dans une enquête immersive au sein d'un domaine de caractère. Indices dissimulés, énigmes historiques, mise en scène soignée : chaque équipe doit collaborer, observer et déduire pour percer les secrets du lieu. Une création originale Latitude Organisation alliant suspense, culture et cohésion.",
+    excerpt: "Un jeu d'enquête historique autour de la naissance de la montgolfière à Annonay : tir à l'arbalète, caricatures mystères et défis d'époque.",
+    description: "À deux pas d'Annonay — berceau mondial de la montgolfière depuis le premier vol des frères Montgolfier en 1783 — cette gentilhommière est le décor parfait d'un jeu d'enquête historique conçu par Latitude Organisation. Vos équipes partent à la découverte du patrimoine local à travers une série d'épreuves originales : tir à l'arbalète, reconnaissance de caricatures dans le noir, défis inspirés de l'histoire du site et du territoire. Une façon ludique et mémorable de s'approprier l'histoire d'un lieu d'exception.",
     isLatitudeOriginal: true,
     duration: "1/2 à journée",
     participants: "15 à 100",
