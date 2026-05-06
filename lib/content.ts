@@ -682,12 +682,8 @@ export const soireeEvents: SoireeEvent[] = [
   {
     slug: "bingo-musical",
     name: "Bingo Musical",
-    image: "/images/famille-animation.jpg",
-    images: [
-      "/images/famille-animation.jpg",
-      "/images/famille-animation-2.jpg",
-      "/images/animation-soiree-groupe.png",
-    ],
+    image: "/images/bingo-1.jpg",
+    images: ["/images/bingo-1.jpg", "/images/bingo-2.jpg", "/images/bingo-3.jpg", "/images/bingo-4.jpg"],
     excerpt: "Un bingo revisité autour de la musique : extraits, artistes, décennies. Ambiance garantie.",
     description: "Le Bingo Musical transforme le classique bingo en un jeu musical interactif et festif. Animateur en scène, extraits de chansons à reconnaître, cartons à composter : vos collaborateurs se découvrent une passion commune pour la musique à travers les décennies. Accessible à tous, irrésistiblement convivial, le Bingo Musical est la soirée parfaite pour briser la glace et finir en beauté.",
     duration: "1h à 2h",
