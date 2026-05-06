@@ -175,7 +175,7 @@ export const activities: Activity[] = [
     category: "interieur",
     image: "/images/temps-x-1.jpg",
     images: ["/images/temps-x-1.jpg", "/images/temps-x-2.jpg", "/images/temps-x-3.jpg", "/images/temps-x-4.jpg", "/images/temps-x-5.jpg", "/images/temps-x-6.jpg", "/images/temps-x-7.jpg", "/images/temps-x-8.jpg"],
-    excerpt: "Des épreuves indoor à gagner pour accumuler des billes — puis les verser dans un sablier : l'équipe dont le sable coule le plus longtemps remporte le défi.",
+    excerpt: "Et si vos victoires se mesuraient en secondes ? Un format inédit où chaque épreuve remportée devient du temps précieux.",
     description: "Challenge Temps X est une création originale Latitude Organisation. Vos équipes s'affrontent dans une série d'épreuves indoor variées — physiques, créatives, tactiques — et récoltent à chaque victoire de petites billes. Ces billes représentent du temps : en fin de parcours, chaque équipe verse ses billes dans un sablier. Plus l'équipe a brillé dans les épreuves, plus son sablier s'écoule longtemps — et plus elle a de chances de l'emporter. Un format unique où chaque effort se transforme en précieuses secondes.",
     isLatitudeOriginal: true,
     duration: "2h à 1/2 journée",
