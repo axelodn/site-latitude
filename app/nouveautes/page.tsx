@@ -23,7 +23,12 @@ const concepts = [
       "Plongez vos équipes dans un scénario inédit signé Latitude Organisation : une nuit de vernissage tourne au drame dans une galerie d'art contemporain. Témoins, suspects, enquêteurs — chaque collaborateur tient un rôle. Comédiens professionnels, décors immersifs et faux indices distillés tout au long de la soirée.",
     highlights: ["Comédiens professionnels", "Scénario exclusif 2026", "10 à 100 participants", "Indoor"],
     mainImage: "/images/murder-presentation-atelier-2.jpg",
-    secondaryImages: ["/images/murder-sergio.jpg"],
+    secondaryImages: [
+      "/images/murder-sergio.jpg",
+      "/images/murder-party-2.jpg",
+      "/images/murder-party.png",
+      "/images/murder-party-3.pdf",
+    ],
     gallery: [],
     dark: true,
   },
@@ -95,7 +100,7 @@ export default function Nouveautes() {
       >
         <div className="absolute inset-0">
           <Image
-            src="/images/murder-karim.jpg"
+            src="/images/murder-presentation-atelier-2.jpg"
             alt="Nos créations"
             fill
             className="object-cover object-center"

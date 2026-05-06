@@ -19,7 +19,7 @@ const sejours_ete = [
     duree: "3 à 5 jours",
     participants: "10 – 80 pers.",
     description: "Entre mer et montagne, terre de rencontres et de traditions où la lumière d'une simple bougie éclaire son monde.",
-    image: "/images/rando-vercors.png",
+    image: "/images/sejour-corse.jpg",
     tags: ["Mer", "Montagne", "Traditions"],
   },
   {
@@ -28,7 +28,7 @@ const sejours_ete = [
     duree: "2 à 4 jours",
     participants: "10 – 80 pers.",
     description: "Été comme hiver, 12 années de vie passée sur ce plateau perché, pour redécouvrir l'essentiel. L'effort au service d'une randonnée pour prendre de la hauteur et côtoyer ses propres sommets.",
-    image: "/images/groupe-cascade.png",
+    image: "/images/sejour-vercors.jpg",
     tags: ["Randonnée", "Nature", "Altitude"],
   },
   {
@@ -37,7 +37,7 @@ const sejours_ete = [
     duree: "2 à 4 jours",
     participants: "8 – 60 pers.",
     description: "Profonde et solennelle, le temps n'y a pas de prises. Ardèche des Gorges ou des collines, du nord où la cuisine est au beurre quand le sud chante sous les oliviers.",
-    image: "/images/canyoning.jpg",
+    image: "/images/sejour-ardeche.jpg",
     tags: ["Gorges", "Nature", "Authenticité"],
   },
 ];
@@ -71,6 +71,7 @@ const sejours_hiver = [
     tags: ["Spéléo", "Exploration", "Challenge"],
   },
 ];
+
 export default function Sejours() {
   return (
     <>
@@ -80,7 +81,7 @@ export default function Sejours() {
       <section className="relative min-h-[70vh] flex items-end overflow-hidden" style={{ background: "#08080A" }}>
         <div className="absolute inset-0">
           <Image
-            src="public/images/4x4-5.jpg"
+            src="/images/4x4-5.jpg"
             alt="Séjours sur-mesure"
             fill
             className="object-cover object-center"
@@ -215,33 +216,6 @@ export default function Sejours() {
                 </div>
 
                 <div className="h-px w-0 group-hover:w-full transition-all duration-500" style={{ background: "linear-gradient(90deg, #C9A961, transparent)" }} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Destinations internationales */}
-      <section className="py-20 lg:py-28" style={{ background: "#0D0C09", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <p className="font-inter text-xs tracking-[0.4em] uppercase mb-4" style={{ color: "#C9A961" }}>Clé en main</p>
-            <h2 className="font-playfair text-4xl md:text-5xl text-white font-bold mb-4">Destinations <em className="font-normal">Internationales</em></h2>
-            <p className="font-inter text-white/50 text-lg max-w-xl mx-auto">
-              Grâce à notre Licence Agence de Voyage, nous gérons visas, hébergements, vols et programme sur mesure.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {destinations.map((dest) => (
-              <div
-                key={dest.name}
-                className="text-center p-6 border border-white/8 hover:border-latitude-gold/40 transition-all duration-300"
-                style={{ background: "rgba(255,255,255,0.02)" }}
-              >
-                <div className="text-4xl mb-3">{dest.icon}</div>
-                <p className="font-playfair font-bold text-white text-lg mb-1">{dest.name}</p>
-                <p className="font-inter text-xs text-white/40">{dest.desc}</p>
               </div>
             ))}
           </div>
