@@ -365,6 +365,20 @@ export const activities: Activity[] = [
     participants: "20 à 150",
   },
   {
+    slug: "les-mysteres-de-la-gentilhommiere",
+    name: "Les Mystères de la Gentilhommière",
+    category: "exterieur",
+    image: "/images/koh-lanta-groupe.jpg",
+    images: [
+      "/images/koh-lanta-groupe.jpg",
+    ],
+    excerpt: "Une enquête immersive dans un cadre de caractère : indices, énigmes et esprit de déduction au cœur d'une gentilhommière.",
+    description: "Les Mystères de la Gentilhommière plonge vos équipes dans une enquête immersive au sein d'un domaine de caractère. Indices dissimulés, énigmes historiques, mise en scène soignée : chaque équipe doit collaborer, observer et déduire pour percer les secrets du lieu. Une création originale Latitude Organisation alliant suspense, culture et cohésion.",
+    isLatitudeOriginal: true,
+    duration: "1/2 à journée",
+    participants: "15 à 100",
+  },
+  {
     slug: "challenge-a-la-ferme",
     name: "Challenge à la ferme",
     category: "exterieur",
