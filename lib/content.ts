@@ -536,7 +536,9 @@ export const activities: Activity[] = [
     name: "Samba",
     category: "exterieur",
     image: "/images/samba-1.jpg",
-    images: ["/images/samba-1.jpg"],
+    images: ["/images/samba-1.jpg",
+            "/samba.PNG"
+            ],
     excerpt: "Une initiation à la samba en équipe : rythme, percussions, danse. Animation festive et solaire.",
     description: "Samba est une animation festive et chaleureuse qui plonge vos équipes dans l'ambiance brésilienne. Initiation aux percussions (surdo, caixa, tamborim), apprentissage de chorégraphies, parade collective : une activité solaire et engageante qui clôture un événement avec énergie et joie.",
     duration: "1h à 2h",
