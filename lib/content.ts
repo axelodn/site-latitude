@@ -345,6 +345,9 @@ export const activities: Activity[] = [
     images: [
       "/images/igloo-team.png",
       "/images/ski-geant-team.png",
+      "/images/ski-fond-synthetique-1.jpg",
+      "/images/ski-fond-synthetique-2.jpg",
+      "/images/ski-fond-synthetique-3.jpg",
     ],
     excerpt: "L'ambiance montagnarde sans quitter votre région : igloos, ski géant, raquettes, biathlon.",
     description: "C comme à la montagne recrée l'ambiance des stations de ski près de chez vous. Construction d'igloos, ski géant collectif, raquettes, biathlon laser : une journée 100% montagne, accessible et originale. Idéal pour un séminaire d'hiver dépaysant ou une animation de fin d'année.",
