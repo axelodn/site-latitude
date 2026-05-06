@@ -1014,8 +1014,8 @@ export const incentiveItems: IncentiveItem[] = [
   {
     slug: "stage-de-pilotage",
     name: "Stage de Pilotage",
-    image: "/images/libre-pilotage-1.jpg",
-    images: ["/images/libre-pilotage-1.jpg", "/images/libre-pilotage-2.jpg"],
+    image: "/images/pilotage-neige-1.png",
+    images: ["/images/pilotage-neige-1.png", "/images/pilotage-neige-2.png", "/images/pilotage-neige-3.png", "/images/pilotage-glace-1.jpg", "/images/pilotage-glace-2.jpg", "/images/pilotage-glace-3.jpg", "/images/pilotage-glace-4.jpg", "/images/pilotage-glace-5.jpg"],
     excerpt: "Stage de pilotage sur circuit homologué — sensations de F1, conduite sportive et chronos en équipe.",
     description: "Sur un circuit homologué, vos collaborateurs se glissent dans la peau de pilotes professionnels. Conduite sportive en GT, figures de maniabilité, chronométrage et coaching personnalisé : le stage de pilotage mêle adrénaline individuelle et esprit de compétition collective. Une activité premium très appréciée des comités de direction et des équipes commerciales.",
     duration: "1/2 à journée",
