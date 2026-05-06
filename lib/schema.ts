@@ -17,13 +17,6 @@ export function generateOrganizationSchema() {
     description:
       "Agence événementielle B2B française spécialisée dans l'organisation de séminaires, soirées et team-building depuis plus de 20 ans.",
     foundingDate: "2004",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "15 Rue de la Paix",
-      addressLocality: "Paris",
-      postalCode: "75008",
-      addressCountry: "FR",
-    },
     telephone: "+33-6-86-70-65-20",
     email: "jerome@latitude-organisation.com",
     openingHoursSpecification: [

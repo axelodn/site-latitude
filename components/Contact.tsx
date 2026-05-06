@@ -403,29 +403,6 @@ export default function Contact() {
                     className="w-10 h-10 flex-shrink-0 flex items-center justify-center border mt-0.5"
                     style={{ borderColor: "#C9A961" }}
                   >
-                    <MapPin
-                      size={16}
-                      style={{ color: "#C9A961" }}
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <div>
-                    <p className="font-inter text-xs text-white/40 tracking-widest uppercase mb-1">
-                      Adresse
-                    </p>
-                    <p className="font-inter text-white">
-                      15 Rue de la Paix
-                      <br />
-                      75008 Paris, France
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div
-                    className="w-10 h-10 flex-shrink-0 flex items-center justify-center border mt-0.5"
-                    style={{ borderColor: "#C9A961" }}
-                  >
                     <Clock
                       size={16}
                       style={{ color: "#C9A961" }}

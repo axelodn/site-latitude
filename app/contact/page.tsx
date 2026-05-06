@@ -92,12 +92,6 @@ export default function ContactPage() {
                     value: "jerome@latitude-organisation.com",
                     href: "mailto:jerome@latitude-organisation.com",
                   },
-                  {
-                    icon: MapPin,
-                    label: "Adresse",
-                    value: "Paris, France",
-                    href: "#",
-                  },
                 ].map(({ icon: Icon, label, value, href }, i) => (
                   <a
                     key={i}
