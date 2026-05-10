@@ -30,9 +30,13 @@ export async function generateMetadata(
     title: expertise.metaTitle,
     description: expertise.metaDescription,
     keywords: expertise.keywords,
+    alternates: {
+      canonical: `https://www.latitude-organisation.com/expertises/${slug}`,
+    },
     openGraph: {
       title: expertise.metaTitle,
       description: expertise.metaDescription,
+      url: `https://www.latitude-organisation.com/expertises/${slug}`,
       type: "website",
     },
   };

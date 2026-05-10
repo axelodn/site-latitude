@@ -26,9 +26,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${item.name} | Séminaires & Incentives | Latitude Organisation`,
     description: item.excerpt,
     keywords: [item.name, "incentive", "séminaire entreprise", "team building", "événementiel"],
+    alternates: {
+      canonical: `https://www.latitude-organisation.com/expertises/seminaires-incentives/${slug}`,
+    },
     openGraph: {
       title: `${item.name} | Latitude Organisation`,
       description: item.excerpt,
+      url: `https://www.latitude-organisation.com/expertises/seminaires-incentives/${slug}`,
       type: "article",
       images: item.image ? [item.image] : undefined,
     },

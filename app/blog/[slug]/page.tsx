@@ -31,9 +31,13 @@ export async function generateMetadata(
       "conseils événementiel",
       article.title,
     ],
+    alternates: {
+      canonical: `https://www.latitude-organisation.com/blog/${slug}`,
+    },
     openGraph: {
       title: `${article.title} | Blog Latitude Organisation`,
       description: article.excerpt,
+      url: `https://www.latitude-organisation.com/blog/${slug}`,
       type: "article",
     },
   };

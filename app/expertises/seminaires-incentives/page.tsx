@@ -11,6 +11,15 @@ export const metadata: Metadata = {
   title: "Séminaires & Incentives d'Entreprise - Agence Spécialisée | Latitude Organisation",
   description:
     "Organisez un séminaire ou voyage incentive d'exception. Expertise, destinations variées, service sur mesure depuis 2004. Devis gratuit sous 24h.",
+  alternates: {
+    canonical: "https://www.latitude-organisation.com/expertises/seminaires-incentives",
+  },
+  openGraph: {
+    title: "Séminaires & Incentives d'Entreprise | Latitude Organisation",
+    description: "Organisez un séminaire ou voyage incentive d'exception. Service sur mesure depuis 2004.",
+    url: "https://www.latitude-organisation.com/expertises/seminaires-incentives",
+    type: "website",
+  },
 };
 
 export default function SeminairesIncentivesPage() {

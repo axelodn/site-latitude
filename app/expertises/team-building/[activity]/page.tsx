@@ -32,9 +32,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "cohésion équipe",
       "activité entreprise",
     ],
+    alternates: {
+      canonical: `https://www.latitude-organisation.com/expertises/team-building/${slug}`,
+    },
     openGraph: {
       title: `${activity.name} | Team-Building Latitude`,
       description: activity.excerpt,
+      url: `https://www.latitude-organisation.com/expertises/team-building/${slug}`,
       type: "article",
       images: activity.image ? [activity.image] : undefined,
     },

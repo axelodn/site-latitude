@@ -101,6 +101,7 @@ export default function EventsMarquee() {
                 src={img.src}
                 alt={img.alt}
                 fill
+                loading="lazy"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 288px, 384px"
               />

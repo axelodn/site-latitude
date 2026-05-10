@@ -32,9 +32,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "soirée d'entreprise",
       "événementiel",
     ],
+    alternates: {
+      canonical: `https://www.latitude-organisation.com/expertises/soirees-evenementielles/${slug}`,
+    },
     openGraph: {
       title: `${soiree.name} | Soirées Événementielles Latitude`,
       description: soiree.excerpt,
+      url: `https://www.latitude-organisation.com/expertises/soirees-evenementielles/${slug}`,
       type: "article",
       images: soiree.images[0] ? [soiree.images[0]] : undefined,
     },
