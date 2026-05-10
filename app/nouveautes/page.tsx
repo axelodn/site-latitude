@@ -10,6 +10,15 @@ export const metadata: Metadata = {
   title: "Nos Créations | Latitude Organisation",
   description:
     "Découvrez les concepts originaux imaginés par Latitude Organisation : Murder Party Galerie des Lumières, Archéo Concept, So British, À la Ferme.",
+  alternates: {
+    canonical: "https://www.latitude-organisation.com/nouveautes",
+  },
+  openGraph: {
+    title: "Nos Créations | Latitude Organisation",
+    description: "Découvrez les concepts originaux imaginés par Latitude Organisation : Murder Party, Archéo Concept, So British.",
+    url: "https://www.latitude-organisation.com/nouveautes",
+    type: "website",
+  },
 };
 
 const concepts = [

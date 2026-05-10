@@ -20,10 +20,13 @@ export const metadata: Metadata = {
     "équipe événementielle professionnelle",
     "20 ans expertise événementielle",
   ],
+  alternates: {
+    canonical: "https://www.latitude-organisation.com/qui-sommes-nous",
+  },
   openGraph: {
     title: "Qui sommes-nous | Latitude Organisation",
-    description:
-      "20 ans d'expertise en organisation d'événements professionnels. Découvrez notre équipe et nos valeurs.",
+    description: "20 ans d'expertise en organisation d'événements professionnels. Découvrez notre équipe et nos valeurs.",
+    url: "https://www.latitude-organisation.com/qui-sommes-nous",
     type: "website",
   },
 };

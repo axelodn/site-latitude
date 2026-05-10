@@ -10,6 +10,15 @@ export const metadata: Metadata = {
   title: "Séjours Sur-Mesure | Latitude Organisation",
   description:
     "Séjours incentive et team-building sur-mesure été comme hiver. Montagne, mer, campagne ou étranger : Latitude Organisation conçoit l'expérience parfaite pour vos équipes.",
+  alternates: {
+    canonical: "https://www.latitude-organisation.com/sejours",
+  },
+  openGraph: {
+    title: "Séjours Sur-Mesure | Latitude Organisation",
+    description: "Séjours incentive et team-building sur-mesure été comme hiver en France et à l'international.",
+    url: "https://www.latitude-organisation.com/sejours",
+    type: "website",
+  },
 };
 
 const sejours_ete = [

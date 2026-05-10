@@ -17,10 +17,13 @@ export const metadata: Metadata = {
     "tendances événementiel",
     "actualités séminaires",
   ],
+  alternates: {
+    canonical: "https://www.latitude-organisation.com/blog",
+  },
   openGraph: {
     title: "Blog | Latitude Organisation",
-    description:
-      "Conseils et tendances en organisation d'événements professionnels",
+    description: "Conseils et tendances en organisation d'événements professionnels",
+    url: "https://www.latitude-organisation.com/blog",
     type: "website",
   },
 };

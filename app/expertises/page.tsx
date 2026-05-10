@@ -18,10 +18,13 @@ export const metadata: Metadata = {
     "team-building",
     "soirées événementielles",
   ],
+  alternates: {
+    canonical: "https://www.latitude-organisation.com/expertises",
+  },
   openGraph: {
     title: "Nos Expertises | Latitude Organisation",
-    description:
-      "Nos expertises pour tous vos événements professionnels",
+    description: "Nos expertises pour tous vos événements professionnels",
+    url: "https://www.latitude-organisation.com/expertises",
     type: "website",
   },
 };
