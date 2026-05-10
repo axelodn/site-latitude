@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Navigation from "@/components/Navigation";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.latitude-organisation.com",
+  },
+};
 import HeroExpansion from "@/components/HeroExpansion";
 
 // Sections above/near fold — chargées normalement

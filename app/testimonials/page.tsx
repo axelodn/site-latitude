@@ -14,10 +14,14 @@ export const metadata: Metadata = {
     "satisfaction client",
     "agence événementielle",
   ],
+  alternates: {
+    canonical: "https://www.latitude-organisation.com/testimonials",
+  },
   openGraph: {
     title: "Témoignages | Latitude Organisation",
     description:
       "Ce que nos clients disent de nous - 98% de satisfaction",
+    url: "https://www.latitude-organisation.com/testimonials",
     type: "website",
   },
 };
