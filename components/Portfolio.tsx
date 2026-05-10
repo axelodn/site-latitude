@@ -7,14 +7,19 @@ import { portfolio, portfolioCategories, type PortfolioCategory } from "@/lib/da
 import { MapPin, Users } from "lucide-react";
 import { staggerContainerFast, scaleIn, viewportConfig } from "@/lib/animations";
 
+const INITIAL_COUNT = 9;
+
 export default function Portfolio() {
-  const [activeFilter, setActiveFilter] =
-    useState<PortfolioCategory>("Tous");
+  const [activeFilter, setActiveFilter] = useState<PortfolioCategory>("Tous");
+  const [showAll, setShowAll] = useState(false);
 
   const filtered =
     activeFilter === "Tous"
       ? portfolio
       : portfolio.filter((p) => p.category === activeFilter);
+
+  const displayed = showAll || activeFilter !== "Tous" ? filtered : filtered.slice(0, INITIAL_COUNT);
+  const hasMore = activeFilter === "Tous" && !showAll && filtered.length > INITIAL_COUNT;
 
   return (
     <section
@@ -63,7 +68,7 @@ export default function Portfolio() {
           {portfolioCategories.map((cat) => (
             <button
               key={cat}
-              onClick={() => setActiveFilter(cat)}
+              onClick={() => { setActiveFilter(cat); setShowAll(false); }}
               className={`font-inter text-sm px-6 py-2.5 border transition-all duration-300 cursor-pointer ${
                 activeFilter === cat
                   ? "bg-white text-latitude-black border-white"
@@ -85,7 +90,7 @@ export default function Portfolio() {
           className="grid grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 [grid-auto-flow:dense]"
         >
           <AnimatePresence mode="popLayout">
-            {filtered.map((item) => (
+            {displayed.map((item) => (
               <motion.article
                 key={item.id}
                 layout
@@ -146,6 +151,18 @@ export default function Portfolio() {
             ))}
           </AnimatePresence>
         </motion.div>
+
+        {/* Voir plus */}
+        {hasMore && (
+          <div className="text-center mt-10">
+            <button
+              onClick={() => setShowAll(true)}
+              className="font-inter text-sm font-medium px-8 py-4 border border-white/30 text-white hover:bg-white hover:text-latitude-black transition-all duration-300 tracking-widest uppercase cursor-pointer"
+            >
+              Voir plus ({filtered.length - INITIAL_COUNT} réalisations)
+            </button>
+          </div>
+        )}
 
         {/* CTA */}
         <motion.div

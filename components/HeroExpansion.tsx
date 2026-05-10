@@ -178,15 +178,15 @@ export default function HeroExpansion() {
           className="font-playfair text-4xl md:text-6xl lg:text-7xl text-white font-bold leading-tight"
           style={{ textShadow: '0 4px 24px rgba(0,0,0,0.9)', willChange: 'transform, opacity' }}
         >
-          L'excellence
+          L&apos;excellence
         </h1>
-        <h1
+        <p
           ref={titleDownRef}
           className="font-playfair text-4xl md:text-6xl lg:text-7xl font-normal italic leading-tight"
           style={{ color: '#C9A961', textShadow: '0 4px 24px rgba(0,0,0,0.9)', willChange: 'transform, opacity' }}
         >
           événementielle depuis 2004
-        </h1>
+        </p>
       </div>
 
       {/* Contenu révélé après expansion complète */}
