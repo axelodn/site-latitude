@@ -103,11 +103,7 @@ export default function RootLayout({
       lang="fr"
       className={`${playfairDisplay.variable} ${inter.variable}`}
     >
-      <head>
-        {/* Preconnect Google Fonts — réduit le render-blocking */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      </head>
+      <head />
       <body
         className="min-h-full antialiased"
         style={{
