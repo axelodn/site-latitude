@@ -159,34 +159,10 @@ export default function Portfolio() {
               onClick={() => setShowAll(true)}
               className="font-inter text-sm font-medium px-8 py-4 border border-white/30 text-white hover:bg-white hover:text-latitude-black transition-all duration-300 tracking-widest uppercase cursor-pointer"
             >
-              Voir plus ({filtered.length - INITIAL_COUNT} réalisations)
+              Voir plus
             </button>
           </div>
         )}
-
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={viewportConfig}
-          transition={{ duration: 0.6 }}
-          className="text-center mt-14"
-        >
-          <p className="font-inter text-white/50 mb-6">
-            Votre prochain événement pourrait figurer ici.
-          </p>
-          <button
-            onClick={() =>
-              document
-                .getElementById("contact")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
-            className="font-inter text-sm font-medium px-8 py-4 border border-white/30 text-white hover:bg-white hover:text-latitude-black transition-all duration-300 tracking-widest uppercase cursor-pointer"
-            aria-label="Nous contacter pour organiser votre événement d'entreprise"
-          >
-            Organiser votre événement
-          </button>
-        </motion.div>
       </div>
     </section>
   );
