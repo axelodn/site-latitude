@@ -6,10 +6,10 @@ import { PageHero, Breadcrumb } from "@/components/shared";
 export const metadata: Metadata = {
   title: "Mentions légales | Latitude Organisation",
   description: "Mentions légales de Latitude Organisation",
-  robots: {
-    index: true,
-    follow: true,
+  alternates: {
+    canonical: "https://www.latitude-organisation.com/mentions-legales",
   },
+  robots: { index: false, follow: true },
 };
 
 const breadcrumbs = [

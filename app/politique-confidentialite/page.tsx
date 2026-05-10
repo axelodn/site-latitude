@@ -7,10 +7,10 @@ export const metadata: Metadata = {
   title: "Politique de confidentialité | Latitude Organisation",
   description:
     "Politique de confidentialité de Latitude Organisation - Protection de vos données personnelles",
-  robots: {
-    index: true,
-    follow: true,
+  alternates: {
+    canonical: "https://www.latitude-organisation.com/politique-confidentialite",
   },
+  robots: { index: false, follow: true },
 };
 
 const breadcrumbs = [

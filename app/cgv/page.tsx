@@ -7,10 +7,10 @@ export const metadata: Metadata = {
   title: "Conditions Générales de Vente | Latitude Organisation",
   description:
     "Conditions Générales de Vente de Latitude Organisation - Engagement de services événementiels",
-  robots: {
-    index: true,
-    follow: true,
+  alternates: {
+    canonical: "https://www.latitude-organisation.com/cgv",
   },
+  robots: { index: false, follow: true },
 };
 
 const breadcrumbs = [
