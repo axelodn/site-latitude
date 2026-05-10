@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { testimonials } from "@/lib/data";
-import { Star } from "lucide-react";
 import { viewportConfig } from "@/lib/animations";
 import { GsapReveal } from "./GsapReveal";
 
@@ -64,7 +63,7 @@ export default function Testimonials() {
               {/* Stars */}
               <div className="flex gap-1 mb-6" aria-label={`${t.rating} étoiles`}>
                 {Array.from({ length: t.rating }).map((_, j) => (
-                  <Star key={j} size={14} fill="#C9A961" stroke="none" aria-hidden="true" />
+                  <span key={j} aria-hidden="true" style={{ color: "#C9A961", fontSize: "14px", lineHeight: 1 }}>★</span>
                 ))}
               </div>
 

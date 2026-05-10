@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Star } from "lucide-react";
 import { activities, type Activity } from "@/lib/content";
 
 function ActivityCard({ activity }: { activity: Activity }) {
@@ -49,7 +48,7 @@ function ActivityCard({ activity }: { activity: Activity }) {
           style={{ background: "#C9A961", color: "#0A0A0A" }}
           title="Création originale Latitude Organisation"
         >
-          <Star size={9} fill="currentColor" />
+          <span aria-hidden="true" style={{ fontSize: "9px" }}>★</span>
           Création Latitude
         </div>
       )}
