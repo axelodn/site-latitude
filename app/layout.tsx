@@ -107,13 +107,6 @@ export default function RootLayout({
         {/* Preconnect Google Fonts — réduit le render-blocking */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* Preload image hero LCP */}
-        <link
-          rel="preload"
-          as="image"
-          href="/images/animation-soiree-groupe.png"
-          fetchPriority="high"
-        />
       </head>
       <body
         className="min-h-full antialiased"

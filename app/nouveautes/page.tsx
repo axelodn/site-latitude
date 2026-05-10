@@ -22,11 +22,11 @@ const concepts = [
     description:
       "Plongez vos équipes dans un scénario inédit signé Latitude Organisation : une nuit de vernissage tourne au drame dans une galerie d'art contemporain. Témoins, suspects, enquêteurs — chaque collaborateur tient un rôle. Comédiens professionnels, décors immersifs et faux indices distillés tout au long de la soirée.",
     highlights: ["Comédiens professionnels", "Scénario exclusif 2026", "10 à 100 participants", "Indoor"],
-    mainImage: "/images/murder-presentation-atelier-2.jpg",
+    mainImage: "/images/murder-presentation-atelier-2.webp",
     secondaryImages: [
-      "/images/murder-sergio.jpg",
-      "/images/murder-party-2.jpg",
-      "/images/murder-party.png",
+      "/images/murder-sergio.webp",
+      "/images/murder-party-2.webp",
+      "/images/murder-party.webp",
       "/images/murder-party-3.pdf",
     ],
     gallery: [],
@@ -41,16 +41,16 @@ const concepts = [
     description:
       "Une création originale Latitude Organisation qui transforme vos équipes en archéologues en herbe. Sur un site authentique du patrimoine français, vos collaborateurs fouillent, analysent et reconstituent des vestiges pour percer un mystère historique. Un team-building intellectuel, ludique et spectaculaire qui mêle culture, cohésion et dépassement de soi en plein air.",
     highlights: ["Sites patrimoniaux authentiques", "Création Latitude", "20 à 200 participants", "Outdoor"],
-    mainImage: "/images/archeo-rochefort.jpg",
-    secondaryImages: ["/images/archeo-rochefort-2.jpg", "/images/archeo-bilboquet.jpg"],
+    mainImage: "/images/archeo-rochefort.webp",
+    secondaryImages: ["/images/archeo-rochefort-2.webp", "/images/archeo-bilboquet.webp"],
     gallery: [
-      "/images/archeo-rochefort-3.jpg",
-      "/images/archeo-rochefort-4.jpg",
-      "/images/archeo-rochefort-5.jpg",
-      "/images/archeo-rochefort-6.jpg",
-      "/images/archeo-tir-arc.jpg",
-      "/images/archeo-jerome.jpg",
-      "/images/archeo-famille-2.jpg",
+      "/images/archeo-rochefort-3.webp",
+      "/images/archeo-rochefort-4.webp",
+      "/images/archeo-rochefort-5.webp",
+      "/images/archeo-rochefort-6.webp",
+      "/images/archeo-tir-arc.webp",
+      "/images/archeo-jerome.webp",
+      "/images/archeo-famille-2.webp",
       "/images/MEDIEVAL FANTASY 2.HEIC.jpg"
     ],
     dark: false,
@@ -64,8 +64,8 @@ const concepts = [
     description:
       "Un concept signé Latitude Organisation qui plonge vos équipes dans l'univers raffiné et décalé de l'Angleterre. Croquet sur pelouse, tea time animé, quiz Beatles, course de plateau de thé, défis fléchettes… Un parcours en stations où l'humour britannique et la compétition bienveillante font bon ménage.",
     highlights: ["Format demi-journée", "Création originale", "15 à 150 participants", "Outdoor"],
-    mainImage: "/images/so-british-croquet.png",
-    secondaryImages: ["/images/so-british-the.png", "/images/so-british-flechettes.jpg"],
+    mainImage: "/images/so-british-croquet.webp",
+    secondaryImages: ["/images/so-british-the.webp", "/images/so-british-flechettes.webp"],
     gallery: [],
     dark: true,
   },
@@ -78,11 +78,11 @@ const concepts = [
     description:
       "Latitude Organisation réinvente le team-building rural avec ce concept décalé et joyeux. Brouette race, concours de labour, atelier fabrication de beurre, quiz animaux de la ferme, olympiades champêtres : vos équipes redécouvrent le plaisir simple du travail en commun dans un cadre verdoyant et dépaysant.",
     highlights: ["Accessible à tous", "Format convivial", "20 à 250 participants", "Outdoor"],
-    mainImage: "/images/jeux-ferme.png",
-    secondaryImages: ["/images/jeux-ferme-2.png", "/images/jeux-ferme-brouette.png"],
+    mainImage: "/images/jeux-ferme.webp",
+    secondaryImages: ["/images/jeux-ferme-2.webp", "/images/jeux-ferme-brouette.webp"],
     gallery: [
-      "/images/famille-animation.jpg",
-      "/images/famille-animation-2.jpg",
+      "/images/famille-animation.webp",
+      "/images/famille-animation-2.webp",
     ],
     dark: false,
   },
@@ -100,7 +100,7 @@ export default function Nouveautes() {
       >
         <div className="absolute inset-0">
           <Image
-            src="/images/murder-presentation-atelier-2.jpg"
+            src="/images/murder-presentation-atelier-2.webp"
             alt="Nos créations"
             fill
             className="object-cover object-center"

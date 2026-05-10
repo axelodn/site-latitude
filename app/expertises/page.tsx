@@ -42,7 +42,7 @@ export default function ExpertisesIndex() {
         eyebrow="NOS DOMAINES"
         title="Nos expertises au service de vos événements"
         subtitle="Séminaires & incentives, soirées événementielles, team-building — des expériences sur mesure, orchestrées de A à Z."
-        imageSrc="/images/rando-vercors.png"
+        imageSrc="/images/rando-vercors.webp"
       />
 
       {/* Expertises Grid */}

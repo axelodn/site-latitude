@@ -87,7 +87,7 @@ export default function FounderStatement() {
                 style={{ borderColor: "#C9A961" }}
               >
                 <Image
-                  src="/images/jerome-stade-de-france.png"
+                  src="/images/jerome-stade-de-france.webp"
                   alt="Jérôme, Directeur Général de Latitude Organisation"
                   fill
                   className="object-cover"

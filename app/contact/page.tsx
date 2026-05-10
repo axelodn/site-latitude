@@ -65,7 +65,7 @@ export default function ContactPage() {
         eyebrow="NOUS CONTACTER"
         title="Parlons de votre prochain événement"
         subtitle="Nos équipes sont disponibles pour discuter de vos projets et vous proposer des solutions sur mesure."
-        imageSrc="/images/presentateurs.jpg"
+        imageSrc="/images/presentateurs.webp"
       />
 
       {/* Contact Section */}

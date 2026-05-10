@@ -7,42 +7,42 @@ import { viewportConfig } from "@/lib/animations";
 
 const images = [
   {
-    src: "/images/animation-soiree-groupe.png",
+    src: "/images/animation-soiree-groupe.webp",
     alt: "Animation soirée dansante d'entreprise",
     label: "Soirée",
   },
   {
-    src: "/images/casino-roulette.png",
+    src: "/images/casino-roulette.webp",
     alt: "Animation casino roulette en soirée",
     label: "Casino",
   },
   {
-    src: "/images/rando-vercors.png",
+    src: "/images/rando-vercors.webp",
     alt: "Randonnée en montagne dans le Vercors",
     label: "Randonnée",
   },
   {
-    src: "/images/canyoning.jpg",
+    src: "/images/canyoning.webp",
     alt: "Canyoning team-building outdoor",
     label: "Canyoning",
   },
   {
-    src: "/images/igloo-team.png",
+    src: "/images/igloo-team.webp",
     alt: "Construction d'igloo en équipe",
     label: "Team-Building",
   },
   {
-    src: "/images/masque-venitien.jpg",
+    src: "/images/masque-venitien.webp",
     alt: "Soirée à thème vénitien",
     label: "Soirée vénitienne",
   },
   {
-    src: "/images/speleo.png",
+    src: "/images/speleo.webp",
     alt: "Spéléologie team-building aventure",
     label: "Spéléologie",
   },
   {
-    src: "/images/koh-lanta-groupe.jpg",
+    src: "/images/koh-lanta-groupe.webp",
     alt: "Les Aventuriers team-building en plein air",
     label: "Les Aventuriers",
   },

@@ -44,7 +44,7 @@ export default function QuiSommesNous() {
         eyebrow="NOTRE HISTOIRE"
         title="Une agence événementielle avec une vraie histoire"
         subtitle="Depuis 2004, nous organisons des événements qui marquent les esprits et renforcent les liens au sein des entreprises."
-        imageSrc="/images/so-british-staff.jpg"
+        imageSrc="/images/so-british-staff.webp"
       />
 
       {/* About Section */}

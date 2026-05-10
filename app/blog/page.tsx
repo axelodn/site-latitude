@@ -46,7 +46,7 @@ export default function BlogIndex() {
         eyebrow="RESSOURCES"
         title="Le Blog de Latitude Organisation"
         subtitle="Conseils, tendances et insights d'experts en organisation d'événements professionnels."
-        imageSrc="/images/archeo-rochefort.jpg"
+        imageSrc="/images/archeo-rochefort.webp"
       />
 
       {/* Articles Grid */}

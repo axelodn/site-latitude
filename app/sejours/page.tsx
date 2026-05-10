@@ -19,7 +19,7 @@ const sejours_ete = [
     duree: "3 à 5 jours",
     participants: "10 – 80 pers.",
     description: "Entre mer et montagne, terre de rencontres et de traditions où la lumière d'une simple bougie éclaire son monde.",
-    image: "/images/sejour-corse.jpg",
+    image: "/images/sejour-corse.webp",
     tags: ["Mer", "Montagne", "Traditions"],
   },
   {
@@ -28,7 +28,7 @@ const sejours_ete = [
     duree: "2 à 4 jours",
     participants: "10 – 80 pers.",
     description: "Été comme hiver, 12 années de vie passée sur ce plateau perché, pour redécouvrir l'essentiel. L'effort au service d'une randonnée pour prendre de la hauteur et côtoyer ses propres sommets.",
-    image: "/images/sejour-vercors.jpg",
+    image: "/images/sejour-vercors.webp",
     tags: ["Randonnée", "Nature", "Altitude"],
   },
   {
@@ -37,7 +37,7 @@ const sejours_ete = [
     duree: "2 à 4 jours",
     participants: "8 – 60 pers.",
     description: "Profonde et solennelle, le temps n'y a pas de prises. Ardèche des Gorges ou des collines, du nord où la cuisine est au beurre quand le sud chante sous les oliviers.",
-    image: "/images/sejour-ardeche.jpg",
+    image: "/images/sejour-ardeche.webp",
     tags: ["Gorges", "Nature", "Authenticité"],
   },
 ];
@@ -49,7 +49,7 @@ const sejours_hiver = [
     duree: "2 à 4 jours",
     participants: "20 – 150 pers.",
     description: "Géant parallèle, biathlon laser, chasse aux trésors sur les pistes, soirée raclette en chalet privatisé. La montagne comme vous ne l'avez jamais vécue en équipe.",
-    image: "/images/sejour-ski-olympiades.jpg",
+    image: "/images/sejour-ski-olympiades.webp",
     tags: ["Ski", "Compétition", "Montagne"],
   },
   {
@@ -58,7 +58,7 @@ const sejours_hiver = [
     duree: "3 à 5 jours",
     participants: "10 – 60 pers.",
     description: "Construction d'igloos, randonnée en raquettes, chiens de traîneaux et bain nordique sous les aurores boréales. Une aventure polaire inoubliable.",
-    image: "/images/sejour-igloo-grand-nord.jpg",
+    image: "/images/sejour-igloo-grand-nord.webp",
     tags: ["Expédition", "Grand Nord", "Immersion"],
   },
   {
@@ -67,7 +67,7 @@ const sejours_hiver = [
     duree: "1 à 2 jours",
     participants: "8 – 40 pers.",
     description: "Progression dans des grottes millénaires, rappels verticaux, découverte de concrétions féeriques. Un défi qui teste la confiance et la solidarité.",
-    image: "/images/speleo.png",
+    image: "/images/speleo.webp",
     tags: ["Spéléo", "Exploration", "Challenge"],
   },
 ];
@@ -81,7 +81,7 @@ export default function Sejours() {
       <section className="relative min-h-[70vh] flex items-end overflow-hidden" style={{ background: "#08080A" }}>
         <div className="absolute inset-0">
           <Image
-            src="/images/4x4-5.jpg"
+            src="/images/4x4-5.webp"
             alt="Séjours sur-mesure"
             fill
             className="object-cover object-center"

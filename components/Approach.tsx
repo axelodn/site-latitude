@@ -107,7 +107,7 @@ export default function Approach() {
             >
               <div ref={imgRef} className="absolute inset-0 will-change-transform" style={{ top: "-15%", bottom: "-15%" }}>
               <Image
-                src="/images/speleo.png"
+                src="/images/speleo.webp"
                 alt="Team-building spéléologie organisé par Latitude Organisation"
                 fill
                 className="object-cover"
