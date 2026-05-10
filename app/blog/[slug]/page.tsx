@@ -4,6 +4,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { PageHero, Breadcrumb, CTABand } from "@/components/shared";
 import { blogArticles } from "@/lib/content";
+import { generateArticleSchema } from "@/lib/schema";
 
 
 
@@ -95,8 +96,14 @@ export default async function BlogArticlePage({
     day: "numeric",
   });
 
+  const articleSchema = generateArticleSchema(article);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <Navigation />
       <Breadcrumb items={breadcrumbs} />
 

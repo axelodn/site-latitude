@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import { Breadcrumb, CTABand } from "@/components/shared";
 import { activities } from "@/lib/content";
 import ImageCarousel from "@/components/ImageCarousel";
+import { generateActivitySchema } from "@/lib/schema";
 
 type Props = {
   params: Promise<{ activity: string }>;
@@ -65,9 +66,19 @@ export default async function ActivityPage({ params }: Props) {
     .slice(0, 3);
 
   const categoryLabel = activity.category === "interieur" ? "Activité Intérieur" : "Activité Extérieur";
+  const activitySchema = generateActivitySchema({
+    name: activity.name,
+    description: activity.description,
+    slug: activity.slug,
+    category: categoryLabel,
+  });
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(activitySchema) }}
+      />
       <Navigation />
       <Breadcrumb items={breadcrumbs} />
 

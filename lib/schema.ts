@@ -131,6 +131,53 @@ export function generateReviewsSchema(
   }));
 }
 
+export function generateArticleSchema(article: {
+  title: string;
+  excerpt: string;
+  date: string;
+  author: string;
+  slug: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.excerpt,
+    datePublished: article.date,
+    dateModified: article.date,
+    author: {
+      "@type": "Person",
+      name: article.author,
+    },
+    publisher: {
+      "@id": `${BASE_URL}/#organization`,
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${BASE_URL}/blog/${article.slug}`,
+    },
+  };
+}
+
+export function generateActivitySchema(activity: {
+  name: string;
+  description: string;
+  slug: string;
+  category: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: activity.name,
+    description: activity.description,
+    category: activity.category,
+    url: `${BASE_URL}/expertises/team-building/${activity.slug}`,
+    brand: {
+      "@id": `${BASE_URL}/#organization`,
+    },
+  };
+}
+
 export function generateBreadcrumbSchema(
   items: Array<{ name: string; url: string }>
 ) {
