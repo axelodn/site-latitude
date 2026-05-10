@@ -4,7 +4,6 @@ import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { CTABand } from "@/components/shared";
-import { ArrowRight, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Nos Créations | Latitude Organisation",
@@ -120,7 +119,7 @@ export default function Nouveautes() {
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-6">
-            <Sparkles size={16} style={{ color: "#C9A961" }} />
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3z"/></svg>
             <p className="font-inter text-xs tracking-[0.4em] uppercase" style={{ color: "#C9A961" }}>
               Exclusivités Latitude Organisation
             </p>
@@ -221,7 +220,7 @@ export default function Nouveautes() {
                     style={{ borderColor: "#C9A961", color: "#C9A961" }}
                   >
                     Demander un devis pour ce concept
-                    <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                   </Link>
                 </div>
               </div>

@@ -5,25 +5,15 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  Users,
-  Presentation,
-  Sparkles,
-  Mountain,
-  Target,
-  Film,
-  ArrowRight,
-} from "lucide-react";
 import { expertises } from "@/lib/data";
 import { staggerContainer, fadeInUp, viewportConfig } from "@/lib/animations";
 
-const iconMap = {
-  Users,
-  PresentationChart: Presentation,
-  Sparkles,
-  Mountain,
-  Target,
-  Film,
+const IconSVG = ({ name }: { name: string }) => {
+  const props = { width: 20, height: 20, viewBox: "0 0 24 24", fill: "none", stroke: "#C9A961", strokeWidth: 1.5, strokeLinecap: "round" as const, strokeLinejoin: "round" as const, "aria-hidden": true };
+  if (name === "Mountain") return <svg {...props}><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>;
+  if (name === "Sparkles") return <svg {...props}><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3z"/></svg>;
+  if (name === "Users") return <svg {...props}><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>;
+  return null;
 };
 
 export default function Expertises() {
@@ -80,8 +70,6 @@ export default function Expertises() {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {expertises.map((expertise) => {
-            const IconComponent =
-              iconMap[expertise.icon as keyof typeof iconMap];
             return (
               <motion.article
                 key={expertise.id}
@@ -120,14 +108,7 @@ export default function Expertises() {
                     className="w-11 h-11 mb-5 flex items-center justify-center border"
                     style={{ borderColor: "rgba(201,169,97,0.7)" }}
                   >
-                    {IconComponent && (
-                      <IconComponent
-                        size={20}
-                        strokeWidth={1.5}
-                        style={{ color: "#C9A961" }}
-                        aria-hidden="true"
-                      />
-                    )}
+                    <IconSVG name={expertise.icon} />
                   </div>
 
                   {/* Title */}
@@ -151,7 +132,7 @@ export default function Expertises() {
                   {/* CTA */}
                   <div className="flex items-center gap-2 text-sm font-medium" style={{ color: "#C9A961" }}>
                     <span className="font-inter tracking-wide">En savoir plus</span>
-                    <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                   </div>
                 </div>
               </motion.article>

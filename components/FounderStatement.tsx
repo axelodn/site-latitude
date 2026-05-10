@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { viewportConfig } from "@/lib/animations";
 
 export default function FounderStatement() {
@@ -51,7 +50,7 @@ export default function FounderStatement() {
               className="inline-flex items-center gap-3 font-inter text-sm font-medium px-8 py-4 border border-white/30 text-white hover:bg-white hover:text-latitude-black transition-all duration-300 tracking-widest uppercase group"
             >
               Lancer mon projet
-              <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </Link>
 
             {/* Phrase fétiche */}

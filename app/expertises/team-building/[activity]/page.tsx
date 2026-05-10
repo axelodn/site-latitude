@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import { Breadcrumb, CTABand } from "@/components/shared";
 import { activities } from "@/lib/content";
 import ImageCarousel from "@/components/ImageCarousel";
-import { Star, Clock, Users, ArrowLeft } from "lucide-react";
 
 type Props = {
   params: Promise<{ activity: string }>;
@@ -79,7 +78,7 @@ export default async function ActivityPage({ params }: Props) {
             href="/expertises/team-building"
             className="inline-flex items-center gap-2 font-inter text-sm text-white/60 hover:text-latitude-gold transition-colors mb-8"
           >
-            <ArrowLeft size={16} />
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
             Toutes les activités team-building
           </Link>
 
@@ -98,7 +97,7 @@ export default async function ActivityPage({ params }: Props) {
                     className="inline-flex items-center gap-1.5 font-inter text-[10px] font-medium tracking-[0.2em] uppercase px-3 py-1.5"
                     style={{ background: "#C9A961", color: "#0A0A0A" }}
                   >
-                    <Star size={10} fill="currentColor" />
+                    <span aria-hidden="true" style={{ fontSize: "10px", lineHeight: 1 }}>★</span>
                     Création Latitude
                   </span>
                 )}
@@ -116,13 +115,13 @@ export default async function ActivityPage({ params }: Props) {
               <div className="flex flex-wrap gap-6 mb-8">
                 {activity.duration && (
                   <div className="flex items-center gap-2 text-white/80">
-                    <Clock size={18} className="text-latitude-gold" />
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-latitude-gold" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                     <span className="font-inter text-sm">{activity.duration}</span>
                   </div>
                 )}
                 {activity.participants && (
                   <div className="flex items-center gap-2 text-white/80">
-                    <Users size={18} className="text-latitude-gold" />
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-latitude-gold" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                     <span className="font-inter text-sm">{activity.participants} participants</span>
                   </div>
                 )}
@@ -161,7 +160,7 @@ export default async function ActivityPage({ params }: Props) {
           {activity.isLatitudeOriginal && (
             <div className="mt-12 border-l-4 pl-6 py-4" style={{ borderColor: "#C9A961", background: "rgba(201,169,97,0.05)" }}>
               <div className="flex items-center gap-2 mb-2">
-                <Star size={16} className="text-latitude-gold" fill="currentColor" />
+                <span aria-hidden="true" style={{ color: "#C9A961", fontSize: "16px", lineHeight: 1 }}>★</span>
                 <span className="font-inter text-xs font-medium tracking-[0.2em] uppercase text-latitude-gold">
                   Création Latitude
                 </span>
@@ -203,7 +202,7 @@ export default async function ActivityPage({ params }: Props) {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
                   {r.isLatitudeOriginal && (
                     <div className="absolute top-3 right-3 inline-flex items-center gap-1 font-inter text-[9px] font-medium tracking-[0.2em] uppercase px-2 py-1" style={{ background: "#C9A961", color: "#0A0A0A" }}>
-                      <Star size={8} fill="currentColor" /> Création
+                      <span aria-hidden="true" style={{ fontSize: "8px", lineHeight: 1 }}>★</span> Création
                     </div>
                   )}
                   <div className="absolute bottom-0 left-0 right-0 p-6">

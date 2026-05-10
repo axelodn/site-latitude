@@ -2,7 +2,6 @@
 
 import { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface ImageCarouselProps {
   images: string[];
@@ -125,7 +124,7 @@ export default function ImageCarousel({
         }}
         aria-label="Image précédente"
       >
-        <ChevronLeft size={20} color="#C9A961" />
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
       </button>
       <button
         onClick={next}
@@ -136,7 +135,7 @@ export default function ImageCarousel({
         }}
         aria-label="Image suivante"
       >
-        <ChevronRight size={20} color="#C9A961" />
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
       </button>
 
       {/* Dot indicators + counter */}

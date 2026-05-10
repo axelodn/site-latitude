@@ -4,7 +4,6 @@ import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { CTABand } from "@/components/shared";
-import { ArrowRight, Sun, Snowflake, MapPin, Users, Calendar } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Séjours Sur-Mesure | Latitude Organisation",
@@ -112,10 +111,10 @@ export default function Sejours() {
           </p>
           <div className="flex flex-wrap gap-4">
             <a href="#ete" className="inline-flex items-center gap-2 px-6 py-3 font-inter text-sm font-medium transition-all duration-300 hover:opacity-80" style={{ background: "#C9A961", color: "#08080A" }}>
-              <Sun size={16} /> Séjours Été
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg> Séjours Été
             </a>
             <a href="#hiver" className="inline-flex items-center gap-2 px-6 py-3 font-inter text-sm font-medium border border-white/30 text-white transition-all duration-300 hover:bg-white/10">
-              <Snowflake size={16} /> Séjours Hiver
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="2" y1="12" x2="22" y2="12"/><line x1="12" y1="2" x2="12" y2="22"/><path d="m20 16-4-4 4-4M4 8l4 4-4 4M16 4l-4 4-4-4M8 20l4-4 4 4"/></svg> Séjours Hiver
             </a>
           </div>
         </div>
@@ -126,7 +125,7 @@ export default function Sejours() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-16">
             <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ background: "rgba(201,169,97,0.15)" }}>
-              <Sun size={22} style={{ color: "#C9A961" }} />
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
             </div>
             <div>
               <p className="font-inter text-xs tracking-[0.3em] uppercase mb-1" style={{ color: "#C9A961" }}>Saison chaude</p>
@@ -157,13 +156,13 @@ export default function Sejours() {
                   <h3 className="font-playfair text-xl font-bold text-white mb-2">{sejour.title}</h3>
                   <div className="flex flex-wrap gap-4 mb-4">
                     <span className="flex items-center gap-1.5 font-inter text-xs text-white/50">
-                      <MapPin size={12} /> {sejour.lieu}
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> {sejour.lieu}
                     </span>
                     <span className="flex items-center gap-1.5 font-inter text-xs text-white/50">
-                      <Calendar size={12} /> {sejour.duree}
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> {sejour.duree}
                     </span>
                     <span className="flex items-center gap-1.5 font-inter text-xs text-white/50">
-                      <Users size={12} /> {sejour.participants}
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> {sejour.participants}
                     </span>
                   </div>
                   <p className="font-inter text-sm text-white/60 leading-relaxed flex-1">{sejour.description}</p>
@@ -181,7 +180,7 @@ export default function Sejours() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-16">
             <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ background: "rgba(201,169,97,0.15)" }}>
-              <Snowflake size={22} style={{ color: "#C9A961" }} />
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="2" y1="12" x2="22" y2="12"/><line x1="12" y1="2" x2="12" y2="22"/><path d="m20 16-4-4 4-4M4 8l4 4-4 4M16 4l-4 4-4-4M8 20l4-4 4 4"/></svg>
             </div>
             <div>
               <p className="font-inter text-xs tracking-[0.3em] uppercase mb-1" style={{ color: "#C9A961" }}>Saison froide</p>
@@ -212,13 +211,13 @@ export default function Sejours() {
                   <h3 className="font-playfair text-xl font-bold text-white mb-2">{sejour.title}</h3>
                   <div className="flex flex-wrap gap-4 mb-4">
                     <span className="flex items-center gap-1.5 font-inter text-xs text-white/50">
-                      <MapPin size={12} /> {sejour.lieu}
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> {sejour.lieu}
                     </span>
                     <span className="flex items-center gap-1.5 font-inter text-xs text-white/50">
-                      <Calendar size={12} /> {sejour.duree}
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> {sejour.duree}
                     </span>
                     <span className="flex items-center gap-1.5 font-inter text-xs text-white/50">
-                      <Users size={12} /> {sejour.participants}
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> {sejour.participants}
                     </span>
                   </div>
                   <p className="font-inter text-sm text-white/60 leading-relaxed flex-1">{sejour.description}</p>

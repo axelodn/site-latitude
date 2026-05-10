@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { faqItems } from "@/lib/data";
-import { Plus, Minus } from "lucide-react";
 import { viewportConfig, staggerContainer, fadeInUp } from "@/lib/animations";
 
 export default function FAQ() {
@@ -72,11 +71,9 @@ export default function FAQ() {
                   style={{ color: "#C9A961" }}
                   aria-hidden="true"
                 >
-                  {openIndex === index ? (
-                    <Minus size={18} />
-                  ) : (
-                    <Plus size={18} />
-                  )}
+                  <span style={{ fontSize: "18px", lineHeight: 1, fontWeight: 300 }} aria-hidden="true">
+                    {openIndex === index ? "−" : "+"}
+                  </span>
                 </div>
               </button>
 

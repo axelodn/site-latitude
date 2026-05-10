@@ -2,7 +2,6 @@
 
 import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Clock, Award } from "lucide-react";
 import { viewportConfig, staggerContainer, fadeInUp, slideInLeft, slideInRight } from "@/lib/animations";
 
 const eventTypes = [
@@ -95,7 +94,7 @@ export default function Contact() {
                   className="w-16 h-16 mb-6 flex items-center justify-center border-2"
                   style={{ borderColor: "#C9A961" }}
                 >
-                  <Award size={28} style={{ color: "#C9A961" }} aria-hidden="true" />
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
                 </div>
                 <h3 className="font-playfair text-white text-2xl font-bold mb-3">
                   Message envoyé !
@@ -357,11 +356,7 @@ export default function Contact() {
                     className="w-10 h-10 flex-shrink-0 flex items-center justify-center border mt-0.5"
                     style={{ borderColor: "#C9A961" }}
                   >
-                    <Phone
-                      size={16}
-                      style={{ color: "#C9A961" }}
-                      aria-hidden="true"
-                    />
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                   </div>
                   <div>
                     <p className="font-inter text-xs text-white/40 tracking-widest uppercase mb-1">
@@ -382,11 +377,7 @@ export default function Contact() {
                     className="w-10 h-10 flex-shrink-0 flex items-center justify-center border mt-0.5"
                     style={{ borderColor: "#C9A961" }}
                   >
-                    <Mail
-                      size={16}
-                      style={{ color: "#C9A961" }}
-                      aria-hidden="true"
-                    />
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                   </div>
                   <div>
                     <p className="font-inter text-xs text-white/40 tracking-widest uppercase mb-1">
@@ -403,11 +394,7 @@ export default function Contact() {
                     className="w-10 h-10 flex-shrink-0 flex items-center justify-center border mt-0.5"
                     style={{ borderColor: "#C9A961" }}
                   >
-                    <Clock
-                      size={16}
-                      style={{ color: "#C9A961" }}
-                      aria-hidden="true"
-                    />
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                   </div>
                   <div>
                     <p className="font-inter text-xs text-white/40 tracking-widest uppercase mb-1">

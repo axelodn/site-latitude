@@ -4,8 +4,6 @@ import Footer from "@/components/Footer";
 import { PageHero, Breadcrumb, CTABand } from "@/components/shared";
 
 
-import { Star } from "lucide-react";
-
 export const metadata: Metadata = {
   title: "Témoignages | Latitude Organisation",
   description:
@@ -120,11 +118,7 @@ export default function TestimonialsPage() {
                 {/* Rating */}
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      className="fill-latitude-gold text-latitude-gold"
-                    />
+                    <span key={i} aria-hidden="true" style={{ color: "#C9A961", fontSize: "16px", lineHeight: 1 }}>★</span>
                   ))}
                 </div>
 
