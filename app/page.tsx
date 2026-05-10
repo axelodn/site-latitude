@@ -1,19 +1,16 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Navigation from "@/components/Navigation";
+import HeroExpansion from "@/components/HeroExpansion";
+import Stats from "@/components/Stats";
 
 export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.latitude-organisation.com",
   },
 };
-import HeroExpansion from "@/components/HeroExpansion";
 
-// Sections above/near fold — chargées normalement
-import EventsMarquee from "@/components/EventsMarquee";
-import Stats from "@/components/Stats";
-
-// Sections below fold — lazy-loadées pour alléger le bundle initial
+const EventsMarquee    = dynamic(() => import("@/components/EventsMarquee"));
 const FounderStatement = dynamic(() => import("@/components/FounderStatement"));
 const TrustBand        = dynamic(() => import("@/components/TrustBand"));
 const Expertises       = dynamic(() => import("@/components/Expertises"));
