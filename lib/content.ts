@@ -1291,8 +1291,8 @@ export const expertiseDetails: ExpertiseDetail[] = [
       { src: "/images/speleo-bournillon.webp", alt: "Spéléologie gouffre de Bournillon — aventure souterraine" },
       { src: "/images/rando-vercors.webp", alt: "Randonnée séminaire Vercors — cohésion en montagne" },
       { src: "/images/raid-vercors-added.webp", alt: "Raid outdoor Vercors — dépassement de soi en équipe" },
-      { src: "/images/libre-pilotage-1.webp", alt: "Stage de pilotage incentive — sensations au volant" },
       { src: "/images/canyoning-3.webp", alt: "Canyoning incentive — rappel et toboggans en canyon" },
+      { src: "/images/pilotage-glace-1.webp", alt: "Stage de pilotage sur glace — incentive hivernal exceptionnel" },
     ],
     sections: [
       {
