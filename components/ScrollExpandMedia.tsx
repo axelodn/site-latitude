@@ -162,6 +162,7 @@ const ScrollExpandMedia = ({
               src={bgImageSrc}
               alt="Background"
               fill
+              sizes="100vw"
               className="object-cover object-center"
               priority
               fetchPriority="high"
@@ -190,6 +191,7 @@ const ScrollExpandMedia = ({
                   src={mediaSrc}
                   alt={title || 'Media content'}
                   fill
+                  sizes="(max-width: 768px) 300px, 600px"
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-black/40" />

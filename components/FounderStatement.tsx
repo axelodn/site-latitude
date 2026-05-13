@@ -89,6 +89,7 @@ export default function FounderStatement() {
                   src="/images/jerome-stade-de-france.webp"
                   alt="Jérôme, Directeur Général de Latitude Organisation"
                   fill
+                  sizes="160px"
                   className="object-cover"
                 />
               </div>

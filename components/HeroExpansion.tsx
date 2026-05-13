@@ -142,6 +142,7 @@ export default function HeroExpansion() {
           src="/images/hero-groupe-exterieur.webp"
           alt="Groupe d'entreprise lors d'un événement en plein air organisé par Latitude Organisation"
           fill
+          sizes="100vw"
           className="object-cover object-center"
           priority
           fetchPriority="high"
@@ -165,6 +166,7 @@ export default function HeroExpansion() {
           src="/images/animation-soiree-groupe.webp"
           alt="Événement Latitude Organisation"
           fill
+          sizes="(max-width: 768px) 320px, 600px"
           className="object-cover"
           priority
           fetchPriority="high"
