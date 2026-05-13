@@ -1285,14 +1285,14 @@ export const expertiseDetails: ExpertiseDetail[] = [
       "Un séminaire d'entreprise réussi conjugue trois dimensions essentielles : un objectif business clair (cohésion, formation, lancement, célébration), une expérience humaine forte qui marque durablement les esprits, et une exécution logistique irréprochable. C'est cette alchimie que nous orchestrons depuis plus de 20 ans pour les plus grands groupes français et internationaux. Que vous organisiez un séminaire d'intégration pour 30 nouveaux collaborateurs, un séminaire stratégique pour votre comité de direction, ou un voyage incentive récompense pour 200 commerciaux, notre méthodologie garantit un résultat à la hauteur de votre ambition.",
     heroImage: "/images/groupe-vercors.webp",
     gallery: [
-      { src: "/images/sens-conscience-bulle.webp", alt: "Séminaire atypique sous bulle en pleine nature" },
-      { src: "/images/projet-fontenille.webp", alt: "Activité outdoor incentive au Domaine de Fontenille" },
-      { src: "/images/impressionnistes-corot.webp", alt: "Team building créatif peinture inspiré de Corot" },
-      { src: "/images/impressionnistes-etangs.webp", alt: "Activité peinture en plein air aux étangs" },
-      { src: "/images/impressionnistes-paillottes.webp", alt: "Séminaire en extérieur sous paillottes" },
-      { src: "/images/rallye-2cv.webp", alt: "Rallye 2CV incentive team building" },
-      { src: "/images/archeo-rochefort.webp", alt: "Activité archéologie en château médiéval de Rochefort" },
-      { src: "/images/archeo-rochefort-2.webp", alt: "Challenge archéologique outdoor en ruines" },
+      { src: "/images/canyoning.webp", alt: "Canyoning en séminaire incentive — descente de canyon en équipe" },
+      { src: "/images/canyoning-2.webp", alt: "Canyoning team incentive — sauts et toboggans naturels" },
+      { src: "/images/speleo.webp", alt: "Spéléologie incentive — exploration de grottes en équipe" },
+      { src: "/images/speleo-bournillon.webp", alt: "Spéléologie gouffre de Bournillon — aventure souterraine" },
+      { src: "/images/rando-vercors.webp", alt: "Randonnée séminaire Vercors — cohésion en montagne" },
+      { src: "/images/raid-vercors-added.webp", alt: "Raid outdoor Vercors — dépassement de soi en équipe" },
+      { src: "/images/pilotage-1.webp", alt: "Stage de pilotage incentive — sensations au volant" },
+      { src: "/images/pilotage-glace-1.webp", alt: "Stage de pilotage sur glace — incentive hivernal exceptionnel" },
     ],
     sections: [
       {

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { Logo } from "./Logo";
 
@@ -25,27 +24,16 @@ export default function Navigation() {
   }, []);
 
   useEffect(() => {
-    if (mobileOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
   }, [mobileOpen]);
 
   const handleNavClick = (href: string) => {
     setMobileOpen(false);
-    // If it's a hash anchor on the same page
     if (href.startsWith("#")) {
-      const id = href.replace("#", "");
-      const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
-      }
+      const el = document.getElementById(href.replace("#", ""));
+      if (el) el.scrollIntoView({ behavior: "smooth" });
     }
-    // Otherwise, Link component will handle navigation
   };
 
   return (
@@ -80,9 +68,7 @@ export default function Navigation() {
                   key={link.href}
                   href={link.href}
                   onClick={() => handleNavClick(link.href)}
-                  className={`font-inter text-xs lg:text-sm font-medium tracking-wide transition-colors duration-300 hover:text-latitude-gold whitespace-nowrap ${
-                    scrolled ? "text-white/90" : "text-white/90"
-                  }`}
+                  className="font-inter text-xs lg:text-sm font-medium tracking-wide transition-colors duration-300 hover:text-latitude-gold whitespace-nowrap text-white/90"
                 >
                   {link.label}
                 </Link>
@@ -108,74 +94,65 @@ export default function Navigation() {
               aria-expanded={mobileOpen}
               aria-controls="mobile-menu"
             >
-              <span
-                className={`block w-6 h-0.5 transition-all duration-300 ${
-                  scrolled || mobileOpen ? "bg-white" : "bg-white"
-                } ${mobileOpen ? "rotate-45 translate-y-2" : ""}`}
-              />
-              <span
-                className={`block w-6 h-0.5 transition-all duration-300 ${
-                  scrolled || mobileOpen ? "bg-white" : "bg-white"
-                } ${mobileOpen ? "opacity-0" : ""}`}
-              />
-              <span
-                className={`block w-6 h-0.5 transition-all duration-300 ${
-                  scrolled || mobileOpen ? "bg-white" : "bg-white"
-                } ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`}
-              />
+              <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${mobileOpen ? "rotate-45 translate-y-2" : ""}`} />
+              <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${mobileOpen ? "opacity-0" : ""}`} />
+              <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`} />
             </button>
           </div>
         </div>
       </header>
 
-      {/* Mobile Menu Fullscreen */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            id="mobile-menu"
-            role="dialog"
-            aria-label="Menu de navigation mobile"
-            initial={{ opacity: 0, x: "100%" }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: "100%" }}
-            transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="fixed inset-0 z-40 bg-latitude-black flex flex-col items-center justify-center"
-          >
-            <nav className="flex flex-col items-center gap-8">
-              {navLinks.map((link, i) => (
-                <motion.div
-                  key={link.href}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.08 + 0.2 }}
-                >
-                  <Link
-                    href={link.href}
-                    onClick={() => handleNavClick(link.href)}
-                    className="font-playfair text-4xl text-white hover:text-latitude-gold transition-colors duration-300"
-                  >
-                    {link.label}
-                  </Link>
-                </motion.div>
-              ))}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: navLinks.length * 0.08 + 0.3 }}
-                className="mt-4"
+      {/* Mobile Menu Fullscreen — CSS-only animation, no Framer Motion */}
+      <div
+        id="mobile-menu"
+        role="dialog"
+        aria-label="Menu de navigation mobile"
+        aria-hidden={!mobileOpen}
+        className="fixed inset-0 z-40 bg-latitude-black flex flex-col items-center justify-center"
+        style={{
+          transform: mobileOpen ? "translateX(0)" : "translateX(100%)",
+          opacity: mobileOpen ? 1 : 0,
+          transition: "transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94), opacity 0.4s cubic-bezier(0.25,0.46,0.45,0.94)",
+          pointerEvents: mobileOpen ? "auto" : "none",
+        }}
+      >
+        <nav className="flex flex-col items-center gap-8">
+          {navLinks.map((link, i) => (
+            <div
+              key={link.href}
+              style={{
+                opacity: mobileOpen ? 1 : 0,
+                transform: mobileOpen ? "translateY(0)" : "translateY(20px)",
+                transition: `opacity 0.35s ease ${i * 0.08 + 0.2}s, transform 0.35s ease ${i * 0.08 + 0.2}s`,
+              }}
+            >
+              <Link
+                href={link.href}
+                onClick={() => handleNavClick(link.href)}
+                className="font-playfair text-4xl text-white hover:text-latitude-gold transition-colors duration-300"
               >
-                <Link
-                  href="/contact"
-                  onClick={() => setMobileOpen(false)}
-                  className="inline-block font-inter text-sm font-medium px-8 py-3 bg-latitude-gold text-white hover:bg-latitude-gold/90 transition-all duration-300 tracking-wide"
-                >
-                  Demander un devis
-                </Link>
-              </motion.div>
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
+                {link.label}
+              </Link>
+            </div>
+          ))}
+          <div
+            className="mt-4"
+            style={{
+              opacity: mobileOpen ? 1 : 0,
+              transform: mobileOpen ? "translateY(0)" : "translateY(20px)",
+              transition: `opacity 0.35s ease ${navLinks.length * 0.08 + 0.3}s, transform 0.35s ease ${navLinks.length * 0.08 + 0.3}s`,
+            }}
+          >
+            <Link
+              href="/contact"
+              onClick={() => setMobileOpen(false)}
+              className="inline-block font-inter text-sm font-medium px-8 py-3 bg-latitude-gold text-white hover:bg-latitude-gold/90 transition-all duration-300 tracking-wide"
+            >
+              Demander un devis
+            </Link>
+          </div>
+        </nav>
+      </div>
     </>
   );
 }
