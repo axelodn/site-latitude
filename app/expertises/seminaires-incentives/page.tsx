@@ -146,20 +146,17 @@ export default function SeminairesIncentivesPage() {
               title="Quelques images de nos événements"
               centered={true}
             />
-            <div className="columns-2 md:columns-3 lg:columns-4 gap-3 mt-12 space-y-3">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-12">
               {expertise.gallery.map((photo, i) => (
-                <div key={i} className="break-inside-avoid overflow-hidden">
-                  <div className="relative overflow-hidden group">
-                    <Image
-                      src={photo.src}
-                      alt={photo.alt}
-                      width={600}
-                      height={400}
-                      className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
-                  </div>
+                <div key={i} className="relative aspect-[4/3] overflow-hidden group">
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
                 </div>
               ))}
             </div>
