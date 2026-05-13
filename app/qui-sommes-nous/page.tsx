@@ -233,7 +233,7 @@ export default function QuiSommesNous() {
             style={{ background: "rgba(201,169,97,0.04)" }}
           >
             {/* Croix pattée des Templiers */}
-            <div className="absolute top-8 right-10 select-none pointer-events-none" aria-hidden>
+            <div className="absolute top-8 right-10 z-20 select-none pointer-events-none" aria-hidden>
               <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
                 <g fill="#d92828">
                   <path d="M30,144.097 C96.9686,223.907,195.815,270,300,270 C404.185,270,503.031,223.907,570,144.097 V455.903 C503.031,376.093,404.185,330,300,330 C195.815,330,96.9686,376.093,30,455.903Z" />
