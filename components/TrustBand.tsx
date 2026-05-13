@@ -1,11 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { InfiniteSlider } from "./ui/infinite-slider";
 import { ProgressiveBlur } from "./ui/progressive-blur";
 import { GsapReveal } from "./GsapReveal";
-import { viewportConfig } from "@/lib/animations";
 
 const logos: { name: string; file: string; imgClass?: string }[] = [
   { name: "EDF",               file: "edf.webp" },
@@ -60,13 +58,7 @@ export default function TrustBand() {
       </div>
 
       {/* Infinite slider */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={viewportConfig}
-        transition={{ duration: 0.8, delay: 0.3 }}
-        className="relative z-10"
-      >
+      <div className="relative z-10">
         <div className="relative">
           <InfiniteSlider gap={20} speed={50} className="py-4">
             {logos.map((logo) => (
@@ -102,18 +94,12 @@ export default function TrustBand() {
             <div className="absolute inset-0" style={{ background: "linear-gradient(to left, #08080A 0%, transparent 100%)" }} />
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Counter */}
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={viewportConfig}
-        transition={{ duration: 0.7, delay: 0.5 }}
-        className="relative z-10 font-inter text-white/25 text-xs tracking-[0.3em] uppercase text-center mt-6"
-      >
+      <p className="relative z-10 font-inter text-white/25 text-xs tracking-[0.3em] uppercase text-center mt-6">
         + 200 entreprises accompagnées depuis 2004 · CAC 40 · Leaders mondiaux
-      </motion.p>
+      </p>
     </section>
   );
 }

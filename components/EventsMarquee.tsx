@@ -2,8 +2,6 @@
 
 import { useRef } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { viewportConfig } from "@/lib/animations";
 
 const images = [
   {
@@ -57,13 +55,7 @@ export default function EventsMarquee() {
   return (
     <section className="bg-latitude-black py-20 overflow-hidden" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
       {/* Header */}
-      <motion.div
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={viewportConfig}
-        transition={{ duration: 0.7 }}
-        className="text-center mb-12 px-6"
-      >
+      <div className="text-center mb-12 px-6">
         <p
           className="font-inter text-xs font-medium tracking-[0.4em] uppercase mb-4"
           style={{ color: "#C9A961" }}
@@ -73,7 +65,7 @@ export default function EventsMarquee() {
         <h2 className="font-playfair font-normal text-white text-4xl md:text-5xl tracking-wide">
           Nos événements en images
         </h2>
-      </motion.div>
+      </div>
 
       {/* Marquee track */}
       <div className="relative w-full" aria-hidden="true">
