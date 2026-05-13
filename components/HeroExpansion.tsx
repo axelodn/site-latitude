@@ -167,6 +167,7 @@ export default function HeroExpansion() {
           fill
           className="object-cover"
           priority
+          fetchPriority="high"
         />
         <div ref={overlayRef} className="absolute inset-0 bg-black/50" />
       </div>
