@@ -23,6 +23,9 @@ const Footer           = dynamic(() => import("@/components/Footer"));
 export default function HomePage() {
   return (
     <>
+      {/* Preload LCP images so the browser fetches them immediately */}
+      <link rel="preload" as="image" href="/images/animation-soiree-groupe.webp" fetchPriority="high" />
+      <link rel="preload" as="image" href="/images/hero-groupe-exterieur.webp" />
       <Navigation />
       <main id="main-content">
         <HeroExpansion />
