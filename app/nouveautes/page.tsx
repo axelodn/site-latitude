@@ -35,7 +35,6 @@ const concepts = [
       "/images/murder-sergio.webp",
       "/images/murder-party-2.webp",
       "/images/murder-presentation-atelier-2.webp",
-      "/images/murder-party-3.pdf",
     ],
     gallery: [],
     dark: true,
@@ -59,7 +58,7 @@ const concepts = [
       "/images/archeo-tir-arc.webp",
       "/images/archeo-jerome.webp",
       "/images/archeo-famille-2.webp",
-      "/images/MEDIEVAL FANTASY 2.HEIC.jpg"
+      "/images/medieval-fantasy-2.webp"
     ],
     dark: false,
   },
