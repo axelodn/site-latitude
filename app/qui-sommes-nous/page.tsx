@@ -263,6 +263,26 @@ export default function QuiSommesNous() {
                 </p>
               </div>
               <div className="space-y-6">
+                <div className="relative overflow-hidden" style={{ height: "280px" }}>
+                  <Image
+                    src="/images/commanderie-templiers-restauration-patrimoine.webp"
+                    alt="Commanderie des Chevaliers Templiers du XIIe siècle restaurée par Latitude Organisation"
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    style={{ filter: "brightness(0.85)" }}
+                  />
+                  <div
+                    className="absolute inset-0"
+                    style={{ background: "linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 60%)" }}
+                  />
+                  <span
+                    className="absolute bottom-4 left-4 font-inter text-xs font-medium tracking-[0.25em] uppercase text-white/80"
+                    style={{ textShadow: "0 1px 4px rgba(0,0,0,0.8)" }}
+                  >
+                    Site du XII<sup>e</sup> siècle
+                  </span>
+                </div>
                 <div className="border-l-2 pl-6" style={{ borderColor: "#C9A961" }}>
                   <p className="font-inter text-white/60 text-sm leading-relaxed">
                     Cet engagement reflète nos valeurs profondes&nbsp;: le respect du temps long,
