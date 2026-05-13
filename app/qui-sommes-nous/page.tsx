@@ -232,16 +232,6 @@ export default function QuiSommesNous() {
             className="mt-20 border border-white/10 p-10 lg:p-14 relative overflow-hidden"
             style={{ background: "rgba(201,169,97,0.04)" }}
           >
-            {/* Croix pattée des Templiers */}
-            <div className="absolute top-8 right-10 z-20 select-none pointer-events-none" aria-hidden>
-              <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                <g fill="#d92828">
-                  <path d="M30,144.097 C96.9686,223.907,195.815,270,300,270 C404.185,270,503.031,223.907,570,144.097 V455.903 C503.031,376.093,404.185,330,300,330 C195.815,330,96.9686,376.093,30,455.903Z" />
-                  <path d="M455.903,30 C376.093,96.9686,330,195.815,330,300 C330,404.185,376.093,503.031,455.903,570 H144.097 C223.907,503.031,270,404.185,270,300 C270,195.815,223.907,96.9686,144.097,30Z" />
-                </g>
-              </svg>
-            </div>
-
             <div className="grid lg:grid-cols-2 gap-10 items-center relative z-10">
               <div>
                 <span
@@ -276,6 +266,15 @@ export default function QuiSommesNous() {
                     className="absolute inset-0"
                     style={{ background: "linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 60%)" }}
                   />
+                  {/* Croix pattée des Templiers */}
+                  <div className="absolute top-3 right-3 select-none pointer-events-none" aria-hidden>
+                    <svg width="64" height="64" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" style={{ filter: "drop-shadow(0 2px 6px rgba(0,0,0,0.6))" }}>
+                      <g fill="#d92828">
+                        <path d="M30,144.097 C96.9686,223.907,195.815,270,300,270 C404.185,270,503.031,223.907,570,144.097 V455.903 C503.031,376.093,404.185,330,300,330 C195.815,330,96.9686,376.093,30,455.903Z" />
+                        <path d="M455.903,30 C376.093,96.9686,330,195.815,330,300 C330,404.185,376.093,503.031,455.903,570 H144.097 C223.907,503.031,270,404.185,270,300 C270,195.815,223.907,96.9686,144.097,30Z" />
+                      </g>
+                    </svg>
+                  </div>
                   <span
                     className="absolute bottom-4 left-4 font-inter text-xs font-medium tracking-[0.25em] uppercase text-white/80"
                     style={{ textShadow: "0 1px 4px rgba(0,0,0,0.8)" }}
