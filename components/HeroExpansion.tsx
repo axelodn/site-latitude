@@ -138,16 +138,18 @@ export default function HeroExpansion() {
     >
       {/* Background atmosphère */}
       <div ref={bgRef} className="absolute inset-0 z-0" style={{ willChange: 'opacity' }}>
-        <Image
-          src="/images/hero-groupe-exterieur.webp"
-          alt="Groupe d'entreprise lors d'un événement en plein air organisé par Latitude Organisation"
-          fill
-          sizes="100vw"
-          className="object-cover object-center"
-          priority
-          fetchPriority="high"
-          quality={85}
-        />
+        {/* picture sert la version mobile (67KB) ou desktop (208KB) */}
+        <picture style={{ position: 'absolute', inset: 0, display: 'block', width: '100%', height: '100%' }}>
+          <source media="(max-width: 768px)" srcSet="/images/hero-groupe-exterieur-mobile.webp" type="image/webp" />
+          <source srcSet="/images/hero-groupe-exterieur.webp" type="image/webp" />
+          <img
+            src="/images/hero-groupe-exterieur.webp"
+            alt="Groupe d'entreprise lors d'un événement en plein air organisé par Latitude Organisation"
+            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
+            fetchPriority="high"
+            decoding="async"
+          />
+        </picture>
         <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.3) 100%)' }} />
       </div>
 
