@@ -20,6 +20,7 @@ const inter = Inter({
 const BASE_URL = "https://www.latitude-organisation.com";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.latitude-organisation.com"),
   title: {
     default:
       "Latitude Organisation | Agence événementielle France — Séminaires, Soirées, Team-Building",

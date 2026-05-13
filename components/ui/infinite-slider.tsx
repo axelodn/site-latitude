@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useAnimationFrame } from "framer-motion";
 
 interface InfiniteSliderProps {
@@ -26,6 +26,23 @@ export function InfiniteSlider({
   const offset = useRef(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
+  const sizeRef = useRef(0);
+
+  // Measure once after mount and on resize — avoids reading scrollWidth every frame
+  useEffect(() => {
+    const measure = () => {
+      const inner = innerRef.current;
+      if (!inner) return;
+      sizeRef.current =
+        direction === "horizontal"
+          ? inner.scrollWidth / 2
+          : inner.scrollHeight / 2;
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    if (innerRef.current) ro.observe(innerRef.current);
+    return () => ro.disconnect();
+  }, [direction]);
 
   useAnimationFrame((_, delta) => {
     const currentSpeed = isHovered && speedOnHover !== undefined ? speedOnHover : speed;
@@ -33,10 +50,8 @@ export function InfiniteSlider({
     offset.current = reverse ? offset.current - px : offset.current + px;
 
     const inner = innerRef.current;
-    if (!inner) return;
-
-    const size =
-      direction === "horizontal" ? inner.scrollWidth / 2 : inner.scrollHeight / 2;
+    const size = sizeRef.current;
+    if (!inner || size === 0) return;
 
     if (offset.current >= size) offset.current = 0;
     if (offset.current < 0) offset.current = size;
