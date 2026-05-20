@@ -603,7 +603,7 @@ export const activities: Activity[] = [
     category: "exterieur",
     image: "/images/rallye-historique-drome-2.webp",
     images: ["/images/rallye-historique-drome-2.webp", "/images/rallye-historique-drome.webp"],
-    excerpt: "Un rallye au cœur de l'histoire et des régions : étapes patrimoniales et défis.",
+    excerpt: "Un rallye au coeur de l'histoire et des régions : étape patrimoniale et défis.",
     description: "Les Rallyes Historiques emmènent vos équipes au cœur des plus beaux patrimoines de France. Étapes dans des villages perchés, châteaux, sites historiques et paysages d'exception, défis culturels et ludiques : une expérience qui marie découverte, histoire locale et cohésion. Une création signée Latitude Organisation.",
     isLatitudeOriginal: true,
     duration: "Journée à 2 jours",
