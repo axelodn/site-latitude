@@ -295,7 +295,7 @@ export const activities: Activity[] = [
     category: "interieur",
     images: [],
     excerpt: "Un tour du monde des défis en confrontation équipe contre équipe : origami, hiéroglyphes, bilboquet, quiz musical…",
-    description: "Enigma est une succession de défis à relever en confrontation directe équipe contre équipe. Comme un tour du monde des challenges, chaque étape propose un défi différent : origami, hiéroglyphes, bilboquet, quiz musical, casse-tête, caricatures… Les équipes s'affrontent défi après défi pour accumuler les points et décrocher la victoire. Créativité, culture, adresse et réflexe au programme. Une création originale signée Latitude Organisation.",
+    description: "Enigma est une succession de défis à relever en confrontation directe équipe contre équipe. Un tour du monde des challenges, chaque étape propose un défi différent : origami, hiéroglyphes, bilboquet, quiz musical, casse-tête, caricatures… Les équipes s'affrontent défi après défi pour accumuler les points et décrocher la victoire. Créativité, culture, adresse et réflexe au programme. Une création originale signée Latitude Organisation.",
     isLatitudeOriginal: true,
     duration: "1h à 2h",
     participants: "8 à 60",
