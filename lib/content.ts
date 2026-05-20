@@ -293,7 +293,7 @@ export const activities: Activity[] = [
     slug: "enigma",
     name: "Enigma",
     category: "interieur",
-    images: [],
+    images: ["/images/enigma-interieur.webp", "/images/enigma-1.webp"],
     excerpt: "Un tour du monde des défis en confrontation équipe contre équipe : origami, hiéroglyphes, bilboquet, quiz musical…",
     description: "Enigma est une succession de défis à relever en confrontation directe équipe contre équipe. Un tour du monde des challenges, chaque étape propose un défi différent : origami, hiéroglyphes, bilboquet, quiz musical, casse-tête, caricatures… Les équipes s'affrontent défi après défi pour accumuler les points et décrocher la victoire. Créativité, culture, adresse et réflexe au programme. Une création originale signée Latitude Organisation.",
     isLatitudeOriginal: true,
