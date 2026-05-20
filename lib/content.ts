@@ -591,7 +591,7 @@ export const activities: Activity[] = [
     name: "Multi sports",
     category: "exterieur",
     image: "/images/tir-arc-multi.webp",
-    images: ["/images/tir-arc-multi.webp", "/images/tir-arc-3.webp", "/images/tir-arc.webp", "/images/escalade-copie.webp"],
+    images: ["/images/tir-arc-multi.webp", "/images/tir-arc-3.webp", "/images/multi-sport.webp", "/images/multi-sport-1.webp"],
     excerpt: "Badminton, volley-ball, hockey sur gazon, tir à l'arc, golf, biathlon : des sports au service du groupe et de l'individu.",
     description: "Multi sports propose une sélection de disciplines sportives variées au service de la cohésion et du dépassement individuel : badminton, volley-ball, sports collectifs, hockey sur gazon, tir à l'arc, golf et biathlon. Chaque activité favorise à la fois l'expression personnelle et la dynamique de groupe. Un format accessible à tous les niveaux, idéal pour fédérer dans le mouvement et le plaisir du sport partagé.",
     duration: "1/2 à journée",
