@@ -256,7 +256,7 @@ export const activities: Activity[] = [
       "/images/medieval-fantasy-2.webp",
     ],
     excerpt: "Une plongée dans l'univers médiéval-fantastique : costumes, défis épiques, aventure imaginaire.",
-    description: "Medieval Fantasy plonge vos équipes dans un univers d'aventure inspiré du Moyen-Âge et des grandes sagas heroic-fantasy. Costumes, défis tactiques, énigmes et combats à l'arme en mousse : un terrain de jeu décalé qui libère l'imaginaire et soude les groupes par l'aventure partagée.",
+    description: "Medieval Fantasy plonge vos équipes dans un univers d'aventure inspiré du Moyen-Âge et des grandes sagas heroic-fantasy. Costumes, défis tactiques et énigmes : un terrain de jeu décalé qui libère l'imaginaire et soude les groupes par l'aventure partagée.",
     isLatitudeOriginal: true,
     duration: "1/2 à journée",
     participants: "12 à 80",
