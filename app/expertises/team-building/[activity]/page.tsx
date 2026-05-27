@@ -164,9 +164,13 @@ export default async function ActivityPage({ params }: Props) {
           <h2 className="font-playfair text-3xl font-bold text-white mb-8">
             En quoi consiste cette activité ?
           </h2>
-          <p className="font-inter text-white/75 text-lg leading-relaxed">
-            {activity.description}
-          </p>
+          <div className="space-y-5">
+            {activity.description.split('\n\n').map((paragraph, i) => (
+              <p key={i} className="font-inter text-white/75 text-lg leading-relaxed">
+                {paragraph}
+              </p>
+            ))}
+          </div>
 
           {activity.isLatitudeOriginal && (
             <div className="mt-12 border-l-4 pl-6 py-4" style={{ borderColor: "#C9A961", background: "rgba(201,169,97,0.05)" }}>
