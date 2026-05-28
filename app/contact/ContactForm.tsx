@@ -19,13 +19,25 @@ export default function ContactForm() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setFormData({ name: "", email: "", phone: "", company: "", subject: "", message: "" });
-      setSubmitted(false);
-    }, 3000);
+
+    try {
+      const form = e.currentTarget;
+      const response = await fetch("https://formspree.io/f/mqkazve", {
+        method: "POST",
+        body: new FormData(form),
+        headers: { "Accept": "application/json" },
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData({ name: "", email: "", phone: "", company: "", subject: "", message: "" });
+        setTimeout(() => setSubmitted(false), 3000);
+      }
+    } catch (error) {
+      console.error("Erreur lors de l'envoi:", error);
+    }
   };
 
   return (
@@ -65,7 +77,7 @@ export default function ContactForm() {
             <p className="font-inter text-white/70">Nous avons reçu votre message et reviendrons vers vous très bientôt.</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form action="https://formspree.io/f/mqkazve" method="POST" onSubmit={handleSubmit} className="space-y-6">
             {[
               { id: "name", label: "Votre nom", type: "text", placeholder: "Nom complet", required: true },
               { id: "email", label: "Email", type: "email", placeholder: "votre@email.com", required: true },
