@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
+
 const PhoneIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
 );
@@ -9,45 +10,7 @@ const MailIcon = () => (
 );
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: "", email: "", phone: "", company: "", subject: "", message: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setLoading(true);
-    setError(false);
-
-    try {
-      const response = await fetch("https://formspree.io/f/mqkazve", {
-        method: "POST",
-        body: JSON.stringify(formData),
-        headers: {
-          "Accept": "application/json",
-          "Content-Type": "application/json",
-        },
-      });
-
-      if (response.ok) {
-        setSubmitted(true);
-        setFormData({ name: "", email: "", phone: "", company: "", subject: "", message: "" });
-      } else {
-        setError(true);
-      }
-    } catch {
-      setError(true);
-    } finally {
-      setLoading(false);
-    }
-  };
+  const [state, handleSubmit] = useForm("maqkazve");
 
   return (
     <div className="grid lg:grid-cols-2 gap-16">
@@ -80,29 +43,46 @@ export default function ContactForm() {
       {/* Formulaire */}
       <div>
         <h2 className="font-playfair text-3xl font-bold text-white mb-8">Envoyez-nous un message</h2>
-        {submitted ? (
+
+        {state.succeeded ? (
           <div className="bg-latitude-gold/10 border border-latitude-gold p-8 text-center">
             <p className="font-playfair text-2xl font-bold text-latitude-gold mb-2">Merci !</p>
             <p className="font-inter text-white/70">Nous avons reçu votre message et reviendrons vers vous très bientôt.</p>
           </div>
         ) : (
-          <form action="https://formspree.io/f/mqkazve" method="POST" onSubmit={handleSubmit} className="space-y-6">
-            {[
-              { id: "name", label: "Votre nom", type: "text", placeholder: "Nom complet", required: true },
-              { id: "email", label: "Email", type: "email", placeholder: "votre@email.com", required: true },
-              { id: "phone", label: "Téléphone", type: "tel", placeholder: "+33 (0)X XX XX XX XX", required: false },
-              { id: "company", label: "Entreprise", type: "text", placeholder: "Nom de votre entreprise", required: false },
-            ].map(({ id, label, type, placeholder, required }) => (
-              <div key={id}>
-                <label htmlFor={id} className="block font-inter text-sm font-medium text-white/80 mb-2">{label}</label>
-                <input type={type} id={id} name={id} value={formData[id as keyof typeof formData]} onChange={handleInputChange} required={required}
-                  className="w-full bg-white/5 border border-white/10 text-white font-inter px-4 py-3 focus:outline-none focus:border-latitude-gold transition-colors duration-300 placeholder:text-white/20"
-                  placeholder={placeholder} />
-              </div>
-            ))}
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
+              <label htmlFor="name" className="block font-inter text-sm font-medium text-white/80 mb-2">Votre nom</label>
+              <input type="text" id="name" name="name" required
+                className="w-full bg-white/5 border border-white/10 text-white font-inter px-4 py-3 focus:outline-none focus:border-latitude-gold transition-colors duration-300 placeholder:text-white/20"
+                placeholder="Nom complet" />
+            </div>
+
+            <div>
+              <label htmlFor="email" className="block font-inter text-sm font-medium text-white/80 mb-2">Email</label>
+              <input type="email" id="email" name="email" required
+                className="w-full bg-white/5 border border-white/10 text-white font-inter px-4 py-3 focus:outline-none focus:border-latitude-gold transition-colors duration-300 placeholder:text-white/20"
+                placeholder="votre@email.com" />
+              <ValidationError field="email" errors={state.errors} className="font-inter text-red-400 text-sm mt-1" />
+            </div>
+
+            <div>
+              <label htmlFor="phone" className="block font-inter text-sm font-medium text-white/80 mb-2">Téléphone</label>
+              <input type="tel" id="phone" name="phone"
+                className="w-full bg-white/5 border border-white/10 text-white font-inter px-4 py-3 focus:outline-none focus:border-latitude-gold transition-colors duration-300 placeholder:text-white/20"
+                placeholder="+33 (0)X XX XX XX XX" />
+            </div>
+
+            <div>
+              <label htmlFor="company" className="block font-inter text-sm font-medium text-white/80 mb-2">Entreprise</label>
+              <input type="text" id="company" name="company"
+                className="w-full bg-white/5 border border-white/10 text-white font-inter px-4 py-3 focus:outline-none focus:border-latitude-gold transition-colors duration-300 placeholder:text-white/20"
+                placeholder="Nom de votre entreprise" />
+            </div>
+
             <div>
               <label htmlFor="subject" className="block font-inter text-sm font-medium text-white/80 mb-2">Sujet de votre demande</label>
-              <select id="subject" name="subject" value={formData.subject} onChange={handleInputChange} required
+              <select id="subject" name="subject" required
                 className="w-full bg-white/5 border border-white/10 text-white font-inter px-4 py-3 focus:outline-none focus:border-latitude-gold transition-colors duration-300">
                 <option value="">Choisir un sujet</option>
                 <option value="seminaire">Séminaire</option>
@@ -111,21 +91,21 @@ export default function ContactForm() {
                 <option value="autre">Autre</option>
               </select>
             </div>
+
             <div>
               <label htmlFor="message" className="block font-inter text-sm font-medium text-white/80 mb-2">Message</label>
-              <textarea id="message" name="message" value={formData.message} onChange={handleInputChange} required rows={6}
+              <textarea id="message" name="message" required rows={6}
                 className="w-full bg-white/5 border border-white/10 text-white font-inter px-4 py-3 focus:outline-none focus:border-latitude-gold transition-colors duration-300 placeholder:text-white/20 resize-none"
                 placeholder="Décrivez votre projet..." />
+              <ValidationError field="message" errors={state.errors} className="font-inter text-red-400 text-sm mt-1" />
             </div>
-            {error && (
-              <p className="font-inter text-red-400 text-sm text-center">
-                Une erreur est survenue. Réessayez ou contactez-nous directement par email.
-              </p>
-            )}
-            <button type="submit" disabled={loading}
+
+            <ValidationError errors={state.errors} className="font-inter text-red-400 text-sm text-center" />
+
+            <button type="submit" disabled={state.submitting}
               className="w-full font-inter text-sm font-medium px-8 py-4 text-white transition-all duration-300 tracking-widest uppercase cursor-pointer hover:opacity-80 disabled:opacity-50 disabled:cursor-not-allowed"
               style={{ background: "#C9A961" }}>
-              {loading ? "Envoi en cours..." : "Envoyer ma demande"}
+              {state.submitting ? "Envoi en cours..." : "Envoyer ma demande"}
             </button>
           </form>
         )}
