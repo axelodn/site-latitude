@@ -13,6 +13,8 @@ export default function ContactForm() {
     name: "", email: "", phone: "", company: "", subject: "", message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -21,22 +23,29 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
+    setError(false);
 
     try {
-      const form = e.currentTarget;
       const response = await fetch("https://formspree.io/f/mqkazve", {
         method: "POST",
-        body: new FormData(form),
-        headers: { "Accept": "application/json" },
+        body: JSON.stringify(formData),
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+        },
       });
 
       if (response.ok) {
         setSubmitted(true);
         setFormData({ name: "", email: "", phone: "", company: "", subject: "", message: "" });
-        setTimeout(() => setSubmitted(false), 3000);
+      } else {
+        setError(true);
       }
-    } catch (error) {
-      console.error("Erreur lors de l'envoi:", error);
+    } catch {
+      setError(true);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -108,10 +117,15 @@ export default function ContactForm() {
                 className="w-full bg-white/5 border border-white/10 text-white font-inter px-4 py-3 focus:outline-none focus:border-latitude-gold transition-colors duration-300 placeholder:text-white/20 resize-none"
                 placeholder="Décrivez votre projet..." />
             </div>
-            <button type="submit"
-              className="w-full font-inter text-sm font-medium px-8 py-4 text-white transition-all duration-300 tracking-widest uppercase cursor-pointer hover:opacity-80"
+            {error && (
+              <p className="font-inter text-red-400 text-sm text-center">
+                Une erreur est survenue. Réessayez ou contactez-nous directement par email.
+              </p>
+            )}
+            <button type="submit" disabled={loading}
+              className="w-full font-inter text-sm font-medium px-8 py-4 text-white transition-all duration-300 tracking-widest uppercase cursor-pointer hover:opacity-80 disabled:opacity-50 disabled:cursor-not-allowed"
               style={{ background: "#C9A961" }}>
-              Envoyer ma demande
+              {loading ? "Envoi en cours..." : "Envoyer ma demande"}
             </button>
           </form>
         )}
