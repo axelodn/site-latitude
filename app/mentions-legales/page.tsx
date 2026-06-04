@@ -62,9 +62,13 @@ export default function MentionsLegales() {
                 3. Hébergement
               </h2>
               <p>
-                Le site est hébergé par [Nom de l&apos;hébergeur]
+                Le site est hébergé par OVHcloud
                 <br />
-                Adresse: [Adresse de l&apos;hébergeur]
+                Siège social : 2 rue Kellermann, 59100 Roubaix, France
+                <br />
+                Site web : www.ovhcloud.com
+                <br />
+                Téléphone : 1007 (depuis la France)
               </p>
             </section>
 
